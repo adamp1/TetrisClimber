@@ -13,14 +13,24 @@ public class Game : MonoBehaviour {
 
     bool spawnPrefab;
     bool startGame;
+    bool pauseGame;
 
     float GameTime;
+
+    GameObject StopUI;
+    GameObject ContinueUI;
+    GameObject OptionsUI;
+    GameObject QuitUI;
 
     //Start
     void Start()
     {
+        StopUI = GameObject.Find("Stop");
+        ContinueUI = GameObject.Find("Continue");
+        OptionsUI = GameObject.Find("Options");
+        QuitUI = GameObject.Find("Quit");
+
         SpawnNextPrefab();
-        
     }
 
     //Update
@@ -113,24 +123,56 @@ public class Game : MonoBehaviour {
     }
 
     //UI
-    public void PauseGame()
+    void PauseGame()
     {
+       
 
-        if (Input.GetKeyDown("escape"))
+        if (Input.GetKeyUp("escape") && Time.timeScale == 1.0)
         {
-            if(Time.timeScale == 1.0)
-            {
-                Time.timeScale = 0;
-                FindObjectOfType<BlockMovement>().enabled = false;
-            }
-            else
-            {
-                Time.timeScale = 1.0f;
-                FindObjectOfType<BlockMovement>().enabled = true;
-            }
-            
-
+            pauseGame = true;
         }
+        else if(Input.GetKeyUp("escape") && Time.timeScale == 0)
+        {
+            pauseGame = false;
+        }
+
+        if(pauseGame)
+        {
+            Time.timeScale = 0;
+            FindObjectOfType<BlockMovement>().enabled = false;
+            StopUI.SetActive(false);
+            ContinueUI.SetActive(true);
+            OptionsUI.SetActive(true);
+            QuitUI.SetActive(true);
+        }
+
+        if (!pauseGame)
+        {
+            Time.timeScale = 1.0f;
+            FindObjectOfType<BlockMovement>().enabled = true;
+            StopUI.SetActive(true);
+            ContinueUI.SetActive(false);
+            OptionsUI.SetActive(false);
+            QuitUI.SetActive(false);
+        }
+        
+    }
+
+    public void Stop()
+    {
+        pauseGame = true;
+        
+        
+    }
+
+    public void Continue()
+    {
+        pauseGame = false;
+    }
+
+    public void Quit()
+    {
+        Application.Quit();   
     }
 
 }
