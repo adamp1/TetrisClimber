@@ -17,8 +17,6 @@ public class Game : MonoBehaviour {
     bool pauseGame;
     bool dead;
 
-    float GameTime;
-
     GameObject StopUI;
     GameObject PauseMenuUI;
 
@@ -35,9 +33,7 @@ public class Game : MonoBehaviour {
     //Update
     private void Update()
     {
-        GameTime += 1 * Time.deltaTime;
 
-        
         if (spawnPrefab)
         {
             SpawnNextPrefab();
