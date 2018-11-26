@@ -5,13 +5,20 @@ using UnityEngine;
 public class DeathCollider : MonoBehaviour {
 
     public float speed;
-
+    float time;
     
 	// Update is called once per frame
 	void FixedUpdate ()
     {
+        changeTime();
         moveCollider();
+        
 	}
+
+    void changeTime()
+    {
+        time += 1 * Time.deltaTime;
+    }
 
     void moveCollider ()
     {

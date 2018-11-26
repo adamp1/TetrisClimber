@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour {
     bool allowMoveLeft;
     bool grounded;
 
+    
+
     // Update is called once per frame
     void FixedUpdate () {
 
