@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DeathCollider : MonoBehaviour {
 
+    public GameObject GameOverUI;
     public float speed;
     float time;
     
@@ -39,6 +40,8 @@ public class DeathCollider : MonoBehaviour {
         {
             GameObject Player = GameObject.Find("Player");
             Destroy(Player);
+            GameOverUI.SetActive(true);
+            GameObject.Find("Main Camera").GetComponent<CameraMovement>().enabled = false;
         }
 
         if (other.gameObject.tag == "Mino")

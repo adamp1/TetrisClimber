@@ -6,19 +6,21 @@ public class BlockMovement : MonoBehaviour {
 
     GameObject[] TetrisPrefab = new GameObject[5];
     GameObject Deathcollider;
-    public float fallingSpeed = 0.05f;
+    float fallingSpeed = 5f;
     bool stopMovement;
 
     public bool allowRotation;
     public bool limitRotation;
 
-    void Update()
+    void FixedUpdate()
     {
 
         if (!stopMovement)
         {
             //Take Object transform
             Vector3 pos = transform.position;
+            
+
 
             //Speed Up falling Object
             if (Input.GetAxis("MoveTetrisDown") > 0)
@@ -29,15 +31,17 @@ public class BlockMovement : MonoBehaviour {
                 if (CheckIsValidPosition())
                 {
                     FindObjectOfType<Game>().UpdateGrid(this);
+
                 }
                 else
-                {
+                {                 
                     transform.position += new Vector3(0, 1, 0);
                 }
               }
 
             //Falling Object
-            transform.position += new Vector3(0, -fallingSpeed, 0);
+            transform.position += new Vector3(0, -fallingSpeed * Time.deltaTime, 0);
+
 
 
             if (CheckIsValidPosition())
