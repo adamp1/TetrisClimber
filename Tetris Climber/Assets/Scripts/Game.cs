@@ -45,7 +45,6 @@ public class Game : MonoBehaviour {
             
             
         }
-
         PauseGame();
     }
 
@@ -105,7 +104,22 @@ public class Game : MonoBehaviour {
     //Spawn Tetris Block
     public void SpawnNextPrefab()
     {
-        int randomPrefab = Random.Range(0, 7);
+        
+        int randomPrefab = Random.Range(0, 5);
+        int flipPrefab = Random.Range(0, 2);
+
+        if (randomPrefab < 2)
+        {
+            if (flipPrefab == 1 && randomPrefab == 0)
+            {
+                randomPrefab = 6;
+            }
+
+            if (flipPrefab == 1 && randomPrefab == 1)
+            {
+                randomPrefab = 5;
+            }
+        }
        // int randomRot = Random.Range(0,2);
        // int rot;
 
