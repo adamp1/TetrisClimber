@@ -9,28 +9,37 @@ public class Game : MonoBehaviour {
 
     public static Transform[,] grid = new Transform[gridWidth, gridHeight];
 
-    public GameObject[] TetrisPrefab = new GameObject[2];
+    public GameObject[] TetrisPrefab = new GameObject[6];
 
     bool spawnPrefab;
     bool startGame;
 
     float GameTime;
 
+    //Start
     void Start()
     {
         SpawnNextPrefab();
+        
     }
 
+    //Update
     private void Update()
     {
         GameTime += 1 * Time.deltaTime;
 
-        if(spawnPrefab)
+        
+        if (spawnPrefab)
         {
             SpawnNextPrefab();
-        }   
+            
+            
+        }
+
+        PauseGame();
     }
 
+    //Grid
     public void UpdateGrid(BlockMovement tetrisBlock)
     {
         for (int y = 0; y < gridHeight; y++)
@@ -83,23 +92,45 @@ public class Game : MonoBehaviour {
     }
 
 
-
+    //Spawn Tetris Block
     public void SpawnNextPrefab()
     {
-        int randomPrefab = Random.Range(0, 5);
-        int randomRot = Random.Range(0,2);
-        int rot;
+        int randomPrefab = Random.Range(0, 7);
+       // int randomRot = Random.Range(0,2);
+       // int rot;
 
-        if (randomRot == 0)
+       /* if (randomRot == 0)
         {
             rot = 180;
         }
         else
         {
             rot = 0;
-        }
+        } */
 
-        Instantiate(TetrisPrefab[randomPrefab], transform.position, new Quaternion(0,rot,0,0));
+        Instantiate(TetrisPrefab[randomPrefab], transform.position, new Quaternion(0,0,0,0));
         spawnPrefab = false;
     }
+
+    //UI
+    public void PauseGame()
+    {
+
+        if (Input.GetKeyDown("escape"))
+        {
+            if(Time.timeScale == 1.0)
+            {
+                Time.timeScale = 0;
+                FindObjectOfType<BlockMovement>().enabled = false;
+            }
+            else
+            {
+                Time.timeScale = 1.0f;
+                FindObjectOfType<BlockMovement>().enabled = true;
+            }
+            
+
+        }
+    }
+
 }

@@ -18,6 +18,12 @@ public class DeathCollider : MonoBehaviour {
     void changeTime()
     {
         time += 1 * Time.deltaTime;
+
+        if (time > 20)
+        {
+            speed += 0.1f;
+            time = 0;
+        }
     }
 
     void moveCollider ()
