@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Game : MonoBehaviour {
 
@@ -14,21 +15,19 @@ public class Game : MonoBehaviour {
     bool spawnPrefab;
     bool startGame;
     bool pauseGame;
+    bool dead;
 
     float GameTime;
 
     GameObject StopUI;
-    GameObject ContinueUI;
-    GameObject OptionsUI;
-    GameObject QuitUI;
+    GameObject PauseMenuUI;
+
 
     //Start
     void Start()
     {
         StopUI = GameObject.Find("Stop");
-        ContinueUI = GameObject.Find("Continue");
-        OptionsUI = GameObject.Find("Options");
-        QuitUI = GameObject.Find("Quit");
+        PauseMenuUI = GameObject.Find("Pause");
 
         SpawnNextPrefab();
     }
@@ -45,6 +44,7 @@ public class Game : MonoBehaviour {
             
             
         }
+
         PauseGame();
     }
 
@@ -67,7 +67,7 @@ public class Game : MonoBehaviour {
 
         foreach(Transform mino in tetrisBlock.transform)
         {
-            Vector2 pos = Round(mino.position);
+            Vector3 pos = Round(mino.position);
 
             if(pos.y < gridHeight)
             {
@@ -76,7 +76,7 @@ public class Game : MonoBehaviour {
         }
     }
 
-    public Transform GetTransformAtGridPosition(Vector2 pos) {
+    public Transform GetTransformAtGridPosition(Vector3 pos) {
 
         if(pos.y > gridHeight - 1)
         {
@@ -155,9 +155,8 @@ public class Game : MonoBehaviour {
             Time.timeScale = 0;
             FindObjectOfType<BlockMovement>().enabled = false;
             StopUI.SetActive(false);
-            ContinueUI.SetActive(true);
-            OptionsUI.SetActive(true);
-            QuitUI.SetActive(true);
+            PauseMenuUI.SetActive(true);
+
         }
 
         if (!pauseGame)
@@ -165,9 +164,7 @@ public class Game : MonoBehaviour {
             Time.timeScale = 1.0f;
             FindObjectOfType<BlockMovement>().enabled = true;
             StopUI.SetActive(true);
-            ContinueUI.SetActive(false);
-            OptionsUI.SetActive(false);
-            QuitUI.SetActive(false);
+            PauseMenuUI.SetActive(false);
         }
         
     }
@@ -187,6 +184,11 @@ public class Game : MonoBehaviour {
     public void Quit()
     {
         Application.Quit();   
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(0);
     }
 
 }
