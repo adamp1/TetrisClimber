@@ -168,8 +168,6 @@ public class Game : MonoBehaviour {
     public void Stop()
     {
         pauseGame = true;
-        
-        
     }
 
     public void Continue()
@@ -184,7 +182,11 @@ public class Game : MonoBehaviour {
 
     public void Restart()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
