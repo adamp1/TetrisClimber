@@ -761,7 +761,7 @@ MonoBehaviour:
   - {fileID: 1368207299206584, guid: 27bbdfc2ca541fc498c2d0cacc0ba561, type: 3}
   - {fileID: 1671236731879914, guid: 99af4dc38fe5ee043890f1a120fb7db9, type: 3}
   - {fileID: 1821396076466522, guid: eb96f9d389152d442b1aacd3a0ebf655, type: 3}
-  - {fileID: 8192369858917466765, guid: aafe2dbe1505efa4195ff95cab02419b, type: 3}
+  - {fileID: 8425271018354209015, guid: c9becfba9f0249440839e16bc6ac5da3, type: 3}
   - {fileID: 5089426084801549774, guid: e19fb1b47f2a8c44f8e9915dc29c554a, type: 3}
 --- !u!1 &1045963696
 GameObject:
@@ -1857,6 +1857,7 @@ GameObject:
   - component: {fileID: 1458156648}
   - component: {fileID: 1458156645}
   - component: {fileID: 1458156650}
+  - component: {fileID: 1458156651}
   - component: {fileID: 1458156647}
   m_Layer: 0
   m_Name: Player
@@ -1973,6 +1974,18 @@ MonoBehaviour:
   speedWhilejump: 10
   jumpPower: 40
   gravity: 80
+--- !u!114 &1458156651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458156644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a763f5579e7620b4e8a12f48bb2667d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1461354833
 GameObject:
   m_ObjectHideFlags: 0
