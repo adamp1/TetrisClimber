@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Game : MonoBehaviour {
 
-    public static int gridWidth = 10;
+    public static int gridWidth = 14;
     public static int gridHeight = 100;
 
     public static Transform[,] grid = new Transform[gridWidth, gridHeight];
