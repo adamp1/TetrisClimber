@@ -2133,6 +2133,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: S Shape 1
       objectReference: {fileID: 0}
+    - target: {fileID: 33154213651985624, guid: 1e0a7ff1c74fb834aa7fc05e186ffc74,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300020, guid: 480ebcc3cd3a97945bc00fa6eb1bbd4c, type: 3}
+    - target: {fileID: 33296996851963424, guid: 1e0a7ff1c74fb834aa7fc05e186ffc74,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300018, guid: 480ebcc3cd3a97945bc00fa6eb1bbd4c, type: 3}
+    - target: {fileID: 33005467493142224, guid: 1e0a7ff1c74fb834aa7fc05e186ffc74,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300022, guid: 480ebcc3cd3a97945bc00fa6eb1bbd4c, type: 3}
+    - target: {fileID: 33041920961033154, guid: 1e0a7ff1c74fb834aa7fc05e186ffc74,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300024, guid: 480ebcc3cd3a97945bc00fa6eb1bbd4c, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e0a7ff1c74fb834aa7fc05e186ffc74, type: 3}
 --- !u!1 &1458156644
