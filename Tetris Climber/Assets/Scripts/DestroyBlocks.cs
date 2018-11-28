@@ -6,28 +6,28 @@ using UnityEngine.UI;
 public class DestroyBlocks : MonoBehaviour
 {
     GameObject Sword;
+    GameObject Swordtop;
 
     public Image Energy;
     float energy;
     public float EnergyRecovery;
-    public float SliceCost;
+    public float SlashCost;
+    public float SlashSpeed;
 
     bool lookRight = false;
     bool lookLeft = true;
     bool inisiateSlice;
     bool sliceEnergy;
-    float moveSwordy = 1;
-    float moveSwordx = 0;
-    float movesSworddown = 0;
 
     // Start is called before the first frame update
     void Start()
     {
         Sword = GameObject.Find("Sword");
+        Swordtop = GameObject.Find("Swordtop");
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         //Energy
         energy = Energy.fillAmount;
@@ -56,7 +56,7 @@ public class DestroyBlocks : MonoBehaviour
 
         if (Input.GetButtonDown("Slice"))
         {
-            if(energy >= SliceCost)
+            if(energy >= SlashCost)
             {
                 inisiateSlice = true;
                 sliceEnergy = true;
@@ -66,85 +66,62 @@ public class DestroyBlocks : MonoBehaviour
 
         if(inisiateSlice)
         {
-            //Raycast
-                RaycastHit hit;
-                Ray Slice = new Ray(new Vector3(pos.x, pos.y + movesSworddown, pos.z), new Vector3(moveSwordx, moveSwordy, 0));
-                Debug.DrawRay(new Vector3(pos.x, pos.y + movesSworddown, pos.z), new Vector3(moveSwordx, moveSwordy, 0));
+            Sword.SetActive(true);
+            Swordtop.SetActive(true);
 
-                if (moveSwordx < 1 && lookRight)
-                {
-                    moveSwordx += 0.1f;
-                }
-                else if(moveSwordx > -1 && lookLeft)
-                {
-                    moveSwordx -= 0.1f;
-                }
+            Vector3 SwordPos = Sword.transform.position;
 
-                if (moveSwordx >= 1  && moveSwordy > 0 && lookRight)
-                {
-                    moveSwordy -= 0.1f;
-                }
-                else if(moveSwordx <= -1 && moveSwordy > 0 && lookLeft)
-                {
-                    moveSwordy -= 0.1f;
-                }
-          
-
-                if (moveSwordy <= 0 && movesSworddown > -1)
-                {
-                    movesSworddown -= 0.1f;
-                }
-
-                if(movesSworddown <= -1)
-                {
-                    inisiateSlice = false;
-                    movesSworddown = 1;
-                    moveSwordx = 0;
-                    moveSwordy = 1;
-                }
-
-
-                if (Physics.Raycast(Slice, out hit, 0.75f))
-                {
-                    if (hit.collider.gameObject.tag == "Mino")
-                    {
-                        Destroy(hit.transform.gameObject);
-                    }
-
-
-                } 
-
-         /*   Vector3 swordPos = Sword.transform.position;
-
-            if (Sword.transform.rotation.z < -90)
+            if (lookRight)
             {
-                Sword.transform.Rotate(0, 0, -100 * Time.deltaTime);
+                SwordPos = new Vector3(pos.x + 0.5f, SwordPos.y, SwordPos.z);
             }
-            
- 
-            Sword.transform.position = swordPos; */
-            
-             
+
+            if (lookLeft)
+            {
+                SwordPos = new Vector3(pos.x - 0.5f, SwordPos.y, SwordPos.z);
+            }
 
 
-            if(sliceEnergy)
+            if (SwordPos.y > pos.y-0.8f)
+            {
+                SwordPos.y -= SlashSpeed * Time.deltaTime;
+            }
+            else
+            {
+                inisiateSlice = false;
+                SwordPos.y = 1.5f;
+            }
+
+            Sword.transform.position = SwordPos;
+
+
+
+            if (sliceEnergy)
             {
                 //Energieverbrauch
-                if(energy > SliceCost)
+                if(energy > SlashCost)
                 {
-                    energy -= SliceCost;
+                    energy -= SlashCost;
                 }
                    
                 sliceEnergy = false;
             }
 
         }
+        else
+        {
+            Sword.SetActive(false);
+            Swordtop.SetActive(false);
+        }
 
         //Show Energy
         energy /= 100;
         Energy.fillAmount = energy;
+      
 
     }
+
+
 
     //BUGS: Blöcke übern spieler gehen noch nicht kaputt
     //      L Reverse geht nicht kaputt

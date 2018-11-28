@@ -101,7 +101,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4948841057382032}
   - component: {fileID: 114249857177015848}
-  - component: {fileID: 64755970331783974}
   m_Layer: 0
   m_Name: Quadrat 1
   m_TagString: Tetromino
@@ -117,7 +116,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1368207299206584}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.5, y: 21, z: 0}
+  m_LocalPosition: {x: 6.5, y: 21, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4985286725485522}
@@ -141,20 +140,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allowRotation: 0
   limitRotation: 0
---- !u!64 &64755970331783974
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1368207299206584}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 0}
 --- !u!1 &1687752199703122
 GameObject:
   m_ObjectHideFlags: 0
