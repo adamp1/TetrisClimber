@@ -2153,6 +2153,26 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 4300024, guid: 480ebcc3cd3a97945bc00fa6eb1bbd4c, type: 3}
+    - target: {fileID: 23241119415763122, guid: 1e0a7ff1c74fb834aa7fc05e186ffc74,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e50ab8ba8e3833342b6a9a12ec2ea032, type: 2}
+    - target: {fileID: 23379518915015604, guid: 1e0a7ff1c74fb834aa7fc05e186ffc74,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e50ab8ba8e3833342b6a9a12ec2ea032, type: 2}
+    - target: {fileID: 23931578072956526, guid: 1e0a7ff1c74fb834aa7fc05e186ffc74,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e50ab8ba8e3833342b6a9a12ec2ea032, type: 2}
+    - target: {fileID: 23253831099235032, guid: 1e0a7ff1c74fb834aa7fc05e186ffc74,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e50ab8ba8e3833342b6a9a12ec2ea032, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e0a7ff1c74fb834aa7fc05e186ffc74, type: 3}
 --- !u!1 &1458156644
