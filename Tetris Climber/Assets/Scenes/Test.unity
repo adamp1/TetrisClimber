@@ -904,7 +904,7 @@ MonoBehaviour:
   TetrisPrefab:
   - {fileID: 1027392622649242, guid: 15f3b0adb2ae30b4da5ce9620467657f, type: 3}
   - {fileID: 1760042239657686, guid: 1cb545224334bbf428369944663f4242, type: 3}
-  - {fileID: 1368207299206584, guid: 27bbdfc2ca541fc498c2d0cacc0ba561, type: 3}
+  - {fileID: 1368207299206584, guid: 0242e05616b9f9447b78b529d8fa6908, type: 3}
   - {fileID: 1671236731879914, guid: 99af4dc38fe5ee043890f1a120fb7db9, type: 3}
   - {fileID: 1821396076466522, guid: eb96f9d389152d442b1aacd3a0ebf655, type: 3}
   - {fileID: 8192369858917466765, guid: aafe2dbe1505efa4195ff95cab02419b, type: 3}
