@@ -103,32 +103,34 @@ public class Game : MonoBehaviour {
         
         int randomPrefab = Random.Range(0, 5);
         int flipPrefab = Random.Range(0, 2);
+        int rot;
 
-        if (randomPrefab < 2)
-        {
-            if (flipPrefab == 1 && randomPrefab == 0)
-            {
-                randomPrefab = 6;
-            }
+        /*  if (randomPrefab < 2)
+          {
+              if (flipPrefab == 1 && randomPrefab == 0)
+              {
+                  randomPrefab = 6;
+              }
 
-            if (flipPrefab == 1 && randomPrefab == 1)
-            {
-                randomPrefab = 5;
-            }
-        }
-       // int randomRot = Random.Range(0,2);
-       // int rot;
+              if (flipPrefab == 1 && randomPrefab == 1)
+              {
+                  randomPrefab = 5;
+              }
+          } */
 
-       /* if (randomRot == 0)
+       
+
+
+       if (flipPrefab == 0)
         {
             rot = 180;
         }
         else
         {
             rot = 0;
-        } */
+        } 
 
-        Instantiate(TetrisPrefab[randomPrefab], transform.position, new Quaternion(0,0,0,0));
+        Instantiate(TetrisPrefab[randomPrefab], transform.position, new Quaternion(0,rot,0,0));
         spawnPrefab = false;
     }
 

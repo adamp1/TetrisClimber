@@ -980,11 +980,9 @@ MonoBehaviour:
   TetrisPrefab:
   - {fileID: 1027392622649242, guid: 15f3b0adb2ae30b4da5ce9620467657f, type: 3}
   - {fileID: 1760042239657686, guid: 1cb545224334bbf428369944663f4242, type: 3}
-  - {fileID: 1368207299206584, guid: 27bbdfc2ca541fc498c2d0cacc0ba561, type: 3}
+  - {fileID: 1368207299206584, guid: 0242e05616b9f9447b78b529d8fa6908, type: 3}
   - {fileID: 1671236731879914, guid: 99af4dc38fe5ee043890f1a120fb7db9, type: 3}
   - {fileID: 1821396076466522, guid: eb96f9d389152d442b1aacd3a0ebf655, type: 3}
-  - {fileID: 8425271018354209015, guid: c9becfba9f0249440839e16bc6ac5da3, type: 3}
-  - {fileID: 5089426084801549774, guid: e19fb1b47f2a8c44f8e9915dc29c554a, type: 3}
 --- !u!1 &1045963696
 GameObject:
   m_ObjectHideFlags: 0
@@ -1722,7 +1720,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1254847515}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.294, z: -0.25}
+  m_LocalPosition: {x: 0, y: 0.4, z: -0.25}
   m_LocalScale: {x: 1.1111112, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1458156649}
@@ -1752,8 +1750,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.33
-  m_Center: {x: 0, y: 0, z: 0.2260952}
+  m_Radius: 0.15
+  m_Center: {x: 0, y: -0.12, z: 0.22718048}
 --- !u!54 &1254847519
 Rigidbody:
   m_ObjectHideFlags: 0

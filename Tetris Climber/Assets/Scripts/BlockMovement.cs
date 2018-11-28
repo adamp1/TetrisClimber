@@ -15,8 +15,7 @@ public class BlockMovement : MonoBehaviour {
     void FixedUpdate()
     {
 
-        if (!stopMovement)
-        {
+
             //Take Object transform
             Vector3 pos = transform.position;
             
@@ -175,7 +174,8 @@ public class BlockMovement : MonoBehaviour {
                     transform.position += new Vector3(1, 0, 0);
                 }
             }     
-        }
+       
+
 
     }
 
