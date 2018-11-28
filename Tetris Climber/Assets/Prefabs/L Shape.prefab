@@ -374,7 +374,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4912389365562418}
   - component: {fileID: 114503380357382984}
-  - component: {fileID: 64527188136829644}
   m_Layer: 0
   m_Name: L Shape
   m_TagString: Tetromino
@@ -412,20 +411,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa0ae0b41c77dcb46a2e7b0f34673fe7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallingSpeed: 0.05
   allowRotation: 1
   limitRotation: 0
---- !u!64 &64527188136829644
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1760042239657686}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 0}
