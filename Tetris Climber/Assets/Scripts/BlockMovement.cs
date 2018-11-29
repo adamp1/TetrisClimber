@@ -172,7 +172,7 @@ public class BlockMovement : MonoBehaviour {
                 else
                 {
                     transform.position += new Vector3(1, 0, 0);
-                }
+                } 
             }     
        
 
