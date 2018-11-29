@@ -5,7 +5,8 @@ Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: test shader tetris
   m_Shader: {fileID: 4800000, guid: 3bbd973f6b5da314a967fd1dcd0df10b, type: 3}
   m_ShaderKeywords: 
@@ -80,4 +81,4 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _GlowColor: {r: 0.07843138, g: 0.3921569, b: 0.7843137, a: 1}
-    - _NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    - _NormalColor: {r: 0.16037738, g: 0.16037738, b: 0.16037738, a: 1}
