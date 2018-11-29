@@ -16,6 +16,10 @@ ModelImporter:
     100020: Cube_001
     100022: Cube_002
     100024: Cube_003
+    100026: T_D
+    100028: T_L
+    100030: T_M
+    100032: T_R
     400000: Plane
     400002: Plane_001
     400004: Plane_002
@@ -29,6 +33,10 @@ ModelImporter:
     400020: Cube_001
     400022: Cube_002
     400024: Cube_003
+    400026: T_D
+    400028: T_L
+    400030: T_M
+    400032: T_R
     2100000: unnamed
     2300000: Plane
     2300002: Plane_001
@@ -42,6 +50,10 @@ ModelImporter:
     2300018: Cube_001
     2300020: Cube_002
     2300022: Cube_003
+    2300024: T_D
+    2300026: T_L
+    2300028: T_M
+    2300030: T_R
     3300000: Plane
     3300002: Plane_001
     3300004: Plane_002
@@ -54,6 +66,10 @@ ModelImporter:
     3300018: Cube_001
     3300020: Cube_002
     3300022: Cube_003
+    3300024: T_D
+    3300026: T_L
+    3300028: T_M
+    3300030: T_R
     4300000: Plane_003
     4300002: Plane_002
     4300004: Plane_001
@@ -66,6 +82,10 @@ ModelImporter:
     4300018: Cube_002
     4300020: Cube_001
     4300022: Cube
+    4300024: T_L
+    4300026: T_M
+    4300028: T_R
+    4300030: T_D
     7400000: Default Take
     9500000: //RootNode
   externalObjects: {}
