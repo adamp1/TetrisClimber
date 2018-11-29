@@ -24,6 +24,12 @@ public class ScriptWithNoName : MonoBehaviour
         Ray CheckUnderBlock = new Ray(new Vector3(pos.x, pos.y, pos.z), Vector3.down);
         Debug.DrawRay(new Vector3(pos.x, pos.y, pos.z), Vector3.down);
 
+        Ray CheckLeftBlock = new Ray(new Vector3(pos.x, pos.y, pos.z), Vector3.left);
+        Debug.DrawRay(new Vector3(pos.x, pos.y, pos.z), Vector3.left);
+
+        Ray CheckRightBlock = new Ray(new Vector3(pos.x, pos.y, pos.z), Vector3.left);
+        Debug.DrawRay(new Vector3(pos.x, pos.y, pos.z), Vector3.right);
+
         if (Physics.Raycast(CheckUnderBlock, out hit, 0.9f))
         {
             
@@ -47,6 +53,13 @@ public class ScriptWithNoName : MonoBehaviour
                 transform.position += new Vector3(0, -fallingSpeed * Time.deltaTime, 0);
                 PlaceBlock = true;
             }
+
+          /*  if(!Physics.Raycast(CheckLeftBlock, out hit, 0.9f) && !Physics.Raycast(CheckRightBlock, out hit, 0.9f))
+            {
+                transform.position += new Vector3(0, -fallingSpeed * Time.deltaTime, 0);
+                PlaceBlock = true;
+            } */
+
         }
 
         if(PlaceBlock)
@@ -58,7 +71,7 @@ public class ScriptWithNoName : MonoBehaviour
                     pos = new Vector3(pos.x, hit.transform.position.y + 1, pos.z);
                     transform.position = pos;
                     BlockUnderBlock = false;
-
+                    PlaceBlock = false;
                 }
 
                 if (hit.transform.tag == "Ground")
@@ -66,6 +79,7 @@ public class ScriptWithNoName : MonoBehaviour
                     pos = new Vector3(pos.x, hit.transform.position.y + 10.5f, pos.z);
                     transform.position = pos;
                     BlockUnderBlock = false;
+                    PlaceBlock = false;
                 }
 
             }

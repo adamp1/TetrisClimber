@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c220b80c7b044046825de4ac4b11e4e, type: 3}
+  m_Name: AkWwiseProjectData
+  m_EditorClassIdentifier: 
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 26bbdd7b48ff6b48bd1e17b252f45066
+    m_lastTime: -8586581168654775808
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 6b66c0df2617c94a8a07608a24355240
+    m_lastTime: -8586581168654775808
+    List: []
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: c89804036e005b4689d4dd3cd9a0b617
+    m_lastTime: -8586581168654775808
+    List: []
+  EventWwu:
+  - PhysicalPath: Events\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 396711d218ddd94ca334a012b7bdf0e8
+    m_lastTime: -8586581164014775808
+    List:
+    - name: Death
+      guid: 5a089b3ea296c24e9a41d7899f0a915a
+      id: 779278001
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Death
+        ObjectType: 3
+      Path: Default Work Unit\Death
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Jump
+      guid: 5f72bf2a61d15e498d999d6eff701289
+      id: 3833651337
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Jump
+        ObjectType: 3
+      Path: Default Work Unit\Jump
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+  RtpcWwu:
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 910a0d3b02990248a55a03984f9af543
+    m_lastTime: -8586581168654775808
+    List: []
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 0212cbcf357a3d4a92ef664711ba54c4
+    m_lastTime: -8586581168654775808
+    List: []
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 2f5673ee1bab42409c519121a9aed23c
+    m_lastTime: -8586581168654775808
+    List: []
+  TriggerWwu:
+  - PhysicalPath: Triggers\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: af44e5ce7f6c3d40a1d3eb8e9dbc7cfb
+    m_lastTime: -8586581168654775808
+    List: []
+  ExpandedItems:
+  - /TetrisClimber
+  - /TetrisClimber/Events
+  - /TetrisClimber/Events/Default Work Unit
+  autoPopulateEnabled: 1
+  CurrentPluginConfig: 

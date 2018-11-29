@@ -2,8 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Game : MonoBehaviour {
+
+    Text HeightUI;
+    float playerheight;
+
 
     public static int gridWidth = 14;
     public static int gridHeight = 100;
@@ -41,6 +46,7 @@ public class Game : MonoBehaviour {
             
         }
 
+        PlayerHeight();
         PauseGame();
     }
 
@@ -134,7 +140,7 @@ public class Game : MonoBehaviour {
         spawnPrefab = false;
     }
 
-    //UI
+    //GUI
     void PauseGame()
     {
        
@@ -190,5 +196,12 @@ public class Game : MonoBehaviour {
     public void MainMenu()
     {
         SceneManager.LoadScene(0);
+    }
+
+    void PlayerHeight()
+    {
+        playerheight = transform.position.y - 20;
+        Mathf.Round(playerheight);
+        GameObject.Find("heightvalue").GetComponent<Text>().text = playerheight.ToString("F2")+" m";
     }
 }
