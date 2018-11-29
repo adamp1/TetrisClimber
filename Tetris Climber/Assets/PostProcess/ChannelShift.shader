@@ -6,7 +6,7 @@
 Shader "Shader Forge/ChannelShift" {
     Properties {
         _MainTex ("MainTex", 2D) = "white" {}
-        _shift ("shift", Float ) = 0.001
+        _shift ("shift", Float ) = 0.01
         _scanlines ("scanlines", 2D) = "white" {}
         _scanlinesintensity ("scanlines intensity", Range(0, 1)) = 0.09070973
         _node_2810 ("node_2810", 2D) = "white" {}
@@ -62,7 +62,7 @@ Shader "Shader Forge/ChannelShift" {
 ////// Lighting:
 ////// Emissive:
                 float4 node_1672 = tex2D(_MainTex,TRANSFORM_TEX(i.uv0, _MainTex));
-                float node_7782 = (_shift*1.0);
+                float node_7782 = (0.003*1.0);
                 float2 node_3431 = float2(node_7782,node_7782);
                 float2 node_4773 = (node_3431+i.uv0);
                 float4 node_240 = tex2D(_MainTex,TRANSFORM_TEX(node_4773, _MainTex));
