@@ -6,9 +6,8 @@ using UnityEngine.UI;
 
 public class Game : MonoBehaviour {
 
-    Text HeightUI;
     float playerheight;
-
+    float gametime;
 
     public static int gridWidth = 14;
     public static int gridHeight = 100;
@@ -17,6 +16,7 @@ public class Game : MonoBehaviour {
 
     public GameObject[] TetrisPrefab = new GameObject[6];
 
+    int prefabRepeat = 9;
     bool spawnPrefab;
     bool startGame;
     bool pauseGame;
@@ -25,13 +25,16 @@ public class Game : MonoBehaviour {
     GameObject StopUI;
     GameObject PauseMenuUI;
 
+    void Awake()
+    {
+        
+    }
 
     //Start
     void Start()
     {
         StopUI = GameObject.Find("Stop");
         PauseMenuUI = GameObject.Find("Pause");
-
         SpawnNextPrefab();
     }
 
@@ -46,6 +49,7 @@ public class Game : MonoBehaviour {
             
         }
 
+        GameTime();
         PlayerHeight();
         PauseGame();
     }
@@ -107,27 +111,13 @@ public class Game : MonoBehaviour {
     public void SpawnNextPrefab()
     {
         
-        int randomPrefab = Random.Range(0, 5);
+        int randomPrefab = Random.Range(0, 5); 
         int flipPrefab = Random.Range(0, 2);
         int rot;
 
-        /*  if (randomPrefab < 2)
-          {
-              if (flipPrefab == 1 && randomPrefab == 0)
-              {
-                  randomPrefab = 6;
-              }
+        
 
-              if (flipPrefab == 1 && randomPrefab == 1)
-              {
-                  randomPrefab = 5;
-              }
-          } */
-
-       
-
-
-       if (flipPrefab == 0)
+        if (flipPrefab == 0)
         {
             rot = 180;
         }
@@ -136,14 +126,25 @@ public class Game : MonoBehaviour {
             rot = 0;
         } 
 
-        Instantiate(TetrisPrefab[randomPrefab], transform.position, new Quaternion(0,rot,0,0));
+        if(randomPrefab == prefabRepeat)
+        {
+            while (randomPrefab == prefabRepeat)
+            {
+                randomPrefab = Random.Range(0, 5);
+                Debug.Log("WHILE");
+            }
+            
+        }
+
+        Instantiate(TetrisPrefab[randomPrefab], transform.position, new Quaternion(0, rot, 0, 0));
+
+        prefabRepeat = randomPrefab;
         spawnPrefab = false;
     }
 
     //GUI
     void PauseGame()
     {
-       
 
         if (Input.GetKeyUp("escape") && Time.timeScale == 1.0)
         {
@@ -201,7 +202,12 @@ public class Game : MonoBehaviour {
     void PlayerHeight()
     {
         playerheight = transform.position.y - 20;
-        Mathf.Round(playerheight);
         GameObject.Find("heightvalue").GetComponent<Text>().text = playerheight.ToString("F2")+" m";
+    }
+
+    void GameTime() 
+    {
+        gametime += 1 * Time.deltaTime;
+        GameObject.Find("timevalue").GetComponent<Text>().text = gametime.ToString("F0")+" s";
     }
 }

@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour {
 
+
+    
     public GameObject Spawner;
     public Rigidbody rb;
     public float speed;
@@ -20,6 +21,8 @@ public class PlayerMovement : MonoBehaviour {
 
     // Update is called once per frame
     void FixedUpdate () {
+
+        
 
         //Player Position und Spawn Position
         Vector3 pos = transform.position;
@@ -88,6 +91,8 @@ public class PlayerMovement : MonoBehaviour {
             grounded = false;
 
             Physics.gravity = new Vector3(0, -gravity, 0);
+            
+
         }
 
         //CheckGround
@@ -118,8 +123,6 @@ public class PlayerMovement : MonoBehaviour {
         {
             allowMoveLeft = true;
         }
-
-        //Player Height
 
 
     }
