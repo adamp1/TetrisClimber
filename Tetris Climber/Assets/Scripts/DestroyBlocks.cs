@@ -73,6 +73,7 @@ public class DestroyBlocks : MonoBehaviour
 
             SwordPos = Sword.transform.position;
 
+
             if (lookRight)
             {
                 SwordPos = new Vector3(pos.x + 0.5f, SwordPos.y, SwordPos.z);
@@ -90,8 +91,8 @@ public class DestroyBlocks : MonoBehaviour
             }
             else
             {
-                inisiateSlice = false;
-                SwordPos.y = 1.5f;
+                SwordPos = new Vector3(SwordPos.x, pos.y + 1.5f, pos.z);
+                inisiateSlice = false;               
             }
 
             Sword.transform.position = SwordPos;
@@ -115,7 +116,7 @@ public class DestroyBlocks : MonoBehaviour
             Sword.SetActive(false);
             Swordtop.SetActive(false);
 
-            SwordPos = new Vector3(0.5f, 1.5f, 0);
+           // SwordPos = new Vector3(pos.x + 0.5f, pos.y + 1.5f, pos.z);
         }
 
         //Show Energy
