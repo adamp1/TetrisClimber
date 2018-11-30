@@ -12,13 +12,15 @@ public class BlockMovement : MonoBehaviour {
     public bool allowRotation;
     public bool limitRotation;
 
+    bool spawnNextPrefabIfDestroyed;
+
     bool moveRightAxis;
     bool moveLeftAxis;
 
     float resetRight;
     float resetLeft;
 
-    void FixedUpdate()
+    void Update()
     {
 
 
@@ -153,11 +155,11 @@ public class BlockMovement : MonoBehaviour {
             }
 
         //Move Object
-        if (Input.GetAxis("MoveTetrisSide") > 0)
+        if (Input.GetAxis("MoveTetrisSide") > 0 || Input.GetKey("right"))
         {
             if (!moveRightAxis)
             {
-                transform.position += new Vector3(Input.GetAxis("MoveTetrisSide"), 0, 0);
+                transform.position += new Vector3(1, 0, 0);
 
                 if (CheckIsValidPosition())
                 {
@@ -184,12 +186,13 @@ public class BlockMovement : MonoBehaviour {
         }
 
 
-        if (Input.GetAxis("MoveTetrisSide") < 0)
+
+        if (Input.GetAxis("MoveTetrisSide") < 0 || Input.GetKey("left"))
         {
 
             if (!moveLeftAxis)
             {
-                transform.position += new Vector3(Input.GetAxis("MoveTetrisSide"), 0, 0);
+                transform.position += new Vector3(-1, 0, 0);
 
                 if (CheckIsValidPosition())
                 {
@@ -215,7 +218,16 @@ public class BlockMovement : MonoBehaviour {
             }
         }
 
-        
+        //BugFix
+        if(!spawnNextPrefabIfDestroyed)
+        {
+            if (transform.childCount == 0)
+            {
+                spawnNextPrefabIfDestroyed = true;
+                FindObjectOfType<Game>().SpawnNextPrefab();
+            }
+        }
+       
 
     }
 

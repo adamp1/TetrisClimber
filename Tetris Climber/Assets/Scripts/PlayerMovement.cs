@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour {
     
 
     // Update is called once per frame
-    void FixedUpdate () {
+    void Update () {
 
         
 
@@ -124,6 +124,7 @@ public class PlayerMovement : MonoBehaviour {
             allowMoveLeft = true;
         }
 
+        
 
     }
 }
