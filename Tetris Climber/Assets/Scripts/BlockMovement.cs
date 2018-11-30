@@ -12,6 +12,12 @@ public class BlockMovement : MonoBehaviour {
     public bool allowRotation;
     public bool limitRotation;
 
+    bool moveRightAxis;
+    bool moveLeftAxis;
+
+    float resetRight;
+    float resetLeft;
+
     void FixedUpdate()
     {
 
@@ -22,7 +28,7 @@ public class BlockMovement : MonoBehaviour {
 
 
             //Speed Up falling Object
-            if (Input.GetAxis("MoveTetrisDown") > 0)
+            if (Input.GetButton("MoveTetrisDown"))
               {
                 //pos.y = pos.y - Input.GetAxis("MoveTetrisDown") * 50 * Time.deltaTime;
                 transform.position += new Vector3(0, -1, 0);
@@ -146,12 +152,14 @@ public class BlockMovement : MonoBehaviour {
                 }
             }
 
-            //Move Object
-            if (Input.GetButtonDown("MoveTetrisRight"))
+        //Move Object
+        if (Input.GetAxis("MoveTetrisSide") > 0)
+        {
+            if (!moveRightAxis)
             {
-                transform.position += new Vector3(1, 0, 0);
+                transform.position += new Vector3(Input.GetAxis("MoveTetrisSide"), 0, 0);
 
-                if(CheckIsValidPosition())
+                if (CheckIsValidPosition())
                 {
                     FindObjectOfType<Game>().UpdateGrid(this);
                 }
@@ -160,10 +168,28 @@ public class BlockMovement : MonoBehaviour {
                     transform.position += new Vector3(-1, 0, 0);
                 }
 
-            }
-            else if (Input.GetButtonDown("MoveTetrisLeft"))
+                moveRightAxis = true;
+            }           
+        }
+
+        if (moveRightAxis)
+        {
+            resetRight += 1 * Time.deltaTime;
+
+            if(resetRight > 0.05)
             {
-                transform.position += new Vector3(-1, 0, 0);
+                moveRightAxis = false;
+                resetRight = 0;
+            }
+        }
+
+
+        if (Input.GetAxis("MoveTetrisSide") < 0)
+        {
+
+            if (!moveLeftAxis)
+            {
+                transform.position += new Vector3(Input.GetAxis("MoveTetrisSide"), 0, 0);
 
                 if (CheckIsValidPosition())
                 {
@@ -172,10 +198,24 @@ public class BlockMovement : MonoBehaviour {
                 else
                 {
                     transform.position += new Vector3(1, 0, 0);
-                } 
-            }     
-       
+                }
+            }
 
+            moveLeftAxis = true;
+        }
+
+        if (moveLeftAxis)
+        {
+            resetLeft += 1 * Time.deltaTime;
+
+            if (resetLeft > 0.05)
+            {
+                moveLeftAxis = false;
+                resetLeft = 0;
+            }
+        }
+
+        
 
     }
 

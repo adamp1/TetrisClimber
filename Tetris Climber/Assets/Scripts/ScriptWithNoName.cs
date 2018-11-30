@@ -83,7 +83,7 @@ public class ScriptWithNoName : MonoBehaviour
                 }
 
             }
-        }
+        } 
 
     }
 }
