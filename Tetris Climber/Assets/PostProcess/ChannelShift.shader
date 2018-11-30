@@ -62,7 +62,7 @@ Shader "Shader Forge/ChannelShift" {
 ////// Lighting:
 ////// Emissive:
                 float4 node_1672 = tex2D(_MainTex,TRANSFORM_TEX(i.uv0, _MainTex));
-                float node_7782 = (0.003*1.0);
+                float node_7782 = (0.0015*1.0);
                 float2 node_3431 = float2(node_7782,node_7782);
                 float2 node_4773 = (node_3431+i.uv0);
                 float4 node_240 = tex2D(_MainTex,TRANSFORM_TEX(node_4773, _MainTex));
