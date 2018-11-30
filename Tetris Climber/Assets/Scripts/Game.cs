@@ -10,7 +10,7 @@ public class Game : MonoBehaviour {
     float gametime;
 
     public static int gridWidth = 14;
-    public static int gridHeight = 100;
+    public static int gridHeight = 1000;
 
     public static Transform[,] grid = new Transform[gridWidth, gridHeight];
 
@@ -22,9 +22,13 @@ public class Game : MonoBehaviour {
     bool pauseGame;
     bool dead;
 
+    bool rayInitializing;
+
     GameObject StopUI;
     GameObject PauseMenuUI;
 
+    Vector3 SpawnerPos;
+ 
     void Awake()
     {
         
@@ -110,33 +114,82 @@ public class Game : MonoBehaviour {
     //Spawn Tetris Block
     public void SpawnNextPrefab()
     {
-        
+        //Unfertig
+
+        RaycastHit hit;
+        Ray CheckUnderSpawner = new Ray(transform.position, Vector3.down);
+        Debug.DrawRay(transform.position, Vector3.down);
+        Ray CheckUnderSpawnerLeft = new Ray(new Vector3(transform.position.x -4, transform.position.y, transform.position.z), Vector3.down);
+        Ray CheckUnderSpawnerRight = new Ray(new Vector3(transform.position.x + 5, transform.position.y, transform.position.z), Vector3.down);
+
         int randomPrefab = Random.Range(0, 5); 
         int flipPrefab = Random.Range(0, 2);
-        int rot;
+        int offsetPos = Random.Range(0, 2);
+        int rot = 0;
+        float spawnPosX = transform.position.x;
 
-        
-
-        if (flipPrefab == 0)
+        if (Physics.Raycast(CheckUnderSpawner, out hit, 2))
         {
-            rot = 180;
+            if (hit.transform.tag == "Mino")
+            {
+                if (!Physics.Raycast(CheckUnderSpawnerLeft, out hit, 2))
+                {
+                    if (offsetPos == 0)
+                    {
+                        spawnPosX = 2;
+                    }
+                }
+                else if(!Physics.Raycast(CheckUnderSpawnerRight, out hit, 2))
+                {
+                    spawnPosX = 10;
+                }
+
+                if (!Physics.Raycast(CheckUnderSpawnerRight, out hit, 2))
+                {
+                    if (offsetPos == 1)
+                    {
+                        spawnPosX = 10;
+                    }
+                }
+                else if (!Physics.Raycast(CheckUnderSpawnerLeft, out hit, 2))
+                {
+                    spawnPosX = 2;
+                }
+            }
+        }       
+
+        if (Physics.Raycast(CheckUnderSpawner, out hit, 2) && Physics.Raycast(CheckUnderSpawnerLeft, out hit, 2) && Physics.Raycast(CheckUnderSpawnerRight, out hit, 2))
+        {
+  
+            transform.position = new Vector3(transform.position.x, transform.position.y + 5, transform.position.z);
+  
+            CheckUnderSpawner = new Ray(transform.position, Vector3.down);
+            CheckUnderSpawnerLeft = new Ray(new Vector3(transform.position.x - 4, transform.position.y, transform.position.z), Vector3.down);
+            CheckUnderSpawnerRight = new Ray(new Vector3(transform.position.x + 5, transform.position.y, transform.position.z), Vector3.down);
         }
-        else
-        {
-            rot = 0;
-        } 
 
         if(randomPrefab == prefabRepeat)
         {
             while (randomPrefab == prefabRepeat)
             {
                 randomPrefab = Random.Range(0, 5);
-                Debug.Log("WHILE");
             }
             
         }
 
-        Instantiate(TetrisPrefab[randomPrefab], transform.position, new Quaternion(0, rot, 0, 0));
+        if (randomPrefab == 0 || randomPrefab == 1)
+        {
+            if (flipPrefab == 0)
+            {
+                rot = 180;
+            }
+            else
+            {
+                rot = 0;
+            }
+        }
+
+        Instantiate(TetrisPrefab[randomPrefab], new Vector3(spawnPosX, transform.position.y, transform.position.z), new Quaternion(0, rot, 0, 0));
 
         prefabRepeat = randomPrefab;
         spawnPrefab = false;

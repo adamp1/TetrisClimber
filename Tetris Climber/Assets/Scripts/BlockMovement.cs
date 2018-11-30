@@ -155,7 +155,7 @@ public class BlockMovement : MonoBehaviour {
             }
 
         //Move Object
-        if (Input.GetAxis("MoveTetrisSide") > 0 || Input.GetKey("right"))
+        if (Input.GetAxis("MoveTetrisSide") > 0 || Input.GetKeyDown("right"))
         {
             if (!moveRightAxis)
             {
@@ -187,7 +187,7 @@ public class BlockMovement : MonoBehaviour {
 
 
 
-        if (Input.GetAxis("MoveTetrisSide") < 0 || Input.GetKey("left"))
+        if (Input.GetAxis("MoveTetrisSide") < 0 || Input.GetKeyDown("left"))
         {
 
             if (!moveLeftAxis)
