@@ -19,6 +19,8 @@ public class DestroyBlocks : MonoBehaviour
     bool inisiateSlice;
     bool sliceEnergy;
 
+    Vector3 SwordPos;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -69,7 +71,7 @@ public class DestroyBlocks : MonoBehaviour
             Sword.SetActive(true);
             Swordtop.SetActive(true);
 
-            Vector3 SwordPos = Sword.transform.position;
+            SwordPos = Sword.transform.position;
 
             if (lookRight)
             {
@@ -112,6 +114,8 @@ public class DestroyBlocks : MonoBehaviour
         {
             Sword.SetActive(false);
             Swordtop.SetActive(false);
+
+            SwordPos = new Vector3(0.5f, 1.5f, 0);
         }
 
         //Show Energy
