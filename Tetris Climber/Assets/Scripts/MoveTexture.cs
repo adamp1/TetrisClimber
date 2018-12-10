@@ -8,7 +8,7 @@ public class MoveTexture : MonoBehaviour
     public Vector2 direction = new Vector2(1, 1);
     public string map = "_EmissionMap";
 
-    Material mat;
+    public Material mat;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +19,9 @@ public class MoveTexture : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        Vector2 offset = direction * speed * Time.time;
+        offset = direction * Time.time;
+        mat.SetTextureOffset(map, new Vector2(Time.time, 0));
+        mat.SetColor("_EmissionColor", Color.green);
     }
 }

@@ -3024,11 +3024,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4183136983229460, guid: 4b1464483bd53b64889aea2514a95b0c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4183136983229460, guid: 4b1464483bd53b64889aea2514a95b0c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 84.8
+      value: 691.8
       objectReference: {fileID: 0}
     - target: {fileID: 4183136983229460, guid: 4b1464483bd53b64889aea2514a95b0c, type: 3}
       propertyPath: m_LocalRotation.x
@@ -3068,15 +3068,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4183136983229460, guid: 4b1464483bd53b64889aea2514a95b0c, type: 3}
       propertyPath: m_LocalScale.x
-      value: 8.4921665
+      value: 23.233717
       objectReference: {fileID: 0}
     - target: {fileID: 4183136983229460, guid: 4b1464483bd53b64889aea2514a95b0c, type: 3}
       propertyPath: m_LocalScale.y
-      value: 8.4921665
+      value: 23.233717
       objectReference: {fileID: 0}
     - target: {fileID: 4183136983229460, guid: 4b1464483bd53b64889aea2514a95b0c, type: 3}
       propertyPath: m_LocalScale.z
-      value: 8.4921665
+      value: 23.233717
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b1464483bd53b64889aea2514a95b0c, type: 3}
@@ -4527,9 +4527,8 @@ GameObject:
   - component: {fileID: 1269728272}
   - component: {fileID: 1269728271}
   - component: {fileID: 1269728270}
-  - component: {fileID: 1269728274}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Vaporwire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4603,26 +4602,11 @@ Transform:
   m_GameObject: {fileID: 1269728269}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.3363, y: -5.21, z: 12.029}
-  m_LocalScale: {x: 22.575596, y: 8.8575, z: 11.9886265}
+  m_LocalScale: {x: 130.41922, y: 51.169777, z: 130.4192}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1269728274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1269728269}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: feac3e3bb5651c642aff1960f6e66006, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 100
-  direction: {x: 1, y: 1}
-  map: _EmissionMap
 --- !u!1 &1275364951
 GameObject:
   m_ObjectHideFlags: 0
