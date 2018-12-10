@@ -7,9 +7,6 @@ public class DestroyBlocks : MonoBehaviour
 {
     GameObject Sword;
     GameObject Swordtop;
-    GameObject Swordmesh;
-
-    int count = 0;
 
     public Image Energy;
     float energy;
@@ -23,21 +20,17 @@ public class DestroyBlocks : MonoBehaviour
     bool sliceEnergy;
 
     Vector3 SwordPos;
-    Vector3 SwordmeshPos;
 
     // Start is called before the first frame update
     void Start()
     {
         Sword = GameObject.Find("Sword");
         Swordtop = GameObject.Find("Swordtop");
-        Swordmesh = GameObject.Find("Swordmesh");
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-
         //Energy
         energy = Energy.fillAmount;
         energy *= 100;
@@ -68,7 +61,7 @@ public class DestroyBlocks : MonoBehaviour
             if(energy >= SlashCost)
             {
                 inisiateSlice = true;
-                sliceEnergy = true;               
+                sliceEnergy = true;
             }
         }
 
@@ -129,39 +122,15 @@ public class DestroyBlocks : MonoBehaviour
         //Show Energy
         energy /= 100;
         Energy.fillAmount = energy;
-
-
-        SliceAnimation();
-
-    }
-    
-    void SliceAnimation () 
-    {
-        //Swordmesh.SetActive(true);
-        
-
-        SwordmeshPos = Swordmesh.transform.position;
-
-        if(count < 5)
-        {
-            count++;
-            Swordmesh.transform.Rotate(0, 0, -10);
-
-        }
-        
-
-        if (SwordmeshPos.x < transform.position.x + 0.5f)
-        {
-            SwordmeshPos.x += 0.1f;
-        }
-              
-
-   
-       
- 
-        Swordmesh.transform.position = SwordmeshPos;
+      
 
     }
 
-        
+
+
+    //BUGS: Blöcke übern spieler gehen noch nicht kaputt
+    //      L Reverse geht nicht kaputt
+    //      Lücken zwischen Blöcken
+    //      Blöcken fallen noch nicht nachdem ein Block zerstört wurdea
+    //      Blöcke spawnen unendlich auf einer stelle falls spieler stehen bleibt
 }

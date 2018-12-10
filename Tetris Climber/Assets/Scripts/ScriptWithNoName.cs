@@ -22,8 +22,13 @@ public class ScriptWithNoName : MonoBehaviour
         //Ray
         RaycastHit hit;
         Ray CheckUnderBlock = new Ray(new Vector3(pos.x, pos.y, pos.z), Vector3.down);
+        Debug.DrawRay(new Vector3(pos.x, pos.y, pos.z), Vector3.down);
+
         Ray CheckLeftBlock = new Ray(new Vector3(pos.x, pos.y, pos.z), Vector3.left);
+        Debug.DrawRay(new Vector3(pos.x, pos.y, pos.z), Vector3.left);
+
         Ray CheckRightBlock = new Ray(new Vector3(pos.x, pos.y, pos.z), Vector3.left);
+        Debug.DrawRay(new Vector3(pos.x, pos.y, pos.z), Vector3.right);
 
         if (Physics.Raycast(CheckUnderBlock, out hit, 0.9f))
         {

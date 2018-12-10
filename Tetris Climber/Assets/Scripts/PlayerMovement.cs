@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour {
 
     bool allowMoveRight;
     bool allowMoveLeft;
-    public bool grounded;
+    bool grounded;
 
     
 
