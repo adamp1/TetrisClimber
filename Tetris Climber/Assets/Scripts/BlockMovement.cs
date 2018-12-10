@@ -5,7 +5,6 @@ using UnityEngine;
 public class BlockMovement : MonoBehaviour {
 
     GameObject[] TetrisPrefab = new GameObject[5];
-    GameObject Deathcollider;
     float fallingSpeed = 5f;
     bool stopMovement;
 
@@ -20,9 +19,10 @@ public class BlockMovement : MonoBehaviour {
     float resetRight;
     float resetLeft;
 
+
     void Update()
     {
-
+            fallingSpeed = FindObjectOfType<Game>().fallingspeed;
 
             //Take Object transform
             Vector3 pos = transform.position;
@@ -262,4 +262,6 @@ public class BlockMovement : MonoBehaviour {
 
           }
       } */
+
+
 }

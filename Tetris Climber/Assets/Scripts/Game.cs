@@ -8,6 +8,9 @@ public class Game : MonoBehaviour {
 
     float playerheight;
     float gametime;
+    float distancetodanger;
+
+    public float fallingspeed = 5f;
 
     public static int gridWidth = 14;
     public static int gridHeight = 1000;
@@ -25,6 +28,7 @@ public class Game : MonoBehaviour {
     bool rayInitializing;
 
     GameObject Player;
+    GameObject Danger;
     GameObject StopUI;
     GameObject PauseMenuUI;
 
@@ -39,6 +43,7 @@ public class Game : MonoBehaviour {
     void Start()
     {
         Player = GameObject.Find("Player");
+        Danger = GameObject.Find("Death Collider");
         StopUI = GameObject.Find("Stop");
         PauseMenuUI = GameObject.Find("Pause");
         SpawnNextPrefab();
@@ -47,18 +52,19 @@ public class Game : MonoBehaviour {
     //Update
     private void Update()
     {
-
-        if (spawnPrefab)
+        if(Player != null)
         {
-            SpawnNextPrefab();
-            
-            
-        }
+            if (spawnPrefab)
+            {
+                SpawnNextPrefab();
+            }
 
-        MoveSpawnerToPlayer();
-        GameTime();
-        PlayerHeight();
-        PauseGame();
+            MoveSpawnerToPlayer();
+            GameTime();
+            PlayerHeight();
+            DistanceToDanger();
+            PauseGame();
+        }
     }
 
     //Grid
@@ -166,7 +172,7 @@ public class Game : MonoBehaviour {
         if (Physics.Raycast(CheckUnderSpawner, out hit, 2) && Physics.Raycast(CheckUnderSpawnerLeft, out hit, 2) && Physics.Raycast(CheckUnderSpawnerRight, out hit, 2))
         {
   
-            transform.position = new Vector3(transform.position.x, transform.position.y + 10, transform.position.z);
+            transform.position = new Vector3(transform.position.x, transform.position.y + 25, transform.position.z);
   
             CheckUnderSpawner = new Ray(transform.position, Vector3.down);
             CheckUnderSpawnerLeft = new Ray(new Vector3(transform.position.x - 4, transform.position.y, transform.position.z), Vector3.down);
@@ -202,13 +208,13 @@ public class Game : MonoBehaviour {
 
     void MoveSpawnerToPlayer ()
     {
-        Vector3 PlayerPos = Player.transform.position;
+        float PlayerPos = Player.transform.position.y;
 
-        PlayerPos.y += 20;
+        PlayerPos += 25;
 
-        if(PlayerPos.y > transform.position.y)
+        if(PlayerPos > transform.position.y)
         {
-            transform.position = new Vector3(transform.position.x, PlayerPos.y, transform.position.z);
+            transform.position = new Vector3(transform.position.x, PlayerPos, transform.position.z);
         }
 
         
@@ -243,6 +249,7 @@ public class Game : MonoBehaviour {
             StopUI.SetActive(true);
             PauseMenuUI.SetActive(false);
         }
+
         
     }
 
@@ -281,5 +288,11 @@ public class Game : MonoBehaviour {
     {
         gametime += 1 * Time.deltaTime;
         GameObject.Find("timevalue").GetComponent<Text>().text = gametime.ToString("F0")+" s";
+    }
+
+    void DistanceToDanger ()
+    {
+        distancetodanger = Player.transform.position.y - Danger.transform.position.y - 10;
+        GameObject.Find("distancedanger").GetComponent<Text>().text = distancetodanger.ToString("F2") + " m";       
     }
 }

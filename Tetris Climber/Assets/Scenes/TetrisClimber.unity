@@ -901,6 +901,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameOverUI: {fileID: 1339772731}
   speed: 0.1
+  increaseAfterTime: 1
+  speedIncrease: 0.005
 --- !u!65 &951007813
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -922,7 +924,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 951007811}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.5, y: -20, z: 0}
+  m_LocalPosition: {x: 6.5, y: -13.8, z: 0}
   m_LocalScale: {x: 60, y: 20, z: 20}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1016,6 +1018,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6719ef1ff993e7340b94a7c159b0545f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fallingspeed: 5
   TetrisPrefab:
   - {fileID: 1027392622649242, guid: 1e0a7ff1c74fb834aa7fc05e186ffc74, type: 3}
   - {fileID: 1760042239657686, guid: ca952e48532d80e4ba5236d0effe6a3b, type: 3}
@@ -2453,12 +2456,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e79dae68d56d8c44aacb156e57ac4c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Spawner: {fileID: 1020030470}
   rb: {fileID: 1458156645}
   speed: 15
   speedWhilejump: 10
   jumpPower: 40
   gravity: 80
+  grounded: 0
 --- !u!114 &1458156651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2524,7 +2527,7 @@ MonoBehaviour:
   m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 1045963696}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &1461354836

@@ -7,7 +7,9 @@ public class DeathCollider : MonoBehaviour {
     public GameObject GameOverUI;
     public float speed;
     float time;
-    
+    public float increaseAfterTime = 20;
+    public float speedIncrease = 0.1f;
+
 	// Update is called once per frame
 	void FixedUpdate ()
     {
@@ -20,9 +22,9 @@ public class DeathCollider : MonoBehaviour {
     {
         time += 1 * Time.deltaTime;
 
-        if (time > 20)
+        if (time > increaseAfterTime)
         {
-            speed += 0.1f;
+            speed += speedIncrease;
             time = 0;
         }
     }
@@ -42,11 +44,6 @@ public class DeathCollider : MonoBehaviour {
             Destroy(Player);
             GameOverUI.SetActive(true);
             GameObject.Find("Main Camera").GetComponent<CameraMovement>().enabled = false;
-        }
-
-        if (other.gameObject.tag == "Mino")
-        {
-            Destroy(other.gameObject);
         }
     }
 }
