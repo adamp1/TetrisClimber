@@ -24,6 +24,7 @@ public class Game : MonoBehaviour {
 
     bool rayInitializing;
 
+    GameObject Player;
     GameObject StopUI;
     GameObject PauseMenuUI;
 
@@ -37,6 +38,7 @@ public class Game : MonoBehaviour {
     //Start
     void Start()
     {
+        Player = GameObject.Find("Player");
         StopUI = GameObject.Find("Stop");
         PauseMenuUI = GameObject.Find("Pause");
         SpawnNextPrefab();
@@ -53,6 +55,7 @@ public class Game : MonoBehaviour {
             
         }
 
+        MoveSpawnerToPlayer();
         GameTime();
         PlayerHeight();
         PauseGame();
@@ -120,7 +123,9 @@ public class Game : MonoBehaviour {
         Ray CheckUnderSpawner = new Ray(transform.position, Vector3.down);
         Debug.DrawRay(transform.position, Vector3.down);
         Ray CheckUnderSpawnerLeft = new Ray(new Vector3(transform.position.x -4, transform.position.y, transform.position.z), Vector3.down);
+        Debug.DrawRay(new Vector3(transform.position.x - 4, transform.position.y, transform.position.z), Vector3.down);
         Ray CheckUnderSpawnerRight = new Ray(new Vector3(transform.position.x + 5, transform.position.y, transform.position.z), Vector3.down);
+        Debug.DrawRay(new Vector3(transform.position.x + 5, transform.position.y, transform.position.z), Vector3.down);
 
         int randomPrefab = Random.Range(0, 5); 
         int flipPrefab = Random.Range(0, 2);
@@ -161,7 +166,7 @@ public class Game : MonoBehaviour {
         if (Physics.Raycast(CheckUnderSpawner, out hit, 2) && Physics.Raycast(CheckUnderSpawnerLeft, out hit, 2) && Physics.Raycast(CheckUnderSpawnerRight, out hit, 2))
         {
   
-            transform.position = new Vector3(transform.position.x, transform.position.y + 5, transform.position.z);
+            transform.position = new Vector3(transform.position.x, transform.position.y + 10, transform.position.z);
   
             CheckUnderSpawner = new Ray(transform.position, Vector3.down);
             CheckUnderSpawnerLeft = new Ray(new Vector3(transform.position.x - 4, transform.position.y, transform.position.z), Vector3.down);
@@ -193,6 +198,20 @@ public class Game : MonoBehaviour {
 
         prefabRepeat = randomPrefab;
         spawnPrefab = false;
+    }
+
+    void MoveSpawnerToPlayer ()
+    {
+        Vector3 PlayerPos = Player.transform.position;
+
+        PlayerPos.y += 20;
+
+        if(PlayerPos.y > transform.position.y)
+        {
+            transform.position = new Vector3(transform.position.x, PlayerPos.y, transform.position.z);
+        }
+
+        
     }
 
     //GUI

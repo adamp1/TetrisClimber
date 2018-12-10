@@ -5,8 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour {
 
 
-    
-    public GameObject Spawner;
+  
     public Rigidbody rb;
     public float speed;
     public float speedWhilejump;
@@ -26,7 +25,6 @@ public class PlayerMovement : MonoBehaviour {
 
         //Player Position und Spawn Position
         Vector3 pos = transform.position;
-        Vector3 SpawnerPos = Spawner.transform.position;
 
         //Ray
         RaycastHit hit;
@@ -75,10 +73,9 @@ public class PlayerMovement : MonoBehaviour {
         }
 
 
-        SpawnerPos.y = pos.y + 20;
 
         transform.position = pos;
-        Spawner.transform.position = SpawnerPos;
+
          
 
         //Jump
@@ -90,8 +87,7 @@ public class PlayerMovement : MonoBehaviour {
 
             grounded = false;
 
-            Physics.gravity = new Vector3(0, -gravity, 0);
-            
+            Physics.gravity = new Vector3(0, -gravity, 0);          
 
         }
 
