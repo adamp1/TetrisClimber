@@ -22,7 +22,7 @@ public class BlockMovement : MonoBehaviour {
 
     void Update()
     {
-
+        fallingSpeed = FindObjectOfType<Game>().blockFallingSpeed;
 
             //Take Object transform
             Vector3 pos = transform.position;
