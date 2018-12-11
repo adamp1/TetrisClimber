@@ -5,12 +5,12 @@ using UnityEngine;
 public class DeathCollider : MonoBehaviour {
 
     public GameObject GameOverUI;
-    public float speed;
-    public float increaseIntervall = 20;
-    public float speedIncrease = 0.1f;
+    public float speed = 0.1f;
+    public float increaseIntervall = 1;
+    public float speedIncrease = 0.005f;
     float time;
     float distancetodanger;
-    public float speedifoutofsight = 1;
+    float speedifoutofsight = 1;
 
 	// Update is called once per frame
 	void FixedUpdate ()
@@ -29,7 +29,7 @@ public class DeathCollider : MonoBehaviour {
         time += 1 * Time.deltaTime;
         
         //
-        if(distancetodanger > 10)
+        if(distancetodanger > 12)
         {
             speedifoutofsight = 3;
         }

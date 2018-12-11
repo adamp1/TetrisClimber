@@ -52,19 +52,21 @@ public class Game : MonoBehaviour {
     //Update
     private void Update()
     {
-
-        if (spawnPrefab)
+        if(Player != null)
         {
-            SpawnNextPrefab();
-            
-            
-        }
+            if (spawnPrefab)
+            {
+                SpawnNextPrefab();
 
-        MoveSpawnerToPlayer();
-        GameTime();
-        PlayerHeight();
-        DistanceToDanger();
-        PauseGame();
+
+            }
+
+            MoveSpawnerToPlayer();
+            GameTime();
+            PlayerHeight();
+            DistanceToDanger();
+            PauseGame();
+        }
     }
 
     //Grid
@@ -224,11 +226,11 @@ public class Game : MonoBehaviour {
     void PauseGame()
     {
 
-        if (Input.GetKeyUp("escape") && Time.timeScale == 1.0)
+        if (Input.GetKeyUp("escape") && Time.timeScale == 1.0 || Input.GetKeyUp("joystick button 9") && Time.timeScale == 1.0)
         {
             pauseGame = true;
         }
-        else if(Input.GetKeyUp("escape") && Time.timeScale == 0)
+        else if(Input.GetKeyUp("escape") && Time.timeScale == 0 || Input.GetKeyUp("joystick button 9") && Time.timeScale == 0 || Input.GetKeyUp("joystick button 2") && Time.timeScale == 0)
         {
             pauseGame = false;
         }
