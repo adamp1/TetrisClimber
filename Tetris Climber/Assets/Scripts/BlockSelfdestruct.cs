@@ -5,10 +5,11 @@ using UnityEngine;
 public class BlockSelfdestruct : MonoBehaviour
 {
     GameObject Deathcollider;
-
+    float offset;
     void Start()
     {
-
+        Deathcollider = GameObject.Find("Death Collider");
+        offset = Deathcollider.transform.localScale.y / 2.0f - 5;
     }
 
     void Update()
@@ -19,9 +20,8 @@ public class BlockSelfdestruct : MonoBehaviour
 
     void DestroyBlock()
     {
-        Deathcollider = GameObject.Find("Death Collider");
 
-        if (Deathcollider.transform.position.y > transform.position.y)
+        if (Deathcollider.transform.position.y + offset > transform.position.y)
         {
             Destroy(this.gameObject);
         }
