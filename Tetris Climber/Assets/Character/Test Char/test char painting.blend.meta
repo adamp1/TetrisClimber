@@ -38,6 +38,10 @@ ModelImporter:
     100064: //RootNode
     100066: lowman_shoes_000
     100068: lowman_shoes_001
+    100070: lowman_shoes_003
+    100072: lowman_shoes_004
+    100074: lowman_shoes_005
+    100076: uieheuihfee
     400000: Armature
     400002: lowman_shoes_002
     400004: mixamorig_Head
@@ -73,6 +77,10 @@ ModelImporter:
     400064: //RootNode
     400066: lowman_shoes_000
     400068: lowman_shoes_001
+    400070: lowman_shoes_003
+    400072: lowman_shoes_004
+    400074: lowman_shoes_005
+    400076: uieheuihfee
     2100000: human__Untitled
     2100002: sword__Untitled
     2100004: None__Untitled_001
@@ -82,9 +90,23 @@ ModelImporter:
     2100012: Material_005__Untitled_001
     2100014: Material_003__Untitled_001
     2100016: Material_004__Untitled_001
+    2100018: _null_
+    2100020: unnamed
+    2300000: lowman_shoes_003
+    2300002: lowman_shoes_004
+    2300004: lowman_shoes_005
+    2300006: uieheuihfee
+    3300000: lowman_shoes_003
+    3300002: lowman_shoes_004
+    3300004: lowman_shoes_005
+    3300006: uieheuihfee
     4300000: lowman_shoes_002
     4300002: lowman_shoes_001
     4300004: lowman_shoes_000
+    4300006: lowman_shoes_003
+    4300008: uieheuihfee
+    4300010: lowman_shoes_005
+    4300012: lowman_shoes_004
     7400000: Default Take
     7400002: Armature_Armature_idle_Armature_idle
     7400004: Armature_Armature_jump_fall_Armature_jump_fall
