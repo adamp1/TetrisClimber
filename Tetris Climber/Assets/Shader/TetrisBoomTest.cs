@@ -9,16 +9,32 @@ public class TetrisBoomTest : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        material = GetComponent<MeshRenderer>().material;
     }
 
-    IEnumerator boom(){
-        
+    Material material;
+
+    IEnumerator boom()
+    {
+        float t = 0;
+
+        while (t <= 0)
+        {
+            material.SetFloat("_boom", Mathf.Lerp(0, 1, t));
+            yield return null;
+
+            t += Time.deltaTime * speed;
+        }
+
+        material.SetFloat("_boom", 0);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            StartCoroutine(boom());
+        }
     }
 }
