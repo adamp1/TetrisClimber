@@ -126,11 +126,4 @@ public class DestroyBlocks : MonoBehaviour
 
     }
 
-
-
-    //BUGS: Blöcke übern spieler gehen noch nicht kaputt
-    //      L Reverse geht nicht kaputt
-    //      Lücken zwischen Blöcken
-    //      Blöcken fallen noch nicht nachdem ein Block zerstört wurdea
-    //      Blöcke spawnen unendlich auf einer stelle falls spieler stehen bleibt
 }
