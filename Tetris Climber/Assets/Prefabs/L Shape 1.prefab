@@ -374,6 +374,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4912389365562418}
   - component: {fileID: 114503380357382984}
+  - component: {fileID: 3076962208555832008}
   m_Layer: 0
   m_Name: L Shape 1
   m_TagString: Tetromino
@@ -413,3 +414,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allowRotation: 1
   limitRotation: 0
+--- !u!114 &3076962208555832008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760042239657686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47366a344dfa68144a04dcedd6cabafa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

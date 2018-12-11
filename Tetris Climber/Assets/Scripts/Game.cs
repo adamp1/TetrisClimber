@@ -25,6 +25,7 @@ public class Game : MonoBehaviour {
     bool rayInitializing;
 
     GameObject Player;
+    GameObject Deathcollider;
     GameObject StopUI;
     GameObject PauseMenuUI;
 
@@ -39,6 +40,7 @@ public class Game : MonoBehaviour {
     void Start()
     {
         Player = GameObject.Find("Player");
+        Deathcollider = GameObject.Find("Death Collider");
         StopUI = GameObject.Find("Stop");
         PauseMenuUI = GameObject.Find("Pause");
         SpawnNextPrefab();
@@ -58,6 +60,7 @@ public class Game : MonoBehaviour {
         MoveSpawnerToPlayer();
         GameTime();
         PlayerHeight();
+        DistanceToDanger();
         PauseGame();
     }
 
@@ -273,7 +276,7 @@ public class Game : MonoBehaviour {
 
     void PlayerHeight()
     {
-        playerheight = transform.position.y - 20;
+        playerheight = Player.transform.position.y ;
         GameObject.Find("heightvalue").GetComponent<Text>().text = playerheight.ToString("F2")+" m";
     }
 
@@ -281,5 +284,11 @@ public class Game : MonoBehaviour {
     {
         gametime += 1 * Time.deltaTime;
         GameObject.Find("timevalue").GetComponent<Text>().text = gametime.ToString("F0")+" s";
+    }
+
+    void DistanceToDanger()
+    {
+        float distancetodanger = Player.transform.position.y - Deathcollider.transform.position.y - 9.87f;
+        GameObject.Find("dangervalue").GetComponent<Text>().text = distancetodanger.ToString("F2") + " m";
     }
 }
