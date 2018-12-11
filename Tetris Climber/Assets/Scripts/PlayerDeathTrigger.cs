@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerDeathTrigger : MonoBehaviour {
 
-    public GameObject GameOverUI;
     public GameObject PauseUI;
 
     void OnTriggerEnter(Collider other)
@@ -13,7 +12,6 @@ public class PlayerDeathTrigger : MonoBehaviour {
         {
             GameObject Player = GameObject.Find("Player");
             Destroy(Player);
-            GameOverUI.SetActive(true);
             PauseUI.SetActive(false);
             GameObject.Find("Main Camera").GetComponent<CameraMovement>().enabled = false;
         }

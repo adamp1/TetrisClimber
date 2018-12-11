@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class Game : MonoBehaviour {
 
     float playerheight;
+    float maxplayerheight;
     float gametime;
 
     public float distancetodanger;
@@ -27,10 +28,12 @@ public class Game : MonoBehaviour {
 
     bool rayInitializing;
 
+    public GameObject GameOverUI; 
     GameObject Player;
     GameObject Deathcollider;
     GameObject StopUI;
     GameObject PauseMenuUI;
+
 
     Vector3 SpawnerPos;
  
@@ -46,6 +49,7 @@ public class Game : MonoBehaviour {
         Deathcollider = GameObject.Find("Death Collider");
         StopUI = GameObject.Find("Stop");
         PauseMenuUI = GameObject.Find("Pause");
+        
         SpawnNextPrefab();
     }
 
@@ -66,6 +70,10 @@ public class Game : MonoBehaviour {
             PlayerHeight();
             DistanceToDanger();
             PauseGame();
+        }
+        else
+        {
+            GameOver();
         }
     }
 
@@ -125,7 +133,6 @@ public class Game : MonoBehaviour {
     //Spawn Tetris Block
     public void SpawnNextPrefab()
     {
-        //Unfertig
 
         RaycastHit hit;
         Ray CheckUnderSpawner = new Ray(transform.position, Vector3.down);
@@ -279,10 +286,17 @@ public class Game : MonoBehaviour {
         SceneManager.LoadScene(0);
     }
 
+    public void GameOver()
+    {
+        GameOverUI.SetActive(true);
+        GameObject.Find("scorevalue").GetComponent<Text>().text = maxplayerheight.ToString("F2") + " m";
+    }
+
     void PlayerHeight()
     {
         playerheight = Player.transform.position.y ;
         GameObject.Find("heightvalue").GetComponent<Text>().text = playerheight.ToString("F2")+" m";
+        maxplayerheight = playerheight;
     }
 
     void GameTime() 
