@@ -9,6 +9,9 @@ public class Game : MonoBehaviour {
     float playerheight;
     float gametime;
 
+    public float distancetodanger;
+    public float blockFallingSpeed;
+
     public static int gridWidth = 14;
     public static int gridHeight = 1000;
 
@@ -288,7 +291,7 @@ public class Game : MonoBehaviour {
 
     void DistanceToDanger()
     {
-        float distancetodanger = Player.transform.position.y - Deathcollider.transform.position.y - 9.87f;
+        distancetodanger = Player.transform.position.y - Deathcollider.transform.position.y - 9.87f;
         GameObject.Find("dangervalue").GetComponent<Text>().text = distancetodanger.ToString("F2") + " m";
     }
 }

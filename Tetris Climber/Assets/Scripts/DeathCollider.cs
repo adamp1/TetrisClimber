@@ -6,31 +6,48 @@ public class DeathCollider : MonoBehaviour {
 
     public GameObject GameOverUI;
     public float speed;
+    public float increaseIntervall = 20;
+    public float speedIncrease = 0.1f;
     float time;
-    
+    float distancetodanger;
+    public float speedifoutofsight = 1;
+
 	// Update is called once per frame
 	void FixedUpdate ()
     {
-        changeTime();
-        moveCollider();
-        
+        moveCollider();        
 	}
 
-    void changeTime()
-    {
-        time += 1 * Time.deltaTime;
 
-        if (time > 20)
-        {
-            speed += 0.1f;
-            time = 0;
-        }
-    }
 
     void moveCollider ()
     {
+        //Distance to Danger
+        distancetodanger = FindObjectOfType<Game>().distancetodanger;
+        
+        //Time
+        time += 1 * Time.deltaTime;
+        
+        //
+        if(distancetodanger > 10)
+        {
+            speedifoutofsight = 3;
+        }
+        else
+        {
+            speedifoutofsight = 1;
+        }
+
+
+
+        if (time > increaseIntervall)
+        {
+            speed += speedIncrease;
+            time = 0;
+        }
+
         Vector3 pos = transform.position;
-        pos.y = pos.y + 1 * speed * Time.deltaTime;
+        pos.y = pos.y + speedifoutofsight * speed * Time.deltaTime;
         transform.position = pos;
     }
 
