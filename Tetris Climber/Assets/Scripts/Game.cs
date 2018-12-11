@@ -10,6 +10,9 @@ public class Game : MonoBehaviour {
     float maxplayerheight;
     float gametime;
 
+    float blockageposX = 0;
+    float blockageposY = 0;
+
     public float distancetodanger;
     public float blockFallingSpeed;
 
@@ -19,6 +22,7 @@ public class Game : MonoBehaviour {
     public static Transform[,] grid = new Transform[gridWidth, gridHeight];
 
     public GameObject[] TetrisPrefab = new GameObject[6];
+    public GameObject BlockagePrefab;
 
     int prefabRepeat = 9;
     bool spawnPrefab;
@@ -51,6 +55,7 @@ public class Game : MonoBehaviour {
         PauseMenuUI = GameObject.Find("Pause");
         
         SpawnNextPrefab();
+        SpawnBlockage();
     }
 
     //Update
@@ -215,6 +220,39 @@ public class Game : MonoBehaviour {
         spawnPrefab = false;
     }
 
+
+    //Spawn Engpässe
+    void SpawnBlockage()
+    {
+        for (int i = 0; i < 20; i++)
+        {
+            float blockageAbstand = Random.Range(10, 20);
+
+            int rot = 0;
+            float blockageWidth = 0;
+
+            int blockagePosX = Random.Range(0, 2);
+
+            if (blockagePosX == 0)
+            {
+                rot = 0;
+                blockageWidth = Random.Range(2.7f, 3.7f);
+                blockageposX = -10;
+            }
+            else if (blockagePosX == 1)
+            {
+                rot = 180;
+                blockageWidth = Random.Range(2.7f, 3.7f);
+                blockageposX = 23;
+            }
+
+
+            BlockagePrefab.transform.localScale = new Vector3(blockageWidth, 2, 10);
+            Instantiate(BlockagePrefab, new Vector3(blockageposX, blockageposY += blockageAbstand, 0), new Quaternion(0, rot, 0, 0));
+        }
+    }
+
+    //Set Spawner To Player Position
     void MoveSpawnerToPlayer ()
     {
         Vector3 PlayerPos = Player.transform.position;
@@ -224,9 +262,7 @@ public class Game : MonoBehaviour {
         if(PlayerPos.y > transform.position.y)
         {
             transform.position = new Vector3(transform.position.x, PlayerPos.y, transform.position.z);
-        }
-
-        
+        }       
     }
 
     //GUI
@@ -311,3 +347,7 @@ public class Game : MonoBehaviour {
         GameObject.Find("dangervalue").GetComponent<Text>().text = distancetodanger.ToString("F2") + " m";
     }
 }
+
+
+//mindestens x scale 2.7
+//maximal x scale 3.7
