@@ -70,6 +70,8 @@ ModelImporter:
     400062: mixamorig:Spine2
     400064: //RootNode
     2100000: No Name
+    2100002: human
+    2100004: sword
     4300000: lowman_shoes.002
     7400000: Armature|idle
     7400002: Armature|run
