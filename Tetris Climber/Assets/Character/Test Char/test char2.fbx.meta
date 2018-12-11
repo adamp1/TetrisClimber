@@ -74,6 +74,8 @@ ModelImporter:
     7400000: Armature|idle
     7400002: Armature|run
     7400004: Armature|slice
+    7400006: Armature|jump fall
+    7400008: Armature|jump up
     9500000: //RootNode
     13700000: lowman_shoes.002
   externalObjects: {}
