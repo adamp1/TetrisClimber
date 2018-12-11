@@ -18,15 +18,17 @@ public class TetrisBoomTest : MonoBehaviour
     {
         float t = 0;
 
-        while (t <= 0)
+        while (t <= 1)
         {
             material.SetFloat("_boom", Mathf.Lerp(0, 1, t));
             yield return null;
+            print(Time.time + " in boom");
 
             t += Time.deltaTime * speed;
         }
 
-        material.SetFloat("_boom", 0);
+        //material.SetFloat("_boom", 0);
+        //material.SetFloat("_emintensity", 1000);
     }
 
     // Update is called once per frame
@@ -34,6 +36,7 @@ public class TetrisBoomTest : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            print("boom");
             StartCoroutine(boom());
         }
     }
