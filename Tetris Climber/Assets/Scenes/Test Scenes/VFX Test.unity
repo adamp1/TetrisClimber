@@ -1692,7 +1692,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 040757db5b16b364f880e30fffe96eb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 8
 --- !u!1 &447345646
 GameObject:
   m_ObjectHideFlags: 0
@@ -3508,6 +3508,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6719ef1ff993e7340b94a7c159b0545f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BlockageDistanceMin: 20
+  BlockageDistanceMax: 25
+  BlockageWidthMin: 3.3
+  BlockageWidthMax: 4.3
   distancetodanger: 0
   blockFallingSpeed: 0
   TetrisPrefab:
@@ -3788,7 +3792,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 38aa8e4471940b74c838ae92433dfea6, type: 2}
+  - {fileID: 2100000, guid: 1ab20fb3353bc8d4a91cb94cdcc01f8c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
