@@ -10,12 +10,14 @@ public class Game : MonoBehaviour {
     float maxplayerheight;
     float gametime;
 
+    int NrBlockages;
+
     int blockagePosX;
     float blockageposX = 0;
     float blockageposY = 0;
     float blockageAbstand = 0;
 
-    public float BlockageDistanceMin = 20;
+    public float BlockageDistanceMin = 25;
     public float BlockageDistanceMax = 25;
     public float BlockageWidthMin = 3.3f;
     public float BlockageWidthMax = 4.3f;
@@ -30,6 +32,8 @@ public class Game : MonoBehaviour {
 
     public GameObject[] TetrisPrefab = new GameObject[6];
     public GameObject BlockagePrefab;
+    GameObject[] BlockageObject = new GameObject[30];
+
 
     int prefabRepeat = 9;
     bool spawnPrefab;
@@ -41,7 +45,7 @@ public class Game : MonoBehaviour {
 
     int spawnBlocksLeftOrRight;
 
-    public GameObject GameOverUI; 
+    public GameObject GameOverUI;
     GameObject Player;
     GameObject Deathcollider;
     GameObject StopUI;
@@ -49,10 +53,11 @@ public class Game : MonoBehaviour {
 
 
     Vector3 SpawnerPos;
- 
+
     void Awake()
     {
         SpawnBlockage();
+        CheckBlockagePosition();
     }
 
     //Start
@@ -62,26 +67,27 @@ public class Game : MonoBehaviour {
         Deathcollider = GameObject.Find("Death Collider");
         StopUI = GameObject.Find("Stop");
         PauseMenuUI = GameObject.Find("Pause");
-        
-        SpawnNextPrefab();        
+
+        SpawnNextPrefab();
     }
 
     //Update
     private void Update()
     {
-        if(Player != null)
+        if (Player != null)
         {
             if (spawnPrefab)
             {
                 SpawnNextPrefab();
             }
 
-            if(Player.transform.position.y > blockageposY -10)
+            CheckBlockagePosition();
+
+            if (Player.transform.position.y > BlockageObject[NrBlockages].transform.position.y + 1)
             {
-                SpawnBlockage();
+                NrBlockages++;
             }
 
-            
             MoveSpawnerToPlayer();
             GameTime();
             PlayerHeight();
@@ -101,9 +107,9 @@ public class Game : MonoBehaviour {
         {
             for (int x = 0; x < gridWidth; x++)
             {
-                if(grid[x, y] != null )
+                if (grid[x, y] != null)
                 {
-                    if(grid[x, y].parent == tetrisBlock.transform)
+                    if (grid[x, y].parent == tetrisBlock.transform)
                     {
                         grid[x, y] = null;
                     }
@@ -111,11 +117,11 @@ public class Game : MonoBehaviour {
             }
         }
 
-        foreach(Transform mino in tetrisBlock.transform)
+        foreach (Transform mino in tetrisBlock.transform)
         {
             Vector3 pos = Round(mino.position);
 
-            if(pos.y < gridHeight)
+            if (pos.y < gridHeight)
             {
                 grid[(int)pos.x, (int)pos.y] = mino;
             }
@@ -124,7 +130,7 @@ public class Game : MonoBehaviour {
 
     public Transform GetTransformAtGridPosition(Vector3 pos) {
 
-        if(pos.y > gridHeight - 1)
+        if (pos.y > gridHeight - 1)
         {
             return null;
         }
@@ -136,12 +142,12 @@ public class Game : MonoBehaviour {
     }
 
 
-    public bool CheckIsInsideGrid (Vector3 pos)
+    public bool CheckIsInsideGrid(Vector3 pos)
     {
-        return ((int)pos.x >= 0 && (int)pos.x < gridWidth && (int)pos.y >= 0 && (int)pos.z == 0); 
+        return ((int)pos.x >= 0 && (int)pos.x < gridWidth && (int)pos.y >= 0 && (int)pos.z == 0);
     }
 
-    public Vector3 Round (Vector3 pos)
+    public Vector3 Round(Vector3 pos)
     {
         return new Vector3(Mathf.Round(pos.x), Mathf.Round(pos.y), Mathf.Round(pos.z));
     }
@@ -154,12 +160,12 @@ public class Game : MonoBehaviour {
         RaycastHit hit;
         Ray CheckUnderSpawner = new Ray(transform.position, Vector3.down);
         Debug.DrawRay(transform.position, Vector3.down);
-        Ray CheckUnderSpawnerLeft = new Ray(new Vector3(transform.position.x -4, transform.position.y, transform.position.z), Vector3.down);
+        Ray CheckUnderSpawnerLeft = new Ray(new Vector3(transform.position.x - 4, transform.position.y, transform.position.z), Vector3.down);
         Debug.DrawRay(new Vector3(transform.position.x - 4, transform.position.y, transform.position.z), Vector3.down);
         Ray CheckUnderSpawnerRight = new Ray(new Vector3(transform.position.x + 5, transform.position.y, transform.position.z), Vector3.down);
         Debug.DrawRay(new Vector3(transform.position.x + 5, transform.position.y, transform.position.z), Vector3.down);
 
-        int randomPrefab = Random.Range(0, 5); 
+        int randomPrefab = Random.Range(0, 5);
         int flipPrefab = Random.Range(0, 2);
         int offsetPos = Random.Range(0, 2);
         int rot = 0;
@@ -176,7 +182,7 @@ public class Game : MonoBehaviour {
                         spawnPosX = 2;
                     }
                 }
-                else if(!Physics.Raycast(CheckUnderSpawnerRight, out hit, 2))
+                else if (!Physics.Raycast(CheckUnderSpawnerRight, out hit, 2))
                 {
                     spawnPosX = 10;
                 }
@@ -193,25 +199,25 @@ public class Game : MonoBehaviour {
                     spawnPosX = 2;
                 }
             }
-        }       
+        }
 
         if (Physics.Raycast(CheckUnderSpawner, out hit, 2) && Physics.Raycast(CheckUnderSpawnerLeft, out hit, 2) && Physics.Raycast(CheckUnderSpawnerRight, out hit, 2))
         {
-  
+
             transform.position = new Vector3(transform.position.x, transform.position.y + 10, transform.position.z);
-  
+
             CheckUnderSpawner = new Ray(transform.position, Vector3.down);
             CheckUnderSpawnerLeft = new Ray(new Vector3(transform.position.x - 4, transform.position.y, transform.position.z), Vector3.down);
             CheckUnderSpawnerRight = new Ray(new Vector3(transform.position.x + 5, transform.position.y, transform.position.z), Vector3.down);
         }
 
-        if(randomPrefab == prefabRepeat)
+        if (randomPrefab == prefabRepeat)
         {
             while (randomPrefab == prefabRepeat)
             {
                 randomPrefab = Random.Range(0, 5);
             }
-            
+
         }
 
         if (randomPrefab == 0 || randomPrefab == 1)
@@ -226,16 +232,15 @@ public class Game : MonoBehaviour {
             }
         }
 
-        if (blockagePosX == 0)
-        {
-            spawnPosX = 10;
-
-        }
-        else if (blockagePosX == 1)
+        if (spawnBlocksLeftOrRight == 1)
         {
             spawnPosX = 2;
-
         }
+        else if (spawnBlocksLeftOrRight == 0)
+        {
+            spawnPosX = 10;
+        }
+
 
         Instantiate(TetrisPrefab[randomPrefab], new Vector3(spawnPosX, transform.position.y, transform.position.z), new Quaternion(0, rot, 0, 0));
 
@@ -247,32 +252,51 @@ public class Game : MonoBehaviour {
     //Spawn Engpässe
     void SpawnBlockage()
     {
-
-        blockageAbstand = Random.Range(BlockageDistanceMin, BlockageDistanceMax);
-
-        int rot = 0;
-        float blockageWidth = 0;
-
-        blockagePosX = Random.Range(0, 2);
-
-        if (blockagePosX == 0)
+        for (int i = 0; i < 20; i++)
         {
-            rot = 0;
-            blockageWidth = Random.Range(BlockageWidthMin, BlockageWidthMax);
-            blockageposX = -10;
+            blockageAbstand = Random.Range(BlockageDistanceMin, BlockageDistanceMax);
+
+            int rot = 0;
+            float blockageWidth = 0;
+
+            blockagePosX = Random.Range(0, 2);
+
+            if (blockagePosX == 0)
+            {
+                rot = 0;
+                blockageWidth = Random.Range(BlockageWidthMin, BlockageWidthMax);
+                blockageposX = -10;
+            }
+            else if (blockagePosX == 1)
+            {
+                rot = 180;
+                blockageWidth = Random.Range(BlockageWidthMin, BlockageWidthMax);
+                blockageposX = 23;
+            }
+
+            BlockagePrefab.transform.localScale = new Vector3(blockageWidth, 2, 10);
+
+            Instantiate(BlockagePrefab, new Vector3(blockageposX, blockageposY += blockageAbstand, 0), new Quaternion(0, rot, 0, 0)).name = "Blockage " + i;
+
+            BlockageObject[i] = GameObject.Find("Blockage " + i);
+
+
         }
-        else if (blockagePosX == 1)
+
+    }
+
+    void CheckBlockagePosition()
+    {
+        if (BlockageObject[NrBlockages].transform.position.x < -9)
         {
-            rot = 180;
-            blockageWidth = Random.Range(BlockageWidthMin, BlockageWidthMax);
-            blockageposX = 23;
+            spawnBlocksLeftOrRight = 0;
         }
 
-
-        BlockagePrefab.transform.localScale = new Vector3(blockageWidth, 2, 10);
-        Instantiate(BlockagePrefab, new Vector3(blockageposX, blockageposY += blockageAbstand, 0), new Quaternion(0, rot, 0, 0));
-        
-    }   
+        else if (BlockageObject[NrBlockages].transform.position.x > 22)
+        {
+            spawnBlocksLeftOrRight = 1;
+        }
+    }
 
     //Set Spawner To Player Position
     void MoveSpawnerToPlayer ()
