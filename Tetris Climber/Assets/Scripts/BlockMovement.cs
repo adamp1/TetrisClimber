@@ -20,31 +20,37 @@ public class BlockMovement : MonoBehaviour {
     float resetRight;
     float resetLeft;
 
+    public bool stopSpeed;
+
     void Update()
     {
         fallingSpeed = FindObjectOfType<Game>().blockFallingSpeed;
 
             //Take Object transform
             Vector3 pos = transform.position;
-            
 
 
-            //Speed Up falling Object
-            if (Input.GetButton("MoveTetrisDown"))
-              {
-                //pos.y = pos.y - Input.GetAxis("MoveTetrisDown") * 50 * Time.deltaTime;
+
+        //Speed Up falling Object
+        if (Input.GetButton("MoveTetrisDown"))
+        {
+            //pos.y = pos.y - Input.GetAxis("MoveTetrisDown") * 50 * Time.deltaTime;
+            if (!stopSpeed)
+            {
                 transform.position += new Vector3(0, -1, 0);
+            }
 
-                if (CheckIsValidPosition())
-                {
-                    FindObjectOfType<Game>().UpdateGrid(this);
 
-                }
-                else
-                {                 
-                    transform.position += new Vector3(0, 1, 0);
-                }
-              }
+            if (CheckIsValidPosition())
+            {
+                FindObjectOfType<Game>().UpdateGrid(this);
+
+            }
+            else
+            {
+                transform.position += new Vector3(0, 1, 0);
+            }
+        }
 
             //Falling Object
             transform.position += new Vector3(0, -fallingSpeed * Time.deltaTime, 0);
