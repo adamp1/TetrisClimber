@@ -7,7 +7,11 @@ using UnityEngine.UI;
 public class Game : MonoBehaviour {
 
     float playerheight;
+    float maxplayerheight;
     float gametime;
+
+    float blockageposX = 0;
+    float blockageposY = 0;
 
     public float distancetodanger;
     public float blockFallingSpeed;
@@ -18,6 +22,7 @@ public class Game : MonoBehaviour {
     public static Transform[,] grid = new Transform[gridWidth, gridHeight];
 
     public GameObject[] TetrisPrefab = new GameObject[6];
+    public GameObject BlockagePrefab;
 
     int prefabRepeat = 9;
     bool spawnPrefab;
@@ -27,10 +32,12 @@ public class Game : MonoBehaviour {
 
     bool rayInitializing;
 
+    public GameObject GameOverUI; 
     GameObject Player;
     GameObject Deathcollider;
     GameObject StopUI;
     GameObject PauseMenuUI;
+
 
     Vector3 SpawnerPos;
  
@@ -46,7 +53,9 @@ public class Game : MonoBehaviour {
         Deathcollider = GameObject.Find("Death Collider");
         StopUI = GameObject.Find("Stop");
         PauseMenuUI = GameObject.Find("Pause");
+        
         SpawnNextPrefab();
+        SpawnBlockage();
     }
 
     //Update
@@ -66,6 +75,10 @@ public class Game : MonoBehaviour {
             PlayerHeight();
             DistanceToDanger();
             PauseGame();
+        }
+        else
+        {
+            GameOver();
         }
     }
 
@@ -125,7 +138,6 @@ public class Game : MonoBehaviour {
     //Spawn Tetris Block
     public void SpawnNextPrefab()
     {
-        //Unfertig
 
         RaycastHit hit;
         Ray CheckUnderSpawner = new Ray(transform.position, Vector3.down);
@@ -208,6 +220,39 @@ public class Game : MonoBehaviour {
         spawnPrefab = false;
     }
 
+
+    //Spawn Engpässe
+    void SpawnBlockage()
+    {
+        for (int i = 0; i < 20; i++)
+        {
+            float blockageAbstand = Random.Range(10, 20);
+
+            int rot = 0;
+            float blockageWidth = 0;
+
+            int blockagePosX = Random.Range(0, 2);
+
+            if (blockagePosX == 0)
+            {
+                rot = 0;
+                blockageWidth = Random.Range(2.7f, 3.7f);
+                blockageposX = -10;
+            }
+            else if (blockagePosX == 1)
+            {
+                rot = 180;
+                blockageWidth = Random.Range(2.7f, 3.7f);
+                blockageposX = 23;
+            }
+
+
+            BlockagePrefab.transform.localScale = new Vector3(blockageWidth, 2, 10);
+            Instantiate(BlockagePrefab, new Vector3(blockageposX, blockageposY += blockageAbstand, 0), new Quaternion(0, rot, 0, 0));
+        }
+    }
+
+    //Set Spawner To Player Position
     void MoveSpawnerToPlayer ()
     {
         Vector3 PlayerPos = Player.transform.position;
@@ -217,9 +262,7 @@ public class Game : MonoBehaviour {
         if(PlayerPos.y > transform.position.y)
         {
             transform.position = new Vector3(transform.position.x, PlayerPos.y, transform.position.z);
-        }
-
-        
+        }       
     }
 
     //GUI
@@ -279,10 +322,17 @@ public class Game : MonoBehaviour {
         SceneManager.LoadScene(0);
     }
 
+    public void GameOver()
+    {
+        GameOverUI.SetActive(true);
+        GameObject.Find("scorevalue").GetComponent<Text>().text = maxplayerheight.ToString("F2") + " m";
+    }
+
     void PlayerHeight()
     {
         playerheight = Player.transform.position.y ;
         GameObject.Find("heightvalue").GetComponent<Text>().text = playerheight.ToString("F2")+" m";
+        maxplayerheight = playerheight;
     }
 
     void GameTime() 
@@ -297,3 +347,7 @@ public class Game : MonoBehaviour {
         GameObject.Find("dangervalue").GetComponent<Text>().text = distancetodanger.ToString("F2") + " m";
     }
 }
+
+
+//mindestens x scale 2.7
+//maximal x scale 3.7
