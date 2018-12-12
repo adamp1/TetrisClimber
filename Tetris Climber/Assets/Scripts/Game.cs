@@ -10,8 +10,15 @@ public class Game : MonoBehaviour {
     float maxplayerheight;
     float gametime;
 
+    int blockagePosX;
     float blockageposX = 0;
     float blockageposY = 0;
+    float blockageAbstand = 0;
+
+    public float BlockageDistanceMin = 20;
+    public float BlockageDistanceMax = 25;
+    public float BlockageWidthMin = 3.3f;
+    public float BlockageWidthMax = 4.3f;
 
     public float distancetodanger;
     public float blockFallingSpeed;
@@ -32,6 +39,8 @@ public class Game : MonoBehaviour {
 
     bool rayInitializing;
 
+    int spawnBlocksLeftOrRight;
+
     public GameObject GameOverUI; 
     GameObject Player;
     GameObject Deathcollider;
@@ -43,7 +52,7 @@ public class Game : MonoBehaviour {
  
     void Awake()
     {
-        
+        SpawnBlockage();
     }
 
     //Start
@@ -54,8 +63,7 @@ public class Game : MonoBehaviour {
         StopUI = GameObject.Find("Stop");
         PauseMenuUI = GameObject.Find("Pause");
         
-        SpawnNextPrefab();
-        SpawnBlockage();
+        SpawnNextPrefab();        
     }
 
     //Update
@@ -66,10 +74,14 @@ public class Game : MonoBehaviour {
             if (spawnPrefab)
             {
                 SpawnNextPrefab();
-
-
             }
 
+            if(Player.transform.position.y > blockageposY -10)
+            {
+                SpawnBlockage();
+            }
+
+            
             MoveSpawnerToPlayer();
             GameTime();
             PlayerHeight();
@@ -214,6 +226,17 @@ public class Game : MonoBehaviour {
             }
         }
 
+        if (blockagePosX == 0)
+        {
+            spawnPosX = 10;
+
+        }
+        else if (blockagePosX == 1)
+        {
+            spawnPosX = 2;
+
+        }
+
         Instantiate(TetrisPrefab[randomPrefab], new Vector3(spawnPosX, transform.position.y, transform.position.z), new Quaternion(0, rot, 0, 0));
 
         prefabRepeat = randomPrefab;
@@ -224,33 +247,32 @@ public class Game : MonoBehaviour {
     //Spawn Engpässe
     void SpawnBlockage()
     {
-        for (int i = 0; i < 20; i++)
+
+        blockageAbstand = Random.Range(BlockageDistanceMin, BlockageDistanceMax);
+
+        int rot = 0;
+        float blockageWidth = 0;
+
+        blockagePosX = Random.Range(0, 2);
+
+        if (blockagePosX == 0)
         {
-            float blockageAbstand = Random.Range(10, 20);
-
-            int rot = 0;
-            float blockageWidth = 0;
-
-            int blockagePosX = Random.Range(0, 2);
-
-            if (blockagePosX == 0)
-            {
-                rot = 0;
-                blockageWidth = Random.Range(2.7f, 3.7f);
-                blockageposX = -10;
-            }
-            else if (blockagePosX == 1)
-            {
-                rot = 180;
-                blockageWidth = Random.Range(2.7f, 3.7f);
-                blockageposX = 23;
-            }
-
-
-            BlockagePrefab.transform.localScale = new Vector3(blockageWidth, 2, 10);
-            Instantiate(BlockagePrefab, new Vector3(blockageposX, blockageposY += blockageAbstand, 0), new Quaternion(0, rot, 0, 0));
+            rot = 0;
+            blockageWidth = Random.Range(BlockageWidthMin, BlockageWidthMax);
+            blockageposX = -10;
         }
-    }
+        else if (blockagePosX == 1)
+        {
+            rot = 180;
+            blockageWidth = Random.Range(BlockageWidthMin, BlockageWidthMax);
+            blockageposX = 23;
+        }
+
+
+        BlockagePrefab.transform.localScale = new Vector3(blockageWidth, 2, 10);
+        Instantiate(BlockagePrefab, new Vector3(blockageposX, blockageposY += blockageAbstand, 0), new Quaternion(0, rot, 0, 0));
+        
+    }   
 
     //Set Spawner To Player Position
     void MoveSpawnerToPlayer ()
@@ -330,7 +352,7 @@ public class Game : MonoBehaviour {
 
     void PlayerHeight()
     {
-        playerheight = Player.transform.position.y ;
+        playerheight = Player.transform.position.y;
         GameObject.Find("heightvalue").GetComponent<Text>().text = playerheight.ToString("F2")+" m";
         maxplayerheight = playerheight;
     }
