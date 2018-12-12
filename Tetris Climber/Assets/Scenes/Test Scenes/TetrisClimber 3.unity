@@ -3364,6 +3364,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6719ef1ff993e7340b94a7c159b0545f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BlockageDistanceMin: 15
+  BlockageDistanceMax: 25
+  BlockageWidthMin: 3.3
+  BlockageWidthMax: 4.3
   distancetodanger: 0
   blockFallingSpeed: 5
   TetrisPrefab:
