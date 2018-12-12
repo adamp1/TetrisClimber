@@ -76,9 +76,13 @@ Material:
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
+    - _boom: 0
     - _emintensity: 3.8
+    - _glowintensity: 5.19
+    - _offset: -2
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _GlowColor: {r: 0.7151002, g: 0.78431374, b: 0.078431346, a: 1}
     - _NormalColor: {r: 0.16037738, g: 0.16037738, b: 0.16037738, a: 1}
+    - _glow: {r: 1, g: 0.902581, b: 0.6556604, a: 1}
