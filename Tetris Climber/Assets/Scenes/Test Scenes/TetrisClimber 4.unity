@@ -3242,6 +3242,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6719ef1ff993e7340b94a7c159b0545f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BlockageDistanceMin: 25
+  BlockageDistanceMax: 25
+  BlockageWidthMin: 3.3
+  BlockageWidthMax: 4.3
   distancetodanger: 0
   blockFallingSpeed: 0
   TetrisPrefab:
@@ -3250,6 +3254,9 @@ MonoBehaviour:
   - {fileID: 1368207299206584, guid: 0242e05616b9f9447b78b529d8fa6908, type: 3}
   - {fileID: 1671236731879914, guid: 91e9a298eb8c80d4482f6229c6459442, type: 3}
   - {fileID: 1821396076466522, guid: 792b2010da8dba648a8ec80568b688d9, type: 3}
+  BlockagePrefab: {fileID: 1254096791075142074, guid: 1e57f18df55bc1d45a0a560dd1d67d63,
+    type: 3}
+  GameOverUI: {fileID: 1339772731}
 --- !u!1 &1031333685
 GameObject:
   m_ObjectHideFlags: 0
@@ -4606,7 +4613,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b21c5a6b88319b8479fbc355be0ffe3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameOverUI: {fileID: 1339772731}
   PauseUI: {fileID: 0}
 --- !u!135 &1254847518
 SphereCollider:
@@ -5503,6 +5509,7 @@ MonoBehaviour:
   speedWhilejump: 10
   jumpPower: 40
   gravity: 80
+  grounded: 0
 --- !u!114 &1458156651
 MonoBehaviour:
   m_ObjectHideFlags: 0

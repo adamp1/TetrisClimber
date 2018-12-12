@@ -7,10 +7,10 @@ public class PlayerMovement : MonoBehaviour {
 
   
     public Rigidbody rb;
-    public float speed;
-    public float speedWhilejump;
-    public float jumpPower;
-    public float gravity;
+    public float speed = 14;
+    public float speedWhilejump = 10;
+    public float jumpPower = 40;
+    public float gravity = 80;
 
     bool allowMoveRight;
     bool allowMoveLeft;
