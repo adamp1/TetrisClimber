@@ -79,7 +79,7 @@ Material:
     - _boom: 0
     - _boom2: 0
     - _emintensity: 4.85
-    - _glowintensity: 5.92
+    - _glowintensity: 3.57
     - _offset: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
