@@ -5767,7 +5767,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1458156645}
-  speed: 15
+  speed: 14
   speedWhilejump: 10
   jumpPower: 40
   gravity: 80
@@ -5785,8 +5785,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Energy: {fileID: 1945190280}
-  EnergyRecovery: 10
-  SlashCost: 20
+  EnergyRecovery: 6.5
+  SlashCost: 24.9
   SlashSpeed: 20
 --- !u!1 &1461354833
 GameObject:

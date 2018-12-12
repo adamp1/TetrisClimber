@@ -26,7 +26,7 @@ public class Game : MonoBehaviour {
     public float blockFallingSpeed;
 
     public static int gridWidth = 14;
-    public static int gridHeight = 1000;
+    public static int gridHeight = 500;
 
     public static Transform[,] grid = new Transform[gridWidth, gridHeight];
 
@@ -252,7 +252,7 @@ public class Game : MonoBehaviour {
     //Spawn Engpässe
     void SpawnBlockage()
     {
-        for (int i = 0; i < 20; i++)
+        for (int i = 0; i < 30; i++)
         {
             blockageAbstand = Random.Range(BlockageDistanceMin, BlockageDistanceMax);
 
@@ -394,6 +394,3 @@ public class Game : MonoBehaviour {
     }
 }
 
-
-//mindestens x scale 2.7
-//maximal x scale 3.7
