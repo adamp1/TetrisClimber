@@ -57,9 +57,8 @@ Shader "Shader Forge/TetrisTestShader" {
                 VertexOutput o = (VertexOutput)0;
                 o.uv0 = v.texcoord0;
                 o.normalDir = UnityObjectToWorldNormal(v.normal);
-                float3 node_9346 = (v.normal*_offset);
                 float node_6286 = (_boom2+_boom);
-                v.vertex.xyz += lerp(float3(0,0,0),node_9346,node_6286);
+                v.vertex.xyz += lerp(float3(0,0,0),(v.normal*_offset),node_6286);
                 o.pos = UnityObjectToClipPos( v.vertex );
                 return o;
             }
@@ -109,9 +108,8 @@ Shader "Shader Forge/TetrisTestShader" {
             VertexOutput vert (VertexInput v) {
                 VertexOutput o = (VertexOutput)0;
                 o.normalDir = UnityObjectToWorldNormal(v.normal);
-                float3 node_9346 = (v.normal*_offset);
                 float node_6286 = (_boom2+_boom);
-                v.vertex.xyz += lerp(float3(0,0,0),node_9346,node_6286);
+                v.vertex.xyz += lerp(float3(0,0,0),(v.normal*_offset),node_6286);
                 o.pos = UnityObjectToClipPos( v.vertex );
                 TRANSFER_SHADOW_CASTER(o)
                 return o;

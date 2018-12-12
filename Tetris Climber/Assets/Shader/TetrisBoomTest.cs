@@ -27,7 +27,8 @@ public class TetrisBoomTest : MonoBehaviour
             t += Time.deltaTime * speed;
         }
 
-        //material.SetFloat("_boom", 0);
+        material.SetFloat("_boom", 0);
+        GetComponent<MeshRenderer>().enabled = false;
         //material.SetFloat("_emintensity", 1000);
     }
 
@@ -38,6 +39,10 @@ public class TetrisBoomTest : MonoBehaviour
         {
             print("boom");
             StartCoroutine(boom());
+        }
+
+        if(Input.GetKeyDown(KeyCode.LeftControl)){
+            GetComponent<MeshRenderer>().enabled = true;
         }
     }
 }
