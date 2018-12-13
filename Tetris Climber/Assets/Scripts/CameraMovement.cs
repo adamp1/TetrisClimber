@@ -7,8 +7,12 @@ public class CameraMovement : MonoBehaviour {
     GameObject Player;
     bool setCameraToPlayer = true;
 
-	// Use this for initialization
-	void Start () {
+    public float CameraY = 6;
+    public float CameraZ = -20;
+
+
+    // Use this for initialization
+    void Start () {
         Player = GameObject.Find("Player");
         
     }
@@ -16,6 +20,7 @@ public class CameraMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         Vector3 PlayerPos = Player.transform.position;
+
         Vector3 CameraPos = transform.position;
 
       /*  if(PlayerPos.y >= CameraPos.y)
@@ -26,7 +31,7 @@ public class CameraMovement : MonoBehaviour {
         if(setCameraToPlayer)
         {
 
-            CameraPos = new Vector3(CameraPos.x, PlayerPos.y + 6 ,CameraPos.z);
+            CameraPos = new Vector3(transform.position.x, PlayerPos.y + CameraY , CameraZ);
             transform.position = CameraPos;
         }
 	}

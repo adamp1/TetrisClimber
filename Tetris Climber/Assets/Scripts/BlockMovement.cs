@@ -22,6 +22,7 @@ public class BlockMovement : MonoBehaviour {
 
     public bool stopSpeed;
 
+
     void Update()
     {
         fallingSpeed = FindObjectOfType<Game>().blockFallingSpeed;

@@ -17,8 +17,8 @@ public class Game : MonoBehaviour {
     float blockageposY = 0;
     float blockageAbstand = 0;
 
-    public float BlockageDistanceMin = 25;
-    public float BlockageDistanceMax = 25;
+    float BlockageDistanceMin = 25;
+    float BlockageDistanceMax = 25;
     public float BlockageWidthMin = 3.3f;
     public float BlockageWidthMax = 4.3f;
 
@@ -55,6 +55,7 @@ public class Game : MonoBehaviour {
 
     void Awake()
     {
+        blockagePosX = Random.Range(0, 2);
         SpawnBlockage();
         CheckBlockagePosition();
     }
@@ -81,7 +82,7 @@ public class Game : MonoBehaviour {
 
             CheckBlockagePosition();
 
-            if (Player.transform.position.y > BlockageObject[NrBlockages].transform.position.y + 1)
+            if (Player.transform.position.y > BlockageObject[NrBlockages].transform.position.y+2)
             {
                 NrBlockages++;
             }
@@ -169,6 +170,15 @@ public class Game : MonoBehaviour {
         int rot = 0;
         float spawnPosX = transform.position.x;
 
+        if (spawnBlocksLeftOrRight == 1)
+        {
+            spawnPosX = 2;
+        }
+        else if (spawnBlocksLeftOrRight == 0)
+        {
+            spawnPosX = 10;
+        }
+
         if (Physics.Raycast(CheckUnderSpawner, out hit, 2))
         {
             if (hit.transform.tag == "Mino")
@@ -195,6 +205,66 @@ public class Game : MonoBehaviour {
                 else if (!Physics.Raycast(CheckUnderSpawnerLeft, out hit, 2))
                 {
                     spawnPosX = 2;
+                }
+            }
+        }
+
+        if (Physics.Raycast(CheckUnderSpawnerRight, out hit, 2))
+        {
+            if (hit.transform.tag == "Mino")
+            {
+                if (!Physics.Raycast(CheckUnderSpawnerLeft, out hit, 2))
+                {
+                    if (offsetPos == 0)
+                    {
+                        spawnPosX = 2;
+                    }
+                }
+                else if (!Physics.Raycast(CheckUnderSpawner, out hit, 2))
+                {
+                    spawnPosX = 5.5f;
+                }
+
+                if (!Physics.Raycast(CheckUnderSpawner, out hit, 2))
+                {
+                    if (offsetPos == 1)
+                    {
+                        spawnPosX = 5.5f;
+                    }
+                }
+                else if (!Physics.Raycast(CheckUnderSpawnerLeft, out hit, 2))
+                {
+                    spawnPosX = 2;
+                }
+            }
+        }
+
+        if (Physics.Raycast(CheckUnderSpawnerLeft, out hit, 2))
+        {
+            if (hit.transform.tag == "Mino")
+            {
+                if (!Physics.Raycast(CheckUnderSpawner, out hit, 2))
+                {
+                    if (offsetPos == 0)
+                    {
+                        spawnPosX = 5.5f;
+                    }
+                }
+                else if (!Physics.Raycast(CheckUnderSpawnerRight, out hit, 2))
+                {
+                    spawnPosX = 10;
+                }
+
+                if (!Physics.Raycast(CheckUnderSpawnerRight, out hit, 2))
+                {
+                    if (offsetPos == 1)
+                    {
+                        spawnPosX = 10;
+                    }
+                }
+                else if (!Physics.Raycast(CheckUnderSpawner, out hit, 2))
+                {
+                    spawnPosX = 5.5f;
                 }
             }
         }
@@ -229,15 +299,6 @@ public class Game : MonoBehaviour {
             }
         }
 
-        if (spawnBlocksLeftOrRight == 1)
-        {
-            spawnPosX = 2;
-        }
-        else if (spawnBlocksLeftOrRight == 0)
-        {
-            spawnPosX = 10;
-        }
-
 
         Instantiate(TetrisPrefab[randomPrefab], new Vector3(spawnPosX, transform.position.y, transform.position.z), new Quaternion(0, rot, 0, 0));
 
@@ -254,11 +315,9 @@ public class Game : MonoBehaviour {
             blockageAbstand = Random.Range(BlockageDistanceMin, BlockageDistanceMax);
 
             int rot = 0;
-            float blockageWidth = 0;
+            float blockageWidth = 0;            
 
-            blockagePosX = Random.Range(0, 2);
-
-            if (blockagePosX == 0)
+      /*      if (blockagePosX == 0)
             {
                 rot = 0;
                 blockageWidth = Random.Range(BlockageWidthMin, BlockageWidthMax);
@@ -269,13 +328,29 @@ public class Game : MonoBehaviour {
                 rot = 180;
                 blockageWidth = Random.Range(BlockageWidthMin, BlockageWidthMax);
                 blockageposX = 23;
+            } */
+
+            if(blockageposX % 2 == 0)
+            {
+                rot = 0;
+                blockageWidth = Random.Range(BlockageWidthMin, BlockageWidthMax);
+                blockageposX = -10;
             }
+            else
+            {
+                rot = 180;
+                blockageWidth = Random.Range(BlockageWidthMin, BlockageWidthMax);
+                blockageposX = 23;
+            }
+
+            blockageposX++;
 
             BlockagePrefab.transform.localScale = new Vector3(blockageWidth, 2, 10);
 
             Instantiate(BlockagePrefab, new Vector3(blockageposX, blockageposY += blockageAbstand, 0), new Quaternion(0, rot, 0, 0)).name = "Blockage " + i;
 
             BlockageObject[i] = GameObject.Find("Blockage " + i);
+
 
         }
 
@@ -386,5 +461,7 @@ public class Game : MonoBehaviour {
         distancetodanger = Player.transform.position.y - Deathcollider.transform.position.y - 9.87f;
         GameObject.Find("dangervalue").GetComponent<Text>().text = distancetodanger.ToString("F2") + " m";
     }
+
+
 }
 
