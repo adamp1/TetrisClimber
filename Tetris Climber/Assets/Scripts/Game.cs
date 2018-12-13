@@ -56,6 +56,7 @@ public class Game : MonoBehaviour {
     void Awake()
     {
         blockagePosX = Random.Range(0, 2);
+        Debug.Log(blockagePosX);
         SpawnBlockage();
         CheckBlockagePosition();
     }
@@ -317,7 +318,7 @@ public class Game : MonoBehaviour {
             int rot = 0;
             float blockageWidth = 0;            
 
-      /*      if (blockagePosX == 0)
+        /*    if (blockagePosX == 0)
             {
                 rot = 0;
                 blockageWidth = Random.Range(BlockageWidthMin, BlockageWidthMax);
@@ -328,9 +329,9 @@ public class Game : MonoBehaviour {
                 rot = 180;
                 blockageWidth = Random.Range(BlockageWidthMin, BlockageWidthMax);
                 blockageposX = 23;
-            } */
+            }*/
 
-            if(blockageposX % 2 == 0)
+            if (blockagePosX % 2 == 0)
             {
                 rot = 0;
                 blockageWidth = Random.Range(BlockageWidthMin, BlockageWidthMax);
@@ -342,12 +343,11 @@ public class Game : MonoBehaviour {
                 blockageWidth = Random.Range(BlockageWidthMin, BlockageWidthMax);
                 blockageposX = 23;
             }
+            blockagePosX++;
 
-            blockageposX++;
+            BlockagePrefab.transform.localScale = new Vector3(blockageWidth, 2, 8.37f);
 
-            BlockagePrefab.transform.localScale = new Vector3(blockageWidth, 2, 10);
-
-            Instantiate(BlockagePrefab, new Vector3(blockageposX, blockageposY += blockageAbstand, 0), new Quaternion(0, rot, 0, 0)).name = "Blockage " + i;
+            Instantiate(BlockagePrefab, new Vector3(blockageposX, blockageposY += blockageAbstand, 0.5f), new Quaternion(0, rot, 0, 0)).name = "Blockage " + i;
 
             BlockageObject[i] = GameObject.Find("Blockage " + i);
 

@@ -7,8 +7,8 @@ public class CameraMovement : MonoBehaviour {
     GameObject Player;
     bool setCameraToPlayer = true;
 
-    public float CameraY = 6;
-    public float CameraZ = -20;
+    public float CameraY = 7;
+    public float CameraZ = -15;
 
 
     // Use this for initialization
