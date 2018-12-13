@@ -446,6 +446,7 @@ public class Game : MonoBehaviour {
     void PlayerHeight()
     {
         playerheight = Player.transform.position.y;
+        if (playerheight < 0) playerheight = 0;
         GameObject.Find("heightvalue").GetComponent<Text>().text = playerheight.ToString("F2")+" m";
         maxplayerheight = playerheight;
     }
@@ -458,7 +459,7 @@ public class Game : MonoBehaviour {
 
     void DistanceToDanger()
     {
-        distancetodanger = Player.transform.position.y - Deathcollider.transform.position.y - 9.87f;
+        distancetodanger = Player.transform.position.y - Deathcollider.transform.position.y - 10.05f;
         GameObject.Find("dangervalue").GetComponent<Text>().text = distancetodanger.ToString("F2") + " m";
     }
 
