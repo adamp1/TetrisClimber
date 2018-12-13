@@ -5,11 +5,14 @@ using UnityEngine;
 public class TetrisBoomTest : MonoBehaviour
 {
     public float speed = 8;
+    public float offset = 0.1f;
 
     // Start is called before the first frame update
     void Start()
     {
         material = GetComponent<MeshRenderer>().material;
+
+        offset = transform.position.x * 0.1f;
     }
 
     Material material;
@@ -17,6 +20,8 @@ public class TetrisBoomTest : MonoBehaviour
     IEnumerator boom()
     {
         float t = 0;
+
+        yield return new WaitForSeconds(offset);
 
         while (t <= 1)
         {
