@@ -48,7 +48,6 @@ public class Game : MonoBehaviour {
     public GameObject GameOverUI;
     GameObject Player;
     GameObject Deathcollider;
-    GameObject StopUI;
     GameObject PauseMenuUI;
 
 
@@ -65,7 +64,6 @@ public class Game : MonoBehaviour {
     {
         Player = GameObject.Find("Player");
         Deathcollider = GameObject.Find("Death Collider");
-        StopUI = GameObject.Find("Stop");
         PauseMenuUI = GameObject.Find("Pause");
 
         SpawnNextPrefab();
@@ -205,7 +203,6 @@ public class Game : MonoBehaviour {
         {
 
             transform.position = new Vector3(transform.position.x, transform.position.y + 10, transform.position.z);
-
             CheckUnderSpawner = new Ray(transform.position, Vector3.down);
             CheckUnderSpawnerLeft = new Ray(new Vector3(transform.position.x - 4, transform.position.y, transform.position.z), Vector3.down);
             CheckUnderSpawnerRight = new Ray(new Vector3(transform.position.x + 5, transform.position.y, transform.position.z), Vector3.down);
@@ -280,7 +277,6 @@ public class Game : MonoBehaviour {
 
             BlockageObject[i] = GameObject.Find("Blockage " + i);
 
-
         }
 
     }
@@ -328,7 +324,6 @@ public class Game : MonoBehaviour {
         {
             Time.timeScale = 0;
             FindObjectOfType<BlockMovement>().enabled = false;
-            StopUI.SetActive(false);
             PauseMenuUI.SetActive(true);
 
         }
@@ -337,7 +332,6 @@ public class Game : MonoBehaviour {
         {
             Time.timeScale = 1.0f;
             FindObjectOfType<BlockMovement>().enabled = true;
-            StopUI.SetActive(true);
             PauseMenuUI.SetActive(false);
         }
         
