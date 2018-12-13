@@ -4845,6 +4845,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 0.41
+      objectReference: {fileID: 0}
     - target: {fileID: 6090474640038939412, guid: ce0835fb467feb745aa878fef1fd169e,
         type: 3}
       propertyPath: m_IsActive
@@ -5646,7 +5647,7 @@ PrefabInstance:
     - target: {fileID: 6841671131779761950, guid: f1d261530576741458d658dcef8c37c9,
         type: 3}
       propertyPath: speed
-      value: 0.4
+      value: 0.12
       objectReference: {fileID: 0}
     - target: {fileID: 6841671131779761950, guid: f1d261530576741458d658dcef8c37c9,
         type: 3}
