@@ -46,7 +46,6 @@ public class BlockMovement : MonoBehaviour {
             if (CheckIsValidPosition())
             {
                 FindObjectOfType<Game>().UpdateGrid(this);
-
             }
             else
             {
