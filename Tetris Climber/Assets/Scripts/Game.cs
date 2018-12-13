@@ -347,7 +347,7 @@ public class Game : MonoBehaviour {
 
             BlockagePrefab.transform.localScale = new Vector3(blockageWidth, 2, 8.37f);
 
-            Instantiate(BlockagePrefab, new Vector3(blockageposX, blockageposY += blockageAbstand, 0.5f), new Quaternion(0, rot, 0, 0)).name = "Blockage " + i;
+            Instantiate(BlockagePrefab, new Vector3(blockageposX, blockageposY += blockageAbstand, -0.4f), new Quaternion(0, rot, 0, 0)).name = "Blockage " + i;
 
             BlockageObject[i] = GameObject.Find("Blockage " + i);
 
