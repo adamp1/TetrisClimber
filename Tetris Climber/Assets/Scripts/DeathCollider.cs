@@ -27,6 +27,8 @@ public class DeathCollider : MonoBehaviour {
         
         //Time
         time += 1 * Time.deltaTime;
+
+
         
         //
         if(distancetodanger > 12)
