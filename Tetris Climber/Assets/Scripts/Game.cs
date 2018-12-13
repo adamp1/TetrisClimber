@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class Game : MonoBehaviour {
 
+    AudioSource Soundtrack;
+
     float playerheight;
     float maxplayerheight;
     float gametime;
@@ -55,8 +57,10 @@ public class Game : MonoBehaviour {
 
     void Awake()
     {
+        Soundtrack = GetComponent<AudioSource>();
+        Soundtrack.Play();
+
         blockagePosX = Random.Range(0, 2);
-        Debug.Log(blockagePosX);
         SpawnBlockage();
         CheckBlockagePosition();
     }
@@ -64,6 +68,7 @@ public class Game : MonoBehaviour {
     //Start
     void Start()
     {
+
         Player = GameObject.Find("Player");
         Deathcollider = GameObject.Find("Death Collider");
         PauseMenuUI = GameObject.Find("Pause");
@@ -74,6 +79,7 @@ public class Game : MonoBehaviour {
     //Update
     private void Update()
     {
+
         if (Player != null)
         {
             if (spawnPrefab)
