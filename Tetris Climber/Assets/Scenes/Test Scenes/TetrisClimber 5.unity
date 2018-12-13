@@ -3364,8 +3364,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6719ef1ff993e7340b94a7c159b0545f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BlockageDistanceMin: 25
-  BlockageDistanceMax: 25
   BlockageWidthMin: 3.3
   BlockageWidthMax: 4.3
   distancetodanger: 0
@@ -4161,6 +4159,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d573942aabbcca4bb36ef227fa9d2bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CameraY: 7
+  CameraZ: -15
 --- !u!114 &1162454240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4390,7 +4390,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d6bd004d6a5e9b04392c61420e2ade13, type: 3}
       propertyPath: m_LocalScale.x
-      value: 6.6315
+      value: 5.1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d6bd004d6a5e9b04392c61420e2ade13, type: 3}
       propertyPath: m_LocalScale.y
