@@ -60,6 +60,7 @@ public class Game : MonoBehaviour {
         Soundtrack = GetComponent<AudioSource>();
         Soundtrack.Play();
 
+
         blockagePosX = Random.Range(0, 2);
         SpawnBlockage();
         CheckBlockagePosition();
