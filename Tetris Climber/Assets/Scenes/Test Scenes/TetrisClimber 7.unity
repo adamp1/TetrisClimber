@@ -2516,6 +2516,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BIG BUILDING
       objectReference: {fileID: 0}
+    - target: {fileID: 6392933682704959045, guid: 7d6a24ea5cecb0749a97885fc3bbe773,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300068, guid: 96e1aaea634cce34a927e1a203ad46b4, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d6a24ea5cecb0749a97885fc3bbe773, type: 3}
 --- !u!1 &941657596
