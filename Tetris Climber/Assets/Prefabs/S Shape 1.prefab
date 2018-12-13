@@ -50,6 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allowRotation: 1
   limitRotation: 0
+  stopSpeed: 0
 --- !u!114 &7362355067819650409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,7 +75,6 @@ GameObject:
   - component: {fileID: 33005467493142224}
   - component: {fileID: 65852314064254120}
   - component: {fileID: 23931578072956526}
-  - component: {fileID: 2301453162695191935}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Mino
@@ -154,18 +154,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &2301453162695191935
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1053127570777674}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d53535535096ad64abdd2772e50c041f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1061861004917714
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,7 +166,6 @@ GameObject:
   - component: {fileID: 33296996851963424}
   - component: {fileID: 65616613240577862}
   - component: {fileID: 23379518915015604}
-  - component: {fileID: 6306030826739889137}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Mino
@@ -258,18 +245,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &6306030826739889137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1061861004917714}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d53535535096ad64abdd2772e50c041f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1562276356759056
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,7 +257,6 @@ GameObject:
   - component: {fileID: 33041920961033154}
   - component: {fileID: 65594621913572516}
   - component: {fileID: 23253831099235032}
-  - component: {fileID: 6041053615186109485}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Mino
@@ -362,18 +336,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &6041053615186109485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1562276356759056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d53535535096ad64abdd2772e50c041f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1644030522426750
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,7 +348,6 @@ GameObject:
   - component: {fileID: 33154213651985624}
   - component: {fileID: 65780026973104630}
   - component: {fileID: 23241119415763122}
-  - component: {fileID: 6244660915186773819}
   m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Mino
@@ -466,15 +427,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &6244660915186773819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1644030522426750}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d53535535096ad64abdd2772e50c041f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
