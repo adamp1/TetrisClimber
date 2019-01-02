@@ -58,9 +58,8 @@ Shader "Shader Forge/TetrisTestShader" {
                 VertexOutput o = (VertexOutput)0;
                 o.uv0 = v.texcoord0;
                 float4 objPos = mul ( unity_ObjectToWorld, float4(0,0,0,1) );
-                float3 node_2805 = (mul(unity_ObjectToWorld, v.vertex).rgb-objPos.rgb);
                 float node_6286 = (_boom2+_boom);
-                v.vertex.xyz += lerp(float3(0,0,0),((((node_2805*(sin(((cos(o.uv0.r)*sin(o.uv0.g))*1000.0))*2.0))*1.0)*_offset)+0.0),node_6286);
+                v.vertex.xyz += lerp(float3(0,0,0),(((((mul(unity_ObjectToWorld, v.vertex).rgb-objPos.rgb)*(sin(((cos(o.uv0.r)*sin(o.uv0.g))*1000.0))*2.0))*1.0)*_offset)+0.0),node_6286);
                 o.posWorld = mul(unity_ObjectToWorld, v.vertex);
                 o.pos = UnityObjectToClipPos( v.vertex );
                 return o;
@@ -112,9 +111,8 @@ Shader "Shader Forge/TetrisTestShader" {
                 VertexOutput o = (VertexOutput)0;
                 o.uv0 = v.texcoord0;
                 float4 objPos = mul ( unity_ObjectToWorld, float4(0,0,0,1) );
-                float3 node_2805 = (mul(unity_ObjectToWorld, v.vertex).rgb-objPos.rgb);
                 float node_6286 = (_boom2+_boom);
-                v.vertex.xyz += lerp(float3(0,0,0),((((node_2805*(sin(((cos(o.uv0.r)*sin(o.uv0.g))*1000.0))*2.0))*1.0)*_offset)+0.0),node_6286);
+                v.vertex.xyz += lerp(float3(0,0,0),(((((mul(unity_ObjectToWorld, v.vertex).rgb-objPos.rgb)*(sin(((cos(o.uv0.r)*sin(o.uv0.g))*1000.0))*2.0))*1.0)*_offset)+0.0),node_6286);
                 o.posWorld = mul(unity_ObjectToWorld, v.vertex);
                 o.pos = UnityObjectToClipPos( v.vertex );
                 TRANSFER_SHADOW_CASTER(o)
