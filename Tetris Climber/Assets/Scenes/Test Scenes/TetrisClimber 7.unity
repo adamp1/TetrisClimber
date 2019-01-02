@@ -4153,10 +4153,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1289904551}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6b0b3d9a4017584caf5b9c7b17e1472, type: 3}
+  m_Script: {fileID: 11500000, guid: 566bcc5f6b0028141b58c83f44c0ac34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  contrast: 0
+  bloom: 0
+  bloommin: 0.5
+  bloommax: 5
 --- !u!114 &1289904554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5129,8 +5131,9 @@ GameObject:
   - component: {fileID: 1856743280}
   - component: {fileID: 1856743282}
   - component: {fileID: 1856743281}
+  - component: {fileID: 1856743283}
   m_Layer: 5
-  m_Name: Text Contrast
+  m_Name: Text Bloom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5188,7 +5191,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Contrast
+  m_Text: 'Bloom
 
 '
 --- !u!222 &1856743282
@@ -5199,6 +5202,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1856743279}
   m_CullTransparentMesh: 0
+--- !u!114 &1856743283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856743279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 566bcc5f6b0028141b58c83f44c0ac34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bloom: 0
+  bloommin: 0
+  bloommax: 0
 --- !u!1 &1879968159
 GameObject:
   m_ObjectHideFlags: 0
