@@ -30,8 +30,11 @@ public class Game : MonoBehaviour {
     public float BlockageWidthMax = 4.3f;
 
     public float distancetodanger;
-    public float blockFallingSpeed;
 
+    public float blockFallingSpeed;
+    public float minFallingSpeed;
+    public float maxFallingSpeed;
+   
     public static int gridWidth = 14;
     public static int gridHeight = 500;
 
@@ -65,8 +68,6 @@ public class Game : MonoBehaviour {
 
     void Awake()
     {
-        Soundtrack = GetComponent<AudioSource>();
-        Soundtrack.Play();
 
 
         blockagePosX = Random.Range(0, 2);
@@ -77,6 +78,7 @@ public class Game : MonoBehaviour {
     //Start
     void Start()
     {
+
 
         Player = GameObject.Find("Player");
         Deathcollider = GameObject.Find("Death Collider");
@@ -349,6 +351,8 @@ public class Game : MonoBehaviour {
 
         prefabRepeat = randomPrefab;
         spawnPrefab = false;
+
+        BlockFallingSpeed();
     }
 
 
@@ -428,6 +432,18 @@ public class Game : MonoBehaviour {
         {
             transform.position = new Vector3(transform.position.x, PlayerPos.y, transform.position.z);
         }       
+    }
+
+    //Increase Block Fallingspeed
+    void BlockFallingSpeed()
+    {
+        if(blockFallingSpeed < maxFallingSpeed)
+        {
+            blockFallingSpeed = minFallingSpeed;
+            blockFallingSpeed = minFallingSpeed * 100 + playerheight;
+            blockFallingSpeed /= 100;
+
+        }
     }
 
     //GUI
