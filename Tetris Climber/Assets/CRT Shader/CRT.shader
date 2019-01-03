@@ -73,7 +73,7 @@ Shader "PostEffects/CRT"
 				
 				// UV座標を再計算し、画面を歪ませる
 				
-				float vignet = length(uv);
+				float vignet = length(uv) * 0.5;
 				uv /= 1 - vignet * 0.1;
 				float2 texUV = uv + 0.5;
 				
