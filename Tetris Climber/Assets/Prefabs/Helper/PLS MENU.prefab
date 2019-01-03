@@ -190,5 +190,35 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 4072887477058544414}
+    - target: {fileID: 2140838231374858520, guid: 11eb196f42413934da1ac9e14e18a9b9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2140838231374858520, guid: 11eb196f42413934da1ac9e14e18a9b9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2140838231374858520, guid: 11eb196f42413934da1ac9e14e18a9b9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2140838231374858520, guid: 11eb196f42413934da1ac9e14e18a9b9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2140838231793811637, guid: 11eb196f42413934da1ac9e14e18a9b9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5153065670698144277, guid: 11eb196f42413934da1ac9e14e18a9b9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11eb196f42413934da1ac9e14e18a9b9, type: 3}
