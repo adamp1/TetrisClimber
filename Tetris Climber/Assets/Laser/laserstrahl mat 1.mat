@@ -76,7 +76,10 @@ Material:
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
-    - _emintensity: 16
+    - _emhigh: 16
+    - _emintensity: 8
+    - _node_7020: 1
+    - _speed: 20
     m_Colors:
     - _Color: {r: 0.5377358, g: 0.1157153, b: 0, a: 1}
     - _EmissionColor: {r: 2.0862746, g: 0.1254902, b: 0, a: 1}
