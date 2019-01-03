@@ -357,7 +357,7 @@ public class Game : MonoBehaviour {
             //Spawn Laser
             laserrot = Random.Range(0, 2);
 
-        if(laserrot == 0)
+            if(laserrot == 0)
             {
                 LaserRot = 0;
                 laserposx = -4;
@@ -365,10 +365,10 @@ public class Game : MonoBehaviour {
             else if(laserrot == 1)
             {
                 LaserRot = 0;
-                laserposx = -4;
+                laserposx = 16;
             } 
 
-           Instantiate(LaserPrefab, new Vector3(laserposx, blockageposY + 12.5f, 0), new Quaternion(0, 0, 0, 0));
+           Instantiate(LaserPrefab, new Vector3(laserposx, blockageposY + 12.5f, 0), new Quaternion(0, LaserRot, 0, 0));
 
         }
 

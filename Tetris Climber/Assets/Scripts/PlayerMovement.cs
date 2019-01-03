@@ -52,6 +52,7 @@ public class PlayerMovement : MonoBehaviour {
                     pos = new Vector3(pos.x + Input.GetAxis("Horizontal") * speedWhilejump * Time.deltaTime, pos.y, pos.z);
                     // pos = new Vector3(pos.x + Input.GetAxis("Horizontal") * speedWhilejump * Time.deltaTime, pos.y, pos.z);
                 }
+
             }
         }
 
@@ -87,7 +88,9 @@ public class PlayerMovement : MonoBehaviour {
 
             grounded = false;
 
-            Physics.gravity = new Vector3(0, -gravity, 0);          
+            Physics.gravity = new Vector3(0, -gravity, 0);
+
+            AkSoundEngine.PostEvent("Jump", gameObject);
 
         }
 
@@ -118,6 +121,15 @@ public class PlayerMovement : MonoBehaviour {
         else
         {
             allowMoveLeft = true;
+
+
+
+
+
+
+
+
+
         }
 
         
