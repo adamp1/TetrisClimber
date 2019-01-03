@@ -81,5 +81,5 @@ Material:
     - _node_7020: 1
     - _speed: 20
     m_Colors:
-    - _Color: {r: 0.5377358, g: 0.1157153, b: 0, a: 1}
+    - _Color: {r: 0.5372549, g: 0.29803717, b: 0, a: 1}
     - _EmissionColor: {r: 2.0862746, g: 0.1254902, b: 0, a: 1}
