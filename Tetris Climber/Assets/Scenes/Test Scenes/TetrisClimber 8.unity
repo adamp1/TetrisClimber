@@ -3307,8 +3307,8 @@ MonoBehaviour:
   shader: {fileID: 4800000, guid: 957f6f5660ec1ae41a3360e82c965c72, type: 3}
   minshake: 0.004
   maxshake: 0.01
-  shake: 0.004
-  noshake: 1
+  shake: 0.01
+  noshake: 0
 --- !u!1 &1170545594
 GameObject:
   m_ObjectHideFlags: 0
@@ -5492,7 +5492,7 @@ PrefabInstance:
     - target: {fileID: 6841671131779761950, guid: f1d261530576741458d658dcef8c37c9,
         type: 3}
       propertyPath: speed
-      value: 0.12
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 6841671131779761950, guid: f1d261530576741458d658dcef8c37c9,
         type: 3}
