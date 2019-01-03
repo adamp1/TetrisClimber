@@ -15,78 +15,122 @@ MonoBehaviour:
   AcousticTextureWwu:
   - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
     ParentPhysicalPath: 
-    guid: 26bbdd7b48ff6b48bd1e17b252f45066
-    m_lastTime: -8586581168654775808
+    guid: 78bb5febc9cc7d43988f0ae121a93d32
+    m_lastTime: -8586551599354775808
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
-    guid: 6b66c0df2617c94a8a07608a24355240
-    m_lastTime: -8586581168654775808
+    guid: c7b0d559d5cb444cafdbac8e703bac41
+    m_lastTime: -8586551599394775808
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
-    guid: c89804036e005b4689d4dd3cd9a0b617
-    m_lastTime: -8586581168654775808
-    List: []
-  EventWwu:
-  - PhysicalPath: Events\Default Work Unit.wwu
-    ParentPhysicalPath: 
-    guid: 396711d218ddd94ca334a012b7bdf0e8
-    m_lastTime: -8586581164014775808
+    guid: 6e0b53c5edb45d409049cd6f25ff12ce
+    m_lastTime: -8586551066114775808
     List:
-    - name: Death
-      guid: 5a089b3ea296c24e9a41d7899f0a915a
-      id: 779278001
+    - name: SoundBank
+      guid: 4b8e74b6ce355646950207c03462dd54
+      id: 1661994096
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Death
+      - ElementName: SoundBank
+        ObjectType: 7
+      Path: Default Work Unit\SoundBank
+  EventWwu:
+  - PhysicalPath: Events\BGM_Events.wwu
+    ParentPhysicalPath: Events\Default Work Unit.wwu
+    guid: ee5b2487c8373648b254b5c8d574b3a6
+    m_lastTime: -8586551552214775808
+    List:
+    - name: Play_BGM
+      guid: d46be821d18122429a3385efcffe5328
+      id: 3126765036
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: BGM_Events
+        ObjectType: 12
+      - ElementName: Play_BGM
         ObjectType: 3
-      Path: Default Work Unit\Death
+      Path: Default Work Unit\BGM_Events\Play_BGM
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Stop_BGM
+      guid: 266838b1b6e0b944a9f4e0f9dd41011c
+      id: 1073466678
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: BGM_Events
+        ObjectType: 12
+      - ElementName: Stop_BGM
+        ObjectType: 3
+      Path: Default Work Unit\BGM_Events\Stop_BGM
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+  - PhysicalPath: Events\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 03a87bd2e8187044b561d12f974b5065
+    m_lastTime: -8586551066114775808
+    List: []
+  - PhysicalPath: Events\SoundFX.wwu
+    ParentPhysicalPath: Events\Default Work Unit.wwu
+    guid: 3edc4fd5b3cc83478f33141f6589d675
+    m_lastTime: -8586551066114775808
+    List:
     - name: Jump
-      guid: 5f72bf2a61d15e498d999d6eff701289
+      guid: 3cbf69185e9b174cba5fa0a05e6faf65
       id: 3833651337
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
+      - ElementName: SoundFX
+        ObjectType: 12
       - ElementName: Jump
         ObjectType: 3
-      Path: Default Work Unit\Jump
+      Path: Default Work Unit\SoundFX\Jump
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
-    guid: 910a0d3b02990248a55a03984f9af543
-    m_lastTime: -8586581168654775808
-    List: []
+    guid: 37a3588abcb24e408cccada5157ef448
+    m_lastTime: -8586550978154775808
+    List:
+    - name: Danger
+      guid: 2bf3444a66cb9646b8b7c5b140dead69
+      id: 4174463524
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Danger
+        ObjectType: 13
+      Path: Default Work Unit\Danger
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
-    guid: 0212cbcf357a3d4a92ef664711ba54c4
-    m_lastTime: -8586581168654775808
+    guid: 9c8d81d77d8e184eb562c23135cdef4f
+    m_lastTime: -8586551599374775808
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
-    guid: 2f5673ee1bab42409c519121a9aed23c
-    m_lastTime: -8586581168654775808
+    guid: cc578b8dea049e42928a5021bda7241e
+    m_lastTime: -8586551599394775808
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
-    guid: af44e5ce7f6c3d40a1d3eb8e9dbc7cfb
-    m_lastTime: -8586581168654775808
+    guid: d91cd1cdc73be344bb10dc0ce6082420
+    m_lastTime: -8586551599374775808
     List: []
   ExpandedItems:
   - /TetrisClimber
-  - /TetrisClimber/Events
-  - /TetrisClimber/Events/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

@@ -11,6 +11,7 @@ public class SwordTrigger : MonoBehaviour
     }
 
     // Update is called once per frame
+
     void Update()
     {
         

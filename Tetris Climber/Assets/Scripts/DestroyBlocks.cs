@@ -19,6 +19,7 @@ public class DestroyBlocks : MonoBehaviour
     bool inisiateSlice;
     bool sliceEnergy;
 
+
     Vector3 SwordPos;
 
     // Start is called before the first frame update

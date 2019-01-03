@@ -19,6 +19,10 @@ public class Game : MonoBehaviour {
     float blockageposY = 0;
     float blockageAbstand = 0;
 
+    float laserposy;
+    float laserposx;
+    int LaserRot;
+
     float BlockageDistanceMin = 25;
     float BlockageDistanceMax = 25;
     public float BlockageWidthMin = 3.3f;
@@ -34,6 +38,7 @@ public class Game : MonoBehaviour {
 
     public GameObject[] TetrisPrefab = new GameObject[6];
     public GameObject BlockagePrefab;
+    public GameObject LaserPrefab;
     GameObject[] BlockageObject = new GameObject[30];
 
 
@@ -46,6 +51,8 @@ public class Game : MonoBehaviour {
     bool rayInitializing;
 
     int spawnBlocksLeftOrRight;
+
+
 
     public GameObject GameOverUI;
     GameObject Player;
@@ -323,20 +330,9 @@ public class Game : MonoBehaviour {
             blockageAbstand = Random.Range(BlockageDistanceMin, BlockageDistanceMax);
 
             int rot = 0;
+            int laserrot = 0;
             float blockageWidth = 0;            
 
-        /*    if (blockagePosX == 0)
-            {
-                rot = 0;
-                blockageWidth = Random.Range(BlockageWidthMin, BlockageWidthMax);
-                blockageposX = -10;
-            }
-            else if (blockagePosX == 1)
-            {
-                rot = 180;
-                blockageWidth = Random.Range(BlockageWidthMin, BlockageWidthMax);
-                blockageposX = 23;
-            }*/
 
             if (blockagePosX % 2 == 0)
             {
@@ -358,10 +354,26 @@ public class Game : MonoBehaviour {
 
             BlockageObject[i] = GameObject.Find("Blockage " + i);
 
+            //Spawn Laser
+            laserrot = Random.Range(0, 2);
+
+        if(laserrot == 0)
+            {
+                LaserRot = 0;
+                laserposx = -4;
+            }
+            else if(laserrot == 1)
+            {
+                LaserRot = 0;
+                laserposx = -4;
+            } 
+
+           Instantiate(LaserPrefab, new Vector3(laserposx, blockageposY + 12.5f, 0), new Quaternion(0, 0, 0, 0));
 
         }
 
     }
+
 
     void CheckBlockagePosition()
     {
