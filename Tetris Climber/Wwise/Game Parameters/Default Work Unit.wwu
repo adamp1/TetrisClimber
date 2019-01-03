@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{8A58A337-B2BC-404E-8CCC-ADA5157EF448}" SchemaVersion="89">
+	<GameParameters>
+		<WorkUnit Name="Default Work Unit" ID="{8A58A337-B2BC-404E-8CCC-ADA5157EF448}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="Danger" ID="{4A44F32B-CB66-4696-B8B7-C5B140DEAD69}"/>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>

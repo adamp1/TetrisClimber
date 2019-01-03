@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{D27BA803-18E8-4470-B561-D12F974B5065}" SchemaVersion="89">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{D27BA803-18E8-4470-B561-D12F974B5065}" PersistMode="Standalone">
+			<ChildrenList>
+				<WorkUnit Name="BGM_Events" ID="{87245BEE-37C8-4836-B254-B5C8D574B3A6}" PersistMode="Reference"/>
+				<WorkUnit Name="SoundFX" ID="{D54FDC3E-CCB3-4783-8F33-141F6589D675}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
