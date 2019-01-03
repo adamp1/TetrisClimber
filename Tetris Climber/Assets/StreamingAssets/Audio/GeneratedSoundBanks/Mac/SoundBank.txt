@@ -1,0 +1,13 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1073466678	Stop_BGM			\Default Work Unit\BGM_Events\Stop_BGM	
+	3126765036	Play_BGM			\Default Work Unit\BGM_Events\Play_BGM	
+	3833651337	Jump			\Default Work Unit\SoundFX\Jump	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	80948791	SFX_Squished_001	Y:\Documents\Projekte\TetrisClimber\Game\Tetris Climber\Wwise\.cache\Mac\SFX\SFX_Squished_001_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SoundFX\SFX_Squished_001		445504
+	536386900	Game_v2_2	Y:\Documents\Projekte\TetrisClimber\Game\Tetris Climber\Wwise\.cache\Mac\SFX\Game_v2.2_8956FC97.wem		\Interactive Music Hierarchy\BackgroundMusic\BackgroundMusic\Game_v2_2\Game_v2_2		22579264
+	591934371	Game_v2_1	Y:\Documents\Projekte\TetrisClimber\Game\Tetris Climber\Wwise\.cache\Mac\SFX\Game_v2.1_8956FC97.wem		\Interactive Music Hierarchy\BackgroundMusic\BackgroundMusic\Game_v2_1\Game_v2_1		22579264
+	706580612	SFX_Menu_ButtonSwitching_001	Y:\Documents\Projekte\TetrisClimber\Game\Tetris Climber\Wwise\.cache\Mac\SFX\SFX_Menu_ButtonSwitching_001_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SoundFX\SFX_Menu_ButtonSwitching_001		17088
+	796183027	SFX_Jump_001	Y:\Documents\Projekte\TetrisClimber\Game\Tetris Climber\Wwise\.cache\Mac\SFX\SFX_Jump_001_2F81BB45.wem		\Actor-Mixer Hierarchy\Default Work Unit\SoundFX\SFX_Jump_001		57744
+	872705618	SFX_Menu_SelectOption_001	Y:\Documents\Projekte\TetrisClimber\Game\Tetris Climber\Wwise\.cache\Mac\SFX\SFX_Menu_SelectOption_001_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SoundFX\SFX_Menu_SelectOption_001		90024
+

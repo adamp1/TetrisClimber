@@ -37,7 +37,7 @@
 											<Language>SFX</Language>
 											<AudioFile>Game_v2.1.wav</AudioFile>
 											<ConvertedFileIDList>
-												<File ID="1016645903"/>
+												<File Platform="Windows" ID="1016645903"/>
 											</ConvertedFileIDList>
 										</AudioFileSource>
 									</ChildrenList>

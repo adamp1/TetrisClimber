@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="132">
 	<RootPaths>
-		<ProjectRoot>/Users/benjaminfeder/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Desktop/Wwise/</ProjectRoot>
-		<SourceFilesRoot>/Users/benjaminfeder/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Desktop/Wwise/.cache/Windows/</SourceFilesRoot>
-		<SoundBanksRoot>/Users/benjaminfeder/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Desktop/Wwise/GeneratedSoundBanks/Windows/</SoundBanksRoot>
+		<ProjectRoot>/Users/benjaminfeder/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Documents/Projekte/TetrisClimber/Game/Tetris Climber/Wwise/</ProjectRoot>
+		<SourceFilesRoot>/Users/benjaminfeder/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Documents/Projekte/TetrisClimber/Game/Tetris Climber/Wwise/.cache/Windows/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/benjaminfeder/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Documents/Projekte/TetrisClimber/Game/Tetris Climber/Wwise/GeneratedSoundBanks/Windows/</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>/Users/benjaminfeder/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Desktop/Wwise/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>/Users/benjaminfeder/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Documents/Projekte/TetrisClimber/Game/Tetris Climber/Wwise/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
