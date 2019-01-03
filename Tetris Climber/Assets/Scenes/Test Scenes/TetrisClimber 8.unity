@@ -3080,6 +3080,7 @@ GameObject:
   - component: {fileID: 1162454243}
   - component: {fileID: 1162454244}
   - component: {fileID: 1162454245}
+  - component: {fileID: 1162454246}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3309,6 +3310,27 @@ MonoBehaviour:
   maxshake: 0.01
   shake: 0.01
   noshake: 0
+--- !u!114 &1162454246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162454234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ba4473b579c9c349886505f065a1d9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 4eb9cd56672ebc14f86b846a32b3180b, type: 2}
+  noiseX: 0
+  rgbNoise: 0
+  sinNoiseScale: 0
+  sinNoiseWidth: 0
+  sinNoiseOffset: 0
+  offset: {x: 0, y: 0}
+  scanLineTail: 2
+  scanLineSpeed: 10
 --- !u!1 &1170545594
 GameObject:
   m_ObjectHideFlags: 0
@@ -5785,5 +5807,15 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 8823170582764013469, guid: 2e2911b1546ab3943b78fccf1df25fe3,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8823170582764013469, guid: 2e2911b1546ab3943b78fccf1df25fe3,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1162454237}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e2911b1546ab3943b78fccf1df25fe3, type: 3}

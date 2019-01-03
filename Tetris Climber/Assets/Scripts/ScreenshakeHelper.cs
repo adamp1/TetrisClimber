@@ -13,6 +13,7 @@ public class ScreenshakeHelper : ImageEffectBase
     public bool noshake = true;
     Game game;
     float dangerdistance;
+    float startdistance = 4;
     void Awake()
     {
         game = GameObject.FindObjectOfType<Game>();
@@ -24,9 +25,9 @@ public class ScreenshakeHelper : ImageEffectBase
 
 
 
-        shake = Mathf.Lerp(minshake, maxshake, 1-(dangerdistance/3));
+        shake = Mathf.Lerp(minshake, maxshake, 1-(dangerdistance/startdistance));
 
-        if (dangerdistance < 3){
+        if (dangerdistance < startdistance){
             noshake = false;
         }
         else{
