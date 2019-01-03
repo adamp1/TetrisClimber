@@ -4,39 +4,81 @@ using UnityEngine;
 
 public class MinoPhysics : MonoBehaviour
 {
+    Material material;
+
     bool BlockUnderBlock;
-    public bool MoveMinoDown;
+    bool MoveMinoDown;
+
+    float speed = 8;
+    float offset = 0f;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        material = GetComponent<MeshRenderer>().material;
+
+        //offset = transform.position.x * 0.1f;
+    }
+
+    IEnumerator boom()
+    {
+        float t = 0;
+
+        yield return new WaitForSeconds(offset);
+
+        while (t <= 1)
+        {
+            material.SetFloat("_boom", Mathf.Lerp(0, 1, t));
+            yield return null;
+            print(Time.time + " in boom");
+
+            t += Time.deltaTime * speed;
+        }
+
+        material.SetFloat("_boom", 0);
+        GetComponent<MeshRenderer>().enabled = false;
+        Destroy(gameObject);
+        //material.SetFloat("_emintensity", 1000);
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 pos = transform.position;
+        //DestroyBlock = GameObject.Find("Player")
 
-        //Ray
-        RaycastHit hit;
-        Ray CheckUnderBlock = new Ray(new Vector3(pos.x, pos.y, pos.z), Vector3.down);
-        Debug.DrawRay(new Vector3(pos.x, pos.y, pos.z), Vector3.down);
+        /*   Vector3 pos = transform.position;
 
-
-        if (Physics.Raycast(CheckUnderBlock, out hit, 0.9f))
-        {
-            if (hit.transform.tag == "Mino" && gameObject.GetComponentInParent<BlockMovement>().enabled == false)
-            {
-                BlockUnderBlock = true;
-            }
-
-        }
+           //Ray
+           RaycastHit hit;
+           Ray CheckUnderBlock = new Ray(new Vector3(pos.x, pos.y, pos.z), Vector3.down);
+           Debug.DrawRay(new Vector3(pos.x, pos.y, pos.z), Vector3.down);
 
 
-        if(!BlockUnderBlock && gameObject.GetComponentInParent<BlockMovement>().enabled == false)
-        {
-            
-        }
+           if (Physics.Raycast(CheckUnderBlock, out hit, 0.9f))
+           {
+               if (hit.transform.tag == "Mino" && gameObject.GetComponentInParent<BlockMovement>().enabled == false)
+               {
+                   BlockUnderBlock = true;
+               }
+
+           }
+
+
+           if(!BlockUnderBlock && gameObject.GetComponentInParent<BlockMovement>().enabled == false)
+           {
+
+           }*/
+
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+
+        if (other.gameObject.tag == "Sword")
+        {
+            StartCoroutine(boom());
+        }
+
+    }
+
 }
