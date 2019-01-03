@@ -72,51 +72,72 @@ Shader "PostEffects/CRT"
 				float2 uv = i.uv - 0.5;
 				
 				// UV座標を再計算し、画面を歪ませる
+				
 				float vignet = length(uv);
-				uv /= 1 - vignet * 0.2;
+				uv /= 1 - vignet * 0.1;
 				float2 texUV = uv + 0.5;
+				
 
 				// 画面外なら描画しない
+				
 				if (max(abs(uv.y) - 0.5, abs(uv.x) - 0.5) > 0)
 				{
 					return float4(0, 0, 0, 1);
 				}
+				
 
 				// 色を計算
 				float3 col;
 
 				// ノイズ、オフセットを適用
+				
 				texUV.x += sin(texUV.y * _SinNoiseWidth + _SinNoiseOffset) * _SinNoiseScale;
 				texUV += _Offset;
 				texUV.x += (rand(floor(texUV.y * 500) + _Time.y) - 0.5) * _NoiseX;
 				texUV = mod(texUV, 1);
+				
+				
 
 				// 色を取得、RGBを少しずつずらす
+				
 				col.r = tex2D(_MainTex, texUV).r;
 				col.g = tex2D(_MainTex, texUV - float2(0.002, 0)).g;
 				col.b = tex2D(_MainTex, texUV - float2(0.004, 0)).b;
+				
+				
 
 				// RGBノイズ
+				
 				if (rand((rand(floor(texUV.y * 500) + _Time.y) - 0.5) + _Time.y) < _RGBNoise)
 				{
 					col.r = rand(uv + float2(123 + _Time.y, 0));
 					col.g = rand(uv + float2(123 + _Time.y, 1));
 					col.b = rand(uv + float2(123 + _Time.y, 2));
 				}
+				
+				
 
 				// ピクセルごとに描画するRGBを決める
+				
 				float floorX = fmod(inUV.x * _ScreenParams.x / 3, 1);
 				col.r *= floorX > 0.3333;
 				col.g *= floorX < 0.3333 || floorX > 0.6666;
 				col.b *= floorX < 0.6666;
+				
+				
+				
 
 				// スキャンラインを描画
+				
 				float scanLineColor = sin(_Time.y * 10 + uv.y * 500) / 2 + 0.5;
 				col *= 0.5 + clamp(scanLineColor + 0.5, 0, 1) * 0.5;
+				
 
 				// スキャンラインの残像を描画
+				
 				float tail = clamp((frac(uv.y + _Time.y * _ScanLineSpeed) - 1 + _ScanLineTail) / min(_ScanLineTail, 1), 0, 1);
 				col *= tail;
+				
 
 				// 画面端を暗くする
 				col *= 1 - vignet * 1.3;
