@@ -28,7 +28,12 @@ public class Laser : MonoBehaviour
             if (hit.collider)
             {
                lr.SetPosition(1, new Vector3(hit.point.x + 4, 0, 0));
-                Debug.Log("HIT");
+
+                if(hit.collider.tag == "Player")
+                {
+                    Destroy(hit.collider.gameObject);
+                }
+
             }
             else
             {
