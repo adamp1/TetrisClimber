@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a6402cce065264489f58c1e733ae195, type: 3}
-  m_Name: 3E9B085A-96A2-4EC2-9A41-D7899F0A915A
+  m_Name: B1386826-E0B6-44B9-A9F4-E0F9DD41011C
   m_EditorClassIdentifier: 
-  objectName: Death
-  id: 779278001
-  guid: 3E9B085A-96A2-4EC2-9A41-D7899F0A915A
+  objectName: Stop_BGM
+  id: 1073466678
+  guid: B1386826-E0B6-44B9-A9F4-E0F9DD41011C

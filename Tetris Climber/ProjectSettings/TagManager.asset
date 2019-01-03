@@ -9,6 +9,7 @@ TagManager:
   - Mino
   - DeathTrigger
   - Blockage
+  - Sword
   layers:
   - Default
   - TransparentFX

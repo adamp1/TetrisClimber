@@ -37,7 +37,6 @@ public class TetrisBoomTest : MonoBehaviour
         //material.SetFloat("_emintensity", 1000);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
@@ -46,8 +45,10 @@ public class TetrisBoomTest : MonoBehaviour
             StartCoroutine(boom());
         }
 
-        if(Input.GetKeyDown(KeyCode.LeftControl)){
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
             GetComponent<MeshRenderer>().enabled = true;
         }
     }
+
 }
