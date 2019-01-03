@@ -55,8 +55,7 @@ Shader "Shader Forge/Screenshake" {
 ////// Emissive:
                 float4 node_3757 = _Time;
                 float node_4454 = (node_3757.g*10.0);
-                float node_6916 = (frac((sin(node_4454)*100.0))*_shakeintensity);
-                float2 node_3385 = ((i.uv0*1.0)+float2((frac((sin(node_4454)*1000.0))*_shakeintensity),node_6916));
+                float2 node_3385 = ((i.uv0*1.0)+float2((frac((sin(node_4454)*1000.0))*_shakeintensity),(frac((sin(node_4454)*100.0))*_shakeintensity)));
                 float4 node_1672 = tex2D(_MainTex,TRANSFORM_TEX(node_3385, _MainTex));
                 float3 emissive = node_1672.rgb;
                 float3 finalColor = emissive;
