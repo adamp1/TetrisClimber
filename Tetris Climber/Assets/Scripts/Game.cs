@@ -23,8 +23,9 @@ public class Game : MonoBehaviour {
     float laserposx;
     int LaserRot;
 
-    float BlockageDistanceMin = 25;
-    float BlockageDistanceMax = 25;
+    public float FirstBlockage = 0;
+    public float BlockageDistanceMin = 25;
+    public float BlockageDistanceMax = 25;
     public float BlockageWidthMin = 3.3f;
     public float BlockageWidthMax = 4.3f;
 
@@ -350,7 +351,8 @@ public class Game : MonoBehaviour {
 
             BlockagePrefab.transform.localScale = new Vector3(blockageWidth, 2, 8.37f);
 
-            Instantiate(BlockagePrefab, new Vector3(blockageposX, blockageposY += blockageAbstand, -0.4f), new Quaternion(0, rot, 0, 0)).name = "Blockage " + i;
+            Instantiate(BlockagePrefab, new Vector3(blockageposX, blockageposY += blockageAbstand + FirstBlockage, -0.4f), new Quaternion(0, rot, 0, 0)).name = "Blockage " + i;
+            FirstBlockage = 0;
 
             BlockageObject[i] = GameObject.Find("Blockage " + i);
 
@@ -368,7 +370,7 @@ public class Game : MonoBehaviour {
                 laserposx = 16;
             } 
 
-           Instantiate(LaserPrefab, new Vector3(laserposx, blockageposY + 12.5f, 0), new Quaternion(0, LaserRot, 0, 0));
+           Instantiate(LaserPrefab, new Vector3(laserposx, blockageposY + blockageAbstand / 2, 0), new Quaternion(0, LaserRot, 0, 0));
 
         }
 
