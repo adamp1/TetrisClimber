@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationCache Version="1" SchemaVersion="89">
+	<ValidationCacheItem File="Y:\Desktop\TetrisClimber\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1546500275" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\TetrisClimber\Actor-Mixer Hierarchy\SoundFX.wwu" DateLow="1546500275" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\TetrisClimber\Attenuations\Default Work Unit.wwu" DateLow="1546446949" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\TetrisClimber\Audio Devices\Default Work Unit.wwu" DateLow="1546446950" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\TetrisClimber\Control Surface Sessions\Default Work Unit.wwu" DateLow="1546446950" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\TetrisClimber\Conversion Settings\Default Work Unit.wwu" DateLow="1546446950" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\TetrisClimber\Conversion Settings\Factory Conversion Settings.wwu" DateLow="1546446952" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\TetrisClimber\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1546446950" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\TetrisClimber\Effects\Default Work Unit.wwu" DateLow="1546446948" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\TetrisClimber\Effects\Factory Effects.wwu" DateLow="1546446951" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\TetrisClimber\Events\BGM_Events.wwu" DateLow="1546451665" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\TetrisClimber\Events\Default Work Unit.wwu" DateLow="1546500275" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\TetrisClimber\Events\SoundFX.wwu" DateLow="1546500275" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\TetrisClimber\Game Parameters\Default Work Unit.wwu" DateLow="1546446948" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\TetrisClimber\Interactive Music Hierarchy\BackgroundMusic.wwu" DateLow="1546451841" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\TetrisClimber\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1546451665" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\TetrisClimber\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1546446947" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\TetrisClimber\Mixing Sessions\Default Work Unit.wwu" DateLow="1546446950" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\TetrisClimber\Modulators\Default Work Unit.wwu" DateLow="1546446950" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\TetrisClimber\Presets\Default Work Unit.wwu" DateLow="1546446949" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\TetrisClimber\Queries\Default Work Unit.wwu" DateLow="1546446949" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\TetrisClimber\Queries\Factory Queries.wwu" DateLow="1546446952" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\TetrisClimber\SoundBanks\Default Work Unit.wwu" DateLow="1546500275" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\TetrisClimber\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1546446949" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\TetrisClimber\States\Default Work Unit.wwu" DateLow="1546446948" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\TetrisClimber\Switches\Default Work Unit.wwu" DateLow="1546446947" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\TetrisClimber\TetrisClimber.crossover.wsettings" DateLow="1546500390" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\TetrisClimber\TetrisClimber.wproj" DateLow="1546446947" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\TetrisClimber\Triggers\Default Work Unit.wwu" DateLow="1546446949" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\TetrisClimber\Virtual Acoustics\Default Work Unit.wwu" DateLow="1546446950" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\Wwise\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1546500275" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\Wwise\Actor-Mixer Hierarchy\SoundFX.wwu" DateLow="1546509071" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\Wwise\Attenuations\Default Work Unit.wwu" DateLow="1546446949" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\Wwise\Audio Devices\Default Work Unit.wwu" DateLow="1546446950" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\Wwise\Control Surface Sessions\Default Work Unit.wwu" DateLow="1546446950" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\Wwise\Conversion Settings\Default Work Unit.wwu" DateLow="1546446950" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\Wwise\Conversion Settings\Factory Conversion Settings.wwu" DateLow="1546446952" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\Wwise\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1546446950" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\Wwise\Effects\Default Work Unit.wwu" DateLow="1546446948" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\Wwise\Effects\Factory Effects.wwu" DateLow="1546446951" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\Wwise\Events\BGM_Events.wwu" DateLow="1546451665" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\Wwise\Events\Default Work Unit.wwu" DateLow="1546500275" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\Wwise\Events\SoundFX.wwu" DateLow="1546500275" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\Wwise\Game Parameters\Default Work Unit.wwu" DateLow="1546509071" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\Wwise\Interactive Music Hierarchy\BackgroundMusic.wwu" DateLow="1546509071" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\Wwise\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1546451665" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\Wwise\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1546446947" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\Wwise\Mixing Sessions\Default Work Unit.wwu" DateLow="1546446950" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\Wwise\Modulators\Default Work Unit.wwu" DateLow="1546446950" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\Wwise\Presets\Default Work Unit.wwu" DateLow="1546446949" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\Wwise\Queries\Default Work Unit.wwu" DateLow="1546446949" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\Wwise\Queries\Factory Queries.wwu" DateLow="1546446952" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\Wwise\SoundBanks\Default Work Unit.wwu" DateLow="1546500275" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\Wwise\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1546446949" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\Wwise\States\Default Work Unit.wwu" DateLow="1546446948" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\Wwise\Switches\Default Work Unit.wwu" DateLow="1546446947" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\Wwise\TetrisClimber.crossover.wsettings" DateLow="1546509071" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\Wwise\TetrisClimber.wproj" DateLow="1546446947" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\Wwise\Triggers\Default Work Unit.wwu" DateLow="1546446949" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\Wwise\Virtual Acoustics\Default Work Unit.wwu" DateLow="1546446950" DateHigh="0"/>
+	<ValidationCacheItem File="Z:\Volumes\Public\Benny\Projekte\TetrisClimber\Wwise\TetrisClimber\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1546446947" DateHigh="0"/>
+	<ValidationCacheItem File="Z:\Volumes\Public\Benny\Projekte\TetrisClimber\Wwise\TetrisClimber\Attenuations\Default Work Unit.wwu" DateLow="1546446949" DateHigh="0"/>
+	<ValidationCacheItem File="Z:\Volumes\Public\Benny\Projekte\TetrisClimber\Wwise\TetrisClimber\Audio Devices\Default Work Unit.wwu" DateLow="1546446950" DateHigh="0"/>
+	<ValidationCacheItem File="Z:\Volumes\Public\Benny\Projekte\TetrisClimber\Wwise\TetrisClimber\Control Surface Sessions\Default Work Unit.wwu" DateLow="1546446950" DateHigh="0"/>
+	<ValidationCacheItem File="Z:\Volumes\Public\Benny\Projekte\TetrisClimber\Wwise\TetrisClimber\Conversion Settings\Default Work Unit.wwu" DateLow="1546446950" DateHigh="0"/>
+	<ValidationCacheItem File="Z:\Volumes\Public\Benny\Projekte\TetrisClimber\Wwise\TetrisClimber\Conversion Settings\Factory Conversion Settings.wwu" DateLow="1546446952" DateHigh="0"/>
+	<ValidationCacheItem File="Z:\Volumes\Public\Benny\Projekte\TetrisClimber\Wwise\TetrisClimber\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1546446950" DateHigh="0"/>
+	<ValidationCacheItem File="Z:\Volumes\Public\Benny\Projekte\TetrisClimber\Wwise\TetrisClimber\Effects\Default Work Unit.wwu" DateLow="1546446948" DateHigh="0"/>
+	<ValidationCacheItem File="Z:\Volumes\Public\Benny\Projekte\TetrisClimber\Wwise\TetrisClimber\Effects\Factory Effects.wwu" DateLow="1546446951" DateHigh="0"/>
+	<ValidationCacheItem File="Z:\Volumes\Public\Benny\Projekte\TetrisClimber\Wwise\TetrisClimber\Events\Default Work Unit.wwu" DateLow="1546446947" DateHigh="0"/>
+	<ValidationCacheItem File="Z:\Volumes\Public\Benny\Projekte\TetrisClimber\Wwise\TetrisClimber\Game Parameters\Default Work Unit.wwu" DateLow="1546446948" DateHigh="0"/>
+	<ValidationCacheItem File="Z:\Volumes\Public\Benny\Projekte\TetrisClimber\Wwise\TetrisClimber\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1546446949" DateHigh="0"/>
+	<ValidationCacheItem File="Z:\Volumes\Public\Benny\Projekte\TetrisClimber\Wwise\TetrisClimber\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1546446947" DateHigh="0"/>
+	<ValidationCacheItem File="Z:\Volumes\Public\Benny\Projekte\TetrisClimber\Wwise\TetrisClimber\Mixing Sessions\Default Work Unit.wwu" DateLow="1546446950" DateHigh="0"/>
+	<ValidationCacheItem File="Z:\Volumes\Public\Benny\Projekte\TetrisClimber\Wwise\TetrisClimber\Modulators\Default Work Unit.wwu" DateLow="1546446950" DateHigh="0"/>
+	<ValidationCacheItem File="Z:\Volumes\Public\Benny\Projekte\TetrisClimber\Wwise\TetrisClimber\Presets\Default Work Unit.wwu" DateLow="1546446949" DateHigh="0"/>
+	<ValidationCacheItem File="Z:\Volumes\Public\Benny\Projekte\TetrisClimber\Wwise\TetrisClimber\Queries\Default Work Unit.wwu" DateLow="1546446949" DateHigh="0"/>
+	<ValidationCacheItem File="Z:\Volumes\Public\Benny\Projekte\TetrisClimber\Wwise\TetrisClimber\Queries\Factory Queries.wwu" DateLow="1546446952" DateHigh="0"/>
+	<ValidationCacheItem File="Z:\Volumes\Public\Benny\Projekte\TetrisClimber\Wwise\TetrisClimber\SoundBanks\Default Work Unit.wwu" DateLow="1546446948" DateHigh="0"/>
+	<ValidationCacheItem File="Z:\Volumes\Public\Benny\Projekte\TetrisClimber\Wwise\TetrisClimber\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1546446949" DateHigh="0"/>
+	<ValidationCacheItem File="Z:\Volumes\Public\Benny\Projekte\TetrisClimber\Wwise\TetrisClimber\States\Default Work Unit.wwu" DateLow="1546446948" DateHigh="0"/>
+	<ValidationCacheItem File="Z:\Volumes\Public\Benny\Projekte\TetrisClimber\Wwise\TetrisClimber\Switches\Default Work Unit.wwu" DateLow="1546446947" DateHigh="0"/>
+	<ValidationCacheItem File="Z:\Volumes\Public\Benny\Projekte\TetrisClimber\Wwise\TetrisClimber\TetrisClimber.wproj" DateLow="1546446947" DateHigh="0"/>
+	<ValidationCacheItem File="Z:\Volumes\Public\Benny\Projekte\TetrisClimber\Wwise\TetrisClimber\Triggers\Default Work Unit.wwu" DateLow="1546446949" DateHigh="0"/>
+	<ValidationCacheItem File="Z:\Volumes\Public\Benny\Projekte\TetrisClimber\Wwise\TetrisClimber\Virtual Acoustics\Default Work Unit.wwu" DateLow="1546446950" DateHigh="0"/>
+</ValidationCache>

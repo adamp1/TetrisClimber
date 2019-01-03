@@ -1,0 +1,7 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1073466678	Stop_BGM			\Default Work Unit\BGM_Events\Stop_BGM	
+	3126765036	Play_BGM			\Default Work Unit\BGM_Events\Play_BGM	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	1016645903	Game_v2_1	Z:\Volumes\Public\Benny\Projekte\TetrisClimber\Wwise\TetrisClimber\.cache\Windows\SFX\Game_v2.1_8956FC97.wem		\Interactive Music Hierarchy\BackgroundMusic\BackgroundMusic\Game_v2_1\Game_v2_1		22579264
+
