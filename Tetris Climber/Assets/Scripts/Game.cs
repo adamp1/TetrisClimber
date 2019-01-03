@@ -108,6 +108,7 @@ public class Game : MonoBehaviour {
             PlayerHeight();
             DistanceToDanger();
             PauseGame();
+
         }
         else
         {
@@ -142,6 +143,34 @@ public class Game : MonoBehaviour {
             }
         }
     }
+
+    //Blockage Grid
+  /*  void UpdateGridBlockage()
+    {
+        for (int y = 0; y < gridHeight; y++)
+        {
+            for (int x = 0; x < gridWidth; x++)
+            {
+                if (grid[x, y] != null)
+                {
+                    if (grid[x, y].parent == BlockageObject[1].transform)
+                    {
+                        grid[x, y] = null;
+                    }
+                }
+            }
+        }
+
+        foreach (Transform mino in BlockageObject[1].transform)
+        {
+            Vector3 pos = Round(mino.position);
+
+            if (pos.y < gridHeight)
+            {
+                grid[(int)pos.x, (int)pos.y] = mino;
+            }
+        }
+    }*/
 
     public Transform GetTransformAtGridPosition(Vector3 pos) {
 
@@ -371,9 +400,7 @@ public class Game : MonoBehaviour {
             } 
 
            Instantiate(LaserPrefab, new Vector3(laserposx, blockageposY + blockageAbstand / 2, 0), new Quaternion(0, LaserRot, 0, 0));
-
         }
-
     }
 
 
