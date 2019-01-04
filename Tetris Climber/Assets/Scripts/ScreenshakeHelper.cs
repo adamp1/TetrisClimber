@@ -9,9 +9,11 @@ public class ScreenshakeHelper : ImageEffectBase
 {
     public float minshake = 0.004f;
     public float maxshake = 0.01f;
-    public float shake;
+    public float shake = 0;
     public bool noshake = true;
     Game game;
+    float dangerdistance;
+    float startdistance = 4;
     void Awake()
     {
         game = GameObject.FindObjectOfType<Game>();
@@ -19,7 +21,18 @@ public class ScreenshakeHelper : ImageEffectBase
     // Called by camera to apply image effect
     void OnRenderImage(RenderTexture source, RenderTexture destination)
     {
-        shake = Mathf.Lerp(minshake, maxshake, 0);
+        dangerdistance = game.distancetodanger;
+
+
+
+        shake = Mathf.Lerp(minshake, maxshake, 1-(dangerdistance/startdistance));
+
+        if (dangerdistance < startdistance){
+            noshake = false;
+        }
+        else{
+            noshake = true;
+        }
 
         if (!noshake)
         {

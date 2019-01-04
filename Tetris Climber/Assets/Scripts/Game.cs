@@ -23,14 +23,18 @@ public class Game : MonoBehaviour {
     float laserposx;
     int LaserRot;
 
-    float BlockageDistanceMin = 25;
-    float BlockageDistanceMax = 25;
+    public float FirstBlockage = 0;
+    public float BlockageDistanceMin = 25;
+    public float BlockageDistanceMax = 25;
     public float BlockageWidthMin = 3.3f;
     public float BlockageWidthMax = 4.3f;
 
     public float distancetodanger;
-    public float blockFallingSpeed;
 
+    public float blockFallingSpeed;
+    public float minFallingSpeed;
+    public float maxFallingSpeed;
+   
     public static int gridWidth = 14;
     public static int gridHeight = 500;
 
@@ -64,8 +68,6 @@ public class Game : MonoBehaviour {
 
     void Awake()
     {
-        Soundtrack = GetComponent<AudioSource>();
-        Soundtrack.Play();
 
 
         blockagePosX = Random.Range(0, 2);
@@ -76,6 +78,7 @@ public class Game : MonoBehaviour {
     //Start
     void Start()
     {
+
 
         Player = GameObject.Find("Player");
         Deathcollider = GameObject.Find("Death Collider");
@@ -107,6 +110,7 @@ public class Game : MonoBehaviour {
             PlayerHeight();
             DistanceToDanger();
             PauseGame();
+
         }
         else
         {
@@ -141,6 +145,34 @@ public class Game : MonoBehaviour {
             }
         }
     }
+
+    //Blockage Grid
+  /*  void UpdateGridBlockage()
+    {
+        for (int y = 0; y < gridHeight; y++)
+        {
+            for (int x = 0; x < gridWidth; x++)
+            {
+                if (grid[x, y] != null)
+                {
+                    if (grid[x, y].parent == BlockageObject[1].transform)
+                    {
+                        grid[x, y] = null;
+                    }
+                }
+            }
+        }
+
+        foreach (Transform mino in BlockageObject[1].transform)
+        {
+            Vector3 pos = Round(mino.position);
+
+            if (pos.y < gridHeight)
+            {
+                grid[(int)pos.x, (int)pos.y] = mino;
+            }
+        }
+    }*/
 
     public Transform GetTransformAtGridPosition(Vector3 pos) {
 
@@ -319,6 +351,8 @@ public class Game : MonoBehaviour {
 
         prefabRepeat = randomPrefab;
         spawnPrefab = false;
+
+        BlockFallingSpeed();
     }
 
 
@@ -350,7 +384,8 @@ public class Game : MonoBehaviour {
 
             BlockagePrefab.transform.localScale = new Vector3(blockageWidth, 2, 8.37f);
 
-            Instantiate(BlockagePrefab, new Vector3(blockageposX, blockageposY += blockageAbstand, -0.4f), new Quaternion(0, rot, 0, 0)).name = "Blockage " + i;
+            Instantiate(BlockagePrefab, new Vector3(blockageposX, blockageposY += blockageAbstand + FirstBlockage, -0.4f), new Quaternion(0, rot, 0, 0)).name = "Blockage " + i;
+            FirstBlockage = 0;
 
             BlockageObject[i] = GameObject.Find("Blockage " + i);
 
@@ -368,10 +403,8 @@ public class Game : MonoBehaviour {
                 laserposx = 16;
             } 
 
-           Instantiate(LaserPrefab, new Vector3(laserposx, blockageposY + 12.5f, 0), new Quaternion(0, LaserRot, 0, 0));
-
+           Instantiate(LaserPrefab, new Vector3(laserposx, blockageposY + blockageAbstand / 2, 0), new Quaternion(0, LaserRot, 0, 0));
         }
-
     }
 
 
@@ -399,6 +432,18 @@ public class Game : MonoBehaviour {
         {
             transform.position = new Vector3(transform.position.x, PlayerPos.y, transform.position.z);
         }       
+    }
+
+    //Increase Block Fallingspeed
+    void BlockFallingSpeed()
+    {
+        if(blockFallingSpeed < maxFallingSpeed)
+        {
+            blockFallingSpeed = minFallingSpeed;
+            blockFallingSpeed = minFallingSpeed * 100 + playerheight;
+            blockFallingSpeed /= 100;
+
+        }
     }
 
     //GUI
