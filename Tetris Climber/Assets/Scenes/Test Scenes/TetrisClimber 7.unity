@@ -2486,7 +2486,7 @@ PrefabInstance:
     - target: {fileID: 690355906208421399, guid: 7d6a24ea5cecb0749a97885fc3bbe773,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 3.99
       objectReference: {fileID: 0}
     - target: {fileID: 690355906208421399, guid: 7d6a24ea5cecb0749a97885fc3bbe773,
         type: 3}
@@ -3124,34 +3124,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 25, y: 0, z: 0}
---- !u!1 &1162454234 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6954327962032065425, guid: db1b7182508627a4ba105a7df40443f5,
-    type: 3}
-  m_PrefabInstance: {fileID: 6954327963050798923}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1162454235
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1162454234}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ba4473b579c9c349886505f065a1d9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  material: {fileID: 2100000, guid: 4eb9cd56672ebc14f86b846a32b3180b, type: 2}
-  noiseX: 0
-  rgbNoise: 0
-  sinNoiseScale: 0
-  sinNoiseWidth: 0
-  sinNoiseOffset: 0
-  offset: {x: 0, y: 0}
-  scanLineTail: 2
-  scanLineSpeed: -10
-  thelerp: 1
 --- !u!20 &1162454237 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 6954327962032065430, guid: db1b7182508627a4ba105a7df40443f5,
