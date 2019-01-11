@@ -28,7 +28,7 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks/Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 6e0b53c5edb45d409049cd6f25ff12ce
-    m_lastTime: -8586550857684775808
+    m_lastTime: -8586543965794775808
     List:
     - name: SoundBank
       guid: 4b8e74b6ce355646950207c03462dd54
@@ -43,7 +43,7 @@ MonoBehaviour:
   - PhysicalPath: Events/BGM_Events.wwu
     ParentPhysicalPath: Events/Default Work Unit.wwu
     guid: ee5b2487c8373648b254b5c8d574b3a6
-    m_lastTime: -8586550864994775808
+    m_lastTime: -8586543960654775808
     List:
     - name: Play_BGM
       guid: d46be821d18122429a3385efcffe5328
@@ -76,24 +76,85 @@ MonoBehaviour:
   - PhysicalPath: Events/Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 03a87bd2e8187044b561d12f974b5065
-    m_lastTime: -8586550864994775808
+    m_lastTime: -8586543912314775808
     List: []
-  - PhysicalPath: Events/SoundFX.wwu
+  - PhysicalPath: Events/PLayerSFX.wwu
     ParentPhysicalPath: Events/Default Work Unit.wwu
     guid: 3edc4fd5b3cc83478f33141f6589d675
-    m_lastTime: -8586550864994775808
+    m_lastTime: -8586543871624775808
     List:
+    - name: Die
+      guid: aafddfc47d33c44089b0b598baa987fa
+      id: 445985469
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: PLayerSFX
+        ObjectType: 12
+      - ElementName: Die
+        ObjectType: 3
+      Path: Default Work Unit/PLayerSFX/Die
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: GameOver
+      guid: f099ade221c09442a07d9ef8fff8e34f
+      id: 4158285989
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: PLayerSFX
+        ObjectType: 12
+      - ElementName: GameOver
+        ObjectType: 3
+      Path: Default Work Unit/PLayerSFX/GameOver
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Jump
       guid: 3cbf69185e9b174cba5fa0a05e6faf65
       id: 3833651337
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: SoundFX
+      - ElementName: PLayerSFX
         ObjectType: 12
       - ElementName: Jump
         ObjectType: 3
-      Path: Default Work Unit/SoundFX/Jump
+      Path: Default Work Unit/PLayerSFX/Jump
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Swing_Sword
+      guid: 78d4a66caa234241ad1faddef9ef6594
+      id: 3063857835
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: PLayerSFX
+        ObjectType: 12
+      - ElementName: Swing_Sword
+        ObjectType: 3
+      Path: Default Work Unit/PLayerSFX/Swing_Sword
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+  - PhysicalPath: Events/SFX_Events.wwu
+    ParentPhysicalPath: Events/Default Work Unit.wwu
+    guid: 9e4f64052ac6b044b7fc6978647153a1
+    m_lastTime: -8586543912314775808
+    List:
+    - name: DangerSound
+      guid: ab261b3928bbf2458a33bb229e3d738b
+      id: 1970547201
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX_Events
+        ObjectType: 12
+      - ElementName: DangerSound
+        ObjectType: 3
+      Path: Default Work Unit/SFX_Events/DangerSound
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -101,8 +162,17 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters/Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 37a3588abcb24e408cccada5157ef448
-    m_lastTime: -8586550864984775808
+    m_lastTime: -8586543912314775808
     List:
+    - name: BGM_PlaybackSpeed
+      guid: 5d77a1892ef6494aba56dc79790b9d21
+      id: 1090009724
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: BGM_PlaybackSpeed
+        ObjectType: 13
+      Path: Default Work Unit/BGM_PlaybackSpeed
     - name: Danger
       guid: 2bf3444a66cb9646b8b7c5b140dead69
       id: 4174463524
@@ -132,7 +202,9 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /TetrisClimber
-  - /TetrisClimber/SoundBanks
-  - /TetrisClimber/SoundBanks/Default Work Unit
+  - /TetrisClimber/Events
+  - /TetrisClimber/Events/Default Work Unit
+  - /TetrisClimber/Events/Default Work Unit/BGM_Events
+  - /TetrisClimber/Events/Default Work Unit/SFX_Events
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

@@ -62,10 +62,6 @@
 					<ShortName>SFX_Menu_SelectOption_001.wav</ShortName>
 					<Path>SFX/SFX_Menu_SelectOption_001_56D34C19.wem</Path>
 				</File>
-				<File Id="1016645903" Language="SFX">
-					<ShortName>Game_v2.1.wav</ShortName>
-					<Path>SFX/Game_v2.1_8956FC97.wem</Path>
-				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
 	</SoundBanks>

@@ -18,7 +18,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	80948791	SFX_Squished_001	Y:\Documents\Projekte\TetrisClimber\Game\Tetris Climber\Wwise\.cache\Mac\SFX\SFX_Squished_001_08ED0245.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\SFX_Squished_001		87772
 	536386900	Game_v2_2	Y:\Documents\Projekte\TetrisClimber\Game\Tetris Climber\Wwise\.cache\Mac\SFX\Game_v2.2_8956FC97.wem		\Interactive Music Hierarchy\BackgroundMusic\BackgroundMusic\Game_v2_2\Game_v2_2		22579264
 	585752603	sword_1	Y:\Documents\Projekte\TetrisClimber\Game\Tetris Climber\Wwise\.cache\Mac\SFX\sword_1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\Sword_Swing\sword_1		59676
-	591934371	Game_v2_1	Y:\Documents\Projekte\TetrisClimber\Game\Tetris Climber\Wwise\.cache\Mac\SFX\Game_v2.1_8956FC97.wem		\Interactive Music Hierarchy\BackgroundMusic\BackgroundMusic\Game_v2_1\Game_v2_1		22579264
 	602572342	DangerSound	Y:\Documents\Projekte\TetrisClimber\Game\Tetris Climber\Wwise\.cache\Mac\SFX\DangerSound_8956FC97.wem		\Actor-Mixer Hierarchy\Default Work Unit\GameSFX\DangerSound		5888920
 	635072450	sword_2	Y:\Documents\Projekte\TetrisClimber\Game\Tetris Climber\Wwise\.cache\Mac\SFX\sword_2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\Sword_Swing\sword_2		59676
 	706580612	SFX_Menu_ButtonSwitching_001	Y:\Documents\Projekte\TetrisClimber\Game\Tetris Climber\Wwise\.cache\Mac\SFX\SFX_Menu_ButtonSwitching_001_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\GameSFX\SFX_Menu_ButtonSwitching_001		17088

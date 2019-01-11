@@ -40,6 +40,7 @@
 				<Property Name="MonitoringManager\WatchMgr\x64_GameSyncWatches" Type="string" Value=""/>
 				<Property Name="MonitoringManager\WatchMgr\x64_Watches" Type="string" Value=""/>
 				<Property Name="Music Transition List\{3635DA24-0B37-4A0E-ABC1-2A3994ECDF11}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Music Transition List\{6F55B117-875B-47FB-9FFB-22EBB65981BA}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Music Transition List\{8FDE9198-9AF4-4F51-A088-77920913127C}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\FirstVisible_10_1" Type="string" Value="{4C96B38B-3DB4-40C7-91C9-665510E38993}"/>
 				<Property Name="ProjectExplorer\FirstVisible_11_1" Type="string" Value="{23EC2DE3-3ED8-4B82-AC99-92E25F2E4C6B}"/>
