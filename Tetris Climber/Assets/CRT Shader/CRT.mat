@@ -70,7 +70,7 @@ Material:
     - _OffsetY: 0
     - _Parallax: 0.02
     - _RGBNoise: 0
-    - _ScanLineSpeed: 10
+    - _ScanLineSpeed: -10
     - _ScanLineTail: 2
     - _SinNoise: 0
     - _SinNoiseOffset: 0
