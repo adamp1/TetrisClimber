@@ -13,6 +13,7 @@ Shader "PostEffects/CRT"
 		_SinNoiseOffset("SinNoiseOffset", Float) = 1
 		_ScanLineTail("Tail", Float) = 0.5
 		_ScanLineSpeed("TailSpeed", Float) = 100
+		_TheLerp("The Lerp", Range(0,1)) = 0.5
 	}
 	SubShader
 	{
@@ -65,6 +66,7 @@ Shader "PostEffects/CRT"
 			float _SinNoiseOffset;
 			float _ScanLineTail;
 			float _ScanLineSpeed;
+			float _TheLerp;
 
 			fixed4 frag (v2f i) : SV_Target
 			{
@@ -141,6 +143,8 @@ Shader "PostEffects/CRT"
 
 				// 画面端を暗くする
 				col *= 1 - vignet * 1.3;
+
+				col = lerp(col, tex2D(_MainTex, texUV), _TheLerp);
 				
 				return float4(col, 1);
 			}
