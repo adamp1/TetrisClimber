@@ -1682,9 +1682,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f931b9bdb09d3446a9a67bf89df1ad6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bloom: 0
-  bloommin: 0
-  bloommax: 0
+  extremecrt: 50
+  crtmultiplier: 0
+  extremeslider: {fileID: 4949854418584072034}
 --- !u!1 &2697062180651895784
 GameObject:
   m_ObjectHideFlags: 0
