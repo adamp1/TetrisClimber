@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Kamerafahrt : MonoBehaviour
 {
 
@@ -19,5 +19,9 @@ public class Kamerafahrt : MonoBehaviour
     void Update()
     {
         transform.position = Vector3.Lerp(startpos, target.position, Mathf.Pow(Mathf.Sin(Time.time * speed), 2));
+
+        if (Input.anyKeyDown){
+            SceneManager.LoadScene(1);
+        }
     }
 }
