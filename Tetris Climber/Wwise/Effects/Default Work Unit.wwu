@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{4B9D26AE-138A-48A5-B0D7-BF194754E732}" SchemaVersion="89">
 	<Effects>
-		<WorkUnit Name="Default Work Unit" ID="{4B9D26AE-138A-48A5-B0D7-BF194754E732}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{4B9D26AE-138A-48A5-B0D7-BF194754E732}" PersistMode="Standalone">
+			<ChildrenList>
+				<Effect Name="Squish" ID="{3D55BA85-1F0F-4455-846A-F028D2BD3C4A}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+					<PropertyList>
+						<Property Name="FrequencyBand1" Type="Real32" Value="849"/>
+						<Property Name="FrequencyBand2" Type="Real32" Value="734"/>
+						<Property Name="FrequencyBand3" Type="Real32" Value="4517"/>
+						<Property Name="GainBand1" Type="Real32" Value="5"/>
+						<Property Name="GainBand2" Type="Real32" Value="2.5"/>
+						<Property Name="GainBand3" Type="Real32" Value="-1"/>
+					</PropertyList>
+				</Effect>
+			</ChildrenList>
+		</WorkUnit>
 	</Effects>
 </WwiseDocument>

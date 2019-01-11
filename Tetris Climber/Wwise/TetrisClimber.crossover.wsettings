@@ -3,9 +3,14 @@
 	<UserProjectSettingsInfo>
 		<UserProjectSettings Name="" ID="{EEC4EFC8-42FA-4116-A27E-A79E2E09170B}">
 			<PropertyList>
+				<Property Name="AudioFilesImporter\Path" Type="string" Value="Y:\Documents\Projekte\TetrisClimber\samples\edited"/>
 				<Property Name="Event Action List\{1869BF3C-9B5E-4C17-BA5F-A0A05E6FAF65}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{21E86BD4-81D1-4222-9A33-85EFCFFE5328}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{391B26AB-BB28-45F2-8A33-BB229E3D738B}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{6CA6D478-23AA-4142-AD1F-ADDEF9EF6594}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{B1386826-E0B6-44B9-A9F4-E0F9DD41011C}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{C4DFFDAA-337D-40C4-89B0-B598BAA987FA}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{E2AD99F0-C021-4294-A07D-9EF8FFF8E34F}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="EventView\FilterMode1" Type="int32" Value="2"/>
 				<Property Name="ExternalSourcesInputPath" Type="string">
 					<ValueList>

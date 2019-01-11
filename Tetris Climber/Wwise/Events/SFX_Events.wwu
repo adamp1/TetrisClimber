@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{05644F9E-C62A-44B0-B7FC-6978647153A1}" SchemaVersion="89" RootDocumentID="{D27BA803-18E8-4470-B561-D12F974B5065}">
+	<Events>
+		<WorkUnit Name="SFX_Events" ID="{05644F9E-C62A-44B0-B7FC-6978647153A1}" OwnerID="{D27BA803-18E8-4470-B561-D12F974B5065}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="DangerSound" ID="{391B26AB-BB28-45F2-8A33-BB229E3D738B}">
+					<ChildrenList>
+						<Action Name="" ID="{AF1777BD-2E47-45A4-8081-2A1651E5E1A4}" ShortID="319433027">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="DangerSound" ID="{B9A525B0-B909-4D51-B1B0-2DE79F7E17CD}" WorkUnitID="{035B1F1F-FE5D-4F3D-B36C-34B1898CC711}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

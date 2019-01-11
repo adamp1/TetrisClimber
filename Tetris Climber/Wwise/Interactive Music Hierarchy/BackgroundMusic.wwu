@@ -16,6 +16,34 @@
 						<MusicSegment Name="Game_v2_1" ID="{991E3F2E-1923-44B4-8FAB-C984FECD8AFE}" ShortID="136954106">
 							<PropertyList>
 								<Property Name="EndPosition" Type="Real64" Value="128000"/>
+								<Property Name="PlaybackSpeed" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{6D888241-7543-491F-9845-06EE3C4D639A}" ShortID="175602382">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="BGM_PlaybackSpeed" ID="{89A1775D-F62E-4A49-BA56-DC79790B9D21}" WorkUnitID="{8A58A337-B2BC-404E-8CCC-ADA5157EF448}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{BC12B65D-FA4A-4FEC-B7D4-D84A99C3B470}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="1"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>0.25</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>1</XPos>
+														<YPos>1</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -78,6 +106,34 @@
 						<MusicSegment Name="Game_v2_2" ID="{F4A98A0A-248C-4EEE-B6F7-B745ED76B1D1}" ShortID="508492700">
 							<PropertyList>
 								<Property Name="EndPosition" Type="Real64" Value="128000"/>
+								<Property Name="PlaybackSpeed" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{31BB0F5A-41F7-4C5A-809B-BE4003C27920}" ShortID="82717829">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="BGM_PlaybackSpeed" ID="{89A1775D-F62E-4A49-BA56-DC79790B9D21}" WorkUnitID="{8A58A337-B2BC-404E-8CCC-ADA5157EF448}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{09397EEB-B537-4D19-8DD6-DC0449F3A9B4}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="1"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>0.25</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>1</XPos>
+														<YPos>1</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-2</Value>
@@ -159,12 +215,6 @@
 								<Property Name="LoopCount" Type="int16" Value="0"/>
 							</PropertyList>
 							<ChildrenList>
-								<MusicPlaylistItem Name="" ID="{C3C71600-FE18-4ECD-8D68-543CF218BA3C}" ShortID="85647384">
-									<PropertyList>
-										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
-									</PropertyList>
-									<SegmentRef Name="Game_v2_1" ID="{991E3F2E-1923-44B4-8FAB-C984FECD8AFE}"/>
-								</MusicPlaylistItem>
 								<MusicPlaylistItem Name="" ID="{EC59906C-20B8-40E0-878E-5C14E5193671}" ShortID="811201851">
 									<PropertyList>
 										<Property Name="PlaylistItemType" Type="int16" Value="1"/>

@@ -5,6 +5,17 @@
 			<ChildrenList>
 				<Event Name="Play_BGM" ID="{21E86BD4-81D1-4222-9A33-85EFCFFE5328}">
 					<ChildrenList>
+						<Action Name="" ID="{228B724A-D95F-495C-AD1C-C196E1A22230}" ShortID="999340663">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BGM_PlaybackSpeed" ID="{89A1775D-F62E-4A49-BA56-DC79790B9D21}" WorkUnitID="{8A58A337-B2BC-404E-8CCC-ADA5157EF448}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 						<Action Name="" ID="{17634A57-62B0-449B-9810-1F99B0ED79B0}" ShortID="909392657">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="1"/>
