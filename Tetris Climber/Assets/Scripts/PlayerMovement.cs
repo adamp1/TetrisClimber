@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour {
 
         if (allowMoveRight)
         {
-            if (Input.GetAxis("Horizontal") > 0 && pos.x < 13)
+            if (Input.GetAxis("Horizontal") > 0 && pos.x < 15)
             {
                 if (grounded)
                 {
