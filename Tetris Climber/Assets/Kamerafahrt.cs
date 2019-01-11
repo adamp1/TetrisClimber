@@ -21,7 +21,7 @@ public class Kamerafahrt : MonoBehaviour
         transform.position = Vector3.Lerp(startpos, target.position, Mathf.Pow(Mathf.Sin(Time.time * speed), 2));
 
         if (Input.anyKeyDown){
-            SceneManager.LoadScene(1);
+            //SceneManager.LoadScene(1);
         }
     }
 }
