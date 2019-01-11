@@ -90,6 +90,11 @@ public class Game : MonoBehaviour {
     //Update
     private void Update()
     {
+        if(Input.GetKeyUp("p"))
+        {
+            UpdateMino();
+        }
+
 
         if (Player != null)
         {
@@ -115,6 +120,20 @@ public class Game : MonoBehaviour {
         else
         {
             GameOver();
+        }
+    }
+
+    public void UpdateMino()
+    {
+        for (int y = 0; y < gridHeight; y++)
+        {
+            for (int x = 0; x < gridWidth; x++)
+            {
+                if (grid[x,y] != null)
+                {
+                    
+                }
+            }
         }
     }
 
@@ -146,33 +165,34 @@ public class Game : MonoBehaviour {
         }
     }
 
+
     //Blockage Grid
-  /*  void UpdateGridBlockage()
-    {
-        for (int y = 0; y < gridHeight; y++)
-        {
-            for (int x = 0; x < gridWidth; x++)
-            {
-                if (grid[x, y] != null)
-                {
-                    if (grid[x, y].parent == BlockageObject[1].transform)
-                    {
-                        grid[x, y] = null;
-                    }
-                }
-            }
-        }
+    /*  void UpdateGridBlockage()
+      {
+          for (int y = 0; y < gridHeight; y++)
+          {
+              for (int x = 0; x < gridWidth; x++)
+              {
+                  if (grid[x, y] != null)
+                  {
+                      if (grid[x, y].parent == BlockageObject[1].transform)
+                      {
+                          grid[x, y] = null;
+                      }
+                  }
+              }
+          }
 
-        foreach (Transform mino in BlockageObject[1].transform)
-        {
-            Vector3 pos = Round(mino.position);
+          foreach (Transform mino in BlockageObject[1].transform)
+          {
+              Vector3 pos = Round(mino.position);
 
-            if (pos.y < gridHeight)
-            {
-                grid[(int)pos.x, (int)pos.y] = mino;
-            }
-        }
-    }*/
+              if (pos.y < gridHeight)
+              {
+                  grid[(int)pos.x, (int)pos.y] = mino;
+              }
+          }
+      }*/
 
     public Transform GetTransformAtGridPosition(Vector3 pos) {
 
@@ -198,6 +218,18 @@ public class Game : MonoBehaviour {
         return new Vector3(Mathf.Round(pos.x), Mathf.Round(pos.y), Mathf.Round(pos.z));
     }
 
+    //MOVE DOWN
+    public void MoveRowDown(int x, int y)
+    {
+        
+              
+        grid[x, y] = null;
+
+
+        //grid[x,y].localPosition += new Vector3(0, -1, 0);
+
+
+    }
 
     //Spawn Tetris Block
     public void SpawnNextPrefab()

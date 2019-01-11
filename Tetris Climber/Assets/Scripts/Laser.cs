@@ -31,7 +31,7 @@ public class Laser : MonoBehaviour
 
                     if (hit.collider.tag == "Player")
                     {
-                        //Destroy(hit.collider.gameObject);
+                        Destroy(hit.collider.gameObject);
                     }
 
                 }
@@ -43,7 +43,7 @@ public class Laser : MonoBehaviour
             }
         }
 
-        if (transform.position.x == 16)
+        if (transform.position.x == 18)
         {
             RaycastHit hit;
             Debug.DrawRay(transform.position, -transform.right * 20);
@@ -57,7 +57,7 @@ public class Laser : MonoBehaviour
 
                     if (hit.collider.tag == "Player")
                     {
-                        //Destroy(hit.collider.gameObject);
+                        Destroy(hit.collider.gameObject);
                     }
 
                 }

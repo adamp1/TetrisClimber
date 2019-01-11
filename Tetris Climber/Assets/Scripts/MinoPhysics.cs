@@ -6,8 +6,7 @@ public class MinoPhysics : MonoBehaviour
 {
     Material material;
 
-    bool BlockUnderBlock;
-    bool MoveMinoDown;
+    bool BlockUnderBlock;   
 
     float speed = 8;
     float offset = 0f;
@@ -30,7 +29,7 @@ public class MinoPhysics : MonoBehaviour
         {
             material.SetFloat("_boom", Mathf.Lerp(0, 1, t));
             yield return null;
-            print(Time.time + " in boom");
+            //print(Time.time + " in boom");
 
             t += Time.deltaTime * speed;
         }
@@ -46,7 +45,7 @@ public class MinoPhysics : MonoBehaviour
     {
         //DestroyBlock = GameObject.Find("Player")
 
-        /*   Vector3 pos = transform.position;
+           Vector3 pos = transform.position;
 
            //Ray
            RaycastHit hit;
@@ -54,17 +53,23 @@ public class MinoPhysics : MonoBehaviour
            Debug.DrawRay(new Vector3(pos.x, pos.y, pos.z), Vector3.down);
 
 
-           if (Physics.Raycast(CheckUnderBlock, out hit, 0.9f))
-           {
-               if (hit.transform.tag == "Mino" && gameObject.GetComponentInParent<BlockMovement>().enabled == false)
-               {
-                   BlockUnderBlock = true;
-               }
+        if (Physics.Raycast(CheckUnderBlock, out hit, 0.9f))
+        {
+            if (hit.transform.tag == "Mino" && gameObject.GetComponentInParent<BlockMovement>().enabled == false)
+            {
+                BlockUnderBlock = true;
+            }
 
-           }
+        }
+        else if (BlockUnderBlock)
+        {
+            //FindObjectOfType<Game>().MoveRowDown(Mathf.RoundToInt(transform.position.x), Mathf.RoundToInt(transform.localPosition.y));
+            //transform.position += new Vector3(0, -1, 0);
+            
+        }
 
 
-           if(!BlockUnderBlock && gameObject.GetComponentInParent<BlockMovement>().enabled == false)
+        /*   if(!BlockUnderBlock && gameObject.GetComponentInParent<BlockMovement>().enabled == false)
            {
 
            }*/

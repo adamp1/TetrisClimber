@@ -47,7 +47,6 @@ public class ScriptWithNoName : MonoBehaviour
 
         if(BlockUnderBlock)
         {
-
             if(!Physics.Raycast(CheckUnderBlock, out hit, 0.9f))
             {
                 transform.position += new Vector3(0, -fallingSpeed * Time.deltaTime, 0);
