@@ -45,6 +45,8 @@ public class CRT : MonoBehaviour {
     float scanLineSpeed = 10;
     public float ScanLineSpeed { get { return scanLineSpeed; } set { scanLineSpeed = value; } }
 
+    public float thelerp = 0.75f;
+
     // Use this for initialization
     void OnRenderImage(RenderTexture src, RenderTexture dest) {
         material.SetFloat("_NoiseX", noiseX);
@@ -54,6 +56,9 @@ public class CRT : MonoBehaviour {
         material.SetFloat("_SinNoiseOffset", sinNoiseOffset);
         material.SetFloat("_ScanLineSpeed", scanLineSpeed);
         material.SetFloat("_ScanLineTail", scanLineTail);
+
+        material.SetFloat("_TheLerp", thelerp);
+        
         material.SetVector("_Offset", offset);
         Graphics.Blit(src, dest, material);
 	}
