@@ -13,7 +13,7 @@
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="Danger" ID="{4A44F32B-CB66-4696-B8B7-C5B140DEAD69}"/>
-							<Value>3.78677444285308E-316</Value>
+							<Value>5</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="BGM_PlaybackSpeed" ID="{89A1775D-F62E-4A49-BA56-DC79790B9D21}"/>

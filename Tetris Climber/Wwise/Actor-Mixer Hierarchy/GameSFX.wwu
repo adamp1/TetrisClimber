@@ -70,12 +70,12 @@
 												<Flags>5</Flags>
 											</Point>
 											<Point>
-												<XPos>6.69576</XPos>
+												<XPos>2.23192</XPos>
 												<YPos>50</YPos>
 												<Flags>0</Flags>
 											</Point>
 											<Point>
-												<XPos>15</XPos>
+												<XPos>5</XPos>
 												<YPos>100</YPos>
 												<Flags>37</Flags>
 											</Point>
@@ -99,11 +99,11 @@
 										<PointList>
 											<Point>
 												<XPos>0</XPos>
-												<YPos>11.99765</YPos>
+												<YPos>4.39343</YPos>
 												<Flags>5</Flags>
 											</Point>
 											<Point>
-												<XPos>15</XPos>
+												<XPos>5</XPos>
 												<YPos>-200</YPos>
 												<Flags>37</Flags>
 											</Point>
@@ -129,6 +129,32 @@
 					</ChildrenList>
 					<ActiveSourceList>
 						<ActiveSource Name="DangerSound" ID="{F6C0CDC9-7CFD-48C2-A59F-722FA28D53BC}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Laser" ID="{9D8B5459-8F81-4346-962A-57F7B556597C}" ShortID="259674894">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Laser" ID="{83198762-61CC-42D6-A1B3-F0914E8E8AE8}" WorkUnitID="{F6B84966-D2A7-4BBB-B6D3-1E3B1B38887F}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B4640E2-A2A8-484D-BCCB-39D6CBB28FBD}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{59D5B0C7-CBD5-4C44-AFDB-AC8E703BAC41}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Laser" ID="{0D1E8781-EE40-4BEE-8343-85CB1BF604E8}" ShortID="935250761">
+							<Language>SFX</Language>
+							<AudioFile>Laser.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Laser" ID="{0D1E8781-EE40-4BEE-8343-85CB1BF604E8}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 			</ChildrenList>

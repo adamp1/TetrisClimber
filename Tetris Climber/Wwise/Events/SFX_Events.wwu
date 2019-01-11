@@ -17,6 +17,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Laser" ID="{9A94DE94-7A5B-46BB-B4E8-1C7B3F41197F}">
+					<ChildrenList>
+						<Action Name="" ID="{B5132841-5C0E-4A17-8E56-1D22CBE6A3BB}" ShortID="35211196">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Laser" ID="{9D8B5459-8F81-4346-962A-57F7B556597C}" WorkUnitID="{035B1F1F-FE5D-4F3D-B36C-34B1898CC711}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
