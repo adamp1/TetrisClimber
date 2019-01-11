@@ -6,19 +6,23 @@ using UnityEngine.UI;
 public class DestroyBlocks : MonoBehaviour
 {
     GameObject Sword;
-    GameObject Swordtop;
 
     public Image Energy;
     float energy;
     public float EnergyRecovery;
     public float SlashCost;
-    public float SlashSpeed;
 
-    bool lookRight = false;
-    bool lookLeft = true;
+    public bool lookRight = false;
+    public bool lookLeft = true;
     bool inisiateSlice;
     bool sliceEnergy;
 
+    public float Slice_Speed = 10;
+    public float Slice_Friction = 1;
+
+    private float SwordRotation;
+
+    bool swordAni;
 
     Vector3 SwordPos;
 
@@ -26,7 +30,7 @@ public class DestroyBlocks : MonoBehaviour
     void Start()
     {
         Sword = GameObject.Find("Sword");
-        Swordtop = GameObject.Find("Swordtop");
+        SwordRotation = 90;
     }
 
     // Update is called once per frame
@@ -46,12 +50,12 @@ public class DestroyBlocks : MonoBehaviour
         //Slice
         Vector3 pos = transform.position;
 
-        if (Input.GetAxis("Horizontal") > 0)
+        if (Input.GetAxis("Horizontal") > 0 && !swordAni)
         {
             lookRight = true;
             lookLeft = false;
         }
-        else if(Input.GetAxis("Horizontal") < 0)
+        else if(Input.GetAxis("Horizontal") < 0 && !swordAni)
         {
             lookLeft = true;
             lookRight = false;
@@ -67,38 +71,56 @@ public class DestroyBlocks : MonoBehaviour
         }
 
 
+
         if(inisiateSlice)
         {
             Sword.SetActive(true);
-            Swordtop.SetActive(true);
+            swordAni = true;
 
-            SwordPos = Sword.transform.position;
+            //  SwordPos = Sword.transform.position;
 
 
             if (lookRight)
             {
-                SwordPos = new Vector3(pos.x + 0.5f, SwordPos.y, SwordPos.z);
+                if (SwordRotation > -90)
+                {
+                    SwordRotation -= 1 * Slice_Speed * Slice_Friction;
+                }
             }
 
             if (lookLeft)
             {
-                SwordPos = new Vector3(pos.x - 0.5f, SwordPos.y, SwordPos.z);
+                if (SwordRotation < 270)
+                {
+                    SwordRotation += 1 * Slice_Speed * Slice_Friction;
+                }
             }
 
 
-            if (SwordPos.y > pos.y-0.8f)
+            /*     if (SwordPos.y > pos.y-0.8f)
+                  {
+                      SwordPos.y -= SlashSpeed * Time.deltaTime;
+                  }
+                  else
+                  {
+                      SwordPos = new Vector3(SwordPos.x, pos.y + 1.5f, pos.z);
+                      inisiateSlice = false;               
+                  }*/
+
+            // Sword.transform.position = SwordPos;
+
+
+
+
+            //Sword.transform.rotation = Quaternion.Lerp(Quaternion_Rotate_From, Quaternion_Rotate_To, Time.deltaTime * Rotation_Smoothness);
+            Sword.transform.rotation = Quaternion.Euler(0, 0, SwordRotation);
+
+            if(SwordRotation == -90 || SwordRotation == 270)
             {
-                SwordPos.y -= SlashSpeed * Time.deltaTime;
-            }
-            else
-            {
-                SwordPos = new Vector3(SwordPos.x, pos.y + 1.5f, pos.z);
-                inisiateSlice = false;               
-            }
-
-            Sword.transform.position = SwordPos;
-
-
+                inisiateSlice = false;
+                swordAni = false;
+                SwordRotation = 90;
+            } 
 
             if (sliceEnergy)
             {
@@ -115,7 +137,6 @@ public class DestroyBlocks : MonoBehaviour
         else
         {
             Sword.SetActive(false);
-            Swordtop.SetActive(false);
 
            // SwordPos = new Vector3(pos.x + 0.5f, pos.y + 1.5f, pos.z);
         }
