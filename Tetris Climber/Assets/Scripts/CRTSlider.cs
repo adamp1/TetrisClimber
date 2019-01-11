@@ -52,6 +52,7 @@ public class CRTSlider : MonoBehaviour
 
         effect.thelerp = Mathf.Lerp(-extremecrt, extremecrt, slider.value);
         print(effect.thelerp);
+        effect.thelerp = Mathf.Lerp(-5, 1, slider.value);
         
     }
 }
