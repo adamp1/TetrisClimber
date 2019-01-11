@@ -382,7 +382,7 @@ public class Game : MonoBehaviour {
             }
             blockagePosX++;
 
-            BlockagePrefab.transform.localScale = new Vector3(blockageWidth, 2, 8.37f);
+            //BlockagePrefab.transform.localScale = new Vector3(blockageWidth, 2, 8.37f);
 
             Instantiate(BlockagePrefab, new Vector3(blockageposX, blockageposY += blockageAbstand + FirstBlockage, -0.4f), new Quaternion(0, rot, 0, 0)).name = "Blockage " + i;
             FirstBlockage = 0;
