@@ -144,7 +144,7 @@ Shader "PostEffects/CRT"
 				// 画面端を暗くする
 				col *= 1 - vignet * 1.3;
 
-				col = lerp(col, tex2D(_MainTex, texUV), _TheLerp);
+				col = lerp(col, tex2D(_MainTex, texUV), 1-_TheLerp);
 				
 				return float4(col, 1);
 			}
