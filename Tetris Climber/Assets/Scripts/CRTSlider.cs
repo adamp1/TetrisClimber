@@ -26,9 +26,10 @@ public class CRTSlider : MonoBehaviour
     void Update()
     {
         //effect.bloomIntensity = Mathf.Lerp(bloommin, bloommax, slider.value);
-        crtmultiplier = (extremeslider.value - 0.5f) * extremecrt;
+        crtmultiplier = Mathf.Lerp(-1, 1, extremeslider.value) * extremecrt;
         float crt = slider.value * crtmultiplier;
         effect.thelerp = crt;
-        effect.thelerp = slider.value;
+        //effect.thelerp = slider.value;
+        
     }
 }
