@@ -35,7 +35,7 @@ public class Game : MonoBehaviour {
     public float minFallingSpeed;
     public float maxFallingSpeed;
    
-    public static int gridWidth = 14;
+    public static int gridWidth = 16;
     public static int gridHeight = 500;
 
     public static Transform[,] grid = new Transform[gridWidth, gridHeight];
@@ -223,7 +223,7 @@ public class Game : MonoBehaviour {
         }
         else if (spawnBlocksLeftOrRight == 0)
         {
-            spawnPosX = 10;
+            spawnPosX = 11;
         }
 
         if (Physics.Raycast(CheckUnderSpawner, out hit, 2))
@@ -239,14 +239,14 @@ public class Game : MonoBehaviour {
                 }
                 else if (!Physics.Raycast(CheckUnderSpawnerRight, out hit, 2))
                 {
-                    spawnPosX = 10;
+                    spawnPosX = 11;
                 }
 
                 if (!Physics.Raycast(CheckUnderSpawnerRight, out hit, 2))
                 {
                     if (offsetPos == 1)
                     {
-                        spawnPosX = 10;
+                        spawnPosX = 11;
                     }
                 }
                 else if (!Physics.Raycast(CheckUnderSpawnerLeft, out hit, 2))
@@ -269,14 +269,14 @@ public class Game : MonoBehaviour {
                 }
                 else if (!Physics.Raycast(CheckUnderSpawner, out hit, 2))
                 {
-                    spawnPosX = 5.5f;
+                    spawnPosX = 6.5f;
                 }
 
                 if (!Physics.Raycast(CheckUnderSpawner, out hit, 2))
                 {
                     if (offsetPos == 1)
                     {
-                        spawnPosX = 5.5f;
+                        spawnPosX = 6.5f;
                     }
                 }
                 else if (!Physics.Raycast(CheckUnderSpawnerLeft, out hit, 2))
@@ -294,24 +294,24 @@ public class Game : MonoBehaviour {
                 {
                     if (offsetPos == 0)
                     {
-                        spawnPosX = 5.5f;
+                        spawnPosX = 6.5f;
                     }
                 }
                 else if (!Physics.Raycast(CheckUnderSpawnerRight, out hit, 2))
                 {
-                    spawnPosX = 10;
+                    spawnPosX = 11;
                 }
 
                 if (!Physics.Raycast(CheckUnderSpawnerRight, out hit, 2))
                 {
                     if (offsetPos == 1)
                     {
-                        spawnPosX = 10;
+                        spawnPosX = 11;
                     }
                 }
                 else if (!Physics.Raycast(CheckUnderSpawner, out hit, 2))
                 {
-                    spawnPosX = 5.5f;
+                    spawnPosX = 6.5f;
                 }
             }
         }
@@ -378,7 +378,7 @@ public class Game : MonoBehaviour {
             {
                 rot = 180;
                 blockageWidth = Random.Range(BlockageWidthMin, BlockageWidthMax);
-                blockageposX = 23;
+                blockageposX = 25;
             }
             blockagePosX++;
 
@@ -400,7 +400,7 @@ public class Game : MonoBehaviour {
             else if(laserrot == 1)
             {
                 LaserRot = 0;
-                laserposx = 16;
+                laserposx = 18;
             } 
 
            Instantiate(LaserPrefab, new Vector3(laserposx, blockageposY + blockageAbstand / 2, 0), new Quaternion(0, LaserRot, 0, 0));
@@ -415,7 +415,7 @@ public class Game : MonoBehaviour {
             spawnBlocksLeftOrRight = 0;
         }
 
-        else if (BlockageObject[NrBlockages].transform.position.x > 22)
+        else if (BlockageObject[NrBlockages].transform.position.x > 24)
         {
             spawnBlocksLeftOrRight = 1;
         }
