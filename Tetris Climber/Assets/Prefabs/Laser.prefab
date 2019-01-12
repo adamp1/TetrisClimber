@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4916940778397888615}
   - component: {fileID: 6550338040045100184}
   - component: {fileID: 1447175359037165210}
+  - component: {fileID: 3621288383511779905}
+  - component: {fileID: 785316212557066185}
   m_Layer: 0
   m_Name: Laser
   m_TagString: Untagged
@@ -139,3 +141,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e38c5f90ce63b9d49b9245e59e79400c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3621288383511779905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3723038851834066423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea09102d321ac9340af220b7a44586ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 0
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
+--- !u!114 &785316212557066185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3723038851834066423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9219feb7e2f2b0842b992d74308e3b70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    valueGuid: 
+    WwiseObjectReference: {fileID: 11400000, guid: 3d4a2fcb33d184ea28adee12c576a467,
+      type: 2}
+  m_callbackData: {fileID: 0}
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  valueGuid: 

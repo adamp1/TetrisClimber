@@ -4,6 +4,36 @@
 		<WorkUnit Name="BackgroundMusic" ID="{14690D2B-5BA9-469C-B9A6-B38D4259CA25}" PersistMode="Standalone">
 			<ChildrenList>
 				<MusicPlaylistContainer Name="BackgroundMusic" ID="{8FDE9198-9AF4-4F51-A088-77920913127C}" ShortID="1007102778">
+					<PropertyList>
+						<Property Name="PlaybackSpeed" Type="Real64">
+							<RTPCList>
+								<RTPC Name="" ID="{EDC39077-F4B1-4170-8BA9-2661D005FC63}" ShortID="680216911">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="BGM_PlaybackSpeed" ID="{89A1775D-F62E-4A49-BA56-DC79790B9D21}" WorkUnitID="{8A58A337-B2BC-404E-8CCC-ADA5157EF448}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{158EC543-6833-4845-8911-9073C1DF6D06}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="1"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>0.25</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>1</XPos>
+												<YPos>1</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B4640E2-A2A8-484D-BCCB-39D6CBB28FBD}"/>

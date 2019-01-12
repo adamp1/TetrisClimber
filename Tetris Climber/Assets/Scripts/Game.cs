@@ -556,6 +556,7 @@ public class Game : MonoBehaviour {
     void DistanceToDanger()
     {
         distancetodanger = Player.transform.position.y - Deathcollider.transform.position.y - 10.05f;
+        AkSoundEngine.SetRTPCValue("Danger", distancetodanger);
         GameObject.Find("dangervalue").GetComponent<Text>().text = distancetodanger.ToString("F2") + " m";
     }
 
