@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="11" SoundbankVersion="132">
+	<RootPaths>
+		<ProjectRoot>/Users/benjaminfeder/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Documents/Projekte/TetrisClimber/Game/Tetris Climber/Wwise/</ProjectRoot>
+		<SourceFilesRoot>/Users/benjaminfeder/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Documents/Projekte/TetrisClimber/Game/Tetris Climber/Wwise/.cache/Mac/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/benjaminfeder/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Documents/Projekte/TetrisClimber/Game/Tetris Climber/Wwise/GeneratedSoundBanks/Mac/</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>/Users/benjaminfeder/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Documents/Projekte/TetrisClimber/Game/Tetris Climber/Wwise/GeneratedSoundBanks/Mac</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="1661994096" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\SoundBank</ObjectPath>
+			<ShortName>SoundBank</ShortName>
+			<Path>SoundBank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1970547201" Name="DangerSound" ObjectPath="\Events\Default Work Unit\SFX_Events\DangerSound"/>
+				<Event Id="445985469" Name="Die" ObjectPath="\Events\Default Work Unit\PLayerSFX\Die"/>
+				<Event Id="4158285989" Name="GameOver" ObjectPath="\Events\Default Work Unit\PLayerSFX\GameOver"/>
+				<Event Id="3833651337" Name="Jump" ObjectPath="\Events\Default Work Unit\PLayerSFX\Jump"/>
+				<Event Id="3982605422" Name="Laser" ObjectPath="\Events\Default Work Unit\SFX_Events\Laser"/>
+				<Event Id="3126765036" Name="Play_BGM" ObjectPath="\Events\Default Work Unit\BGM_Events\Play_BGM"/>
+				<Event Id="1073466678" Name="Stop_BGM" ObjectPath="\Events\Default Work Unit\BGM_Events\Stop_BGM"/>
+				<Event Id="3063857835" Name="Swing_Sword" ObjectPath="\Events\Default Work Unit\PLayerSFX\Swing_Sword"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="80948791" Language="SFX">
+					<ShortName>SFX_Squished_001.wav</ShortName>
+					<Path>SFX/SFX_Squished_001_1056097B.wem</Path>
+				</File>
+				<File Id="536386900" Language="SFX">
+					<ShortName>Game_v2.2.wav</ShortName>
+					<Path>SFX/Game_v2.2_8956FC97.wem</Path>
+				</File>
+				<File Id="585752603" Language="SFX">
+					<ShortName>sword_1.wav</ShortName>
+					<Path>SFX/sword_1_56D34C19.wem</Path>
+				</File>
+				<File Id="602572342" Language="SFX">
+					<ShortName>DangerSound.wav</ShortName>
+					<Path>SFX/DangerSound_8956FC97.wem</Path>
+				</File>
+				<File Id="635072450" Language="SFX">
+					<ShortName>sword_2.wav</ShortName>
+					<Path>SFX/sword_2_56D34C19.wem</Path>
+				</File>
+				<File Id="706580612" Language="SFX">
+					<ShortName>SFX_Menu_ButtonSwitching_001.wav</ShortName>
+					<Path>SFX/SFX_Menu_ButtonSwitching_001_56D34C19.wem</Path>
+				</File>
+				<File Id="796183027" Language="SFX">
+					<ShortName>SFX_Jump_001.wav</ShortName>
+					<Path>SFX/SFX_Jump_001_9418050A.wem</Path>
+				</File>
+				<File Id="872705618" Language="SFX">
+					<ShortName>SFX_Menu_SelectOption_001.wav</ShortName>
+					<Path>SFX/SFX_Menu_SelectOption_001_56D34C19.wem</Path>
+				</File>
+				<File Id="935250761" Language="SFX">
+					<ShortName>Laser.wav</ShortName>
+					<Path>SFX/Laser_8956FC97.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

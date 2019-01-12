@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{035B1F1F-FE5D-4F3D-B36C-34B1898CC711}" SchemaVersion="89" RootDocumentID="{82BA0831-8B77-46B5-BBB4-A968759254E5}">
+	<AudioObjects>
+		<WorkUnit Name="GameSFX" ID="{035B1F1F-FE5D-4F3D-B36C-34B1898CC711}" OwnerID="{82BA0831-8B77-46B5-BBB4-A968759254E5}" PersistMode="Nested">
+			<ChildrenList>
+				<Sound Name="SFX_Menu_ButtonSwitching_001" ID="{BA69FB4C-19B3-4073-BA0E-D63DA393CDF6}" ShortID="1010838891">
+					<PropertyList>
+						<Property Name="OutputBusHighpass" Type="int16">
+							<ValueList>
+								<Value>38</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B4640E2-A2A8-484D-BCCB-39D6CBB28FBD}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{59D5B0C7-CBD5-4C44-AFDB-AC8E703BAC41}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="SFX_Menu_ButtonSwitching_001" ID="{E5BF4CEE-2AFD-4CD3-AE36-D6C997F057D6}" ShortID="706580612">
+							<Language>SFX</Language>
+							<AudioFile>SFX_Menu_ButtonSwitching_001.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="SFX_Menu_ButtonSwitching_001" ID="{E5BF4CEE-2AFD-4CD3-AE36-D6C997F057D6}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="SFX_Menu_SelectOption_001" ID="{50DC4D5D-EED4-46DE-9B99-5955D8AD3176}" ShortID="889445523">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B4640E2-A2A8-484D-BCCB-39D6CBB28FBD}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{59D5B0C7-CBD5-4C44-AFDB-AC8E703BAC41}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="SFX_Menu_SelectOption_001" ID="{5CBBA917-00BE-4A18-8C01-EE49BB47783C}" ShortID="872705618">
+							<Language>SFX</Language>
+							<AudioFile>SFX_Menu_SelectOption_001.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="SFX_Menu_SelectOption_001" ID="{5CBBA917-00BE-4A18-8C01-EE49BB47783C}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="DangerSound" ID="{B9A525B0-B909-4D51-B1B0-2DE79F7E17CD}" ShortID="547924624">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Lowpass" Type="int16">
+							<RTPCList>
+								<RTPC Name="" ID="{4AA400A7-45EB-449C-A0BD-4700D2DB99E7}" ShortID="1048489994">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="Danger" ID="{4A44F32B-CB66-4696-B8B7-C5B140DEAD69}" WorkUnitID="{8A58A337-B2BC-404E-8CCC-ADA5157EF448}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{D3516371-CD7E-464C-A7FC-B55EDF26DBBB}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="65537"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-100</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>2.23192</XPos>
+												<YPos>50</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>5</XPos>
+												<YPos>100</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<RTPCList>
+								<RTPC Name="" ID="{721F5BA6-690D-4271-A815-0BF33F330926}" ShortID="630964275">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="Danger" ID="{4A44F32B-CB66-4696-B8B7-C5B140DEAD69}" WorkUnitID="{8A58A337-B2BC-404E-8CCC-ADA5157EF448}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{8669E4AC-4A6F-40B3-8291-8EC13500F8A6}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>4.39343</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>5</XPos>
+												<YPos>-200</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B4640E2-A2A8-484D-BCCB-39D6CBB28FBD}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{59D5B0C7-CBD5-4C44-AFDB-AC8E703BAC41}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="DangerSound" ID="{F6C0CDC9-7CFD-48C2-A59F-722FA28D53BC}" ShortID="602572342">
+							<Language>SFX</Language>
+							<AudioFile>DangerSound.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="DangerSound" ID="{F6C0CDC9-7CFD-48C2-A59F-722FA28D53BC}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Laser" ID="{9D8B5459-8F81-4346-962A-57F7B556597C}" ShortID="259674894">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Laser" ID="{83198762-61CC-42D6-A1B3-F0914E8E8AE8}" WorkUnitID="{F6B84966-D2A7-4BBB-B6D3-1E3B1B38887F}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B4640E2-A2A8-484D-BCCB-39D6CBB28FBD}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{59D5B0C7-CBD5-4C44-AFDB-AC8E703BAC41}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Laser" ID="{0D1E8781-EE40-4BEE-8343-85CB1BF604E8}" ShortID="935250761">
+							<Language>SFX</Language>
+							<AudioFile>Laser.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Laser" ID="{0D1E8781-EE40-4BEE-8343-85CB1BF604E8}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
