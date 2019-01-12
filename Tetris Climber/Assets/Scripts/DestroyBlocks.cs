@@ -65,6 +65,7 @@ public class DestroyBlocks : MonoBehaviour
         {
             if(energy >= SlashCost)
             {
+                AkSoundEngine.PostEvent("Swing_Sword", gameObject);
                 inisiateSlice = true;
                 sliceEnergy = true;
             }

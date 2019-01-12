@@ -23,7 +23,6 @@
 			<IncludedEvents>
 				<Event Id="1970547201" Name="DangerSound" ObjectPath="\Events\Default Work Unit\SFX_Events\DangerSound"/>
 				<Event Id="445985469" Name="Die" ObjectPath="\Events\Default Work Unit\PLayerSFX\Die"/>
-				<Event Id="4158285989" Name="GameOver" ObjectPath="\Events\Default Work Unit\PLayerSFX\GameOver"/>
 				<Event Id="3833651337" Name="Jump" ObjectPath="\Events\Default Work Unit\PLayerSFX\Jump"/>
 				<Event Id="3982605422" Name="Laser" ObjectPath="\Events\Default Work Unit\SFX_Events\Laser"/>
 				<Event Id="3126765036" Name="Play_BGM" ObjectPath="\Events\Default Work Unit\BGM_Events\Play_BGM"/>

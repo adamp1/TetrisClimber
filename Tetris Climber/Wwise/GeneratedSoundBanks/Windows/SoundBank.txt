@@ -6,13 +6,13 @@ Event	ID	Name			Wwise Object Path	Notes
 	3126765036	Play_BGM			\Default Work Unit\BGM_Events\Play_BGM	
 	3833651337	Jump			\Default Work Unit\PLayerSFX\Jump	
 	3982605422	Laser			\Default Work Unit\SFX_Events\Laser	
-	4158285989	GameOver			\Default Work Unit\PLayerSFX\GameOver	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	1090009724	BGM_PlaybackSpeed			\Default Work Unit\BGM_PlaybackSpeed	
 	4174463524	Danger			\Default Work Unit\Danger	
 
 Effect plug-ins	ID	Name	Type				Notes
+	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
 	1531833962	Squish	Wwise Parametric EQ			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size

@@ -46,7 +46,7 @@
 						<Action Name="" ID="{28B41ED8-0FAA-4FC5-B58A-F31BB048FD8A}" ShortID="69394881">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="38"/>
-								<Property Name="GameParameterValue" Type="Real64" Value="5"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="7"/>
 								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
