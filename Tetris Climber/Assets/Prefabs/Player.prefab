@@ -161,11 +161,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Energy: {fileID: 0}
-  EnergyRecovery: 6.5
+  EnergyRecovery: 10
   SlashCost: 24.9
   lookRight: 0
   lookLeft: 1
-  Slice_Speed: 0
+  Slice_Speed: 12
   Slice_Friction: 0
 --- !u!136 &3473486972618215318
 CapsuleCollider:
