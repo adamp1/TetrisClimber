@@ -5410,12 +5410,12 @@ PrefabInstance:
     - target: {fileID: 6434282302539720793, guid: 5b463e87c5a93ec4eac93835974f863c,
         type: 3}
       propertyPath: minFallingSpeed
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6434282302539720793, guid: 5b463e87c5a93ec4eac93835974f863c,
         type: 3}
       propertyPath: maxFallingSpeed
-      value: 20
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 6434282302539720792, guid: 5b463e87c5a93ec4eac93835974f863c,
         type: 3}
@@ -5549,12 +5549,12 @@ PrefabInstance:
     - target: {fileID: 6841671131779761950, guid: f1d261530576741458d658dcef8c37c9,
         type: 3}
       propertyPath: speed
-      value: 0.12
+      value: 0.13
       objectReference: {fileID: 0}
     - target: {fileID: 6841671131779761950, guid: f1d261530576741458d658dcef8c37c9,
         type: 3}
       propertyPath: speedIncrease
-      value: 0.002
+      value: 0.004
       objectReference: {fileID: 0}
     - target: {fileID: 6841671131779761949, guid: f1d261530576741458d658dcef8c37c9,
         type: 3}
