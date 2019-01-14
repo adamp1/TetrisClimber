@@ -47,9 +47,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameOverUI: {fileID: 0}
-  speed: 0.08
-  increaseIntervall: 1.2
-  speedIncrease: 0.002
+  speed: 0.125
+  increaseIntervall: 1.05
+  speedIncrease: 0.01
 --- !u!33 &6841671131779761938
 MeshFilter:
   m_ObjectHideFlags: 0

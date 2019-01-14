@@ -70,7 +70,7 @@ Material:
     - _OffsetY: 0
     - _Parallax: 0.02
     - _RGBNoise: 0
-    - _ScanLineSpeed: 10
+    - _ScanLineSpeed: -10
     - _ScanLineTail: 2
     - _SinNoise: 0
     - _SinNoiseOffset: 0
@@ -78,7 +78,7 @@ Material:
     - _SinNoiseWidth: 0
     - _SrcBlend: 1
     - _Tail: 1
-    - _TheLerp: 0.75
+    - _TheLerp: 1
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:

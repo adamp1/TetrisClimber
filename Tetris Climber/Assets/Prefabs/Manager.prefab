@@ -43,12 +43,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6719ef1ff993e7340b94a7c159b0545f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FirstBlockage: 0
   BlockageDistanceMin: 25
   BlockageDistanceMax: 25
   BlockageWidthMin: 3.3
   BlockageWidthMax: 4.3
   distancetodanger: 0
-  blockFallingSpeed: 8
+  blockFallingSpeed: 13
+  minFallingSpeed: 0
+  maxFallingSpeed: 0
   TetrisPrefab:
   - {fileID: 1027392622649242, guid: 1e0a7ff1c74fb834aa7fc05e186ffc74, type: 3}
   - {fileID: 1760042239657686, guid: ca952e48532d80e4ba5236d0effe6a3b, type: 3}
@@ -57,4 +60,5 @@ MonoBehaviour:
   - {fileID: 1821396076466522, guid: 792b2010da8dba648a8ec80568b688d9, type: 3}
   BlockagePrefab: {fileID: 1254096791075142074, guid: 1e57f18df55bc1d45a0a560dd1d67d63,
     type: 3}
+  LaserPrefab: {fileID: 0}
   GameOverUI: {fileID: 0}
