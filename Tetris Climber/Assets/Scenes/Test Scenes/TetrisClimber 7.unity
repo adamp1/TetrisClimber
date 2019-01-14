@@ -5922,17 +5922,17 @@ PrefabInstance:
     - target: {fileID: 3473486972618215322, guid: de1ebf98e34bef045b552eefa69560ed,
         type: 3}
       propertyPath: EnergyRecovery
-      value: 50
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3473486972618215322, guid: de1ebf98e34bef045b552eefa69560ed,
         type: 3}
       propertyPath: SlashCost
-      value: 99.9
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 3473486972618215322, guid: de1ebf98e34bef045b552eefa69560ed,
         type: 3}
       propertyPath: Slice_Speed
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3473486972618215322, guid: de1ebf98e34bef045b552eefa69560ed,
         type: 3}
