@@ -117,6 +117,7 @@ public class Game : MonoBehaviour {
             GameTime();
             PlayerHeight();
             DistanceToDanger();
+            UInput();
             UpdateMenu();
 
         }
@@ -481,20 +482,35 @@ public class Game : MonoBehaviour {
         }
     }
 
+    void UInput()
+    {
+        if (Input.GetKeyUp("escape") && !pauseGame)
+        {
+            pauseGame = true;
+            Debug.Log("fdsf");
+        }
+        else if (Input.GetKeyUp("escape") && pauseGame)
+        {
+            pauseGame = false;
+            Debug.Log("test");
+        }
+    } 
+
     //GUI
     void UpdateMenu()
     {
 
-        if (Input.GetKeyUp("escape") && Time.timeScale == 1.0 || Input.GetKeyUp("joystick button 9") && Time.timeScale == 1.0)
+    /*    if (Input.GetKeyUp("escape") && !pauseGame || Input.GetKeyUp("joystick button 9") && Time.timeScale == 1.0)
         {
             pauseGame = true;
 
         }
-        else if (Input.GetKeyUp("escape") && Time.timeScale == 0 || Input.GetKeyUp("joystick button 9") && Time.timeScale == 0 || Input.GetKeyUp("joystick button 2") && Time.timeScale == 0)
+
+        if (Input.GetKeyUp("escape") && pauseGame || Input.GetKeyUp("joystick button 9") && Time.timeScale == 0 || Input.GetKeyUp("joystick button 2") && Time.timeScale == 0)
         {
             pauseGame = false;
             options = false;
-        }
+        } */
 
         if(pauseGame)
         {

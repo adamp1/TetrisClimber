@@ -5989,6 +5989,21 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 3473486972618215323, guid: de1ebf98e34bef045b552eefa69560ed,
+        type: 3}
+      propertyPath: gravity
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 3473486972618215323, guid: de1ebf98e34bef045b552eefa69560ed,
+        type: 3}
+      propertyPath: jumpPower
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 3473486972618215323, guid: de1ebf98e34bef045b552eefa69560ed,
+        type: 3}
+      propertyPath: speedWhilejump
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de1ebf98e34bef045b552eefa69560ed, type: 3}
 --- !u!1 &3723038851834066423 stripped
@@ -6268,7 +6283,7 @@ PrefabInstance:
     - target: {fileID: 6954327962032065429, guid: db1b7182508627a4ba105a7df40443f5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -19.87
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 6954327962032065429, guid: db1b7182508627a4ba105a7df40443f5,
         type: 3}
