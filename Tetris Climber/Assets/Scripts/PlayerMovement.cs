@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour {
 
 
-  
+    Vector3 MovePlayer;
     public Rigidbody rb;
     public float speed = 14;
     public float speedWhilejump = 10;
@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour {
         Ray WallCheckRight3 = new Ray(new Vector3(pos.x, pos.y, pos.z), Vector3.right);
         Ray WallCheckLeft1 = new Ray(new Vector3(pos.x, pos.y - 0.9f, pos.z), Vector3.left);
         Ray WallCheckLeft2 = new Ray(new Vector3(pos.x, pos.y + 0.9f, pos.z), Vector3.left);
-        Ray WallCheckLeft3 = new Ray(new Vector3(pos.x, pos.y, pos.z), Vector3.left);
+        Ray WallCheckLeft3 = new Ray(new Vector3(pos.x, pos.y, pos.z), Vector3.left); 
 
         if (allowMoveRight)
         {
@@ -43,12 +43,15 @@ public class PlayerMovement : MonoBehaviour {
             {
                 if (grounded)
                 {
-                    //rb.AddForce(pos + Vector3.right * speed );
+                    //MovePlayer = new Vector3(pos.x + Input.GetAxis("Horizontal") * speed * Time.deltaTime, pos.y, pos.z);
+                    //rb.MovePosition(MovePlayer);
                     pos = new Vector3(pos.x + Input.GetAxis("Horizontal") * speed * Time.deltaTime, pos.y, pos.z);
                     //transform.position += new Vector3(0.2f, 0, 0);
                 }
                 else
                 {
+                    //MovePlayer = new Vector3(pos.x + Input.GetAxis("Horizontal") * speedWhilejump * Time.deltaTime, pos.y, pos.z);
+                    //rb.MovePosition(MovePlayer);
                     pos = new Vector3(pos.x + Input.GetAxis("Horizontal") * speedWhilejump * Time.deltaTime, pos.y, pos.z);
                     // pos = new Vector3(pos.x + Input.GetAxis("Horizontal") * speedWhilejump * Time.deltaTime, pos.y, pos.z);
                 }
