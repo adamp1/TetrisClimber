@@ -490,7 +490,7 @@ public class Game : MonoBehaviour {
             pauseGame = true;
 
         }
-        else if(Input.GetKeyUp("escape") && Time.timeScale == 0 || Input.GetKeyUp("joystick button 9") && Time.timeScale == 0 || Input.GetKeyUp("joystick button 2") && Time.timeScale == 0)
+        else if (Input.GetKeyUp("escape") && Time.timeScale == 0 || Input.GetKeyUp("joystick button 9") && Time.timeScale == 0 || Input.GetKeyUp("joystick button 2") && Time.timeScale == 0)
         {
             pauseGame = false;
             options = false;

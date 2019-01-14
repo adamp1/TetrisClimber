@@ -41,7 +41,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1070216577864078}
-  m_Mesh: {fileID: 4300070, guid: f9ba610fccfb098418c22655abf3b9ba, type: 3}
+  m_Mesh: {fileID: 0}
 --- !u!65 &65900728123564924
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49,7 +49,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1070216577864078}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 7257834cf144d664ca55a36935b1e4ef, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -145,7 +145,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1138832702625240}
-  m_Mesh: {fileID: 4300074, guid: f9ba610fccfb098418c22655abf3b9ba, type: 3}
+  m_Mesh: {fileID: 0}
 --- !u!65 &65031199498448034
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -153,7 +153,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1138832702625240}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 7257834cf144d664ca55a36935b1e4ef, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -249,7 +249,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1249315082286244}
-  m_Mesh: {fileID: 4300068, guid: f9ba610fccfb098418c22655abf3b9ba, type: 3}
+  m_Mesh: {fileID: 0}
 --- !u!65 &65253306738238548
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -257,7 +257,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1249315082286244}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 7257834cf144d664ca55a36935b1e4ef, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -353,7 +353,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1616092632352484}
-  m_Mesh: {fileID: 4300072, guid: f9ba610fccfb098418c22655abf3b9ba, type: 3}
+  m_Mesh: {fileID: 0}
 --- !u!65 &65983049156066160
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -361,7 +361,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1616092632352484}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 7257834cf144d664ca55a36935b1e4ef, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
