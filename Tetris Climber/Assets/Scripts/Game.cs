@@ -50,6 +50,7 @@ public class Game : MonoBehaviour {
     bool spawnPrefab;
     bool startGame;
     bool pauseGame;
+    bool options;
     bool dead;
 
     bool rayInitializing;
@@ -62,14 +63,15 @@ public class Game : MonoBehaviour {
     GameObject Player;
     GameObject Deathcollider;
     GameObject PauseMenuUI;
+    GameObject OptionsMenuUI;
 
 
     Vector3 SpawnerPos;
 
     void Awake()
     {
-
-
+        OptionsMenuUI = GameObject.Find("OptionsMenu");
+        PauseMenuUI = GameObject.Find("Pause");
         blockagePosX = Random.Range(0, 2);
         SpawnBlockage();
         CheckBlockagePosition();
@@ -78,11 +80,12 @@ public class Game : MonoBehaviour {
     //Start
     void Start()
     {
-
+        OptionsMenuUI.SetActive(false);
 
         Player = GameObject.Find("Player");
         Deathcollider = GameObject.Find("Death Collider");
-        PauseMenuUI = GameObject.Find("Pause");
+
+  
 
         SpawnNextPrefab();
     }
@@ -114,7 +117,7 @@ public class Game : MonoBehaviour {
             GameTime();
             PlayerHeight();
             DistanceToDanger();
-            PauseGame();
+            UpdateMenu();
 
         }
         else
@@ -479,38 +482,77 @@ public class Game : MonoBehaviour {
     }
 
     //GUI
-    void PauseGame()
+    void UpdateMenu()
     {
 
         if (Input.GetKeyUp("escape") && Time.timeScale == 1.0 || Input.GetKeyUp("joystick button 9") && Time.timeScale == 1.0)
         {
             pauseGame = true;
+
         }
         else if(Input.GetKeyUp("escape") && Time.timeScale == 0 || Input.GetKeyUp("joystick button 9") && Time.timeScale == 0 || Input.GetKeyUp("joystick button 2") && Time.timeScale == 0)
         {
             pauseGame = false;
+            options = false;
         }
 
         if(pauseGame)
         {
+            PauseMenuUI.SetActive(true);
             Time.timeScale = 0;
             FindObjectOfType<BlockMovement>().enabled = false;
-            PauseMenuUI.SetActive(true);
 
         }
 
         if (!pauseGame)
         {
+            PauseMenuUI.SetActive(false);
             Time.timeScale = 1.0f;
             FindObjectOfType<BlockMovement>().enabled = true;
-            PauseMenuUI.SetActive(false);
         }
-        
+
+        if(options)
+        {
+            OptionsMenuUI.SetActive(true);
+            FindObjectOfType<BlockMovement>().enabled = false;
+            Time.timeScale = 0;
+        }
+
+        if(!options)
+        {
+            OptionsMenuUI.SetActive(false);
+            FindObjectOfType<BlockMovement>().enabled = true;
+            Time.timeScale = 1.0f;
+        }
+
     }
+
+    
 
     public void Stop()
     {
-        pauseGame = true;
+        // pauseGame = true;
+        // options = false;
+        // UpdateMenu();
+        // Time.timeScale = 1.0f;
+
+    }
+
+    public void OptionsMenu()
+    {
+        pauseGame = false;
+        options = true;
+    }
+
+    public void GoBack()
+    {
+        //PauseMenuUI.SetActive(true);
+
+
+        //Debug.Log("Youre Working?");
+        //pauseGame = false;
+        //options = false;
+        //UpdateMenu();
     }
 
     public void Continue()
