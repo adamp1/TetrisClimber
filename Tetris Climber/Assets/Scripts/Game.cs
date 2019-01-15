@@ -81,6 +81,7 @@ public class Game : MonoBehaviour {
     void Start()
     {
         OptionsMenuUI.SetActive(false);
+        PauseMenuUI.SetActive(false);
 
         Player = GameObject.Find("Player");
         Deathcollider = GameObject.Find("Death Collider");
@@ -117,7 +118,6 @@ public class Game : MonoBehaviour {
             GameTime();
             PlayerHeight();
             DistanceToDanger();
-            UInput();
             UpdateMenu();
 
         }
@@ -484,15 +484,25 @@ public class Game : MonoBehaviour {
 
     void UInput()
     {
-        if (Input.GetKeyUp("escape") && !pauseGame)
+        if (Input.GetKeyUp("escape") && Time.timeScale == 1.0f && !OptionsMenuUI.activeInHierarchy || Input.GetKeyUp(KeyCode.Joystick1Button9) && Time.timeScale == 1.0f && !OptionsMenuUI.activeInHierarchy)
         {
-            pauseGame = true;
-            Debug.Log("fdsf");
+            PauseMenuUI.SetActive(true);
+            Time.timeScale = 0;
+            FindObjectOfType<BlockMovement>().enabled = false;
         }
-        else if (Input.GetKeyUp("escape") && pauseGame)
+        else if (Input.GetKeyUp("escape") && Time.timeScale == 0 && !OptionsMenuUI.activeInHierarchy || Input.GetKeyUp(KeyCode.Joystick1Button9) && Time.timeScale == 0 && !OptionsMenuUI.activeInHierarchy)
         {
-            pauseGame = false;
-            Debug.Log("test");
+            PauseMenuUI.SetActive(false);
+            Time.timeScale = 1.0f;
+            FindObjectOfType<BlockMovement>().enabled = true;
+        }
+
+        if(OptionsMenuUI.activeInHierarchy && Input.GetKeyUp("escape"))
+        {
+            PauseMenuUI.SetActive(false);
+            OptionsMenuUI.SetActive(false);
+            Time.timeScale = 1.0f;
+            FindObjectOfType<BlockMovement>().enabled = true;
         }
     } 
 
@@ -500,7 +510,9 @@ public class Game : MonoBehaviour {
     void UpdateMenu()
     {
 
-    /*    if (Input.GetKeyUp("escape") && !pauseGame || Input.GetKeyUp("joystick button 9") && Time.timeScale == 1.0)
+        UInput();
+
+    /*  if (Input.GetKeyUp("escape") && !pauseGame || Input.GetKeyUp("joystick button 9") && Time.timeScale == 1.0)
         {
             pauseGame = true;
 
@@ -512,7 +524,7 @@ public class Game : MonoBehaviour {
             options = false;
         } */
 
-        if(pauseGame)
+       /* if(pauseGame)
         {
             PauseMenuUI.SetActive(true);
             Time.timeScale = 0;
@@ -525,9 +537,9 @@ public class Game : MonoBehaviour {
             PauseMenuUI.SetActive(false);
             Time.timeScale = 1.0f;
             FindObjectOfType<BlockMovement>().enabled = true;
-        }
+        }*/
 
-        if(options)
+    /*    if(options)
         {
             OptionsMenuUI.SetActive(true);
             FindObjectOfType<BlockMovement>().enabled = false;
@@ -539,7 +551,7 @@ public class Game : MonoBehaviour {
             OptionsMenuUI.SetActive(false);
             FindObjectOfType<BlockMovement>().enabled = true;
             Time.timeScale = 1.0f;
-        }
+        }*/
 
     }
 
@@ -556,8 +568,8 @@ public class Game : MonoBehaviour {
 
     public void OptionsMenu()
     {
-        pauseGame = false;
-        options = true;
+      /*  pauseGame = false;
+        options = true; */
     }
 
     public void GoBack()
@@ -573,7 +585,9 @@ public class Game : MonoBehaviour {
 
     public void Continue()
     {
-        pauseGame = false;
+        PauseMenuUI.SetActive(false);
+        Time.timeScale = 1.0f;
+        FindObjectOfType<BlockMovement>().enabled = true;
     }
 
     public void Quit()
@@ -584,6 +598,7 @@ public class Game : MonoBehaviour {
     public void Restart()
     {
         SceneManager.LoadScene(1);
+        Time.timeScale = 1.0f;
     }
 
     public void MainMenu()
