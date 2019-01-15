@@ -65,7 +65,7 @@ public class DeathCollider : MonoBehaviour {
 
         if (other.gameObject.tag == "Mino")
         {
-            Destroy(other.gameObject);
+            //Destroy(other.gameObject);
         }
     }
 }

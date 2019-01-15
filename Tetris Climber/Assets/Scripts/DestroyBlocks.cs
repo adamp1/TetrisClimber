@@ -18,7 +18,7 @@ public class DestroyBlocks : MonoBehaviour
     bool sliceEnergy;
 
     public float Slice_Speed = 10;
-    public float Slice_Friction = 1;
+    float Slice_Friction = 1;
 
     private float SwordRotation;
 

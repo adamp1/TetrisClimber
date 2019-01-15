@@ -1,0 +1,771 @@
+fileFormatVersion: 2
+guid: e7cf41ff6adb4f744b25666bd3b43873
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Character_TestWalkAnimation_SpriteSheet_0
+    21300002: Character_TestWalkAnimation_SpriteSheet_1
+    21300004: Character_TestWalkAnimation_SpriteSheet_2
+    21300006: Character_TestWalkAnimation_SpriteSheet_3
+    21300008: Character_TestWalkAnimation_SpriteSheet_4
+    21300010: Character_TestWalkAnimation_SpriteSheet_5
+    21300012: Character_TestWalkAnimation_SpriteSheet_6
+    21300014: Character_TestWalkAnimation_SpriteSheet_7
+    21300016: Character_TestWalkAnimation_SpriteSheet_8
+    21300018: Character_TestWalkAnimation_SpriteSheet_9
+    21300020: Character_TestWalkAnimation_SpriteSheet_10
+    21300022: Character_TestWalkAnimation_SpriteSheet_11
+    21300024: Character_TestWalkAnimation_SpriteSheet_12
+    21300026: Character_TestWalkAnimation_SpriteSheet_13
+    21300028: Character_TestWalkAnimation_SpriteSheet_14
+    21300030: Character_TestWalkAnimation_SpriteSheet_15
+    21300032: Character_TestWalkAnimation_SpriteSheet_16
+    21300034: Character_TestWalkAnimation_SpriteSheet_17
+    21300036: Character_TestWalkAnimation_SpriteSheet_18
+    21300038: Character_TestWalkAnimation_SpriteSheet_19
+    21300040: Character_TestWalkAnimation_SpriteSheet_20
+    21300042: Character_TestWalkAnimation_SpriteSheet_21
+    21300044: Character_TestWalkAnimation_SpriteSheet_22
+    21300046: Character_TestWalkAnimation_SpriteSheet_23
+    21300048: Character_TestWalkAnimation_SpriteSheet_24
+    21300050: Character_TestWalkAnimation_SpriteSheet_25
+    21300052: Character_TestWalkAnimation_SpriteSheet_26
+    21300054: Character_TestWalkAnimation_SpriteSheet_27
+    21300056: Character_TestWalkAnimation_SpriteSheet_28
+    21300058: Character_TestWalkAnimation_SpriteSheet_29
+    21300060: Character_TestWalkAnimation_SpriteSheet_30
+    21300062: Character_TestWalkAnimation_SpriteSheet_31
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Character_TestWalkAnimation_SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1792
+        width: 187
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99585e23d6bcd9c44bd49902d63166be
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestWalkAnimation_SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 1792
+        width: 187
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4480cffad444bec4aa177bc9ca82cc5a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestWalkAnimation_SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1792
+        width: 187
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e89ff256f7c1134fa2693a60b4a0a5d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestWalkAnimation_SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 1792
+        width: 187
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f64a183c2c15814db48eaedef326eac
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestWalkAnimation_SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 187
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85508a1defb31b4488b9d6273945e828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestWalkAnimation_SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 1536
+        width: 187
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f669b254b275694f9bcc4eda0d2d7b4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestWalkAnimation_SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1536
+        width: 187
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eba670e192b7ce946952857b308f9f21
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestWalkAnimation_SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 1536
+        width: 187
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfd189da68adb3b4d9ba1972b19ef643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestWalkAnimation_SpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1280
+        width: 187
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 426325a4528d63c45a34a2561926fe1a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestWalkAnimation_SpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 1280
+        width: 187
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7875ec582f6940849b13dd61d4f439ad
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestWalkAnimation_SpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1280
+        width: 187
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 066ec47b5bd9dfe4ab0ce52cb8ae4125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestWalkAnimation_SpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 1280
+        width: 187
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2af3c0541215fb948861a06a3563a891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestWalkAnimation_SpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 187
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e6be7633edc55b488a74876f4dca09d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestWalkAnimation_SpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 1024
+        width: 187
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7fff82b8b935024594f38937d66663d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestWalkAnimation_SpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1024
+        width: 187
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7908ea72a0aa406489f2eec737ad1e62
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestWalkAnimation_SpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 1024
+        width: 187
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c46a3db18e718a4bb598804d5ccfa09
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestWalkAnimation_SpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 187
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65fc13e2dc301d84b9f2b3adf1333702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestWalkAnimation_SpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 768
+        width: 187
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 902d033056243054981a98db98b4596b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestWalkAnimation_SpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 768
+        width: 187
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88777e9059c91614bbf44ec6821b8346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestWalkAnimation_SpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 768
+        width: 187
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8483c2eca979e5d42a545c743d75812d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestWalkAnimation_SpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 187
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db96cbb5869b37b4b89f73bb5e67292b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestWalkAnimation_SpriteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 512
+        width: 187
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bdcdcad52b4c46478ebef304b16b25e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestWalkAnimation_SpriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 512
+        width: 187
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69657520d4f307f48a242497d7c33b1e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestWalkAnimation_SpriteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 512
+        width: 187
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a86260eb1bef4c4a93950ffac13021e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestWalkAnimation_SpriteSheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 187
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 171c873914c7bb14fb47e5f31e59739a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestWalkAnimation_SpriteSheet_25
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 256
+        width: 187
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 760cbc514099b6f498c305223f78442b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestWalkAnimation_SpriteSheet_26
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 256
+        width: 187
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8dbf64a284650346a734c5d8e57e99d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestWalkAnimation_SpriteSheet_27
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 256
+        width: 187
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2076962ddc3490a4a8421e55c15b5f32
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestWalkAnimation_SpriteSheet_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 187
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76c1a22912dc95e4cb7053b3caee46b5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestWalkAnimation_SpriteSheet_29
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 0
+        width: 187
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c40088de69ddd342abe55c3d2a8e946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestWalkAnimation_SpriteSheet_30
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 0
+        width: 187
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 376e32c930d4b1e419d027642d876cc2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestWalkAnimation_SpriteSheet_31
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 0
+        width: 187
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96871519efcccc84d971f4d6203601fc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 3c23bf61beacf1d41a39d94960c90167
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
