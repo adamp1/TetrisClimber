@@ -13,6 +13,23 @@
 						<Property Name="GainBand3" Type="Real32" Value="-1"/>
 					</PropertyList>
 				</Effect>
+				<Effect Name="Click" ID="{CB433142-44F1-4F82-8B15-F0A48FD5105F}" PluginName="Wwise Guitar Distortion" CompanyID="0" PluginID="126" PluginType="3">
+					<PropertyList>
+						<Property Name="DistortionDrive" Type="Real32" Value="16"/>
+						<Property Name="DistortionTone" Type="Real32" Value="6"/>
+						<Property Name="DistortionType" Type="int32" Value="1"/>
+						<Property Name="OutputLevel" Type="Real32" Value="-3.5"/>
+						<Property Name="PostEQBand2Enable" Type="bool" Value="True"/>
+						<Property Name="PostEQBand2FilterType" Type="int32" Value="1"/>
+						<Property Name="PostEQBand2Frequency" Type="Real32" Value="706"/>
+						<Property Name="PostEQBand2Gain" Type="Real32" Value="14"/>
+						<Property Name="PostEQBand2QFactor" Type="Real32" Value="2.9"/>
+						<Property Name="PreEQBand3Enable" Type="bool" Value="True"/>
+						<Property Name="PreEQBand3FilterType" Type="int32" Value="2"/>
+						<Property Name="PreEQBand3Frequency" Type="Real32" Value="2651"/>
+						<Property Name="PreEQBand3Gain" Type="Real32" Value="4"/>
+					</PropertyList>
+				</Effect>
 			</ChildrenList>
 		</WorkUnit>
 	</Effects>

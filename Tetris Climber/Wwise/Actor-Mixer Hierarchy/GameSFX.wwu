@@ -30,9 +30,36 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="SFX_Menu_SelectOption_001" ID="{50DC4D5D-EED4-46DE-9B99-5955D8AD3176}" ShortID="889445523">
+					<PropertyList>
+						<Property Name="OutputBusHighpass" Type="int16">
+							<ValueList>
+								<Value>40</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{4AA406A1-D789-4865-B546-CF9850CBDB91}">
+										<PropertyList>
+											<Property Name="Max" Type="Real64" Value="25"/>
+											<Property Name="Min" Type="Real64" Value="-51"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-7</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B4640E2-A2A8-484D-BCCB-39D6CBB28FBD}"/>
+						</Reference>
+						<Reference Name="Effect0" PluginName="Wwise Guitar Distortion" CompanyID="0" PluginID="126" PluginType="3">
+							<ObjectRef Name="Click" ID="{CB433142-44F1-4F82-8B15-F0A48FD5105F}" WorkUnitID="{4B9D26AE-138A-48A5-B0D7-BF194754E732}"/>
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{59D5B0C7-CBD5-4C44-AFDB-AC8E703BAC41}"/>
@@ -59,7 +86,7 @@
 						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>4</Value>
+								<Value>6</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>

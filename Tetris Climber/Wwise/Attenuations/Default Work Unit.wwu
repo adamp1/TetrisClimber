@@ -5,7 +5,7 @@
 			<ChildrenList>
 				<Attenuation Name="Laser" ID="{83198762-61CC-42D6-A1B3-F0914E8E8AE8}" ShortID="275879670">
 					<PropertyList>
-						<Property Name="RadiusMax" Type="Real64" Value="20"/>
+						<Property Name="RadiusMax" Type="Real64" Value="25"/>
 					</PropertyList>
 					<CurveUsageInfoList>
 						<VolumeDryUsage>
@@ -21,7 +21,7 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>20</XPos>
+											<XPos>25</XPos>
 											<YPos>-200</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -48,8 +48,8 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>20</XPos>
-											<YPos>27</YPos>
+											<XPos>25</XPos>
+											<YPos>38</YPos>
 											<Flags>37</Flags>
 										</Point>
 									</PointList>

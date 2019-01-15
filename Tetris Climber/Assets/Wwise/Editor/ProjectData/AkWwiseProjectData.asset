@@ -81,7 +81,7 @@ MonoBehaviour:
   - PhysicalPath: Events/PLayerSFX.wwu
     ParentPhysicalPath: Events/Default Work Unit.wwu
     guid: 3edc4fd5b3cc83478f33141f6589d675
-    m_lastTime: -8586540188214775808
+    m_lastTime: -8586540155264775808
     List:
     - name: Die
       guid: aafddfc47d33c44089b0b598baa987fa
@@ -128,22 +128,8 @@ MonoBehaviour:
   - PhysicalPath: Events/SFX_Events.wwu
     ParentPhysicalPath: Events/Default Work Unit.wwu
     guid: 9e4f64052ac6b044b7fc6978647153a1
-    m_lastTime: -8586540188214775808
+    m_lastTime: -8586540155264775808
     List:
-    - name: DangerSound
-      guid: ab261b3928bbf2458a33bb229e3d738b
-      id: 1970547201
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: SFX_Events
-        ObjectType: 12
-      - ElementName: DangerSound
-        ObjectType: 3
-      Path: Default Work Unit/SFX_Events/DangerSound
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
     - name: Laser
       guid: 94de949a5b7abb46b4e81c7b3f41197f
       id: 3982605422
@@ -204,8 +190,7 @@ MonoBehaviour:
   - /TetrisClimber
   - /TetrisClimber/Events
   - /TetrisClimber/Events/Default Work Unit
-  - /TetrisClimber/Events/Default Work Unit/PLayerSFX
-  - /TetrisClimber/SoundBanks
-  - /TetrisClimber/SoundBanks/Default Work Unit
+  - /TetrisClimber/Events/Default Work Unit/BGM_Events
+  - /TetrisClimber/Events/Default Work Unit/SFX_Events
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
