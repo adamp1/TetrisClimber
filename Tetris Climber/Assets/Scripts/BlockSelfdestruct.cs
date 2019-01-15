@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BlockSelfdestruct : MonoBehaviour
 {
-    GameObject Deathcollider;
+  /*  GameObject Deathcollider;
     float offset;
     void Start()
     {
@@ -25,5 +25,5 @@ public class BlockSelfdestruct : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-    }
+    }*/
 }

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BlockMovement : MonoBehaviour {
 
+    GameObject Player;
+
     GameObject[] TetrisPrefab = new GameObject[5];
     GameObject Deathcollider;
     float fallingSpeed = 5f;
@@ -20,7 +22,10 @@ public class BlockMovement : MonoBehaviour {
     float resetRight;
     float resetLeft;
 
-  
+    void Start()
+    {
+        Player = GameObject.Find("Player");    
+    }
 
 
     void Update()
@@ -45,6 +50,9 @@ public class BlockMovement : MonoBehaviour {
 
 
 
+
+
+
             if (CheckIsValidPosition())
             {
                 FindObjectOfType<Game>().UpdateGrid(this);
@@ -58,6 +66,14 @@ public class BlockMovement : MonoBehaviour {
             //Falling Object
             transform.position += new Vector3(0, -fallingSpeed * Time.deltaTime, 0);
 
+
+
+        //Spawn New Prefab if out of sight
+        if(transform.position.y < Player.transform.position.y - 10)
+        {
+            enabled = false;
+            FindObjectOfType<Game>().SpawnNextPrefab();
+        }
         
 
 
