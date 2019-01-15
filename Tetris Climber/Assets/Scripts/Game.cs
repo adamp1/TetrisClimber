@@ -484,13 +484,13 @@ public class Game : MonoBehaviour {
 
     void UInput()
     {
-        if (Input.GetKeyUp("escape") && Time.timeScale == 1.0f && !OptionsMenuUI.activeInHierarchy)
+        if (Input.GetKeyUp("escape") && Time.timeScale == 1.0f && !OptionsMenuUI.activeInHierarchy || Input.GetKeyUp(KeyCode.Joystick1Button9) && Time.timeScale == 1.0f && !OptionsMenuUI.activeInHierarchy)
         {
             PauseMenuUI.SetActive(true);
             Time.timeScale = 0;
             FindObjectOfType<BlockMovement>().enabled = false;
         }
-        else if (Input.GetKeyUp("escape") && Time.timeScale == 0 && !OptionsMenuUI.activeInHierarchy)
+        else if (Input.GetKeyUp("escape") && Time.timeScale == 0 && !OptionsMenuUI.activeInHierarchy || Input.GetKeyUp(KeyCode.Joystick1Button9) && Time.timeScale == 0 && !OptionsMenuUI.activeInHierarchy)
         {
             PauseMenuUI.SetActive(false);
             Time.timeScale = 1.0f;
