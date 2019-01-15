@@ -50,7 +50,7 @@
 					<ChildrenList>
 						<MusicSegment Name="Game_v2_4" ID="{B3E2D929-0681-4BA0-8185-48512CE43BD7}" ShortID="661165287">
 							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="32000"/>
+								<Property Name="EndPosition" Type="Real64" Value="72130.6715063522"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -61,20 +61,20 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<MusicTrack Name="Game_v2_4" ID="{B48CA020-3031-49B3-B13F-529E6CB6CCDE}" ShortID="401818135">
+								<MusicTrack Name="Game_v2_7" ID="{7193CF2F-6033-4225-924A-523BF9D490E6}" ShortID="97114427">
 									<ReferenceList>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{59D5B0C7-CBD5-4C44-AFDB-AC8E703BAC41}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Game_v2_4" ID="{1B3FC2F6-7B0A-4215-AE1B-3713B7EEC587}" ShortID="60594962">
+										<AudioFileSource Name="Game_v2_7" ID="{1B7CBAB8-802F-4392-918A-8A2AB153CAFE}" ShortID="831293494">
 											<Language>SFX</Language>
-											<AudioFile>Game_v2.4.wav</AudioFile>
+											<AudioFile>Game_v2.7.wav</AudioFile>
 										</AudioFileSource>
 									</ChildrenList>
 									<TransitionList>
-										<MusicTransition Name="Root" ID="{3CCE44E4-BAA0-4EFC-B5E7-290C01457769}">
+										<MusicTransition Name="Root" ID="{48C157C0-3A8C-48E3-BB33-32B34F794EC5}">
 											<PropertyList>
 												<Property Name="IsFolder" Type="bool" Value="True"/>
 											</PropertyList>
@@ -82,18 +82,120 @@
 										</MusicTransition>
 									</TransitionList>
 									<SequenceList>
-										<MusicTrackSequence Name="" ID="{C061DD7E-6BEE-451C-90AB-4F3812165786}">
+										<MusicTrackSequence Name="" ID="{931F5F2E-70A5-4879-B3AD-479B2C7BEA7F}">
 											<ClipList>
-												<MusicClip Name="Game_v2_4" ID="{3BD3E764-FC1A-4D16-A718-E761D253371C}">
+												<MusicClip Name="Game_v2_7" ID="{65FC4B99-ECCF-424E-BDD0-FE33CAA48D3B}">
 													<PropertyList>
 														<Property Name="EndTrimOffset" Type="Real64" Value="32000"/>
 														<Property Name="FadeInMode" Type="int16" Value="0"/>
 														<Property Name="FadeOutMode" Type="int16" Value="0"/>
 													</PropertyList>
-													<AudioSourceRef Name="Game_v2_4" ID="{1B3FC2F6-7B0A-4215-AE1B-3713B7EEC587}"/>
+													<AudioSourceRef Name="Game_v2_7" ID="{1B7CBAB8-802F-4392-918A-8A2AB153CAFE}"/>
 												</MusicClip>
 											</ClipList>
 										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+								<MusicTrack Name="Inserts_1" ID="{1C2A61DA-D3F2-4C19-ACE7-B50893F45E89}" ShortID="532956965">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{59D5B0C7-CBD5-4C44-AFDB-AC8E703BAC41}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Inserts_1_mp3" ID="{20FAA1BE-7271-4609-B310-92009C8BA49A}" ShortID="837590637">
+											<Language>SFX</Language>
+											<AudioFile>Inserts_1.mp3.wav</AudioFile>
+										</AudioFileSource>
+										<AudioFileSource Name="Inserts_3_mp3" ID="{0AD9E21E-3B53-4C6C-B32A-2D1D875B19E9}" ShortID="769991994">
+											<Language>SFX</Language>
+											<AudioFile>Inserts_3.mp3.wav</AudioFile>
+										</AudioFileSource>
+										<AudioFileSource Name="Inserts_2_mp3" ID="{B52ACBA0-1338-42F9-940A-4C10E053E0CB}" ShortID="344996841">
+											<Language>SFX</Language>
+											<AudioFile>Inserts_2.mp3.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{8BA171C9-A0EF-474B-ABF2-4CBB0FE50891}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicTransition Name="Transition" ID="{9525D6FF-222D-44E0-8DDB-92D72D8279C9}">
+													<TransitionInfo/>
+												</MusicTransition>
+											</ChildrenList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{9429D0E2-C41D-4C24-9DAD-0C3A222DF0B6}">
+											<ClipList>
+												<MusicClip Name="Inserts_1_mp3" ID="{B541E5F8-07EB-41AB-A2A3-1D6A9FDBDCD8}">
+													<PropertyList>
+														<Property Name="EndTrimOffset" Type="Real64" Value="32000"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+													</PropertyList>
+													<AudioSourceRef Name="Inserts_1_mp3" ID="{20FAA1BE-7271-4609-B310-92009C8BA49A}"/>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+										<MusicTrackSequence Name="" ID="{5661D7B4-67CA-4D6D-8E21-E28622FFB23B}">
+											<ClipList>
+												<MusicClip Name="Inserts_3_mp3" ID="{741253E6-A8E8-4285-8BEF-337DF0424375}">
+													<PropertyList>
+														<Property Name="EndTrimOffset" Type="Real64" Value="32000"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+													</PropertyList>
+													<AudioSourceRef Name="Inserts_3_mp3" ID="{0AD9E21E-3B53-4C6C-B32A-2D1D875B19E9}"/>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+										<MusicTrackSequence Name="" ID="{61440BA2-404B-40C7-AEA7-CCA0F532076D}">
+											<ClipList>
+												<MusicClip Name="Inserts_2_mp3" ID="{46035F9E-4EE4-4CCF-91D2-714F3B7D3483}">
+													<PropertyList>
+														<Property Name="EndTrimOffset" Type="Real64" Value="32000"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+													</PropertyList>
+													<AudioSourceRef Name="Inserts_2_mp3" ID="{B52ACBA0-1338-42F9-940A-4C10E053E0CB}"/>
+													<PropertyCurveList>
+														<PropertyCurve PropertyName="Lowpass">
+															<Curve Name="" ID="{1AF4203A-DEB5-46CB-8FF2-6CB2A30EF1B6}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>32</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+													</PropertyCurveList>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+										<MusicTrackSequence Name="" ID="{DDF7DA7C-D35F-4B13-B9CB-5C71AEA5A063}"/>
 									</SequenceList>
 								</MusicTrack>
 							</ChildrenList>
@@ -102,7 +204,7 @@
 								<MusicCue Name="Exit Cue" ID="{68FE947C-1E7E-42E7-A183-21E40D654A9A}">
 									<PropertyList>
 										<Property Name="CueType" Type="int16" Value="1"/>
-										<Property Name="TimeMs" Type="Real64" Value="32000"/>
+										<Property Name="TimeMs" Type="Real64" Value="32000.0001134726"/>
 									</PropertyList>
 								</MusicCue>
 							</CueList>
@@ -127,7 +229,7 @@
 								<Property Name="LoopCount" Type="int16" Value="0"/>
 							</PropertyList>
 							<ChildrenList>
-								<MusicPlaylistItem Name="" ID="{C6159E40-D8E0-4D92-B0D7-2FBB9CAEF7B8}" ShortID="1023102324">
+								<MusicPlaylistItem Name="" ID="{C9F52795-C9A1-4CAC-9358-9FEE2BB870A5}" ShortID="549991776">
 									<PropertyList>
 										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
 									</PropertyList>

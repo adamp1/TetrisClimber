@@ -9,7 +9,6 @@ Event	ID	Name			Wwise Object Path	Notes
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	1090009724	BGM_PlaybackSpeed			\Default Work Unit\BGM_PlaybackSpeed	
-	4174463524	Danger			\Default Work Unit\Danger	
 
 Effect plug-ins	ID	Name	Type				Notes
 	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
@@ -17,12 +16,14 @@ Effect plug-ins	ID	Name	Type				Notes
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	80948791	SFX_Squished_001	Y:\Documents\Projekte\TetrisClimber\Game\Tetris Climber\Wwise\.cache\Windows\SFX\SFX_Squished_001_1056097B.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\SFX_Squished_001		87772
-	536386900	Game_v2_2	Y:\Documents\Projekte\TetrisClimber\Game\Tetris Climber\Wwise\.cache\Windows\SFX\Game_v2.2_8956FC97.wem		\Interactive Music Hierarchy\BackgroundMusic\BackgroundMusic\Game_v2_2\Game_v2_2		22579264
+	344996841	Inserts_1	Y:\Documents\Projekte\TetrisClimber\Game\Tetris Climber\Wwise\.cache\Windows\SFX\Inserts_2.mp3_8956FC97.wem		\Interactive Music Hierarchy\BackgroundMusic\BackgroundMusic\Game_v2_4\Inserts_1		6144064
 	585752603	sword_1	Y:\Documents\Projekte\TetrisClimber\Game\Tetris Climber\Wwise\.cache\Windows\SFX\sword_1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\Sword_Swing\sword_1		59676
-	602572342	DangerSound	Y:\Documents\Projekte\TetrisClimber\Game\Tetris Climber\Wwise\.cache\Windows\SFX\DangerSound_8956FC97.wem		\Actor-Mixer Hierarchy\Default Work Unit\GameSFX\DangerSound		5888920
 	635072450	sword_2	Y:\Documents\Projekte\TetrisClimber\Game\Tetris Climber\Wwise\.cache\Windows\SFX\sword_2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\Sword_Swing\sword_2		59676
 	706580612	SFX_Menu_ButtonSwitching_001	Y:\Documents\Projekte\TetrisClimber\Game\Tetris Climber\Wwise\.cache\Windows\SFX\SFX_Menu_ButtonSwitching_001_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\GameSFX\SFX_Menu_ButtonSwitching_001		17088
+	769991994	Inserts_1	Y:\Documents\Projekte\TetrisClimber\Game\Tetris Climber\Wwise\.cache\Windows\SFX\Inserts_3.mp3_8956FC97.wem		\Interactive Music Hierarchy\BackgroundMusic\BackgroundMusic\Game_v2_4\Inserts_1		6144064
 	796183027	SFX_Jump_001	Y:\Documents\Projekte\TetrisClimber\Game\Tetris Climber\Wwise\.cache\Windows\SFX\SFX_Jump_001_9418050A.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\SFX_Jump_001		81428
+	831293494	Game_v2_7	Y:\Documents\Projekte\TetrisClimber\Game\Tetris Climber\Wwise\.cache\Windows\SFX\Game_v2.7_8956FC97.wem		\Interactive Music Hierarchy\BackgroundMusic\BackgroundMusic\Game_v2_4\Game_v2_7		6144064
+	837590637	Inserts_1	Y:\Documents\Projekte\TetrisClimber\Game\Tetris Climber\Wwise\.cache\Windows\SFX\Inserts_1.mp3_8956FC97.wem		\Interactive Music Hierarchy\BackgroundMusic\BackgroundMusic\Game_v2_4\Inserts_1		6144064
 	872705618	SFX_Menu_SelectOption_001	Y:\Documents\Projekte\TetrisClimber\Game\Tetris Climber\Wwise\.cache\Windows\SFX\SFX_Menu_SelectOption_001_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\GameSFX\SFX_Menu_SelectOption_001		90024
 	935250761	Laser	Y:\Documents\Projekte\TetrisClimber\Game\Tetris Climber\Wwise\.cache\Windows\SFX\Laser_8956FC97.wem		\Actor-Mixer Hierarchy\Default Work Unit\GameSFX\Laser		737572
 

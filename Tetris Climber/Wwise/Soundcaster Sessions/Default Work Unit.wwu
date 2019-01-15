@@ -10,10 +10,6 @@
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="DangerSound" ID="{B9A525B0-B909-4D51-B1B0-2DE79F7E17CD}" WorkUnitID="{035B1F1F-FE5D-4F3D-B36C-34B1898CC711}"/>
-							<Position X="1" Y="0"/>
-						</Module>
-						<Module>
 							<ObjectRef Name="Laser" ID="{9D8B5459-8F81-4346-962A-57F7B556597C}" WorkUnitID="{035B1F1F-FE5D-4F3D-B36C-34B1898CC711}"/>
 							<Position X="2" Y="0"/>
 						</Module>
@@ -25,7 +21,7 @@
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="Danger" ID="{4A44F32B-CB66-4696-B8B7-C5B140DEAD69}"/>
-							<Value>7</Value>
+							<Value>6.38855421686747</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="BGM_PlaybackSpeed" ID="{89A1775D-F62E-4A49-BA56-DC79790B9D21}"/>

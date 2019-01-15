@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.451145, g: 0.49975836, b: 0.56766504, a: 1}
+  m_IndirectSpecularColor: {r: 0.45114535, g: 0.4997592, b: 0.56766546, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -921,86 +921,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 348298069}
   m_Mesh: {fileID: 4300044, guid: d6bd004d6a5e9b04392c61420e2ade13, type: 3}
---- !u!1 &360972198 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3473486972618215317, guid: de1ebf98e34bef045b552eefa69560ed,
-    type: 3}
-  m_PrefabInstance: {fileID: 3473486973848697841}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &360972199
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 360972198}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9219feb7e2f2b0842b992d74308e3b70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: 958ca0ea
-  useOtherObject: 0
-  actionOnEventType: 0
-  curveInterpolation: 4
-  enableActionOnEvent: 0
-  data:
-    valueGuid: 
-    WwiseObjectReference: {fileID: 11400000, guid: 77fbbe86044aaab4faae095de9b887ce,
-      type: 2}
-  m_callbackData: {fileID: 0}
-  playingId: 0
-  soundEmitterObject: {fileID: 0}
-  transitionDuration: 0
-  valueGuid: 
---- !u!114 &360972200
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 360972198}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9219feb7e2f2b0842b992d74308e3b70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: ae8d9d44
-  useOtherObject: 0
-  actionOnEventType: 0
-  curveInterpolation: 4
-  enableActionOnEvent: 0
-  data:
-    valueGuid: 
-    WwiseObjectReference: {fileID: 11400000, guid: 6252ff93007f72646a8e5b270e50e8b2,
-      type: 2}
-  m_callbackData: {fileID: 0}
-  playingId: 0
-  soundEmitterObject: {fileID: 0}
-  transitionDuration: 0
-  valueGuid: 
---- !u!114 &360972201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 360972198}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea09102d321ac9340af220b7a44586ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_listeners:
-    initialListenerList: []
-    useDefaultListeners: 1
-  isEnvironmentAware: 0
-  isStaticObject: 0
-  m_positionOffsetData:
-    KeepMe: 0
-    positionOffset: {x: 0, y: 0, z: 0}
-  m_posOffsetData: {fileID: 0}
-  listenerMask: 1
 --- !u!1 &379951825
 GameObject:
   m_ObjectHideFlags: 0

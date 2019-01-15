@@ -7,9 +7,10 @@
 					<PropertyList>
 						<Property Name="InitialValue" Type="Real64" Value="7"/>
 						<Property Name="Max" Type="Real64" Value="7"/>
+						<Property Name="Min" Type="Real64" Value="1"/>
 						<Property Name="RTPCRamping" Type="int16" Value="1"/>
-						<Property Name="SlewRateDown" Type="Real64" Value="1"/>
-						<Property Name="SlewRateUp" Type="Real64" Value="1"/>
+						<Property Name="SlewRateDown" Type="Real64" Value="2"/>
+						<Property Name="SlewRateUp" Type="Real64" Value="2"/>
 					</PropertyList>
 				</GameParameter>
 				<GameParameter Name="BGM_PlaybackSpeed" ID="{89A1775D-F62E-4A49-BA56-DC79790B9D21}">
