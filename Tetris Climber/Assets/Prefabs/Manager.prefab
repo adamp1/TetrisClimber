@@ -24,7 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6434282302539720790}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6, y: 25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -43,12 +43,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6719ef1ff993e7340b94a7c159b0545f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FirstBlockage: 0
   BlockageDistanceMin: 25
   BlockageDistanceMax: 25
   BlockageWidthMin: 3.3
   BlockageWidthMax: 4.3
   distancetodanger: 0
-  blockFallingSpeed: 8
+  blockFallingSpeed: 0
+  minFallingSpeed: 5
+  maxFallingSpeed: 20
   TetrisPrefab:
   - {fileID: 1027392622649242, guid: 1e0a7ff1c74fb834aa7fc05e186ffc74, type: 3}
   - {fileID: 1760042239657686, guid: ca952e48532d80e4ba5236d0effe6a3b, type: 3}
@@ -56,5 +59,7 @@ MonoBehaviour:
   - {fileID: 1671236731879914, guid: 91e9a298eb8c80d4482f6229c6459442, type: 3}
   - {fileID: 1821396076466522, guid: 792b2010da8dba648a8ec80568b688d9, type: 3}
   BlockagePrefab: {fileID: 1254096791075142074, guid: 1e57f18df55bc1d45a0a560dd1d67d63,
+    type: 3}
+  LaserPrefab: {fileID: 8114108574246539558, guid: d27323ade4c28f04288a2d31d6827dc3,
     type: 3}
   GameOverUI: {fileID: 0}

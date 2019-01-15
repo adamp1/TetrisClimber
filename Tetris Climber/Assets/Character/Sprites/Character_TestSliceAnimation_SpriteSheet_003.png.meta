@@ -1,0 +1,771 @@
+fileFormatVersion: 2
+guid: 540dd1b529a131d4faeb3ed122c0c06f
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Character_TestSliceAnimation_SpriteSheet_003_0
+    21300002: Character_TestSliceAnimation_SpriteSheet_003_1
+    21300004: Character_TestSliceAnimation_SpriteSheet_003_2
+    21300006: Character_TestSliceAnimation_SpriteSheet_003_3
+    21300008: Character_TestSliceAnimation_SpriteSheet_003_4
+    21300010: Character_TestSliceAnimation_SpriteSheet_003_5
+    21300012: Character_TestSliceAnimation_SpriteSheet_003_6
+    21300014: Character_TestSliceAnimation_SpriteSheet_003_7
+    21300016: Character_TestSliceAnimation_SpriteSheet_003_8
+    21300018: Character_TestSliceAnimation_SpriteSheet_003_9
+    21300020: Character_TestSliceAnimation_SpriteSheet_003_10
+    21300022: Character_TestSliceAnimation_SpriteSheet_003_11
+    21300024: Character_TestSliceAnimation_SpriteSheet_003_12
+    21300026: Character_TestSliceAnimation_SpriteSheet_003_13
+    21300028: Character_TestSliceAnimation_SpriteSheet_003_14
+    21300030: Character_TestSliceAnimation_SpriteSheet_003_15
+    21300032: Character_TestSliceAnimation_SpriteSheet_003_16
+    21300034: Character_TestSliceAnimation_SpriteSheet_003_17
+    21300036: Character_TestSliceAnimation_SpriteSheet_003_18
+    21300038: Character_TestSliceAnimation_SpriteSheet_003_19
+    21300040: Character_TestSliceAnimation_SpriteSheet_003_20
+    21300042: Character_TestSliceAnimation_SpriteSheet_003_21
+    21300044: Character_TestSliceAnimation_SpriteSheet_003_22
+    21300046: Character_TestSliceAnimation_SpriteSheet_003_23
+    21300048: Character_TestSliceAnimation_SpriteSheet_003_24
+    21300050: Character_TestSliceAnimation_SpriteSheet_003_25
+    21300052: Character_TestSliceAnimation_SpriteSheet_003_26
+    21300054: Character_TestSliceAnimation_SpriteSheet_003_27
+    21300056: Character_TestSliceAnimation_SpriteSheet_003_28
+    21300058: Character_TestSliceAnimation_SpriteSheet_003_29
+    21300060: Character_TestSliceAnimation_SpriteSheet_003_30
+    21300062: Character_TestSliceAnimation_SpriteSheet_003_31
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Character_TestSliceAnimation_SpriteSheet_003_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1792
+        width: 242
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9901fabe7a2c2984aa4dec0b699bd6d9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestSliceAnimation_SpriteSheet_003_1
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 1792
+        width: 242
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f74098cc9b75e9e42a10e6532a318017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestSliceAnimation_SpriteSheet_003_2
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 1792
+        width: 242
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2dd6e8a51c970d43878823311b9c517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestSliceAnimation_SpriteSheet_003_3
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 1792
+        width: 242
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 515493df9399e8643978fb41c9c74e69
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestSliceAnimation_SpriteSheet_003_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 242
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 858674565847ec9498de958c544943e5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestSliceAnimation_SpriteSheet_003_5
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 1536
+        width: 242
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f30c6ca8e0549044b9c86a825fd14313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestSliceAnimation_SpriteSheet_003_6
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 1536
+        width: 242
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b396dc5f21b1a945a692bd755bb4de8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestSliceAnimation_SpriteSheet_003_7
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 1536
+        width: 242
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f87708aeedc745e45abeec81532eeb85
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestSliceAnimation_SpriteSheet_003_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1280
+        width: 242
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d656f09e41625bf4abbea086316060d2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestSliceAnimation_SpriteSheet_003_9
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 1280
+        width: 242
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a915f04cf4fd49342a593b25e420f376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestSliceAnimation_SpriteSheet_003_10
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 1280
+        width: 242
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cb41d7254c3d12408a732f359066e21
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestSliceAnimation_SpriteSheet_003_11
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 1280
+        width: 242
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abca364dc756a3f4ab05fc10cf3db39a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestSliceAnimation_SpriteSheet_003_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 242
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 926c6fc0b37319d4a9671467560a8195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestSliceAnimation_SpriteSheet_003_13
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 1024
+        width: 242
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2497d0397872f27459008a723f651b0b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestSliceAnimation_SpriteSheet_003_14
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 1024
+        width: 242
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6440858f240b215428d76aea846976c9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestSliceAnimation_SpriteSheet_003_15
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 1024
+        width: 242
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 671ec3a179df3e8498d74daa36f8109a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestSliceAnimation_SpriteSheet_003_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 242
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33763c143171142429ac500452c41919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestSliceAnimation_SpriteSheet_003_17
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 768
+        width: 242
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 527ce795020294a49a13e10250797b40
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestSliceAnimation_SpriteSheet_003_18
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 768
+        width: 242
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a995db72fe351494d873f022c2290c9e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestSliceAnimation_SpriteSheet_003_19
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 768
+        width: 242
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73115a2ff8849ac4889c8e3b5b771763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestSliceAnimation_SpriteSheet_003_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 242
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcbc79036f1ebf1408c5c8e8a9fedb86
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestSliceAnimation_SpriteSheet_003_21
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 512
+        width: 242
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04cdef61ead48084ca866d3b9c1d5765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestSliceAnimation_SpriteSheet_003_22
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 512
+        width: 242
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce161437117f948419fce47a6b2c3c8e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestSliceAnimation_SpriteSheet_003_23
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 512
+        width: 242
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fd9e11f55c5a7348acc5e4503342d62
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestSliceAnimation_SpriteSheet_003_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 242
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b905b26cbd0a3c428f0fa1142e32845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestSliceAnimation_SpriteSheet_003_25
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 256
+        width: 242
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e697f1fec8e1104fb7c7b644145d9e1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestSliceAnimation_SpriteSheet_003_26
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 256
+        width: 242
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 506e409a6cd91bf42810f11afb7df298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestSliceAnimation_SpriteSheet_003_27
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 256
+        width: 242
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f16b8d273f2cd2438796a4f28b6c7b0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestSliceAnimation_SpriteSheet_003_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 242
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ff98057b59d6e64dad75da56957c7e4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestSliceAnimation_SpriteSheet_003_29
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 0
+        width: 242
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ab38942c26d1964c874460b7e4203e9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestSliceAnimation_SpriteSheet_003_30
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 0
+        width: 242
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4b5c4310d19d6d438f884ab49e072af
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_TestSliceAnimation_SpriteSheet_003_31
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 0
+        width: 242
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75887bdd278b8d441817f78f86825ca9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 73a2769ff70d41c419795b868e01b6c7
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

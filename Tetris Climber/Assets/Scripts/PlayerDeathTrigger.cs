@@ -19,6 +19,13 @@ public class PlayerDeathTrigger : MonoBehaviour {
             GameObject Player = GameObject.Find("Player");
             Destroy(Player);
         }
+
+        if (other.gameObject.tag == "DeathCollider")
+        {
+            GameObject Player = GameObject.Find("Player");
+            Destroy(Player);
+            FindObjectOfType<BlockMovement>().enabled = false;
+        }
     }
 
 }

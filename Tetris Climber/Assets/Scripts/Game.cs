@@ -23,6 +23,8 @@ public class Game : MonoBehaviour {
     float laserposx;
     int LaserRot;
 
+    float a;
+
     public float FirstBlockage = 0;
     public float BlockageDistanceMin = 25;
     public float BlockageDistanceMax = 25;
@@ -45,11 +47,13 @@ public class Game : MonoBehaviour {
     public GameObject LaserPrefab;
     GameObject[] BlockageObject = new GameObject[30];
 
+    GameObject[] Minos = new GameObject[500];
 
     int prefabRepeat = 9;
     bool spawnPrefab;
     bool startGame;
     bool pauseGame;
+    bool options;
     bool dead;
 
     bool rayInitializing;
@@ -57,19 +61,19 @@ public class Game : MonoBehaviour {
     int spawnBlocksLeftOrRight;
 
 
-
     public GameObject GameOverUI;
     GameObject Player;
     GameObject Deathcollider;
     GameObject PauseMenuUI;
+    GameObject OptionsMenuUI;
 
 
     Vector3 SpawnerPos;
 
     void Awake()
     {
-
-
+        OptionsMenuUI = GameObject.Find("OptionsMenu");
+        PauseMenuUI = GameObject.Find("Pause");
         blockagePosX = Random.Range(0, 2);
         SpawnBlockage();
         CheckBlockagePosition();
@@ -78,11 +82,13 @@ public class Game : MonoBehaviour {
     //Start
     void Start()
     {
-
+        OptionsMenuUI.SetActive(false);
+        PauseMenuUI.SetActive(false);
 
         Player = GameObject.Find("Player");
         Deathcollider = GameObject.Find("Death Collider");
-        PauseMenuUI = GameObject.Find("Pause");
+
+  
 
         SpawnNextPrefab();
     }
@@ -90,10 +96,6 @@ public class Game : MonoBehaviour {
     //Update
     private void Update()
     {
-        if(Input.GetKeyUp("p"))
-        {
-            UpdateMino();
-        }
 
 
         if (Player != null)
@@ -114,29 +116,20 @@ public class Game : MonoBehaviour {
             GameTime();
             PlayerHeight();
             DistanceToDanger();
-            PauseGame();
+            UpdateMenu();
+            UpdateMinoPos();
+
 
         }
         else
         {
             GameOver();
         }
+
+        
     }
 
-    public void UpdateMino()
-    {
-        for (int y = 0; y < gridHeight; y++)
-        {
-            for (int x = 0; x < gridWidth; x++)
-            {
-                if (grid[x,y] != null)
-                {
-                    
-                }
-            }
-        }
-    }
-
+    
     //Grid
     public void UpdateGrid(BlockMovement tetrisBlock)
     {
@@ -218,12 +211,67 @@ public class Game : MonoBehaviour {
         return new Vector3(Mathf.Round(pos.x), Mathf.Round(pos.y), Mathf.Round(pos.z));
     }
 
-    //MOVE DOWN
-    public void MoveRowDown(int x, int y)
+    //delete grid
+    public void DeleteGrid()
     {
-        
-              
-        grid[x, y] = null;
+        for (int y = 0; y < gridHeight; y++)
+        {
+            for (int x = 0; x < gridWidth; x++)
+            {
+                //if(y > Minoy)
+                grid[x, y] = null;
+            }
+        }
+    }
+
+
+    //MOVE DOWN
+    public void MoveRowDown(int Minox, int Minoy)
+    {
+
+     /*   for (int y = 0; y < gridHeight; y++)
+        {
+            for (int x = 0; x < gridWidth; x++)
+            {
+                
+                if(grid[Minox, Minoy] == grid[x,y])
+
+                grid[Minox, y] = grid[Minox, Minoy + 1];
+
+
+
+
+                //grid[x, y] = grid[x, y];
+
+                //if(grid[x,y] == null)
+
+                //grid[x, y] = grid[x, y - 1];
+
+
+
+
+
+
+
+
+
+
+
+
+            }
+
+
+            // {
+            // grid[x, y] = grid[x, y - 1];
+
+
+
+        }*/
+
+        //Debug.Log(x);
+       // Debug.Log(y);
+
+        //grid[x, y];
 
 
         //grid[x,y].localPosition += new Vector3(0, -1, 0);
@@ -378,13 +426,47 @@ public class Game : MonoBehaviour {
             }
         }
 
-
+        
         Instantiate(TetrisPrefab[randomPrefab], new Vector3(spawnPosX, transform.position.y, transform.position.z), new Quaternion(0, rot, 0, 0));
 
         prefabRepeat = randomPrefab;
         spawnPrefab = false;
 
         BlockFallingSpeed();
+        DeleteGrid();
+
+    }
+
+    //UPDATE MINO POS IN GRID
+    void UpdateMinoPos()
+    {
+        //UPDATE MINO POS IN GRID
+        Minos = GameObject.FindGameObjectsWithTag("Mino") as GameObject[];
+
+        for (int i = 0; i < Minos.Length; i++)
+        {
+            if (Minos[i] != null)
+            {
+                int Minox = Mathf.RoundToInt(Minos[i].transform.position.x);
+                int Minoy = Mathf.RoundToInt(Minos[i].transform.position.y)+1;
+
+                for (int y = 0; y < gridHeight; y++)
+                {
+                    for (int x = 0; x < gridWidth; x++)
+                    {
+                        if (Minox == x && Minoy == y)
+                        {
+                            grid[x, y] = Minos[i].transform;
+                        }
+
+                        //if(grid[x,y] == null)
+                        //grid[x, y] = ;
+                    }
+                }
+            }
+        }
+
+       
     }
 
 
@@ -478,44 +560,112 @@ public class Game : MonoBehaviour {
         }
     }
 
-    //GUI
-    void PauseGame()
+    void UInput()
     {
-
-        if (Input.GetKeyUp("escape") && Time.timeScale == 1.0 || Input.GetKeyUp("joystick button 9") && Time.timeScale == 1.0)
+        if (Input.GetKeyUp("escape") && Time.timeScale == 1.0f && !OptionsMenuUI.activeInHierarchy || Input.GetKeyUp(KeyCode.Joystick1Button9) && Time.timeScale == 1.0f && !OptionsMenuUI.activeInHierarchy)
         {
-            pauseGame = true;
-        }
-        else if(Input.GetKeyUp("escape") && Time.timeScale == 0 || Input.GetKeyUp("joystick button 9") && Time.timeScale == 0 || Input.GetKeyUp("joystick button 2") && Time.timeScale == 0)
-        {
-            pauseGame = false;
-        }
-
-        if(pauseGame)
-        {
+            PauseMenuUI.SetActive(true);
             Time.timeScale = 0;
             FindObjectOfType<BlockMovement>().enabled = false;
+        }
+        else if (Input.GetKeyUp("escape") && Time.timeScale == 0 && !OptionsMenuUI.activeInHierarchy || Input.GetKeyUp(KeyCode.Joystick1Button9) && Time.timeScale == 0 && !OptionsMenuUI.activeInHierarchy)
+        {
+            PauseMenuUI.SetActive(false);
+            Time.timeScale = 1.0f;
+            FindObjectOfType<BlockMovement>().enabled = true;
+        }
+
+        if(OptionsMenuUI.activeInHierarchy && Input.GetKeyUp("escape"))
+        {
+            PauseMenuUI.SetActive(false);
+            OptionsMenuUI.SetActive(false);
+            Time.timeScale = 1.0f;
+            FindObjectOfType<BlockMovement>().enabled = true;
+        }
+    } 
+
+    //GUI
+    void UpdateMenu()
+    {
+
+        UInput();
+
+    /*  if (Input.GetKeyUp("escape") && !pauseGame || Input.GetKeyUp("joystick button 9") && Time.timeScale == 1.0)
+        {
+            pauseGame = true;
+
+        }
+
+        if (Input.GetKeyUp("escape") && pauseGame || Input.GetKeyUp("joystick button 9") && Time.timeScale == 0 || Input.GetKeyUp("joystick button 2") && Time.timeScale == 0)
+        {
+            pauseGame = false;
+            options = false;
+        } */
+
+       /* if(pauseGame)
+        {
             PauseMenuUI.SetActive(true);
+            Time.timeScale = 0;
+            FindObjectOfType<BlockMovement>().enabled = false;
 
         }
 
         if (!pauseGame)
         {
+            PauseMenuUI.SetActive(false);
             Time.timeScale = 1.0f;
             FindObjectOfType<BlockMovement>().enabled = true;
-            PauseMenuUI.SetActive(false);
+        }*/
+
+    /*    if(options)
+        {
+            OptionsMenuUI.SetActive(true);
+            FindObjectOfType<BlockMovement>().enabled = false;
+            Time.timeScale = 0;
         }
-        
+
+        if(!options)
+        {
+            OptionsMenuUI.SetActive(false);
+            FindObjectOfType<BlockMovement>().enabled = true;
+            Time.timeScale = 1.0f;
+        }*/
+
     }
+
+    
 
     public void Stop()
     {
-        pauseGame = true;
+        // pauseGame = true;
+        // options = false;
+        // UpdateMenu();
+        // Time.timeScale = 1.0f;
+
+    }
+
+    public void OptionsMenu()
+    {
+      /*  pauseGame = false;
+        options = true; */
+    }
+
+    public void GoBack()
+    {
+        //PauseMenuUI.SetActive(true);
+
+
+        //Debug.Log("Youre Working?");
+        //pauseGame = false;
+        //options = false;
+        //UpdateMenu();
     }
 
     public void Continue()
     {
-        pauseGame = false;
+        PauseMenuUI.SetActive(false);
+        Time.timeScale = 1.0f;
+        FindObjectOfType<BlockMovement>().enabled = true;
     }
 
     public void Quit()
@@ -526,6 +676,7 @@ public class Game : MonoBehaviour {
     public void Restart()
     {
         SceneManager.LoadScene(1);
+        Time.timeScale = 1.0f;
     }
 
     public void MainMenu()
