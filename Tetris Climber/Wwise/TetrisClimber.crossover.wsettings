@@ -3,7 +3,7 @@
 	<UserProjectSettingsInfo>
 		<UserProjectSettings Name="" ID="{EEC4EFC8-42FA-4116-A27E-A79E2E09170B}">
 			<PropertyList>
-				<Property Name="AudioFilesImporter\Path" Type="string" Value="Y:\Documents\Projekte\TetrisClimber\samples\edited"/>
+				<Property Name="AudioFilesImporter\Path" Type="string" Value="Y:\Documents\Projekte\TetrisClimber\Komposition\Bounces"/>
 				<Property Name="Event Action List\{1869BF3C-9B5E-4C17-BA5F-A0A05E6FAF65}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{21E86BD4-81D1-4222-9A33-85EFCFFE5328}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{391B26AB-BB28-45F2-8A33-BB229E3D738B}\x64_Expand States" Type="string" Value=""/>
@@ -33,6 +33,7 @@
 				<Property Name="GenerateSoundBanks\x64_SelectedSoundBanks" Type="string" Value="S450ts41VkaVAgfANGLdVA=="/>
 				<Property Name="HardwareController\CurrentSession" Type="string" Value="{00000000-0000-0000-0000-000000000000}"/>
 				<Property Name="Interactive Music\x64_{991E3F2E-1923-44B4-8FAB-C984FECD8AFE} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwPwAAAAAAwBtAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
+				<Property Name="Interactive Music\x64_{B3E2D929-0681-4BA0-8185-48512CE43BD7} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwPwAAAAAAODFAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
 				<Property Name="Interactive Music\x64_{F4A98A0A-248C-4EEE-B6F7-B745ED76B1D1} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwPwAAAAAA4BFAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
 				<Property Name="MeterView\LastObject1" Type="string" Value="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
 				<Property Name="MeterView\MeterMode1" Type="int32" Value="1"/>
@@ -43,6 +44,7 @@
 				<Property Name="Music Transition List\{3635DA24-0B37-4A0E-ABC1-2A3994ECDF11}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Music Transition List\{6F55B117-875B-47FB-9FFB-22EBB65981BA}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Music Transition List\{8FDE9198-9AF4-4F51-A088-77920913127C}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Music Transition List\{B48CA020-3031-49B3-B13F-529E6CB6CCDE}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\FirstVisible_10_1" Type="string" Value="{4C96B38B-3DB4-40C7-91C9-665510E38993}"/>
 				<Property Name="ProjectExplorer\FirstVisible_11_1" Type="string" Value="{23EC2DE3-3ED8-4B82-AC99-92E25F2E4C6B}"/>
 				<Property Name="ProjectExplorer\FirstVisible_1_1" Type="string" Value="{2388DAEA-9775-46C6-A2ED-C5222A397756}"/>
@@ -52,7 +54,7 @@
 				<Property Name="ProjectExplorer\FirstVisible_8_1" Type="string" Value="{41093F77-829F-4D88-8601-E8B25F3D4781}"/>
 				<Property Name="ProjectExplorer\x64_Expanded_10_1" Type="string" Value="1BxiGEFTuUO9PkJCm1dPrA=="/>
 				<Property Name="ProjectExplorer\x64_Expanded_11_1" Type="string" Value=""/>
-				<Property Name="ProjectExplorer\x64_Expanded_12_1" Type="string" Value="vDjoxmJ89EGuvzARv+0USCsNaRSpW5xGuaazjUJZyiWYkd6P9JpRT6CId5IJExJ8"/>
+				<Property Name="ProjectExplorer\x64_Expanded_12_1" Type="string" Value="vDjoxmJ89EGuvzARv+0USCsNaRSpW5xGuaazjUJZyiUp2eKzgQagS4GFSFEs5DvXmJHej/SaUU+giHeSCRMSfA=="/>
 				<Property Name="ProjectExplorer\x64_Expanded_13_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_14_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_15_1" Type="string" Value=""/>
