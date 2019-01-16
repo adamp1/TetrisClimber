@@ -30,24 +30,25 @@ public class Game : MonoBehaviour {
     public float BlockageDistanceMax = 25;
     public float BlockageWidthMin = 3.3f;
     public float BlockageWidthMax = 4.3f;
-
+    [Space]
     public float distancetodanger;
 
-    public float blockFallingSpeed;
+    [Space]
+
+    public float blockFallingSpeed;    
     public float minFallingSpeed;
     public float maxFallingSpeed;
+    public float FallingSpeedMultiplikator = 1;
    
     public static int gridWidth = 16;
     public static int gridHeight = 500;
 
     public static Transform[,] grid = new Transform[gridWidth, gridHeight];
-
+    [Space]
     public GameObject[] TetrisPrefab = new GameObject[6];
     public GameObject BlockagePrefab;
     public GameObject LaserPrefab;
     GameObject[] BlockageObject = new GameObject[30];
-
-    GameObject[] Minos = new GameObject[500];
 
     int prefabRepeat = 9;
     bool spawnPrefab;
@@ -96,7 +97,15 @@ public class Game : MonoBehaviour {
     //Update
     private void Update()
     {
+        if(Input.GetKeyUp("p") && Time.timeScale == 1f)
+        {
+            Time.timeScale = 0.1f;
+        }
 
+        else if (Input.GetKeyUp("p") && Time.timeScale == 0.1f)
+        {
+            Time.timeScale = 1f;
+        }
 
         if (Player != null)
         {
@@ -224,6 +233,42 @@ public class Game : MonoBehaviour {
         }
     }
 
+    //UPDATE MINO POS IN GRID
+    public void UpdateMinoPos()
+    {
+        //UPDATE MINO POS IN GRID
+        //Minos = GameObject.FindGameObjectsWithTag("Mino") as GameObject[];
+
+        GameObject[] Minos = new GameObject[GameObject.FindGameObjectsWithTag("Mino").Length];
+
+        Minos = GameObject.FindGameObjectsWithTag("Mino") as GameObject[];
+        
+
+        for (int i = 0; i < Minos.Length; i++)
+        {
+            if (Minos[i] != null)
+            {
+                int Minox = Mathf.RoundToInt(Minos[i].transform.position.x);
+                int Minoy = Mathf.RoundToInt(Minos[i].transform.position.y) + 1;
+
+                for (int y = 0; y < gridHeight; y++)
+                {
+                    for (int x = 0; x < gridWidth; x++)
+                    {
+                        if (Minox == x && Minoy == y)
+                        {
+                            grid[x, y] = Minos[i].transform;
+                        }
+
+                        //if(grid[x,y] == null)
+                        //grid[x, y] = ;
+                    }
+                }
+            }
+        }
+
+
+    }
 
     //MOVE DOWN
     public void MoveRowDown(int Minox, int Minoy)
@@ -437,38 +482,6 @@ public class Game : MonoBehaviour {
 
     }
 
-    //UPDATE MINO POS IN GRID
-    void UpdateMinoPos()
-    {
-        //UPDATE MINO POS IN GRID
-        Minos = GameObject.FindGameObjectsWithTag("Mino") as GameObject[];
-
-        for (int i = 0; i < Minos.Length; i++)
-        {
-            if (Minos[i] != null)
-            {
-                int Minox = Mathf.RoundToInt(Minos[i].transform.position.x);
-                int Minoy = Mathf.RoundToInt(Minos[i].transform.position.y)+1;
-
-                for (int y = 0; y < gridHeight; y++)
-                {
-                    for (int x = 0; x < gridWidth; x++)
-                    {
-                        if (Minox == x && Minoy == y)
-                        {
-                            grid[x, y] = Minos[i].transform;
-                        }
-
-                        //if(grid[x,y] == null)
-                        //grid[x, y] = ;
-                    }
-                }
-            }
-        }
-
-       
-    }
-
 
     //Spawn Engpässe
     void SpawnBlockage()
@@ -517,7 +530,18 @@ public class Game : MonoBehaviour {
                 laserposx = 18;
             } 
 
-           Instantiate(LaserPrefab, new Vector3(laserposx, blockageposY + blockageAbstand / 2, 0), new Quaternion(0, LaserRot, 0, 0));
+            Instantiate(LaserPrefab, new Vector3(laserposx, blockageposY + blockageAbstand / 2, 0), new Quaternion(0, LaserRot, 0, 0)).name = "Laser "+i;
+            GameObject.Find("Lasermodel").name = "Lasermodel " + i;
+
+            //Flip Lasermodel
+            if(laserrot == 1)
+            {
+                GameObject.Find("Lasermodel " + i).transform.Rotate(0, 0, 180);
+                GameObject.Find("Lasermodel " + i).transform.position = new Vector3(
+                GameObject.Find("Lasermodel " + i).transform.position.x + 2, 
+                GameObject.Find("Lasermodel " + i).transform.position.y, 
+                GameObject.Find("Lasermodel " + i).transform.position.z);
+            }
         }
     }
 
@@ -554,6 +578,7 @@ public class Game : MonoBehaviour {
         if(blockFallingSpeed < maxFallingSpeed)
         {
             blockFallingSpeed = minFallingSpeed;
+            playerheight *= FallingSpeedMultiplikator;
             blockFallingSpeed = minFallingSpeed * 100 + playerheight;
             blockFallingSpeed /= 100;
 
