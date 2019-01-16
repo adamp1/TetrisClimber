@@ -38,6 +38,7 @@ ModelImporter:
     100064: Plane_039
     100066: Plane_040
     100068: Plane_041
+    100070: Cube
     400000: //RootNode
     400002: Plane_008
     400004: Plane_009
@@ -73,6 +74,7 @@ ModelImporter:
     400064: Plane_039
     400066: Plane_040
     400068: Plane_041
+    400070: Cube
     2100000: unnamed
     2300000: Plane_008
     2300002: Plane_009
@@ -108,6 +110,7 @@ ModelImporter:
     2300062: Plane_039
     2300064: Plane_040
     2300066: Plane_041
+    2300068: Cube
     3300000: Plane_008
     3300002: Plane_009
     3300004: Plane_010
@@ -142,6 +145,7 @@ ModelImporter:
     3300062: Plane_039
     3300064: Plane_040
     3300066: Plane_041
+    3300068: Cube
     4300000: Plane_024
     4300002: Plane_023
     4300004: Plane_022
@@ -176,6 +180,7 @@ ModelImporter:
     4300062: Plane_039
     4300064: Plane_040
     4300066: Plane_041
+    4300068: Cube
     7400000: Default Take
     9500000: //RootNode
   externalObjects:
