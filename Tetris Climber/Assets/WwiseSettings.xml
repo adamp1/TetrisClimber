@@ -6,7 +6,7 @@
   <CreateWwiseListener>true</CreateWwiseListener>
   <GenerateSoundBanksAsPreBuildStep>false</GenerateSoundBanksAsPreBuildStep>
   <ShowMissingRigidBodyWarning>true</ShowMissingRigidBodyWarning>
-  <SoundbankPath>Audio/</SoundbankPath>
+  <SoundbankPath>../../../../../../Documents/Git/TetrisClimber/Tetris Climber/Assets/StreamingAssets/</SoundbankPath>
   <WwiseInstallationPathMac />
   <WwiseInstallationPathWindows />
   <WwiseProjectPath>../Wwise/TetrisClimber.wproj</WwiseProjectPath>
