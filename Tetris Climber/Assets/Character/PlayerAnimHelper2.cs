@@ -19,7 +19,9 @@ public class PlayerAnimHelper2 : MonoBehaviour
     public void Jump()
     {
         animator.Play("Jump");
+        
     }
+
 
     //Play Run animation
     public void Run()
@@ -43,7 +45,7 @@ public class PlayerAnimHelper2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+     
 
         if (Input.GetAxis("Horizontal") != 0)
         {
@@ -76,9 +78,11 @@ public class PlayerAnimHelper2 : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.J))
             {
                 Jump();
+               
             }
         }
 
+        
 
 
     }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
 
+    
 
     Vector3 MovePlayer;
     public Rigidbody rb;
@@ -11,12 +12,19 @@ public class PlayerMovement : MonoBehaviour {
     public float speedWhilejump = 10;
     public float jumpPower = 40;
     public float gravity = 80;
+    float time;
+    bool moving;
+
+    bool jumping;
 
     bool allowMoveRight = true;
     bool allowMoveLeft = true;
     public bool grounded;
 
-
+    private void Start()
+    {
+        
+    }
 
     // Update is called once per frame
     void Update() {
@@ -39,6 +47,28 @@ public class PlayerMovement : MonoBehaviour {
         Ray DeathFromAbove = new Ray(new Vector3(pos.x, pos.y, pos.z), Vector3.up);
         Debug.DrawRay(new Vector3(pos.x, pos.y, pos.z), Vector3.up);
 
+
+        //IDLE
+
+        /*     if (!Input.anyKey)
+             {
+                 time = time + 1 * Time.deltaTime;
+                 Debug.Log(time);
+                 if (time > 0.2)
+                 {
+                     FindObjectOfType<PlayerAnimHelper2>().Idle();
+                     time = 0;
+                 }
+
+             } */
+
+        if (Input.GetAxis("Horizontal") == 0 && jumping == false && FindObjectOfType<DestroyBlocks>().inisiateSlice == false )
+
+        {
+            FindObjectOfType<PlayerAnimHelper2>().Idle();
+        }
+        
+
         //MoveRight
         if (allowMoveRight)
         {
@@ -49,17 +79,29 @@ public class PlayerMovement : MonoBehaviour {
                     //MovePlayer = new Vector3(pos.x + Input.GetAxis("Horizontal") * speed * Time.deltaTime, pos.y, pos.z);
                     //rb.MovePosition(MovePlayer);
                     pos = new Vector3(pos.x + Input.GetAxis("Horizontal") * speed * Time.deltaTime, pos.y, pos.z);
+                    if(FindObjectOfType<DestroyBlocks>().inisiateSlice == false)
+                        FindObjectOfType<PlayerAnimHelper2>().Run();
+                    moving = true;
                     //transform.position += new Vector3(0.2f, 0, 0);
+
                 }
                 else
                 {
                     //MovePlayer = new Vector3(pos.x + Input.GetAxis("Horizontal") * speedWhilejump * Time.deltaTime, pos.y, pos.z);
                     //rb.MovePosition(MovePlayer);
                     pos = new Vector3(pos.x + Input.GetAxis("Horizontal") * speedWhilejump * Time.deltaTime, pos.y, pos.z);
+                    FindObjectOfType<PlayerAnimHelper2>().Jump();
+                    jumping = true;
                     // pos = new Vector3(pos.x + Input.GetAxis("Horizontal") * speedWhilejump * Time.deltaTime, pos.y, pos.z);
                 }
             }
+            else
+            {
+                moving = false;
+            }
+
         }
+
 
         //MoveLeft
         if (allowMoveLeft)
@@ -69,19 +111,30 @@ public class PlayerMovement : MonoBehaviour {
                 if (grounded)
                 {
                     //MovePlayer = new Vector3(pos.x + Input.GetAxis("Horizontal") * speed * Time.deltaTime, pos.y, pos.z);
-                    //rb.MovePosition(MovePlayer);
+                    //rb.MovePosition(MovePlaywder);
                     pos = new Vector3(pos.x + Input.GetAxis("Horizontal") * speed * Time.deltaTime, pos.y, pos.z);
+                    if (FindObjectOfType<DestroyBlocks>().inisiateSlice == false)
+                        FindObjectOfType<PlayerAnimHelper2>().Run();
+                    moving = true;
                     //transform.position += new Vector3(0.2f, 0, 0);
+
                 }
                 else
                 {
                     //MovePlayer = new Vector3(pos.x + Input.GetAxis("Horizontal") * speedWhilejump * Time.deltaTime, pos.y, pos.z);
                     //rb.MovePosition(MovePlayer);
                     pos = new Vector3(pos.x + Input.GetAxis("Horizontal") * speedWhilejump * Time.deltaTime, pos.y, pos.z);
+                    FindObjectOfType<PlayerAnimHelper2>().Jump();
                     // pos = new Vector3(pos.x + Input.GetAxis("Horizontal") * speedWhilejump * Time.deltaTime, pos.y, pos.z);
+                    jumping = true;
                 }
             }
+            else
+            {
+                moving = false;
+            }
         }
+
 
         transform.position = pos;
        
@@ -94,16 +147,35 @@ public class PlayerMovement : MonoBehaviour {
 
             grounded = false;
 
+            jumping = true;
+
             Physics.gravity = new Vector3(0, -gravity, 0);
+
+            FindObjectOfType<PlayerAnimHelper2>().Jump();
 
             AkSoundEngine.PostEvent("Jump", gameObject);
 
+
         }
+
+        if(jumping)
+        {
+            //JUMP Ani
+            time = time + 1 * Time.deltaTime;
+            //Debug.Log(time);
+            if (time > 0.5)
+            {
+                time = 0;
+                jumping = false;
+            }
+        }
+
+        
 
         //CheckGround
         if (Physics.Raycast(GroundCheck1, out hit, 1.1f) || Physics.Raycast(GroundCheck2, out hit, 1.1f))
         {
-            grounded = true;
+            grounded = true;           
         }
         else
         {

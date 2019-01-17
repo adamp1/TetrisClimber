@@ -7,6 +7,7 @@ public class DestroyBlocks : MonoBehaviour
 {
     GameObject Sword;
 
+    
     public Image Energy;
     float energy;
     public float EnergyRecovery;
@@ -14,7 +15,7 @@ public class DestroyBlocks : MonoBehaviour
 
     public bool lookRight = false;
     public bool lookLeft = true;
-    bool inisiateSlice;
+    public bool inisiateSlice;
     bool sliceEnergy;
 
     public float Slice_Speed = 10;
@@ -67,10 +68,14 @@ public class DestroyBlocks : MonoBehaviour
             {
                 inisiateSlice = true;
                 sliceEnergy = true;
+                FindObjectOfType<PlayerAnimHelper2>().Slice();
                 AkSoundEngine.PostEvent("Swing_Sword", gameObject);
                 Debug.Log("Slice");
             }
         }
+
+
+
 
 
 
