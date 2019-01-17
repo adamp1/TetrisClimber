@@ -128,7 +128,7 @@ public class Game : MonoBehaviour {
             PlayerHeight();
             DistanceToDanger();
             UpdateMenu();
-            //UpdateMinoPos();
+            UpdateMinoPos();
 
 
         }
