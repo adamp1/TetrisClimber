@@ -65,7 +65,7 @@ public class Game : MonoBehaviour {
     public GameObject GameOverUI;
     GameObject Player;
     GameObject Deathcollider;
-    GameObject PauseMenuUI;
+    public GameObject PauseMenuUI;
     GameObject OptionsMenuUI;
 
 

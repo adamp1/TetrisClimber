@@ -61,7 +61,7 @@ public class DestroyBlocks : MonoBehaviour
             lookRight = false;
         }
 
-        if (Input.GetButtonDown("Slice"))
+        if (Input.GetButtonDown("Slice") && !FindObjectOfType<Game>().PauseMenuUI.activeInHierarchy)
         {
             if(energy >= SlashCost)
             {
