@@ -69,7 +69,7 @@ public class MinoPhysics : MonoBehaviour
 
              if (Physics.Raycast(CheckRightBlock, out hit, 0.9f))
              {
-                 if (hit.transform.tag == "Mino" && gameObject.GetComponentInParent<BlockMovement>().enabled == false && hit.transform.gameObject.GetComponent<MinoPhysics>().isFalling == false && isFalling == false)
+                 if (hit.transform.tag == "Mino" && gameObject.GetComponentInParent<BlockMovement>().enabled == false)
                  {  
                      RightBlock = true;
                  }
@@ -89,7 +89,7 @@ public class MinoPhysics : MonoBehaviour
 
              if (Physics.Raycast(CheckLeftBlock, out hit, 0.9f))
              {
-                 if (hit.transform.tag == "Mino" && gameObject.GetComponentInParent<BlockMovement>().enabled == false && hit.transform.gameObject.GetComponent<MinoPhysics>().isFalling == false && isFalling == false)
+                 if (hit.transform.tag == "Mino" && gameObject.GetComponentInParent<BlockMovement>().enabled == false)
                  {
                      LeftBlock = true;
                  }
@@ -111,7 +111,7 @@ public class MinoPhysics : MonoBehaviour
 
              if (Physics.Raycast(CheckUnderBlock, out hit, 0.9f))
              {
-                 if (hit.transform.tag == "Mino" && gameObject.GetComponentInParent<BlockMovement>().enabled == false && hit.transform.gameObject.GetComponent<MinoPhysics>().isFalling == false && isFalling == false)
+                 if (hit.transform.tag == "Mino" && gameObject.GetComponentInParent<BlockMovement>().enabled == false)
                  {
                      if (hit.transform.GetComponentInParent<BlockMovement>().enabled == false)
                      BlockUnderBlock = true;

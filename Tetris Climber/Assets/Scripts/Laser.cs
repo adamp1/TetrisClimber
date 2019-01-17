@@ -29,6 +29,8 @@ public class Laser : MonoBehaviour
                     lr.SetPosition(1, new Vector3(hit.point.x + 4, 0, 0));
                     //lr.SetPosition(1, new Vector3(hit.point.x - 16, 0, 0));
 
+                    Debug.Log("Laserhit");
+
                     if (hit.collider.tag == "Player")
                     {
                         Destroy(hit.collider.gameObject);
@@ -50,10 +52,11 @@ public class Laser : MonoBehaviour
 
             if (Physics.Raycast(transform.position, -transform.right * 20, out hit))
             {
-                if (hit.collider)
+                if (hit.collider )
                 {
                     //lr.SetPosition(1, new Vector3(hit.point.x + 4, 0, 0));
                     lr.SetPosition(1, new Vector3(hit.point.x - 16, 0, 0));
+                    Debug.Log("Laserhit");
 
                     if (hit.collider.tag == "Player")
                     {
