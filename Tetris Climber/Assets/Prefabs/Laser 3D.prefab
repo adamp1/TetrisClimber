@@ -177,8 +177,8 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
-        value: 0.13414383
+        time: 0.03824997
+        value: 0.09247208
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -237,3 +237,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e38c5f90ce63b9d49b9245e59e79400c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SparksEffect: {fileID: 7245298921716112683, guid: c540d764af2f829478196f1a07dea52b,
+    type: 3}

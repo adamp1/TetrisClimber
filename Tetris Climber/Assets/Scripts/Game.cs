@@ -556,7 +556,7 @@ public class Game : MonoBehaviour {
             Instantiate(LaserPrefab, new Vector3(laserposx, blockageposY + blockageAbstand / 2, 0), new Quaternion(0, LaserRot, 0, 0)).name = "Laser "+i;
             GameObject.Find("Lasermodel").name = "Lasermodel " + i;
             GameObject.Find("Lasermodel " + i).transform.position = new Vector3(
-                laserposx,
+                laserposx + 0.2f,
                 GameObject.Find("Lasermodel " + i).transform.position.y,
                 GameObject.Find("Lasermodel " + i).transform.position.z
                 );
@@ -566,7 +566,7 @@ public class Game : MonoBehaviour {
             {
                 GameObject.Find("Lasermodel " + i).transform.Rotate(0, 0, 180);
                 GameObject.Find("Lasermodel " + i).transform.position = new Vector3(
-                GameObject.Find("Lasermodel " + i).transform.position.x, 
+                GameObject.Find("Lasermodel " + i).transform.position.x - 0.2f, 
                 GameObject.Find("Lasermodel " + i).transform.position.y, 
                 GameObject.Find("Lasermodel " + i).transform.position.z);
             }

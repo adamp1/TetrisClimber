@@ -76,6 +76,10 @@ public class BlockMovement : MonoBehaviour {
                 FindObjectOfType<Game>().SpawnNextPrefab();
             }
         }
+        else
+        {
+            enabled = false;
+        }
 
 
 
