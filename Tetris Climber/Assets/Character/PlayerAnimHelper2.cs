@@ -7,6 +7,7 @@ public class PlayerAnimHelper2 : MonoBehaviour
 
     public Animator animator;
     public string state;
+    public bool debugmode;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,22 +15,26 @@ public class PlayerAnimHelper2 : MonoBehaviour
 
     }
 
+    //Play Jump animation
     public void Jump()
     {
         animator.Play("Jump");
     }
 
+    //Play Run animation
     public void Run()
     {
         animator.Play("Run");
     }
 
+    //Play Slice animation
     public void Slice()
     {
         animator.Play("Slice");
 
     }
 
+    //Play Idle animation
     public void Idle()
     {
         animator.Play("Idle");
@@ -51,25 +56,30 @@ public class PlayerAnimHelper2 : MonoBehaviour
             transform.eulerAngles = new Vector3(0, mirrorfloat, 0);
         }
 
-        if (Input.GetKeyDown(KeyCode.I))
+        if (debugmode)
         {
-            Idle();
+            if (Input.GetKeyDown(KeyCode.I))
+            {
+                Idle();
+            }
+
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                Slice();
+            }
+
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                Run();
+            }
+
+            if (Input.GetKeyDown(KeyCode.J))
+            {
+                Jump();
+            }
         }
 
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            Slice();
-        }
 
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            Run();
-        }
-
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            Jump();
-        }
 
     }
 }
