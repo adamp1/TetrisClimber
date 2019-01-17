@@ -13,22 +13,22 @@ MonoBehaviour:
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
   AcousticTextureWwu:
-  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+  - PhysicalPath: Virtual Acoustics/Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 78bb5febc9cc7d43988f0ae121a93d32
-    m_lastTime: -8586550863164034533
+    m_lastTime: -8586543029054775808
     List: []
   AuxBusWwu:
-  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+  - PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: c7b0d559d5cb444cafdbac8e703bac41
-    m_lastTime: -8586550863168616800
+    m_lastTime: -8586543029064775808
     List: []
   BankWwu:
-  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+  - PhysicalPath: SoundBanks/Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 6e0b53c5edb45d409049cd6f25ff12ce
-    m_lastTime: -8586550863164124478
+    m_lastTime: -8586539189314775808
     List:
     - name: SoundBank
       guid: 4b8e74b6ce355646950207c03462dd54
@@ -38,24 +38,43 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: SoundBank
         ObjectType: 7
-      Path: Default Work Unit\SoundBank
+      Path: Default Work Unit/SoundBank
   EventWwu:
-  - PhysicalPath: Events\BGM_Events.wwu
-    ParentPhysicalPath: Events\Default Work Unit.wwu
-    guid: ee5b2487c8373648b254b5c8d574b3a6
-    m_lastTime: -8586550863173606864
+  - PhysicalPath: Events/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 03a87bd2e8187044b561d12f974b5065
+    m_lastTime: -8586539189334775808
+    List: []
+  - PhysicalPath: Events/GameEvents.wwu
+    ParentPhysicalPath: Events/Default Work Unit.wwu
+    guid: 0f56630845d4bb4b946e636a1f8b4c40
+    m_lastTime: -8586539189334775808
     List:
-    - name: Play_BGM
-      guid: d46be821d18122429a3385efcffe5328
-      id: 3126765036
+    - name: ButtonClick
+      guid: 29445634aa766245961ae635260d44ea
+      id: 4051332235
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: BGM_Events
+      - ElementName: GameEvents
         ObjectType: 12
-      - ElementName: Play_BGM
+      - ElementName: ButtonClick
         ObjectType: 3
-      Path: Default Work Unit\BGM_Events\Play_BGM
+      Path: Default Work Unit/GameEvents/ButtonClick
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Start
+      guid: d46be821d18122429a3385efcffe5328
+      id: 1281810935
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: GameEvents
+        ObjectType: 12
+      - ElementName: Start
+        ObjectType: 3
+      Path: Default Work Unit/GameEvents/Start
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -65,44 +84,95 @@ MonoBehaviour:
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: BGM_Events
+      - ElementName: GameEvents
         ObjectType: 12
       - ElementName: Stop_BGM
         ObjectType: 3
-      Path: Default Work Unit\BGM_Events\Stop_BGM
+      Path: Default Work Unit/GameEvents/Stop_BGM
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-  - PhysicalPath: Events\Default Work Unit.wwu
-    ParentPhysicalPath: 
-    guid: 03a87bd2e8187044b561d12f974b5065
-    m_lastTime: -8586550863173596870
-    List: []
-  - PhysicalPath: Events\SoundFX.wwu
-    ParentPhysicalPath: Events\Default Work Unit.wwu
+  - PhysicalPath: Events/PlayerEvents.wwu
+    ParentPhysicalPath: Events/Default Work Unit.wwu
     guid: 3edc4fd5b3cc83478f33141f6589d675
-    m_lastTime: -8586550863173586876
+    m_lastTime: -8586539189334775808
     List:
+    - name: Die
+      guid: aafddfc47d33c44089b0b598baa987fa
+      id: 445985469
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: PlayerEvents
+        ObjectType: 12
+      - ElementName: Die
+        ObjectType: 3
+      Path: Default Work Unit/PlayerEvents/Die
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Jump
       guid: 3cbf69185e9b174cba5fa0a05e6faf65
       id: 3833651337
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: SoundFX
+      - ElementName: PlayerEvents
         ObjectType: 12
       - ElementName: Jump
         ObjectType: 3
-      Path: Default Work Unit\SoundFX\Jump
+      Path: Default Work Unit/PlayerEvents/Jump
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Swing_Sword
+      guid: 78d4a66caa234241ad1faddef9ef6594
+      id: 3063857835
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: PlayerEvents
+        ObjectType: 12
+      - ElementName: Swing_Sword
+        ObjectType: 3
+      Path: Default Work Unit/PlayerEvents/Swing_Sword
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+  - PhysicalPath: Events/SoundEvents.wwu
+    ParentPhysicalPath: Events/Default Work Unit.wwu
+    guid: 9e4f64052ac6b044b7fc6978647153a1
+    m_lastTime: -8586539189334775808
+    List:
+    - name: Laser
+      guid: 94de949a5b7abb46b4e81c7b3f41197f
+      id: 3982605422
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SoundEvents
+        ObjectType: 12
+      - ElementName: Laser
+        ObjectType: 3
+      Path: Default Work Unit/SoundEvents/Laser
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
   RtpcWwu:
-  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+  - PhysicalPath: Game Parameters/Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 37a3588abcb24e408cccada5157ef448
-    m_lastTime: -8586550863173576875
+    m_lastTime: -8586539189334775808
     List:
+    - name: BGM_PlaybackSpeed
+      guid: 5d77a1892ef6494aba56dc79790b9d21
+      id: 1090009724
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: BGM_PlaybackSpeed
+        ObjectType: 13
+      Path: Default Work Unit/BGM_PlaybackSpeed
     - name: Danger
       guid: 2bf3444a66cb9646b8b7c5b140dead69
       id: 4174463524
@@ -111,26 +181,30 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: Danger
         ObjectType: 13
-      Path: Default Work Unit\Danger
+      Path: Default Work Unit/Danger
   StateWwu:
-  - PhysicalPath: States\Default Work Unit.wwu
+  - PhysicalPath: States/Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 9c8d81d77d8e184eb562c23135cdef4f
-    m_lastTime: -8586550863164114490
+    m_lastTime: -8586543029054775808
     List: []
   SwitchWwu:
-  - PhysicalPath: Switches\Default Work Unit.wwu
+  - PhysicalPath: Switches/Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: cc578b8dea049e42928a5021bda7241e
-    m_lastTime: -8586550863164104490
+    m_lastTime: -8586543029054775808
     List: []
   TriggerWwu:
-  - PhysicalPath: Triggers\Default Work Unit.wwu
+  - PhysicalPath: Triggers/Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: d91cd1cdc73be344bb10dc0ce6082420
-    m_lastTime: -8586550863164044531
+    m_lastTime: -8586543029054775808
     List: []
   ExpandedItems:
   - /TetrisClimber
+  - /TetrisClimber/Events
+  - /TetrisClimber/Events/Default Work Unit
+  - /TetrisClimber/Events/Default Work Unit/GameEvents
+  - /TetrisClimber/Events/Default Work Unit/PlayerEvents
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

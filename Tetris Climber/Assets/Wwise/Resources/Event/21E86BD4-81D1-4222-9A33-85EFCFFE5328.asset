@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a6402cce065264489f58c1e733ae195, type: 3}
   m_Name: 21E86BD4-81D1-4222-9A33-85EFCFFE5328
   m_EditorClassIdentifier: 
-  objectName: Play_BGM
-  id: 3126765036
+  objectName: Start
+  id: 1281810935
   guid: 21E86BD4-81D1-4222-9A33-85EFCFFE5328

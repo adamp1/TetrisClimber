@@ -3,7 +3,8 @@
 	<AudioObjects>
 		<WorkUnit Name="Default Work Unit" ID="{82BA0831-8B77-46B5-BBB4-A968759254E5}" PersistMode="Standalone">
 			<ChildrenList>
-				<WorkUnit Name="SoundFX" ID="{035B1F1F-FE5D-4F3D-B36C-34B1898CC711}" PersistMode="Reference"/>
+				<WorkUnit Name="GameSFX" ID="{035B1F1F-FE5D-4F3D-B36C-34B1898CC711}" PersistMode="Reference"/>
+				<WorkUnit Name="PlayerSFX" ID="{A3FB5ABD-58BE-4F99-A897-3BB3D9562A49}" PersistMode="Reference"/>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

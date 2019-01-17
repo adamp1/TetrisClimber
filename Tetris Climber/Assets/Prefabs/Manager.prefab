@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6434282302539720792}
   - component: {fileID: 6434282302539720793}
+  - component: {fileID: 6721984747080376007}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -52,6 +53,7 @@ MonoBehaviour:
   blockFallingSpeed: 0
   minFallingSpeed: 5
   maxFallingSpeed: 20
+  FallingSpeedMultiplikator: 1
   TetrisPrefab:
   - {fileID: 1027392622649242, guid: 1e0a7ff1c74fb834aa7fc05e186ffc74, type: 3}
   - {fileID: 1760042239657686, guid: ca952e48532d80e4ba5236d0effe6a3b, type: 3}
@@ -63,3 +65,26 @@ MonoBehaviour:
   LaserPrefab: {fileID: 8114108574246539558, guid: d27323ade4c28f04288a2d31d6827dc3,
     type: 3}
   GameOverUI: {fileID: 0}
+--- !u!114 &6721984747080376007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6434282302539720790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5920ede3af3e46148a5cb7a622df0c58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    valueGuid: 
+    WwiseObjectReference: {fileID: 11400000, guid: 302195168746bc24494af02f08f55b68,
+      type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  valueGuid: 

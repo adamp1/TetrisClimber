@@ -67,6 +67,8 @@ public class DestroyBlocks : MonoBehaviour
             {
                 inisiateSlice = true;
                 sliceEnergy = true;
+                AkSoundEngine.PostEvent("Swing_Sword", gameObject);
+                Debug.Log("Slice");
             }
         }
 

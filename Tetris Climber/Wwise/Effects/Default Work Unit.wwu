@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{4B9D26AE-138A-48A5-B0D7-BF194754E732}" SchemaVersion="89">
 	<Effects>
-		<WorkUnit Name="Default Work Unit" ID="{4B9D26AE-138A-48A5-B0D7-BF194754E732}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{4B9D26AE-138A-48A5-B0D7-BF194754E732}" PersistMode="Standalone">
+			<ChildrenList>
+				<Effect Name="Squish" ID="{3D55BA85-1F0F-4455-846A-F028D2BD3C4A}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+					<PropertyList>
+						<Property Name="FrequencyBand1" Type="Real32" Value="849"/>
+						<Property Name="FrequencyBand2" Type="Real32" Value="734"/>
+						<Property Name="FrequencyBand3" Type="Real32" Value="4517"/>
+						<Property Name="GainBand1" Type="Real32" Value="5"/>
+						<Property Name="GainBand2" Type="Real32" Value="2.5"/>
+						<Property Name="GainBand3" Type="Real32" Value="-1"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="Click" ID="{CB433142-44F1-4F82-8B15-F0A48FD5105F}" PluginName="Wwise Guitar Distortion" CompanyID="0" PluginID="126" PluginType="3">
+					<PropertyList>
+						<Property Name="DistortionDrive" Type="Real32" Value="16"/>
+						<Property Name="DistortionTone" Type="Real32" Value="6"/>
+						<Property Name="DistortionType" Type="int32" Value="1"/>
+						<Property Name="OutputLevel" Type="Real32" Value="-3.5"/>
+						<Property Name="PostEQBand2Enable" Type="bool" Value="True"/>
+						<Property Name="PostEQBand2FilterType" Type="int32" Value="1"/>
+						<Property Name="PostEQBand2Frequency" Type="Real32" Value="706"/>
+						<Property Name="PostEQBand2Gain" Type="Real32" Value="14"/>
+						<Property Name="PostEQBand2QFactor" Type="Real32" Value="2.9"/>
+						<Property Name="PreEQBand3Enable" Type="bool" Value="True"/>
+						<Property Name="PreEQBand3FilterType" Type="int32" Value="2"/>
+						<Property Name="PreEQBand3Frequency" Type="Real32" Value="2651"/>
+						<Property Name="PreEQBand3Gain" Type="Real32" Value="4"/>
+					</PropertyList>
+				</Effect>
+			</ChildrenList>
+		</WorkUnit>
 	</Effects>
 </WwiseDocument>
