@@ -6577,6 +6577,56 @@ PrefabInstance:
       propertyPath: m_Name
       value: Werbetafel Group
       objectReference: {fileID: 0}
+    - target: {fileID: 717940979, guid: 11bb38dbdba4dc54e9f6329535959c3a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 26.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 717940979, guid: 11bb38dbdba4dc54e9f6329535959c3a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 27.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 670789509, guid: 11bb38dbdba4dc54e9f6329535959c3a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 670789509, guid: 11bb38dbdba4dc54e9f6329535959c3a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 5696030680912219613, guid: 11bb38dbdba4dc54e9f6329535959c3a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 5696030680912219613, guid: 11bb38dbdba4dc54e9f6329535959c3a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 1876552340, guid: 11bb38dbdba4dc54e9f6329535959c3a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.89947516
+      objectReference: {fileID: 0}
+    - target: {fileID: 940926333, guid: 11bb38dbdba4dc54e9f6329535959c3a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.0780842
+      objectReference: {fileID: 0}
+    - target: {fileID: 814417424, guid: 11bb38dbdba4dc54e9f6329535959c3a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 22.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 500752903, guid: 11bb38dbdba4dc54e9f6329535959c3a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 19.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 500752903, guid: 11bb38dbdba4dc54e9f6329535959c3a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 20.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 500752903, guid: 11bb38dbdba4dc54e9f6329535959c3a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 19.53
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11bb38dbdba4dc54e9f6329535959c3a, type: 3}
 --- !u!1001 &6434282301940172368
@@ -6873,7 +6923,7 @@ PrefabInstance:
     - target: {fileID: 6954327962032065429, guid: db1b7182508627a4ba105a7df40443f5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 58
+      value: 11.9
       objectReference: {fileID: 0}
     - target: {fileID: 6954327962032065429, guid: db1b7182508627a4ba105a7df40443f5,
         type: 3}
