@@ -49,6 +49,7 @@ public class Game : MonoBehaviour {
     public GameObject BlockagePrefab;
     public GameObject LaserPrefab;
     GameObject[] BlockageObject = new GameObject[30];
+    GameObject LaserSpawner;
 
     int prefabRepeat = 9;
     bool spawnPrefab;
@@ -68,13 +69,14 @@ public class Game : MonoBehaviour {
     public GameObject PauseMenuUI;
     GameObject OptionsMenuUI;
 
-
+    Vector3 LaserSpawnDirection;
     Vector3 SpawnerPos;
 
     void Awake()
     {
         OptionsMenuUI = GameObject.Find("OptionsMenu");
         PauseMenuUI = GameObject.Find("Pause");
+        LaserSpawner = GameObject.Find("Laserspawner");
         blockagePosX = Random.Range(0, 2);
         SpawnBlockage();
         CheckBlockagePosition();
@@ -519,26 +521,52 @@ public class Game : MonoBehaviour {
             //Spawn Laser
             laserrot = Random.Range(0, 2);
 
+
             if(laserrot == 0)
             {
                 LaserRot = 0;
                 laserposx = -4;
+                LaserSpawnDirection = new Vector3(-30, 0, 0);
+
             }
             else if(laserrot == 1)
             {
                 LaserRot = 0;
                 laserposx = 18;
-            } 
+                LaserSpawnDirection = new Vector3(30, 0, 0);
+            }
+
+            LaserSpawner.transform.position = new Vector3(LaserSpawner.transform.position.x, blockageAbstand / 2, LaserSpawner.transform.position.z);
+
+            //LaserSpawnerRay
+            RaycastHit hit;
+            Ray SpawnLaser = new Ray(new Vector3(LaserSpawner.transform.position.x, LaserSpawner.transform.position.y, LaserSpawner.transform.position.z), LaserSpawnDirection);
+
+            if(Physics.Raycast(SpawnLaser, out hit))
+            {
+                if(hit.transform.tag == "Wall")
+                {
+                    laserposx = hit.point.x;
+                    //Debug.Log("WallHIT " + hit.point.x);
+                }
+
+            }
+
 
             Instantiate(LaserPrefab, new Vector3(laserposx, blockageposY + blockageAbstand / 2, 0), new Quaternion(0, LaserRot, 0, 0)).name = "Laser "+i;
             GameObject.Find("Lasermodel").name = "Lasermodel " + i;
+            GameObject.Find("Lasermodel " + i).transform.position = new Vector3(
+                laserposx,
+                GameObject.Find("Lasermodel " + i).transform.position.y,
+                GameObject.Find("Lasermodel " + i).transform.position.z
+                );
 
             //Flip Lasermodel
-            if(laserrot == 1)
+            if (laserrot == 1)
             {
                 GameObject.Find("Lasermodel " + i).transform.Rotate(0, 0, 180);
                 GameObject.Find("Lasermodel " + i).transform.position = new Vector3(
-                GameObject.Find("Lasermodel " + i).transform.position.x + 2, 
+                GameObject.Find("Lasermodel " + i).transform.position.x, 
                 GameObject.Find("Lasermodel " + i).transform.position.y, 
                 GameObject.Find("Lasermodel " + i).transform.position.z);
             }

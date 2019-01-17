@@ -19,20 +19,26 @@ public class CameraMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Vector3 PlayerPos = Player.transform.position;
-
-        Vector3 CameraPos = transform.position;
-
-      /*  if(PlayerPos.y >= CameraPos.y)
-        {
-            setCameraToPlayer = true;
-        }  */
-
-        if(setCameraToPlayer)
+        if (Player != null)
         {
 
-            CameraPos = new Vector3(transform.position.x, PlayerPos.y + CameraY , CameraZ);
-            transform.position = CameraPos;
+
+
+            Vector3 PlayerPos = Player.transform.position;
+
+            Vector3 CameraPos = transform.position;
+
+            /*  if(PlayerPos.y >= CameraPos.y)
+              {
+                  setCameraToPlayer = true;
+              }  */
+
+            if (setCameraToPlayer)
+            {
+
+                CameraPos = new Vector3(transform.position.x, PlayerPos.y + CameraY, CameraZ);
+                transform.position = CameraPos;
+            }
         }
 	}
 }

@@ -10,6 +10,7 @@ TagManager:
   - DeathTrigger
   - Blockage
   - Sword
+  - Wall
   layers:
   - Default
   - TransparentFX

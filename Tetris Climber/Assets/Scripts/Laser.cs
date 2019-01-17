@@ -17,14 +17,14 @@ public class Laser : MonoBehaviour
     void Update()
     {
 
-        if(transform.position.x == -4)
+        if(transform.position.x < 7.5f)
         {
             RaycastHit hit;
-            Debug.DrawRay(transform.position, transform.right * 20);
+            Debug.DrawRay(transform.position, transform.right * 30);
 
-            if (Physics.Raycast(transform.position, transform.right * 20, out hit))
+            if (Physics.Raycast(transform.position, transform.right * 30, out hit))
             {
-                if (hit.collider)
+                if (hit.collider.tag == "Player" || hit.collider.tag == "Mino")
                 {
                     lr.SetPosition(1, new Vector3(hit.point.x + 4, 0, 0));
                     //lr.SetPosition(1, new Vector3(hit.point.x - 16, 0, 0));
@@ -37,26 +37,28 @@ public class Laser : MonoBehaviour
                     }
 
                 }
+                else
+                {
+                    lr.SetPosition(1, new Vector3(20, 0, 0));
+                    //lr.SetPosition(1, new Vector3(-20, 0, 0));
+                }
             }
-            else
-            {
-                lr.SetPosition(1, new Vector3(20, 0, 0));
-                //lr.SetPosition(1, new Vector3(-20, 0, 0));
-            }
+
+
         }
 
-        if (transform.position.x == 18)
+        if (transform.position.x > 7.5f)
         {
             RaycastHit hit;
-            Debug.DrawRay(transform.position, -transform.right * 20);
+            Debug.DrawRay(transform.position, -transform.right * 30);
 
-            if (Physics.Raycast(transform.position, -transform.right * 20, out hit))
+            if (Physics.Raycast(transform.position, -transform.right * 30, out hit))
             {
-                if (hit.collider )
+                if (hit.collider.tag == "Player" || hit.collider.tag == "Mino")
                 {
                     //lr.SetPosition(1, new Vector3(hit.point.x + 4, 0, 0));
                     lr.SetPosition(1, new Vector3(hit.point.x - 16, 0, 0));
-                    Debug.Log("Laserhit");
+                    //Debug.Log("Laserhit");
 
                     if (hit.collider.tag == "Player")
                     {
@@ -64,13 +66,15 @@ public class Laser : MonoBehaviour
                     }
 
                 }
+                else
+                {
+                    //lr.SetPosition(1, new Vector3(20, 0, 0));
+                    lr.SetPosition(1, new Vector3(-20, 0, 0));
+                }
             }
-            else
-            {
-                //lr.SetPosition(1, new Vector3(20, 0, 0));
-                lr.SetPosition(1, new Vector3(-20, 0, 0));
-            }
+
         }
+
 
 
 

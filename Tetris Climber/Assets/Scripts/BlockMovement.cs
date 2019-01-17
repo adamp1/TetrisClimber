@@ -67,14 +67,15 @@ public class BlockMovement : MonoBehaviour {
             transform.position += new Vector3(0, -fallingSpeed * Time.deltaTime, 0);
 
 
-
-        //Spawn New Prefab if out of sight
-        if(transform.position.y < Player.transform.position.y - 10)
+        if (Player != null)
         {
-            enabled = false;
-            FindObjectOfType<Game>().SpawnNextPrefab();
+            //Spawn New Prefab if out of sight
+            if (transform.position.y < Player.transform.position.y - 10)
+            {
+                enabled = false;
+                FindObjectOfType<Game>().SpawnNextPrefab();
+            }
         }
-        
 
 
 
