@@ -2665,6 +2665,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SparksEffect
       objectReference: {fileID: 0}
+    - target: {fileID: 3338996249397344931, guid: d23b7ea5a4cc81f459e5ed374cb1b143,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d23b7ea5a4cc81f459e5ed374cb1b143, type: 3}
 --- !u!1 &652069291
@@ -3191,7 +3196,7 @@ PrefabInstance:
     - target: {fileID: 5190219932226604733, guid: 45f1ea6dbdd30014ba193374f6a2f9ba,
         type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 5190219932226604733, guid: 45f1ea6dbdd30014ba193374f6a2f9ba,
         type: 3}
@@ -6859,6 +6864,31 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.563
       objectReference: {fileID: 0}
+    - target: {fileID: 3473486972618215323, guid: de1ebf98e34bef045b552eefa69560ed,
+        type: 3}
+      propertyPath: speed
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3473486972618215323, guid: de1ebf98e34bef045b552eefa69560ed,
+        type: 3}
+      propertyPath: speedWhilejump
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3473486972618215323, guid: de1ebf98e34bef045b552eefa69560ed,
+        type: 3}
+      propertyPath: gravity
+      value: 66
+      objectReference: {fileID: 0}
+    - target: {fileID: 3473486972618215322, guid: de1ebf98e34bef045b552eefa69560ed,
+        type: 3}
+      propertyPath: Slice_Speed
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 3473486972618215322, guid: de1ebf98e34bef045b552eefa69560ed,
+        type: 3}
+      propertyPath: EnergyRecovery
+      value: 99.9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de1ebf98e34bef045b552eefa69560ed, type: 3}
 --- !u!1 &3723038851834066423 stripped
@@ -6879,6 +6909,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e38c5f90ce63b9d49b9245e59e79400c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SparksEffect: {fileID: 0}
 --- !u!1001 &6434282301940172368
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6915,17 +6946,17 @@ PrefabInstance:
     - target: {fileID: 6434282302539720793, guid: 5b463e87c5a93ec4eac93835974f863c,
         type: 3}
       propertyPath: FirstBlockage
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6434282302539720793, guid: 5b463e87c5a93ec4eac93835974f863c,
         type: 3}
       propertyPath: BlockageDistanceMin
-      value: 25
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 6434282302539720793, guid: 5b463e87c5a93ec4eac93835974f863c,
         type: 3}
       propertyPath: BlockageDistanceMax
-      value: 25
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 6434282302539720793, guid: 5b463e87c5a93ec4eac93835974f863c,
         type: 3}
@@ -7020,7 +7051,7 @@ PrefabInstance:
     - target: {fileID: 6434282302539720793, guid: 5b463e87c5a93ec4eac93835974f863c,
         type: 3}
       propertyPath: FallingSpeedMultiplikator
-      value: 1
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 6434282302539720793, guid: 5b463e87c5a93ec4eac93835974f863c,
         type: 3}
@@ -7104,12 +7135,12 @@ PrefabInstance:
     - target: {fileID: 6841671131779761950, guid: f1d261530576741458d658dcef8c37c9,
         type: 3}
       propertyPath: speed
-      value: 0.13
+      value: 0.16
       objectReference: {fileID: 0}
     - target: {fileID: 6841671131779761950, guid: f1d261530576741458d658dcef8c37c9,
         type: 3}
       propertyPath: speedIncrease
-      value: 0.0035
+      value: 0.001
       objectReference: {fileID: 0}
     - target: {fileID: 6841671131779761949, guid: f1d261530576741458d658dcef8c37c9,
         type: 3}
@@ -7144,7 +7175,7 @@ PrefabInstance:
     - target: {fileID: 6841671131779761950, guid: f1d261530576741458d658dcef8c37c9,
         type: 3}
       propertyPath: increaseIntervall
-      value: 0.8
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6071341089657595680, guid: f1d261530576741458d658dcef8c37c9,
         type: 3}
