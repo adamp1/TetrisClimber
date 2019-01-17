@@ -3191,7 +3191,7 @@ PrefabInstance:
     - target: {fileID: 5190219932226604733, guid: 45f1ea6dbdd30014ba193374f6a2f9ba,
         type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 5190219932226604733, guid: 45f1ea6dbdd30014ba193374f6a2f9ba,
         type: 3}
@@ -6834,35 +6834,30 @@ PrefabInstance:
       propertyPath: Energy
       value: 
       objectReference: {fileID: 2056746235}
-    - target: {fileID: 3473486972618215323, guid: de1ebf98e34bef045b552eefa69560ed,
+    - target: {fileID: 3473486972618215319, guid: de1ebf98e34bef045b552eefa69560ed,
         type: 3}
-      propertyPath: speed
-      value: 10
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3473486972618215323, guid: de1ebf98e34bef045b552eefa69560ed,
+    - target: {fileID: 6708453451886093946, guid: de1ebf98e34bef045b552eefa69560ed,
         type: 3}
-      propertyPath: speedWhilejump
-      value: 10
+      propertyPath: m_LocalScale.x
+      value: 0.938046
       objectReference: {fileID: 0}
-    - target: {fileID: 3473486972618215323, guid: de1ebf98e34bef045b552eefa69560ed,
+    - target: {fileID: 6708453451886093946, guid: de1ebf98e34bef045b552eefa69560ed,
         type: 3}
-      propertyPath: jumpPower
-      value: 28
+      propertyPath: m_LocalScale.y
+      value: 0.938046
       objectReference: {fileID: 0}
-    - target: {fileID: 3473486972618215322, guid: de1ebf98e34bef045b552eefa69560ed,
+    - target: {fileID: 6708453451886093946, guid: de1ebf98e34bef045b552eefa69560ed,
         type: 3}
-      propertyPath: EnergyRecovery
-      value: 90
+      propertyPath: m_LocalScale.z
+      value: 0.938046
       objectReference: {fileID: 0}
-    - target: {fileID: 3473486972618215322, guid: de1ebf98e34bef045b552eefa69560ed,
+    - target: {fileID: 6708453451886093946, guid: de1ebf98e34bef045b552eefa69560ed,
         type: 3}
-      propertyPath: SlashCost
-      value: 99.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 3473486972618215322, guid: de1ebf98e34bef045b552eefa69560ed,
-        type: 3}
-      propertyPath: Slice_Speed
-      value: 20
+      propertyPath: m_LocalPosition.y
+      value: 0.563
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de1ebf98e34bef045b552eefa69560ed, type: 3}
