@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Game : MonoBehaviour {
 
-    AudioSource Soundtrack;
+    //AudioSource Soundtrack;
 
     float playerheight;
     float maxplayerheight;
@@ -47,7 +47,9 @@ public class Game : MonoBehaviour {
     [Space]
     public GameObject[] TetrisPrefab = new GameObject[6];
     public GameObject BlockagePrefab;
-    public GameObject LaserPrefab;
+
+    
+public GameObject LaserPrefab;
     GameObject[] BlockageObject = new GameObject[30];
     GameObject LaserSpawner;
 
@@ -71,6 +73,9 @@ public class Game : MonoBehaviour {
 
     Vector3 LaserSpawnDirection;
     Vector3 SpawnerPos;
+
+    GameObject Manager;
+
 
     void Awake()
     {
@@ -728,12 +733,16 @@ public class Game : MonoBehaviour {
 
     public void Restart()
     {
+        AkSoundEngine.StopAll();
+        
         SceneManager.LoadScene(1);
+        
         Time.timeScale = 1.0f;
     }
 
     public void MainMenu()
     {
+        AkSoundEngine.StopAll();
         SceneManager.LoadScene(0);
     }
 

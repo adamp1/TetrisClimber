@@ -77,7 +77,7 @@ public class Laser : MonoBehaviour
                 if (hit.collider.tag == "Player" || hit.collider.tag == "Mino")
                 {
                     
-                    lr.SetPosition(1, new Vector3(hit.point.x - transform.position.x , 0, 0));
+                    lr.SetPosition(1, new Vector3(hit.point.x - transform.position.x, 0, 0));
 
 
 
