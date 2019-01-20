@@ -15,10 +15,10 @@ GameObject:
   - component: {fileID: 6954327962032065451}
   - component: {fileID: 6954327962032065424}
   - component: {fileID: 6954327962032065449}
-  - component: {fileID: 6954327962032065450}
   - component: {fileID: 6954327962032065448}
   - component: {fileID: 6954327962032065455}
   - component: {fileID: 6954327962032065454}
+  - component: {fileID: 6954327962032065450}
   - component: {fileID: 1162454235}
   m_Layer: 0
   m_Name: Main Camera
@@ -162,19 +162,6 @@ MonoBehaviour:
   edgesOnly: 0
   edgesOnlyBgColor: {r: 1, g: 1, b: 1, a: 1}
   edgeDetectShader: {fileID: 4800000, guid: 0d1644bdf064147baa97f235fc5b4903, type: 3}
---- !u!114 &6954327962032065450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6954327962032065425}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a07a781cad112c75d0008dfa8d76c639, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shader: {fileID: 4800000, guid: 7ba218dabf3aaf04e9e3a09061d34e27, type: 3}
 --- !u!114 &6954327962032065448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,6 +236,19 @@ MonoBehaviour:
   maxshake: 0.01
   shake: 0.01
   noshake: 0
+--- !u!114 &6954327962032065450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6954327962032065425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a07a781cad112c75d0008dfa8d76c639, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: 7ba218dabf3aaf04e9e3a09061d34e27, type: 3}
 --- !u!114 &1162454235
 MonoBehaviour:
   m_ObjectHideFlags: 0
