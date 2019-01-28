@@ -49,7 +49,7 @@ public class PlayerAnimHelper2 : MonoBehaviour
 
         if (Input.GetAxis("Horizontal") != 0)
         {
-            print(Input.GetAxis("Horizontal"));
+           // print(Input.GetAxis("Horizontal"));
             bool mirror = Input.GetAxis("Horizontal") < 0;
             float mirrorfloat = mirror ? 1 : 0;
             mirrorfloat *= 180;

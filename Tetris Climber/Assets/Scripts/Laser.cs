@@ -31,13 +31,25 @@ public class Laser : MonoBehaviour
             //lr.SetPosition(0, transform.position);
             if (Physics.Raycast(transform.position, transform.right * 30, out hit))
             {
-
+                
+                //Particle Effect
                 transform.GetChild(1).gameObject.SetActive(true);
                 transform.GetChild(1).transform.position = hit.point;
+                transform.GetChild(1).transform.rotation = Quaternion.Euler(0, 270, 0);
 
+                //Reposition Laser if not working
+                if (hit.collider.tag == "Wall" && hit.point.x < 7.5f)
+                {
+                    transform.position = new Vector3(transform.position.x + 0.1f, transform.position.y, transform.position.z);
+                   // Debug.Log("Laser Correction: " + name);
+                }
+
+                //Set laser Position
                 if (hit.collider.tag == "Player" || hit.collider.tag == "Mino")
                 {
-                    lr.SetPosition(1, new Vector3(hit.point.x + transform.position.x, 0, 0));
+
+                    float hitpoint = hit.point.x - transform.position.x;
+                    lr.SetPosition(1, new Vector3(hitpoint / 2, 0, 0));
 
 
                     if (hit.collider.tag == "Player")
@@ -71,13 +83,23 @@ public class Laser : MonoBehaviour
             if (Physics.Raycast(transform.position, -transform.right * 30, out hit))
             {
 
+                //Particle Effect
                 transform.GetChild(1).gameObject.SetActive(true);
                 transform.GetChild(1).transform.position = hit.point;
 
+                //Reposition Laser if not working
+                if (hit.collider.tag == "Wall" && hit.point.x > 7.5f)
+                {
+                    transform.position = new Vector3(transform.position.x - 0.1f, transform.position.y, transform.position.z);
+                    //Debug.Log("Laser Correction: " + name);
+                }
+
+                //Set laser Position
                 if (hit.collider.tag == "Player" || hit.collider.tag == "Mino")
                 {
-                    
-                    lr.SetPosition(1, new Vector3(hit.point.x - transform.position.x, 0, 0));
+
+                    float hitpoint = hit.point.x - transform.position.x;
+                    lr.SetPosition(1, new Vector3(hitpoint / 2, 0, 0));
 
 
 

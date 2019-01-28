@@ -47,94 +47,92 @@ public class PlayerMovement : MonoBehaviour {
         Ray DeathFromAbove = new Ray(new Vector3(pos.x, pos.y, pos.z), Vector3.up);
         Debug.DrawRay(new Vector3(pos.x, pos.y, pos.z), Vector3.up);
 
-
-        //IDLE
-
-        /*     if (!Input.anyKey)
-             {
-                 time = time + 1 * Time.deltaTime;
-                 Debug.Log(time);
-                 if (time > 0.2)
-                 {
-                     FindObjectOfType<PlayerAnimHelper2>().Idle();
-                     time = 0;
-                 }
-
-             } */
-
-        if (Input.GetAxis("Horizontal") == 0 && jumping == false && FindObjectOfType<DestroyBlocks>().inisiateSlice == false )
-
+        //IDLE ANIMATION
+        if (moving == false && jumping == false && FindObjectOfType<DestroyBlocks>().inisiateSlice == false )
         {
+
             FindObjectOfType<PlayerAnimHelper2>().Idle();
+            //Debug.Log("START IDLE");
         }
-        
 
-        //MoveRight
-        if (allowMoveRight)
+
+        //MOVE PLAYER HORIZONTAL
+        if (Input.GetAxisRaw("Horizontal") != 0)
         {
-            if (Input.GetAxis("Horizontal") > 0 && pos.x < 15)
-            {
-                if (grounded)
-                {
-                    //MovePlayer = new Vector3(pos.x + Input.GetAxis("Horizontal") * speed * Time.deltaTime, pos.y, pos.z);
-                    //rb.MovePosition(MovePlayer);
-                    pos = new Vector3(pos.x + Input.GetAxis("Horizontal") * speed * Time.deltaTime, pos.y, pos.z);
-                    if(FindObjectOfType<DestroyBlocks>().inisiateSlice == false)
-                        FindObjectOfType<PlayerAnimHelper2>().Run();
-                    moving = true;
-                    //transform.position += new Vector3(0.2f, 0, 0);
 
+            //MoveRight
+            if (allowMoveRight)
+            {
+                if (Input.GetAxisRaw("Horizontal") > 0 && pos.x < 15)
+                {
+                    if (grounded)
+                    {
+                        //MovePlayer = new Vector3(pos.x + Input.GetAxis("Horizontal") * speed * Time.deltaTime, pos.y, pos.z);
+                        //rb.MovePosition(MovePlayer);
+                        pos = new Vector3(pos.x + Input.GetAxisRaw("Horizontal") * speed * Time.deltaTime, pos.y, pos.z);
+                        if (FindObjectOfType<DestroyBlocks>().inisiateSlice == false && !jumping)
+                            FindObjectOfType<PlayerAnimHelper2>().Run();
+                        moving = true;
+                        //transform.position += new Vector3(0.2f, 0, 0);
+
+                    }
+                    else
+                    {
+                        //MovePlayer = new Vector3(pos.x + Input.GetAxis("Horizontal") * speedWhilejump * Time.deltaTime, pos.y, pos.z);
+                        //rb.MovePosition(MovePlayer);
+                        pos = new Vector3(pos.x + Input.GetAxisRaw("Horizontal") * speedWhilejump * Time.deltaTime, pos.y, pos.z);
+                        //FindObjectOfType<PlayerAnimHelper2>().Jump();
+                        //jumping = true;
+                        // pos = new Vector3(pos.x + Input.GetAxis("Horizontal") * speedWhilejump * Time.deltaTime, pos.y, pos.z);
+                        moving = false;
+                    }
                 }
                 else
                 {
-                    //MovePlayer = new Vector3(pos.x + Input.GetAxis("Horizontal") * speedWhilejump * Time.deltaTime, pos.y, pos.z);
-                    //rb.MovePosition(MovePlayer);
-                    pos = new Vector3(pos.x + Input.GetAxis("Horizontal") * speedWhilejump * Time.deltaTime, pos.y, pos.z);
-                    FindObjectOfType<PlayerAnimHelper2>().Jump();
-                    jumping = true;
-                    // pos = new Vector3(pos.x + Input.GetAxis("Horizontal") * speedWhilejump * Time.deltaTime, pos.y, pos.z);
+                    
                 }
-            }
-            else
-            {
-                moving = false;
+
             }
 
-        }
 
-
-        //MoveLeft
-        if (allowMoveLeft)
-        {
-            if (Input.GetAxis("Horizontal") < 0 && pos.x > 0)
+            //MoveLeft
+            if (allowMoveLeft)
             {
-                if (grounded)
+                if (Input.GetAxisRaw("Horizontal") < 0 && pos.x > 0)
                 {
-                    //MovePlayer = new Vector3(pos.x + Input.GetAxis("Horizontal") * speed * Time.deltaTime, pos.y, pos.z);
-                    //rb.MovePosition(MovePlaywder);
-                    pos = new Vector3(pos.x + Input.GetAxis("Horizontal") * speed * Time.deltaTime, pos.y, pos.z);
-                    if (FindObjectOfType<DestroyBlocks>().inisiateSlice == false)
-                        FindObjectOfType<PlayerAnimHelper2>().Run();
-                    moving = true;
-                    //transform.position += new Vector3(0.2f, 0, 0);
+                    if (grounded)
+                    {
+                        //MovePlayer = new Vector3(pos.x + Input.GetAxis("Horizontal") * speed * Time.deltaTime, pos.y, pos.z);
+                        //rb.MovePosition(MovePlaywder);
+                        pos = new Vector3(pos.x + Input.GetAxisRaw("Horizontal") * speed * Time.deltaTime, pos.y, pos.z);
+                        if (FindObjectOfType<DestroyBlocks>().inisiateSlice == false && !jumping)
+                            FindObjectOfType<PlayerAnimHelper2>().Run();
+                        moving = true;
+                        //transform.position += new Vector3(0.2f, 0, 0);
 
+                    }
+                    else
+                    {
+                        //MovePlayer = new Vector3(pos.x + Input.GetAxis("Horizontal") * speedWhilejump * Time.deltaTime, pos.y, pos.z);
+                        //rb.MovePosition(MovePlayer);
+                        pos = new Vector3(pos.x + Input.GetAxisRaw("Horizontal") * speedWhilejump * Time.deltaTime, pos.y, pos.z);
+                        // FindObjectOfType<PlayerAnimHelper2>().Jump();
+                        // pos = new Vector3(pos.x + Input.GetAxis("Horizontal") * speedWhilejump * Time.deltaTime, pos.y, pos.z);
+                        //jumping = true;
+                        moving = false;
+                    }
                 }
                 else
                 {
-                    //MovePlayer = new Vector3(pos.x + Input.GetAxis("Horizontal") * speedWhilejump * Time.deltaTime, pos.y, pos.z);
-                    //rb.MovePosition(MovePlayer);
-                    pos = new Vector3(pos.x + Input.GetAxis("Horizontal") * speedWhilejump * Time.deltaTime, pos.y, pos.z);
-                    FindObjectOfType<PlayerAnimHelper2>().Jump();
-                    // pos = new Vector3(pos.x + Input.GetAxis("Horizontal") * speedWhilejump * Time.deltaTime, pos.y, pos.z);
-                    jumping = true;
+                    
                 }
             }
-            else
-            {
-                moving = false;
-            }
-        }
 
+        }
+        else
+        {
+            moving = false;
+        }
 
         transform.position = pos;
        
@@ -163,7 +161,7 @@ public class PlayerMovement : MonoBehaviour {
             //JUMP Ani
             time = time + 1 * Time.deltaTime;
             //Debug.Log(time);
-            if (time > 0.5)
+            if (time > 0.48)
             {
                 time = 0;
                 jumping = false;
@@ -196,6 +194,7 @@ public class PlayerMovement : MonoBehaviour {
         if(Physics.Raycast(WallCheckRight1, out hit, 0.6f) || Physics.Raycast(WallCheckRight2, out hit, 0.5f) || Physics.Raycast(WallCheckRight3, out hit, 0.5f))
         {
             allowMoveRight = false;
+            //FindObjectOfType<PlayerAnimHelper2>().animator.SetBool("run", false);
         }
         else
         {
@@ -205,6 +204,7 @@ public class PlayerMovement : MonoBehaviour {
         if (Physics.Raycast(WallCheckLeft1, out hit, 0.6f) || Physics.Raycast(WallCheckLeft2, out hit, 0.5f) || Physics.Raycast(WallCheckLeft3, out hit, 0.5f))
         {
             allowMoveLeft = false;
+            //FindObjectOfType<PlayerAnimHelper2>().animator.SetBool("run", false);
         }
         else
         {

@@ -64,7 +64,6 @@ public GameObject LaserPrefab;
 
     int spawnBlocksLeftOrRight;
 
-
     public GameObject GameOverUI;
     GameObject Player;
     GameObject Deathcollider;
@@ -104,15 +103,6 @@ public GameObject LaserPrefab;
     //Update
     private void Update()
     {
-        if(Input.GetKeyUp("p") && Time.timeScale == 1f)
-        {
-            Time.timeScale = 0.1f;
-        }
-
-        else if (Input.GetKeyUp("p") && Time.timeScale == 0.1f)
-        {
-            Time.timeScale = 1f;
-        }
 
         if (Player != null)
         {
@@ -230,7 +220,12 @@ public GameObject LaserPrefab;
     //delete grid
     public void DeleteGrid()
     {
-        for (int y = 0; y < gridHeight; y++)
+        int UpdateLowestGridPos = Mathf.RoundToInt(Deathcollider.transform.position.y);
+        int SpawnerPos = Mathf.RoundToInt(transform.position.y);
+
+        if (UpdateLowestGridPos < 0) UpdateLowestGridPos = 0;
+
+        for (int y = UpdateLowestGridPos; y < SpawnerPos; y++)
         {
             for (int x = 0; x < gridWidth; x++)
             {
@@ -246,90 +241,64 @@ public GameObject LaserPrefab;
         //UPDATE MINO POS IN GRID
         //Minos = GameObject.FindGameObjectsWithTag("Mino") as GameObject[];
 
-        GameObject[] Minos = new GameObject[GameObject.FindGameObjectsWithTag("Mino").Length];
+        DeleteGrid();
 
-        Minos = GameObject.FindGameObjectsWithTag("Mino") as GameObject[];
+        GameObject[] Minos = new GameObject[GameObject.FindGameObjectsWithTag("Mino").Length];
         
+        Minos = GameObject.FindGameObjectsWithTag("Mino") as GameObject[];
+       
 
         for (int i = 0; i < Minos.Length; i++)
         {
-            if (Minos[i] != null)
+            int Minox = Mathf.RoundToInt(Minos[i].transform.position.x);
+            int Minoy = Mathf.RoundToInt(Minos[i].transform.position.y + 1);
+            int UpdateLowestGridPos = Mathf.RoundToInt(Deathcollider.transform.position.y);
+            int SpawnerPos = Mathf.RoundToInt(transform.position.y);
+
+            if(UpdateLowestGridPos < 0) UpdateLowestGridPos = 0;
+
+
+            for (int y = UpdateLowestGridPos; y < SpawnerPos; y++)
             {
-                int Minox = Mathf.RoundToInt(Minos[i].transform.position.x);
-                int Minoy = Mathf.RoundToInt(Minos[i].transform.position.y) + 1;
-
-                for (int y = 0; y < gridHeight; y++)
+                for (int x = 0; x < gridWidth; x++)
                 {
-                    for (int x = 0; x < gridWidth; x++)
+                    if (Minox == x && Minoy == y)
                     {
-                        if (Minox == x && Minoy == y)
-                        {
-                            grid[x, y] = Minos[i].transform;
-                        }
-
-                        //if(grid[x,y] == null)
-                        //grid[x, y] = ;
+                        grid[x, y] = Minos[i].transform;
                     }
+
+                    //if(grid[x,y] == null)
+                    //grid[x, y] = ;
                 }
             }
+            
+        }
+    }
+
+    //CLEASR MINO IN GRID
+    public void DeleteMinoBudgetEdition(int x, int y)
+    {
+        //Collider Pos
+        int UpdateLowestGridPos = Mathf.RoundToInt(Deathcollider.transform.position.y);
+
+        //Delete Grid
+        for (int iy = 0; iy < gridHeight; iy++)
+        {
+            grid[x, iy] = null;
         }
 
-
+        Debug.Log("x "+x);
+        Debug.Log("y "+y);
     }
 
-    //MOVE DOWN
-    public void MoveRowDown(int Minox, int Minoy)
+    //UpdateMino In Grid
+    public void UpdateMinoBudgetEdition(int x, int y, Transform mino)
     {
-
-     /*   for (int y = 0; y < gridHeight; y++)
-        {
-            for (int x = 0; x < gridWidth; x++)
-            {
-                
-                if(grid[Minox, Minoy] == grid[x,y])
-
-                grid[Minox, y] = grid[Minox, Minoy + 1];
-
-
-
-
-                //grid[x, y] = grid[x, y];
-
-                //if(grid[x,y] == null)
-
-                //grid[x, y] = grid[x, y - 1];
-
-
-
-
-
-
-
-
-
-
-
-
-            }
-
-
-            // {
-            // grid[x, y] = grid[x, y - 1];
-
-
-
-        }*/
-
-        //Debug.Log(x);
-       // Debug.Log(y);
-
-        //grid[x, y];
-
-
-        //grid[x,y].localPosition += new Vector3(0, -1, 0);
-
+        //Update Grid
+        grid[x, y] = mino;
 
     }
+
 
     //Spawn Tetris Block
     public void SpawnNextPrefab()
@@ -485,7 +454,7 @@ public GameObject LaserPrefab;
         spawnPrefab = false;
 
         BlockFallingSpeed();
-        DeleteGrid();
+        //DeleteGrid();
 
     }
 
@@ -522,6 +491,7 @@ public GameObject LaserPrefab;
             FirstBlockage = 0;
 
             BlockageObject[i] = GameObject.Find("Blockage " + i);
+            BlockageObject[i].transform.localScale = new Vector3(blockageWidth, 2, 2.87f);
 
             //Spawn Laser
             laserrot = Random.Range(0, 2);
@@ -558,10 +528,10 @@ public GameObject LaserPrefab;
             }
 
 
-            Instantiate(LaserPrefab, new Vector3(laserposx, blockageposY + blockageAbstand / 2, 0), new Quaternion(0, LaserRot, 0, 0)).name = "Laser "+i;
-            GameObject.Find("Lasermodel").name = "Lasermodel " + i;
-            GameObject.Find("Lasermodel " + i).transform.position = new Vector3(
-                laserposx + 0.5f,
+          Instantiate(LaserPrefab, new Vector3(laserposx, blockageposY + blockageAbstand / 2, 0), new Quaternion(0, LaserRot, 0, 0)).name = "Laser "+i;
+                GameObject.Find("Lasermodel").name = "Lasermodel " + i;
+                GameObject.Find("Lasermodel " + i).transform.position = new Vector3(
+                laserposx,
                 GameObject.Find("Lasermodel " + i).transform.position.y,
                 GameObject.Find("Lasermodel " + i).transform.position.z
                 );
@@ -571,7 +541,7 @@ public GameObject LaserPrefab;
             {
                 GameObject.Find("Lasermodel " + i).transform.Rotate(0, 0, 180);
                 GameObject.Find("Lasermodel " + i).transform.position = new Vector3(
-                GameObject.Find("Lasermodel " + i).transform.position.x - 0.5f, 
+                GameObject.Find("Lasermodel " + i).transform.position.x, 
                 GameObject.Find("Lasermodel " + i).transform.position.y, 
                 GameObject.Find("Lasermodel " + i).transform.position.z);
             }

@@ -23,7 +23,7 @@ public class DestroyBlocks : MonoBehaviour
 
     private float SwordRotation;
 
-    bool swordAni;
+    public bool swordAni;
 
     Vector3 SwordPos;
 
@@ -51,12 +51,12 @@ public class DestroyBlocks : MonoBehaviour
         //Slice
         Vector3 pos = transform.position;
 
-        if (Input.GetAxis("Horizontal") > 0 && !swordAni)
+        if (Input.GetAxisRaw("Horizontal") > 0 && !swordAni)
         {
             lookRight = true;
             lookLeft = false;
         }
-        else if(Input.GetAxis("Horizontal") < 0 && !swordAni)
+        else if(Input.GetAxisRaw("Horizontal") < 0 && !swordAni)
         {
             lookLeft = true;
             lookRight = false;
@@ -70,7 +70,7 @@ public class DestroyBlocks : MonoBehaviour
                 sliceEnergy = true;
                 FindObjectOfType<PlayerAnimHelper2>().Slice();
                 AkSoundEngine.PostEvent("Swing_Sword", gameObject);
-                Debug.Log("Slice");
+                //Debug.Log("Slice");
             }
         }
 

@@ -6,25 +6,36 @@ public class MinoPhysics : MonoBehaviour
 {
     GameObject Player;
     Material material;
+    Material inactiveMat;
 
-    bool BlockUnderBlock;
-    bool RightBlock;
-    bool LeftBlock;
+    public bool moveMino;
+    public bool BlockUnderBlock;
+    public bool RightBlock;
+    public bool LeftBlock;
 
     float goingdown;
     float speed = 8;
     float offset = 0f;
 
     public bool isFalling;
-    public bool Grounded;
+    public bool sameParent;
+    public bool Grounded = true;
+
+    bool updateMinos; 
+
+    int counter = 0;
+
+    float timer;
 
     // Start is called before the first frame update
     void Start()
     {
         Player = GameObject.Find("Player");
         material = GetComponent<MeshRenderer>().material;
+        //inactiveMat = Resources.Load("Models/Tetris Colors/Inactive Blocks.mat", typeof(Material)) as Material;
 
         //offset = transform.position.x * 0.1f;
+        //Grounded = true;
     }
 
     IEnumerator boom()
@@ -45,7 +56,7 @@ public class MinoPhysics : MonoBehaviour
         material.SetFloat("_boom", 0);
         GetComponent<MeshRenderer>().enabled = false;
 
-        FindObjectOfType<Game>().DeleteGrid();
+        //FindObjectOfType<Game>().DeleteGrid();
 
         Destroy(gameObject);
         //material.SetFloat("_emintensity", 1000);
@@ -64,164 +75,119 @@ public class MinoPhysics : MonoBehaviour
         Ray CheckRightBlock = new Ray(new Vector3(pos.x, pos.y, pos.z), Vector3.right);
         Ray CheckLeftBlock = new Ray(new Vector3(pos.x, pos.y, pos.z), Vector3.left);
         Ray CheckOverBlock = new Ray(new Vector3(pos.x, pos.y, pos.z), Vector3.up);
+        Ray CheckRightBlockUnder = new Ray(new Vector3(pos.x, pos.y - 0.6f, pos.z), Vector3.right);
+        Ray CheckLeftBlockUnder = new Ray(new Vector3(pos.x, pos.y - 0.6f, pos.z), Vector3.left);
+        //Ray CheckOverBlock = new Ray(new Vector3(pos.x, pos.y, pos.z), Vector3.up);
+        //Ray CheckRightUPDATE = new Ray(new Vector3(pos.x, pos.y- 0.5f, pos.z), Vector3.right * 5);
+        // Ray CheckLeftUPDATE = new Ray(new Vector3(pos.x, pos.y - 0.5f, pos.z), Vector3.left * 5);
+        Ray CheckUnderBlockLeft = new Ray(new Vector3(pos.x - 1, pos.y, pos.z), Vector3.down * 5);
+        Ray CheckUnderBlockRight = new Ray(new Vector3(pos.x + 1, pos.y , pos.z), Vector3.down * 5);
 
         Debug.DrawRay(new Vector3(pos.x, pos.y, pos.z), Vector3.down);
 
-             if (Physics.Raycast(CheckRightBlock, out hit, 0.9f))
-             {
-                 if (hit.transform.tag == "Mino" && gameObject.GetComponentInParent<BlockMovement>().enabled == false)
-                 {  
-                     RightBlock = true;
-                 }
-                 //isFalling = false;
-
-             }
-             else if(RightBlock )
-             {
-                 if (!Physics.Raycast(CheckUnderBlock, out hit, 0.9f))
-                 {
-                         FindObjectOfType<Game>().DeleteGrid();
-                         transform.position += new Vector3(0, -1, 0);
-                         FindObjectOfType<Game>().UpdateMinoPos();
-                        //isFalling = true;
-            }
-             }
-
-             if (Physics.Raycast(CheckLeftBlock, out hit, 0.9f))
-             {
-                 if (hit.transform.tag == "Mino" && gameObject.GetComponentInParent<BlockMovement>().enabled == false)
-                 {
-                     LeftBlock = true;
-                 }
-                 //isFalling = false;
-
-             }
-             else if (LeftBlock )
-             {
-                 if (!Physics.Raycast(CheckUnderBlock, out hit, 0.9f))
-                 {
-
-                         FindObjectOfType<Game>().DeleteGrid();
-                         transform.position += new Vector3(0, -1, 0);
-                         FindObjectOfType<Game>().UpdateMinoPos();
-                         //isFalling = true;
-                 }
-             }
-
-
-             if (Physics.Raycast(CheckUnderBlock, out hit, 0.9f))
-             {
-                 if (hit.transform.tag == "Mino" && gameObject.GetComponentInParent<BlockMovement>().enabled == false)
-                 {
-                     if (hit.transform.GetComponentInParent<BlockMovement>().enabled == false)
-                     BlockUnderBlock = true;
-                 }
-
-                // isFalling = false;
-
-             }
-             else if (BlockUnderBlock)
-             {
-                 FindObjectOfType<Game>().DeleteGrid();           
-                 transform.position += new Vector3(0, -1, 0);
-                 FindObjectOfType<Game>().UpdateMinoPos();
-                 //isFalling = true;
-
-             }
-
-     /*   if (gameObject.GetComponentInParent<BlockMovement>().enabled == false)
+        //GROUND TREE
+        if (gameObject.GetComponentInParent<BlockMovement>().enabled == false && Time.timeScale != 0)
         {
-            //if (!Physics.Raycast(CheckUnderBlock, out hit, 1f) && 
-            //   !Physics.Raycast(CheckRightBlock, out hit, 1f) && 
-            // !Physics.Raycast(CheckLeftBlock, out hit, 1f))
-            //{
 
-            //  transform.position += new Vector3(0, -1, 0);
-            //}
-
-            if (Physics.Raycast(CheckOverBlock, out hit, 1f))
-            {
-                if (hit.transform.tag == "Mino")
-                {
-
-                    if (hit.transform.gameObject.GetComponent<MinoPhysics>().Grounded == true && hit.transform.parent == transform.parent)
-                    {
-                        Grounded = true;
-                        RightBlock = true;
-                    }
-                }
-                else if (LeftBlock)
-                {
-                    Grounded = false;
-                }
-            }
-
-            if (Physics.Raycast(CheckRightBlock, out hit, 1f))
-            {
-                if (hit.transform.tag == "Mino")
-                {
-                    if (hit.transform.gameObject.GetComponent<MinoPhysics>().Grounded == true && hit.transform.parent == transform.parent)
-                    {
-                        Grounded = true;
-                    }
-                }
-            }
-
-            if (Physics.Raycast(CheckLeftBlock, out hit, 1f))
-            {
-                if (hit.transform.tag == "Mino")
-                {
-                    if (hit.transform.gameObject.GetComponent<MinoPhysics>().Grounded == true && hit.transform.parent == transform.parent)
-                    {
-                        Grounded = true;
-                        LeftBlock = true;
-                    }
-
-                }
-                else if(LeftBlock)
-                {
-                    Grounded = false;
-                }
-            }
-
+            //UNDER BLOCK CHECK
             if (Physics.Raycast(CheckUnderBlock, out hit, 1f))
             {
-                if(hit.transform.tag == "Ground")
+                if (hit.transform.tag == "Ground")
+                {
+
+                }
+
+                if (hit.transform.tag == "Mino")
+                {
+                    if (hit.transform.parent.GetComponent<BlockMovement>().enabled == false && gameObject.GetComponentInParent<BlockMovement>().enabled == false)
+                    {
+                        BlockUnderBlock = true;
+                        isFalling = false;
+                    }
+                }
+
+                if (hit.transform.tag == "Player" && isFalling)
+                {
+                    Destroy(hit.collider.gameObject);
+                }
+
+                moveMino = false;
+            }
+            else if ( BlockUnderBlock || isFalling)
+            {
+                isFalling = true;
+                MoveMinoDown();
+            }
+
+            //LEFT BLOCK CHECK
+            if (Physics.Raycast(CheckLeftBlock, out hit, 1f))
+            {
+                if (hit.transform.tag == "Mino" && hit.transform.parent.GetComponent<BlockMovement>().enabled == false && !hit.transform.GetComponent<MinoPhysics>().moveMino)
+                    LeftBlock = true;
+            }
+            else if (LeftBlock)
+            {
+                isFalling = true;
+            }
+
+            //RIGHT BLOCK CHECK
+            if (Physics.Raycast(CheckRightBlock, out hit, 1f) )
+            {
+                if(hit.transform.tag == "Mino" && hit.transform.parent.GetComponent<BlockMovement>().enabled == false && !hit.transform.GetComponent<MinoPhysics>().moveMino)
+                    RightBlock = true;
+            }
+            else if (RightBlock)
+            {
+                isFalling = true;
+            }
+
+
+
+
+            //BUGFIXES
+            if (!Physics.Raycast(CheckUnderBlock, out hit, 1) && !Physics.Raycast(CheckLeftBlock, out hit, 1) && !Physics.Raycast(CheckRightBlock, out hit, 1) && !Physics.Raycast(CheckOverBlock, out hit, 1) && gameObject.GetComponentInParent<BlockMovement>().enabled == false)
+            {
+                isFalling = true;
+            }
+
+
+       /*     //BUG FIX GROUNDED
+            if (Physics.Raycast(CheckUnderBlock, out hit, 1f))
+            {
+                if (hit.transform.tag == "Mino" && hit.transform.parent != transform.parent || hit.transform.tag == "Ground")
                 {
                     Grounded = true;
                 }
+                else Grounded = false;
 
-                if(hit.transform.tag == "Mino")
+            }
+            else Grounded = false;
+
+            if (FindObjectOfType<DestroyBlocks>().swordAni == true)
+            {
+
+
+                for (int i = 0; i < transform.parent.childCount; i++)
                 {
-                    if (hit.transform.gameObject.GetComponent<MinoPhysics>().Grounded == true)
+                    if (transform.parent.GetChild(i).GetComponent<MinoPhysics>().Grounded == false)
                     {
-                        Grounded = true;
+                        counter++;
+                        Debug.Log(counter);
                     }
                 }
 
-            }
-            else if(!Physics.Raycast(CheckUnderBlock, out hit, 1f) &&
-                !Physics.Raycast(CheckLeftBlock, out hit, 1f) &&
-                    !Physics.Raycast(CheckRightBlock, out hit, 1f))
-            {
-               Grounded = false;
-            }
-               
-            if(Grounded == false)
-            {
-
-
-                FindObjectOfType<Game>().DeleteGrid();
-
-                transform.position += new Vector3(0, -1, 0);
-                FindObjectOfType<Game>().UpdateMinoPos();
-            }
-        }*/
-
-
-        
-
-
+                if (counter == transform.parent.childCount)
+                {
+                    isFalling = true;
+                    Debug.Log("isFalling");
+                    counter = 0;
+                }
+                else
+                {
+                    counter = 0;
+                }
+            }*/
+        } 
 
 
         if (Player == null)
@@ -246,4 +212,14 @@ public class MinoPhysics : MonoBehaviour
 
     }
 
+    void MoveMinoDown ()
+    {
+        transform.position += new Vector3(0, -1f, 0);
+        moveMino = true;
+    }
+
+    void UpdateMino()
+    {
+        FindObjectOfType<Game>().UpdateMinoBudgetEdition(Mathf.RoundToInt(transform.position.x), Mathf.RoundToInt(transform.position.y + 1), transform);
+    }
 }

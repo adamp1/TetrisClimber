@@ -22,9 +22,17 @@ public class BlockMovement : MonoBehaviour {
     float resetRight;
     float resetLeft;
 
+    Material inactiveMat;
+
     void Start()
     {
-        Player = GameObject.Find("Player");    
+        Player = GameObject.Find("Player");
+       // inactiveMat = Resources.Load("Models/Tetris Colors/Inactive Blocks.mat", typeof(Material)) as Material;
+       /* for (int i = 0; i < 4; i++)
+        {
+            transform.GetChild(i).GetComponent<MeshRenderer>().material = inactiveMat;
+        }*/
+
     }
 
 
@@ -44,14 +52,7 @@ public class BlockMovement : MonoBehaviour {
             //pos.y = pos.y - Input.GetAxis("MoveTetrisDown") * 50 * Time.deltaTime;
             
             
-                transform.position += new Vector3(0, -1, 0);
-
-            
-
-
-
-
-
+            transform.position += new Vector3(0, -1, 0);
 
             if (CheckIsValidPosition())
             {
@@ -66,42 +67,48 @@ public class BlockMovement : MonoBehaviour {
             //Falling Object
             transform.position += new Vector3(0, -fallingSpeed * Time.deltaTime, 0);
 
-
-        if (Player != null)
+        //Disable Script
+        if (CheckIsValidPosition())
         {
-            //Spawn New Prefab if out of sight
-            if (transform.position.y < Player.transform.position.y - 10)
-            {
-                enabled = false;
-                FindObjectOfType<Game>().SpawnNextPrefab();
-            }
+            FindObjectOfType<Game>().UpdateGrid(this);
         }
         else
         {
             enabled = false;
+            FindObjectOfType<Game>().SpawnNextPrefab();
         }
 
+        //ROTATE RIGHT
+        if (Input.GetButtonDown("RotateRight"))
+        {
 
-
-        if (CheckIsValidPosition())
+            if (allowRotation)
             {
-                FindObjectOfType<Game>().UpdateGrid(this);
-            }
-            else
-            {
-                enabled = false;
-                FindObjectOfType<Game>().SpawnNextPrefab();
-            }
-
-            //Rotate Object
-            if (Input.GetButtonDown("RotateRight"))
-            {
-
-                if (allowRotation)
+                if (limitRotation)
                 {
-                    if(limitRotation)
+                    if (transform.rotation.eulerAngles.z >= -90)
                     {
-                        if(transform.rotation.eulerAngles.z >= -90)
+                        transform.Rotate(0, 0, 90);
+                    }
+                    else
+                    {
+                        transform.Rotate(0, 0, -90);
+                    }
+                }
+                else
+                {
+                    transform.Rotate(0, 0, -90);
+                }
+
+                if (CheckIsValidPosition())
+                {
+                    FindObjectOfType<Game>().UpdateGrid(this);
+                }
+                else
+                {
+                    if (limitRotation)
+                    {
+                        if (transform.rotation.eulerAngles.z >= -90)
                         {
                             transform.Rotate(0, 0, 90);
                         }
@@ -112,37 +119,38 @@ public class BlockMovement : MonoBehaviour {
                     }
                     else
                     {
-                        transform.Rotate(0, 0, -90);
-                    }
-
-                    if (CheckIsValidPosition())
-                    {
-                        FindObjectOfType<Game>().UpdateGrid(this);
-                    }
-                    else
-                    {
-                        if (limitRotation)
-                        {
-                            if (transform.rotation.eulerAngles.z >= -90)
-                            {
-                                transform.Rotate(0, 0, 90);
-                            }
-                            else
-                            {
-                                transform.Rotate(0, 0, -90);
-                            }
-                        }
-                        else
-                        {
-                            transform.Rotate(0, 0, +90);
-                        }
+                        transform.Rotate(0, 0, +90);
                     }
                 }
             }
-
-            if (Input.GetButtonDown("RotateLeft"))
+        }
+        //ROTATE LEFT
+        if (Input.GetButtonDown("RotateLeft"))
+        {
+            if (allowRotation)
             {
-                if (allowRotation)
+                if (limitRotation)
+                {
+                    if (transform.rotation.eulerAngles.z >= 90)
+                    {
+                        transform.Rotate(0, 0, -90);
+                    }
+                    else
+                    {
+                        transform.Rotate(0, 0, 90);
+                    }
+                }
+                else
+                {
+                    transform.Rotate(0, 0, 90);
+
+                }
+
+                if (CheckIsValidPosition())
+                {
+                    FindObjectOfType<Game>().UpdateGrid(this);
+                }
+                else
                 {
                     if (limitRotation)
                     {
@@ -157,36 +165,13 @@ public class BlockMovement : MonoBehaviour {
                     }
                     else
                     {
-                        transform.Rotate(0, 0, 90);
-
-                    }
-
-                    if (CheckIsValidPosition())
-                    {
-                        FindObjectOfType<Game>().UpdateGrid(this);
-                    }
-                    else
-                    {
-                        if (limitRotation)
-                        {
-                            if (transform.rotation.eulerAngles.z >= 90)
-                            {
-                                transform.Rotate(0, 0, -90);
-                            }
-                            else
-                            {
-                                transform.Rotate(0, 0, 90);
-                            }
-                        }
-                        else
-                        {
-                            transform.Rotate(0, 0, -90);
-                        }
+                        transform.Rotate(0, 0, -90);
                     }
                 }
             }
+        }
 
-        //Move Object
+        //MOVE TETRISBLOCK LEFT AND RIGHT
         if (Input.GetAxis("MoveTetrisSide") > 0 || Input.GetKeyDown("right"))
         {
             if (!moveRightAxis)
@@ -203,14 +188,14 @@ public class BlockMovement : MonoBehaviour {
                 }
 
                 moveRightAxis = true;
-            }           
+            }
         }
 
         if (moveRightAxis)
         {
             resetRight += 1 * Time.deltaTime;
 
-            if(resetRight > 0.05)
+            if (resetRight > 0.05)
             {
                 moveRightAxis = false;
                 resetRight = 0;
@@ -249,9 +234,25 @@ public class BlockMovement : MonoBehaviour {
                 resetLeft = 0;
             }
         }
+        
+
+        //Spawn New Prefab if out of Sight
+        if (Player != null)
+        {
+            //Spawn New Prefab if out of sight
+            if (transform.position.y < Player.transform.position.y - 10)
+            {
+                enabled = false;
+                FindObjectOfType<Game>().SpawnNextPrefab();
+            }
+        }
+        else
+        {
+            enabled = false;
+        }
 
         //BugFix
-        if(!spawnNextPrefabIfDestroyed)
+        if (!spawnNextPrefabIfDestroyed)
         {
             if (transform.childCount == 0)
             {
