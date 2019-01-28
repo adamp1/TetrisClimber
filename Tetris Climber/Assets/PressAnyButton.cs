@@ -22,7 +22,8 @@ public class PressAnyButton : MonoBehaviour
         if (Input.anyKey)
         {
             menu.SetActive(true);
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
+            Destroy(gameObject.transform.parent.parent.gameObject);
         }
 
         Vector4 a = text.color;
