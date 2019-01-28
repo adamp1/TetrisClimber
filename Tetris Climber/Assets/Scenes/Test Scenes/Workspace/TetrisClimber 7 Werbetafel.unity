@@ -6577,72 +6577,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Werbetafel Group
       objectReference: {fileID: 0}
-    - target: {fileID: 5696030681451295575, guid: 11bb38dbdba4dc54e9f6329535959c3a,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5696030680912219611, guid: 11bb38dbdba4dc54e9f6329535959c3a,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 814417424, guid: 11bb38dbdba4dc54e9f6329535959c3a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 123.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 500752903, guid: 11bb38dbdba4dc54e9f6329535959c3a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 126.99
-      objectReference: {fileID: 0}
-    - target: {fileID: 814417424, guid: 11bb38dbdba4dc54e9f6329535959c3a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -6.88
-      objectReference: {fileID: 0}
-    - target: {fileID: 814417424, guid: 11bb38dbdba4dc54e9f6329535959c3a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 18.51
-      objectReference: {fileID: 0}
-    - target: {fileID: 500752903, guid: 11bb38dbdba4dc54e9f6329535959c3a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 19.28
-      objectReference: {fileID: 0}
-    - target: {fileID: 500752903, guid: 11bb38dbdba4dc54e9f6329535959c3a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: 500752905, guid: 11bb38dbdba4dc54e9f6329535959c3a, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 221786548, guid: 11bb38dbdba4dc54e9f6329535959c3a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 25.83
-      objectReference: {fileID: 0}
-    - target: {fileID: 221786548, guid: 11bb38dbdba4dc54e9f6329535959c3a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.65
-      objectReference: {fileID: 0}
-    - target: {fileID: 221786548, guid: 11bb38dbdba4dc54e9f6329535959c3a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 28.71
-      objectReference: {fileID: 0}
-    - target: {fileID: 221786548, guid: 11bb38dbdba4dc54e9f6329535959c3a, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.9583942
-      objectReference: {fileID: 0}
-    - target: {fileID: 221786548, guid: 11bb38dbdba4dc54e9f6329535959c3a, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.2854
-      objectReference: {fileID: 0}
-    - target: {fileID: 221786548, guid: 11bb38dbdba4dc54e9f6329535959c3a, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.1974144
-      objectReference: {fileID: 0}
-    - target: {fileID: 1611125279, guid: 11bb38dbdba4dc54e9f6329535959c3a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5.5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11bb38dbdba4dc54e9f6329535959c3a, type: 3}
 --- !u!1001 &6434282301940172368
@@ -6939,7 +6873,7 @@ PrefabInstance:
     - target: {fileID: 6954327962032065429, guid: db1b7182508627a4ba105a7df40443f5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 40
+      value: 122.8
       objectReference: {fileID: 0}
     - target: {fileID: 6954327962032065429, guid: db1b7182508627a4ba105a7df40443f5,
         type: 3}
