@@ -108,6 +108,7 @@ public class Laser : MonoBehaviour
                     if (hit.collider.tag == "Player")
                     {
                         Destroy(hit.collider.gameObject);
+                        FindObjectOfType<Game>().SaveScore();
                     }
 
                 }

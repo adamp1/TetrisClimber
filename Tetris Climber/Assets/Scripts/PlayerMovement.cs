@@ -217,13 +217,6 @@ public class PlayerMovement : MonoBehaviour {
     }
 
 
-    void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject.tag == "Blockage")
-        {
-            Destroy(gameObject);
-        }    
-    }
 
 
 }
