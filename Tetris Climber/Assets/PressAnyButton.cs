@@ -8,11 +8,12 @@ public class PressAnyButton : MonoBehaviour
     public GameObject menu;
     public AnimationCurve curve;
     public float speed = 0.4f;
+    Text text;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        text = GetComponent<Text>();
     }
 
     // Update is called once per frame
@@ -23,6 +24,6 @@ public class PressAnyButton : MonoBehaviour
             gameObject.SetActive(false);
         }
 
-
+        Vector4 a = text.color;
     }
 }

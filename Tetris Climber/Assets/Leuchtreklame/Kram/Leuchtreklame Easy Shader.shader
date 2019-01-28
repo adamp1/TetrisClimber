@@ -11,7 +11,7 @@ Shader "Shader Forge/Leuchtreklame Easy Shader" {
     }
     SubShader {
         Tags {
-            "Queue"="AlphaTest"
+            "Queue"="Transparent"
             "RenderType"="TransparentCutout"
         }
         Pass {
