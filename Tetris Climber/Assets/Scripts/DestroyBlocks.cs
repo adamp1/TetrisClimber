@@ -89,7 +89,7 @@ public class DestroyBlocks : MonoBehaviour
 
             if (lookRight)
             {
-                if (SwordRotation > -90)
+                if (SwordRotation > 0)
                 {
                     SwordRotation -= 1 * Slice_Speed * Slice_Friction;
                 }
@@ -97,7 +97,7 @@ public class DestroyBlocks : MonoBehaviour
 
             if (lookLeft)
             {
-                if (SwordRotation < 270)
+                if (SwordRotation < 180)
                 {
                     SwordRotation += 1 * Slice_Speed * Slice_Friction;
                 }
@@ -122,7 +122,7 @@ public class DestroyBlocks : MonoBehaviour
             //Sword.transform.rotation = Quaternion.Lerp(Quaternion_Rotate_From, Quaternion_Rotate_To, Time.deltaTime * Rotation_Smoothness);
             Sword.transform.rotation = Quaternion.Euler(0, 0, SwordRotation);
 
-            if(SwordRotation == -90 || SwordRotation == 270)
+            if(SwordRotation == 0 || SwordRotation == 180)
             {
                 inisiateSlice = false;
                 swordAni = false;

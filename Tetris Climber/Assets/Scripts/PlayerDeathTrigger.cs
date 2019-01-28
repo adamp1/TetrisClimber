@@ -12,12 +12,14 @@ public class PlayerDeathTrigger : MonoBehaviour {
             GameObject Player = GameObject.Find("Player");
             Destroy(Player);
             GameObject.Find("Main Camera").GetComponent<CameraMovement>().enabled = false;
+            FindObjectOfType<Game>().SaveScore();
         }
 
         if(other.gameObject.tag == "Ground")
         {
             GameObject Player = GameObject.Find("Player");
             Destroy(Player);
+            FindObjectOfType<Game>().SaveScore();
         }
 
         if (other.gameObject.tag == "DeathCollider")
@@ -25,6 +27,14 @@ public class PlayerDeathTrigger : MonoBehaviour {
             GameObject Player = GameObject.Find("Player");
             Destroy(Player);
             FindObjectOfType<BlockMovement>().enabled = false;
+            FindObjectOfType<Game>().SaveScore();
+
+        }
+
+        if (other.gameObject.tag == "Blockage")
+        {
+            Destroy(gameObject);
+            FindObjectOfType<Game>().SaveScore();
         }
     }
 

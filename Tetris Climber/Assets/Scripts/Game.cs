@@ -49,7 +49,7 @@ public class Game : MonoBehaviour {
     public GameObject BlockagePrefab;
 
     
-public GameObject LaserPrefab;
+    public GameObject LaserPrefab;
     GameObject[] BlockageObject = new GameObject[30];
     GameObject LaserSpawner;
 
@@ -69,6 +69,7 @@ public GameObject LaserPrefab;
     GameObject Deathcollider;
     public GameObject PauseMenuUI;
     GameObject OptionsMenuUI;
+    GameObject HighscoreAlert;
 
     Vector3 LaserSpawnDirection;
     Vector3 SpawnerPos;
@@ -89,13 +90,22 @@ public GameObject LaserPrefab;
     //Start
     void Start()
     {
+
+        //UPDATE SCOREBOARD
+        if (PauseMenuUI.activeInHierarchy)
+        {
+            GameObject.Find("Highscore 1").GetComponent<Text>().text = PlayerPrefs.GetFloat("Highscore1").ToString("F0") + " m";
+            GameObject.Find("Highscore 2").GetComponent<Text>().text = PlayerPrefs.GetFloat("Highscore2").ToString("F0") + " m";
+            GameObject.Find("Highscore 3").GetComponent<Text>().text = PlayerPrefs.GetFloat("Highscore3").ToString("F0") + " m";
+            GameObject.Find("Highscore 4").GetComponent<Text>().text = PlayerPrefs.GetFloat("Highscore4").ToString("F0") + " m";
+            GameObject.Find("Highscore 5").GetComponent<Text>().text = PlayerPrefs.GetFloat("Highscore5").ToString("F0") + " m";
+        }
+
         OptionsMenuUI.SetActive(false);
         PauseMenuUI.SetActive(false);
 
         Player = GameObject.Find("Player");
         Deathcollider = GameObject.Find("Death Collider");
-
-  
 
         SpawnNextPrefab();
     }
@@ -119,9 +129,6 @@ public GameObject LaserPrefab;
             }
 
             MoveSpawnerToPlayer();
-            GameTime();
-            PlayerHeight();
-            DistanceToDanger();
             UpdateMenu();
             UpdateMinoPos();
 
@@ -275,7 +282,7 @@ public GameObject LaserPrefab;
         }
     }
 
-    //CLEASR MINO IN GRID
+    //CLEARS MINO IN GRID
     public void DeleteMinoBudgetEdition(int x, int y)
     {
         //Collider Pos
@@ -610,6 +617,7 @@ public GameObject LaserPrefab;
             Time.timeScale = 1.0f;
             FindObjectOfType<BlockMovement>().enabled = true;
         }
+
     } 
 
     //GUI
@@ -617,6 +625,9 @@ public GameObject LaserPrefab;
     {
 
         UInput();
+        GameTime();
+        PlayerHeight();
+        DistanceToDanger();
 
     /*  if (Input.GetKeyUp("escape") && !pauseGame || Input.GetKeyUp("joystick button 9") && Time.timeScale == 1.0)
         {
@@ -719,7 +730,7 @@ public GameObject LaserPrefab;
     public void GameOver()
     {
         GameOverUI.SetActive(true);
-        GameObject.Find("scorevalue").GetComponent<Text>().text = maxplayerheight.ToString("F2") + " m";
+        GameObject.Find("scorevalue").GetComponent<Text>().text = maxplayerheight.ToString("F0") + " m";
     }
 
     void PlayerHeight()
@@ -738,11 +749,68 @@ public GameObject LaserPrefab;
 
     void DistanceToDanger()
     {
-        distancetodanger = Player.transform.position.y - Deathcollider.transform.position.y - 10.05f;
+        distancetodanger = Player.transform.position.y - Deathcollider.transform.position.y - 10.7f;
         GameObject.Find("dangervalue").GetComponent<Text>().text = distancetodanger.ToString("F1");
         AkSoundEngine.SetRTPCValue("Danger", distancetodanger);
     }
 
+    public void SaveScore()
+    {
+        if (PlayerPrefs.GetFloat("Highscore5") < maxplayerheight)
+        {
+            if (PlayerPrefs.GetFloat("Highscore4") < maxplayerheight)
+            {
+                if (PlayerPrefs.GetFloat("Highscore3") < maxplayerheight)
+                {
+                    if (PlayerPrefs.GetFloat("Highscore2") < maxplayerheight)
+                    {
+                        if (PlayerPrefs.GetFloat("Highscore1") < maxplayerheight)
+                        {
+                            PlayerPrefs.SetFloat("Highscore5", PlayerPrefs.GetFloat("Highscore4"));
+                            PlayerPrefs.SetFloat("Highscore4", PlayerPrefs.GetFloat("Highscore3"));
+                            PlayerPrefs.SetFloat("Highscore3", PlayerPrefs.GetFloat("Highscore2"));
+                            PlayerPrefs.SetFloat("Highscore2", PlayerPrefs.GetFloat("Highscore1"));
+                            PlayerPrefs.SetFloat("Highscore1", maxplayerheight);
+                        }
+                        else
+                        {
+                            PlayerPrefs.SetFloat("Highscore5", PlayerPrefs.GetFloat("Highscore4"));
+                            PlayerPrefs.SetFloat("Highscore4", PlayerPrefs.GetFloat("Highscore3"));
+                            PlayerPrefs.SetFloat("Highscore3", PlayerPrefs.GetFloat("Highscore2"));
+                            PlayerPrefs.SetFloat("Highscore2", maxplayerheight);
+                        }
+                    }
+                    else
+                    {
+                        PlayerPrefs.SetFloat("Highscore5", PlayerPrefs.GetFloat("Highscore4"));
+                        PlayerPrefs.SetFloat("Highscore4", PlayerPrefs.GetFloat("Highscore3"));
+                        PlayerPrefs.SetFloat("Highscore3", maxplayerheight);
+                    }
+                }
+                else
+                {
+                    PlayerPrefs.SetFloat("Highscore5", PlayerPrefs.GetFloat("Highscore4"));
+                    PlayerPrefs.SetFloat("Highscore4", maxplayerheight);
+                }
+            }
+            else
+            {
+                PlayerPrefs.SetFloat("Highscore5", maxplayerheight);
+            }
+        }
+
+        Debug.Log(PlayerPrefs.GetFloat("Highscore1"));
+        Debug.Log(PlayerPrefs.GetFloat("Highscore2"));
+        Debug.Log(PlayerPrefs.GetFloat("Highscore3"));
+        Debug.Log(PlayerPrefs.GetFloat("Highscore4"));
+        Debug.Log(PlayerPrefs.GetFloat("Highscore5"));
+
+      /*  PlayerPrefs.SetFloat("Highscore5", 0);
+        PlayerPrefs.SetFloat("Highscore4", 0);
+        PlayerPrefs.SetFloat("Highscore3", 0);
+        PlayerPrefs.SetFloat("Highscore2", 0);
+        PlayerPrefs.SetFloat("Highscore1", 0);*/
+    }
 
 }
 
