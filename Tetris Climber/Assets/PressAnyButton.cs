@@ -19,11 +19,15 @@ public class PressAnyButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.anyKey){
+        if (Input.anyKey)
+        {
             menu.SetActive(true);
             gameObject.SetActive(false);
         }
 
         Vector4 a = text.color;
+        a.w = (Mathf.Sin((Time.time * speed) * Mathf.PI) + 1) / 2;
+        a.w = curve.Evaluate(a.w);
+        text.color = a;
     }
 }
