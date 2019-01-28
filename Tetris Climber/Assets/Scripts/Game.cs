@@ -59,12 +59,16 @@ public class Game : MonoBehaviour {
     bool pauseGame;
     bool options;
     bool dead;
+    bool newHighscore;
 
     bool rayInitializing;
 
     int spawnBlocksLeftOrRight;
 
     public GameObject GameOverUI;
+    public GameObject GameOver2UI;
+
+
     GameObject Player;
     GameObject Deathcollider;
     public GameObject PauseMenuUI;
@@ -99,6 +103,12 @@ public class Game : MonoBehaviour {
             GameObject.Find("Highscore 3").GetComponent<Text>().text = PlayerPrefs.GetFloat("Highscore3").ToString("F0") + " m";
             GameObject.Find("Highscore 4").GetComponent<Text>().text = PlayerPrefs.GetFloat("Highscore4").ToString("F0") + " m";
             GameObject.Find("Highscore 5").GetComponent<Text>().text = PlayerPrefs.GetFloat("Highscore5").ToString("F0") + " m";
+
+            GameObject.Find("Name 1").GetComponent<Text>().text = PlayerPrefs.GetString("Name1");
+            GameObject.Find("Name 2").GetComponent<Text>().text = PlayerPrefs.GetString("Name2");
+            GameObject.Find("Name 3").GetComponent<Text>().text = PlayerPrefs.GetString("Name3");
+            GameObject.Find("Name 4").GetComponent<Text>().text = PlayerPrefs.GetString("Name4");
+            GameObject.Find("Name 5").GetComponent<Text>().text = PlayerPrefs.GetString("Name5"); 
         }
 
         OptionsMenuUI.SetActive(false);
@@ -108,10 +118,23 @@ public class Game : MonoBehaviour {
         Deathcollider = GameObject.Find("Death Collider");
 
         SpawnNextPrefab();
+
+      /*   PlayerPrefs.SetFloat("Highscore5", 0);
+          PlayerPrefs.SetFloat("Highscore4", 0);
+          PlayerPrefs.SetFloat("Highscore3", 0);
+          PlayerPrefs.SetFloat("Highscore2", 0);
+          PlayerPrefs.SetFloat("Highscore1", 0);
+
+        PlayerPrefs.SetString("Name5", "Name 5");
+        PlayerPrefs.SetString("Name4", "Name 4");
+        PlayerPrefs.SetString("Name3", "Name 3");
+        PlayerPrefs.SetString("Name2", "Name 2");
+        PlayerPrefs.SetString("Name1", "Name 1"); */
+
     }
 
     //Update
-    private void Update()
+    private void Update() 
     {
 
         if (Player != null)
@@ -136,7 +159,15 @@ public class Game : MonoBehaviour {
         }
         else
         {
-            GameOver();
+            if(!newHighscore)
+            {
+                GameOver();
+            }
+            else
+            {
+                GameOver2();
+            }
+
         }
 
         
@@ -629,75 +660,33 @@ public class Game : MonoBehaviour {
         PlayerHeight();
         DistanceToDanger();
 
-    /*  if (Input.GetKeyUp("escape") && !pauseGame || Input.GetKeyUp("joystick button 9") && Time.timeScale == 1.0)
+        if(PlayerPrefs.GetFloat("Highscore5") < playerheight)
         {
-            pauseGame = true;
-
+            newHighscore = true;
         }
-
-        if (Input.GetKeyUp("escape") && pauseGame || Input.GetKeyUp("joystick button 9") && Time.timeScale == 0 || Input.GetKeyUp("joystick button 2") && Time.timeScale == 0)
+        else
         {
-            pauseGame = false;
-            options = false;
-        } */
-
-       /* if(pauseGame)
-        {
-            PauseMenuUI.SetActive(true);
-            Time.timeScale = 0;
-            FindObjectOfType<BlockMovement>().enabled = false;
-
+            newHighscore = false;
         }
-
-        if (!pauseGame)
-        {
-            PauseMenuUI.SetActive(false);
-            Time.timeScale = 1.0f;
-            FindObjectOfType<BlockMovement>().enabled = true;
-        }*/
-
-    /*    if(options)
-        {
-            OptionsMenuUI.SetActive(true);
-            FindObjectOfType<BlockMovement>().enabled = false;
-            Time.timeScale = 0;
-        }
-
-        if(!options)
-        {
-            OptionsMenuUI.SetActive(false);
-            FindObjectOfType<BlockMovement>().enabled = true;
-            Time.timeScale = 1.0f;
-        }*/
 
     }
 
     
 
-    public void Stop()
+    public void SubmitName()
     {
-        // pauseGame = true;
-        // options = false;
-        // UpdateMenu();
-        // Time.timeScale = 1.0f;
-
-    }
-
-    public void OptionsMenu()
-    {
-      /*  pauseGame = false;
-        options = true; */
-    }
-
-    public void GoBack()
-    {
-        //PauseMenuUI.SetActive(true);
+        //GameObject.Find("Input Name").GetComponent<InputField>().text;
 
 
-        //Debug.Log("Youre Working?");
-        //pauseGame = false;
-        //options = false;
-        //UpdateMenu();
+
+
+
+        SaveScore();
+
+
+        Debug.Log(GameObject.Find("Input Name").GetComponent<InputField>().text);
+
+
     }
 
     public void Continue()
@@ -730,6 +719,12 @@ public class Game : MonoBehaviour {
     public void GameOver()
     {
         GameOverUI.SetActive(true);
+        GameObject.Find("scorevalue").GetComponent<Text>().text = maxplayerheight.ToString("F0") + " m";
+    }
+
+    public void GameOver2()
+    {
+        GameOver2UI.SetActive(true);
         GameObject.Find("scorevalue").GetComponent<Text>().text = maxplayerheight.ToString("F0") + " m";
     }
 
@@ -767,49 +762,59 @@ public class Game : MonoBehaviour {
                         if (PlayerPrefs.GetFloat("Highscore1") < maxplayerheight)
                         {
                             PlayerPrefs.SetFloat("Highscore5", PlayerPrefs.GetFloat("Highscore4"));
+                            PlayerPrefs.SetString("Name5", PlayerPrefs.GetString("Name4"));
                             PlayerPrefs.SetFloat("Highscore4", PlayerPrefs.GetFloat("Highscore3"));
+                            PlayerPrefs.SetString("Name4", PlayerPrefs.GetString("Name3"));
                             PlayerPrefs.SetFloat("Highscore3", PlayerPrefs.GetFloat("Highscore2"));
+                            PlayerPrefs.SetString("Name3", PlayerPrefs.GetString("Name2"));
                             PlayerPrefs.SetFloat("Highscore2", PlayerPrefs.GetFloat("Highscore1"));
+                            PlayerPrefs.SetString("Name2", PlayerPrefs.GetString("Name1"));
                             PlayerPrefs.SetFloat("Highscore1", maxplayerheight);
+                            PlayerPrefs.SetString("Name1", GameObject.Find("Input Name").GetComponent<InputField>().text);
                         }
                         else
                         {
                             PlayerPrefs.SetFloat("Highscore5", PlayerPrefs.GetFloat("Highscore4"));
+                            PlayerPrefs.SetString("Name5", PlayerPrefs.GetString("Name4"));
                             PlayerPrefs.SetFloat("Highscore4", PlayerPrefs.GetFloat("Highscore3"));
+                            PlayerPrefs.SetString("Name4", PlayerPrefs.GetString("Name3"));
                             PlayerPrefs.SetFloat("Highscore3", PlayerPrefs.GetFloat("Highscore2"));
+                            PlayerPrefs.SetString("Name3", PlayerPrefs.GetString("Name2"));
                             PlayerPrefs.SetFloat("Highscore2", maxplayerheight);
+                            PlayerPrefs.SetString("Name2", GameObject.Find("Input Name").GetComponent<InputField>().text);
                         }
                     }
                     else
                     {
                         PlayerPrefs.SetFloat("Highscore5", PlayerPrefs.GetFloat("Highscore4"));
+                        PlayerPrefs.SetString("Name5", PlayerPrefs.GetString("Name4"));
                         PlayerPrefs.SetFloat("Highscore4", PlayerPrefs.GetFloat("Highscore3"));
+                        PlayerPrefs.SetString("Name4", PlayerPrefs.GetString("Name3"));
                         PlayerPrefs.SetFloat("Highscore3", maxplayerheight);
+                        PlayerPrefs.SetString("Name3", GameObject.Find("Input Name").GetComponent<InputField>().text);
                     }
                 }
                 else
                 {
                     PlayerPrefs.SetFloat("Highscore5", PlayerPrefs.GetFloat("Highscore4"));
+                    PlayerPrefs.SetString("Name5", PlayerPrefs.GetString("Name4"));
                     PlayerPrefs.SetFloat("Highscore4", maxplayerheight);
+                    PlayerPrefs.SetString("Name4", GameObject.Find("Input Name").GetComponent<InputField>().text);
                 }
             }
             else
             {
-                PlayerPrefs.SetFloat("Highscore5", maxplayerheight);
+                PlayerPrefs.SetFloat("Highscore5", maxplayerheight);              
+                PlayerPrefs.SetString("Name5", GameObject.Find("Input Name").GetComponent<InputField>().text);
             }
         }
 
-        Debug.Log(PlayerPrefs.GetFloat("Highscore1"));
+      /*  Debug.Log(PlayerPrefs.GetFloat("Highscore1"));
         Debug.Log(PlayerPrefs.GetFloat("Highscore2"));
         Debug.Log(PlayerPrefs.GetFloat("Highscore3"));
         Debug.Log(PlayerPrefs.GetFloat("Highscore4"));
-        Debug.Log(PlayerPrefs.GetFloat("Highscore5"));
+        Debug.Log(PlayerPrefs.GetFloat("Highscore5")); */
 
-      /*  PlayerPrefs.SetFloat("Highscore5", 0);
-        PlayerPrefs.SetFloat("Highscore4", 0);
-        PlayerPrefs.SetFloat("Highscore3", 0);
-        PlayerPrefs.SetFloat("Highscore2", 0);
-        PlayerPrefs.SetFloat("Highscore1", 0);*/
     }
 
 }
