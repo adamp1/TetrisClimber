@@ -489,13 +489,13 @@ public class Game : MonoBehaviour {
 
         
         Instantiate(TetrisPrefab[randomPrefab], new Vector3(spawnPosX, transform.position.y, transform.position.z), new Quaternion(0, rot, 0, 0));
+        
 
         prefabRepeat = randomPrefab;
         spawnPrefab = false;
 
         BlockFallingSpeed();
         //DeleteGrid();
-
     }
 
 

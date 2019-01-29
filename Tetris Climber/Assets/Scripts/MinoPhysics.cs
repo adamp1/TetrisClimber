@@ -35,7 +35,8 @@ public class MinoPhysics : MonoBehaviour
         Player = GameObject.Find("Player");
         material = GetComponent<MeshRenderer>().material;
         lr = GetComponent<LineRenderer>();
-        
+
+
         //inactiveMat = Resources.Load("Models/Tetris Colors/Inactive Blocks.mat", typeof(Material)) as Material;
 
         //offset = transform.position.x * 0.1f;
@@ -97,7 +98,7 @@ public class MinoPhysics : MonoBehaviour
             //UNDER BLOCK CHECK
             if (Physics.Raycast(CheckUnderBlock, out hit, 1f))
             {
-                if (hit.transform.tag == "Ground")
+                if (hit.transform.tag == "Ground") 
                 {
 
                 }
@@ -171,7 +172,7 @@ public class MinoPhysics : MonoBehaviour
                     lr.SetPosition(0, transform.position);
                     float hitpoint = hit.point.y - transform.position.y;
                     lr.SetPosition(1, hit.point);
-
+                    
                 }
             }
             else
