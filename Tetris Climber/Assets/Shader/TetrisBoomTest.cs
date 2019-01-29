@@ -6,6 +6,8 @@ public class TetrisBoomTest : MonoBehaviour
 {
     public float speed = 8;
     public float offset = 0.1f;
+
+    //Hier muss das Tetris Sparks Prefab rein
     public GameObject effect;
     GameObject ob;
     ParticleSystem gameeffect;
@@ -21,6 +23,7 @@ public class TetrisBoomTest : MonoBehaviour
         gameeffect = ob.GetComponent<ParticleSystem>();
 
         
+        //Partikeleffekte müssen Farbe vom jeweiligen Block nehmen
         var main = gameeffect.main;
         main.startColor = material.GetColor("_GlowColor");
     }
