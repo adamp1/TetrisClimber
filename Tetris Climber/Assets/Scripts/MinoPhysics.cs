@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MinoPhysics : MonoBehaviour
 {
     GameObject Player;
     Material material;
     Material inactiveMat;
+    LineRenderer lr;
 
     public bool moveMino;
     public bool BlockUnderBlock;
@@ -32,6 +34,8 @@ public class MinoPhysics : MonoBehaviour
     {
         Player = GameObject.Find("Player");
         material = GetComponent<MeshRenderer>().material;
+        lr = GetComponent<LineRenderer>();
+        
         //inactiveMat = Resources.Load("Models/Tetris Colors/Inactive Blocks.mat", typeof(Material)) as Material;
 
         //offset = transform.position.x * 0.1f;
@@ -82,8 +86,9 @@ public class MinoPhysics : MonoBehaviour
         // Ray CheckLeftUPDATE = new Ray(new Vector3(pos.x, pos.y - 0.5f, pos.z), Vector3.left * 5);
         Ray CheckUnderBlockLeft = new Ray(new Vector3(pos.x - 1, pos.y, pos.z), Vector3.down * 5);
         Ray CheckUnderBlockRight = new Ray(new Vector3(pos.x + 1, pos.y , pos.z), Vector3.down * 5);
+        Ray ShapePreview = new Ray(new Vector3(pos.x, pos.y, pos.z), Vector3.down * 30);
 
-        Debug.DrawRay(new Vector3(pos.x, pos.y, pos.z), Vector3.down);
+        Debug.DrawRay(new Vector3(pos.x, pos.y, pos.z), Vector3.down * Mathf.Infinity );
 
         //GROUND TREE
         if (gameObject.GetComponentInParent<BlockMovement>().enabled == false && Time.timeScale != 0)
@@ -150,45 +155,35 @@ public class MinoPhysics : MonoBehaviour
                 isFalling = true;
             }
 
+        }
 
-       /*     //BUG FIX GROUNDED
-            if (Physics.Raycast(CheckUnderBlock, out hit, 1f))
+        //SHAPE PREVIEW
+        if (FindObjectOfType<Game>().shapePreviewOn)
+        {
+
+            if (gameObject.GetComponentInParent<BlockMovement>().enabled)
             {
-                if (hit.transform.tag == "Mino" && hit.transform.parent != transform.parent || hit.transform.tag == "Ground")
-                {
-                    Grounded = true;
-                }
-                else Grounded = false;
+                lr.enabled = true;
 
+                if (Physics.Raycast(ShapePreview, out hit))
+                {
+
+                    lr.SetPosition(0, transform.position);
+                    float hitpoint = hit.point.y - transform.position.y;
+                    lr.SetPosition(1, hit.point);
+
+                }
             }
-            else Grounded = false;
-
-            if (FindObjectOfType<DestroyBlocks>().swordAni == true)
+            else
             {
-
-
-                for (int i = 0; i < transform.parent.childCount; i++)
-                {
-                    if (transform.parent.GetChild(i).GetComponent<MinoPhysics>().Grounded == false)
-                    {
-                        counter++;
-                        Debug.Log(counter);
-                    }
-                }
-
-                if (counter == transform.parent.childCount)
-                {
-                    isFalling = true;
-                    Debug.Log("isFalling");
-                    counter = 0;
-                }
-                else
-                {
-                    counter = 0;
-                }
-            }*/
-        } 
-
+                lr.enabled = false;
+            }
+        }
+        else
+        {
+                lr.enabled = false;
+        }
+        
 
         if (Player == null)
         {

@@ -33,16 +33,4 @@ public class PlayerDeathTrigger : MonoBehaviour {
 
     }
 
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Blockage")
-        {
-            GameObject Player = GameObject.Find("Player");
-            Destroy(Player);
-            FindObjectOfType<BlockMovement>().enabled = false;
-            //FindObjectOfType<Game>().SaveScore();
-
-        }
-    }
-
 }

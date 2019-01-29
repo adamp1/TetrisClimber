@@ -60,7 +60,7 @@ public class Game : MonoBehaviour {
     bool options;
     bool dead;
     bool newHighscore;
-
+    public bool shapePreviewOn;
     bool rayInitializing;
 
     int spawnBlocksLeftOrRight;
@@ -86,6 +86,8 @@ public class Game : MonoBehaviour {
         OptionsMenuUI = GameObject.Find("OptionsMenu");
         PauseMenuUI = GameObject.Find("Pause");
         LaserSpawner = GameObject.Find("Laserspawner");
+        shapePreviewOn = GameObject.Find("Shape Preview").GetComponent<Toggle>().isOn;
+
         blockagePosX = Random.Range(0, 2);
         SpawnBlockage();
         CheckBlockagePosition();
@@ -632,6 +634,7 @@ public class Game : MonoBehaviour {
         {
             PauseMenuUI.SetActive(true);
             Time.timeScale = 0;
+            //AudioListener.volume = 0.5f;
             FindObjectOfType<BlockMovement>().enabled = false;
         }
         else if (Input.GetKeyUp("escape") && Time.timeScale == 0 && !OptionsMenuUI.activeInHierarchy || Input.GetKeyUp(KeyCode.Joystick1Button9) && Time.timeScale == 0 && !OptionsMenuUI.activeInHierarchy)
@@ -643,6 +646,7 @@ public class Game : MonoBehaviour {
 
         if(OptionsMenuUI.activeInHierarchy && Input.GetKeyUp("escape"))
         {
+            shapePreviewOn = GameObject.Find("Shape Preview").GetComponent<Toggle>().isOn;;
             PauseMenuUI.SetActive(false);
             OptionsMenuUI.SetActive(false);
             Time.timeScale = 1.0f;
