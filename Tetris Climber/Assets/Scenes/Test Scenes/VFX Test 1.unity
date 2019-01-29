@@ -879,7 +879,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 8
   offset: 0.1
-  effect: {fileID: 0}
+  effect: {fileID: 1098341894}
 --- !u!1 &447426477
 GameObject:
   m_ObjectHideFlags: 0
@@ -1539,7 +1539,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 8
   offset: 0.1
-  effect: {fileID: 0}
+  effect: {fileID: 1098341894}
 --- !u!1 &981254483
 GameObject:
   m_ObjectHideFlags: 0
@@ -6747,7 +6747,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -12732,7 +12732,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 8
   offset: 0.1
-  effect: {fileID: 0}
+  effect: {fileID: 1098341894}
 --- !u!114 &1473657699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12963,7 +12963,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 8
   offset: 0.1
-  effect: {fileID: 0}
+  effect: {fileID: 1098341894}
 --- !u!1 &1655258114
 GameObject:
   m_ObjectHideFlags: 0
