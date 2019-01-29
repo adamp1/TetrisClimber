@@ -731,13 +731,13 @@ public class Game : MonoBehaviour {
         GameOver2UI.SetActive(true);
         GameObject.Find("scorevalue").GetComponent<Text>().text = maxplayerheight.ToString("F0") + " m";
         
-        if(PlayerPrefs.GetFloat("Highscore1") < playerheight)
+        if(PlayerPrefs.GetFloat("Highscore1") < maxplayerheight)
         {
             RectTransform rt = GameObject.Find("GameOverText").GetComponent<RectTransform>();
             rt.sizeDelta = new Vector2(500, 81.2f);
             GameObject.Find("GameOverText").GetComponent<Text>().text = "NEW HIGHSCORE";
             GameObject.Find("GameOverText").GetComponent<Text>().color = Color.green;
-                //new Color32(254, 152, 203, 255); 
+            //new Color32(254, 152, 203, 255); 
         } 
     }
 
@@ -745,7 +745,7 @@ public class Game : MonoBehaviour {
     {
         playerheight = Player.transform.position.y;
         if (playerheight < 0) playerheight = 0;
-        GameObject.Find("heightvalue").GetComponent<Text>().text = playerheight.ToString("F0");
+        GameObject.Find("heightvalue").GetComponent<Text>().text = playerheight.ToString("F0");      
         maxplayerheight = playerheight;
     }
 

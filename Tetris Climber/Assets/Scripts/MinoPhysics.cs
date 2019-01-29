@@ -158,12 +158,14 @@ public class MinoPhysics : MonoBehaviour
 
         }
 
-        //SHAPE PREVIEW
-        if (FindObjectOfType<Game>().shapePreviewOn)
+        if (gameObject.GetComponentInParent<BlockMovement>().enabled)
         {
 
-            if (gameObject.GetComponentInParent<BlockMovement>().enabled)
+            //SHAPE PREVIEW
+            if (FindObjectOfType<Game>().shapePreviewOn)
             {
+
+                
                 lr.enabled = true;
 
                 if (Physics.Raycast(ShapePreview, out hit))
@@ -172,19 +174,22 @@ public class MinoPhysics : MonoBehaviour
                     lr.SetPosition(0, transform.position);
                     float hitpoint = hit.point.y - transform.position.y;
                     lr.SetPosition(1, hit.point);
-                    
+
                 }
+                
+                
             }
             else
             {
                 lr.enabled = false;
             }
+
         }
         else
         {
-                lr.enabled = false;
+            lr.enabled = false;
         }
-        
+
 
         if (Player == null)
         {
