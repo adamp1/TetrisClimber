@@ -119,7 +119,7 @@ public class Game : MonoBehaviour {
 
         SpawnNextPrefab();
 
-      /*   PlayerPrefs.SetFloat("Highscore5", 0);
+     /*    PlayerPrefs.SetFloat("Highscore5", 0);
           PlayerPrefs.SetFloat("Highscore4", 0);
           PlayerPrefs.SetFloat("Highscore3", 0);
           PlayerPrefs.SetFloat("Highscore2", 0);
@@ -715,7 +715,7 @@ public class Game : MonoBehaviour {
         AkSoundEngine.StopAll();
         SceneManager.LoadScene(0);
     }
-
+ 
     public void GameOver()
     {
         GameOverUI.SetActive(true);
@@ -726,6 +726,15 @@ public class Game : MonoBehaviour {
     {
         GameOver2UI.SetActive(true);
         GameObject.Find("scorevalue").GetComponent<Text>().text = maxplayerheight.ToString("F0") + " m";
+        
+        if(PlayerPrefs.GetFloat("Highscore1") < playerheight)
+        {
+            RectTransform rt = GameObject.Find("GameOverText").GetComponent<RectTransform>();
+            rt.sizeDelta = new Vector2(500, 81.2f);
+            GameObject.Find("GameOverText").GetComponent<Text>().text = "NEW HIGHSCORE";
+            GameObject.Find("GameOverText").GetComponent<Text>().color = Color.green;
+                //new Color32(254, 152, 203, 255); 
+        } 
     }
 
     void PlayerHeight()
@@ -809,12 +818,11 @@ public class Game : MonoBehaviour {
             }
         }
 
-      /*  Debug.Log(PlayerPrefs.GetFloat("Highscore1"));
-        Debug.Log(PlayerPrefs.GetFloat("Highscore2"));
-        Debug.Log(PlayerPrefs.GetFloat("Highscore3"));
-        Debug.Log(PlayerPrefs.GetFloat("Highscore4"));
-        Debug.Log(PlayerPrefs.GetFloat("Highscore5")); */
+    }
 
+    public void MouseHover()
+    {
+        AkSoundEngine.PostEvent("ButtonClick", gameObject);
     }
 
 }

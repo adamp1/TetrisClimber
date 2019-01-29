@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class DestroyBlocks : MonoBehaviour
 {
     GameObject Sword;
-
+    GameObject Blade;
     
     public Image Energy;
     float energy;
@@ -22,6 +22,7 @@ public class DestroyBlocks : MonoBehaviour
     float Slice_Friction = 1;
 
     private float SwordRotation;
+    private float SwordRotationY;
 
     public bool swordAni;
 
@@ -31,7 +32,8 @@ public class DestroyBlocks : MonoBehaviour
     void Start()
     {
         Sword = GameObject.Find("Sword");
-        SwordRotation = 90;
+        Blade = GameObject.Find("Blade");
+        SwordRotation = 0;
     }
 
     // Update is called once per frame
@@ -88,16 +90,20 @@ public class DestroyBlocks : MonoBehaviour
 
 
             if (lookRight)
-            {
-                if (SwordRotation > 0)
+            {               
+                SwordRotationY = 0;
+
+                if (SwordRotation < 90)
                 {
-                    SwordRotation -= 1 * Slice_Speed * Slice_Friction;
+                    SwordRotation += 1 * Slice_Speed * Slice_Friction;
                 }
             }
 
             if (lookLeft)
             {
-                if (SwordRotation < 180)
+                SwordRotationY = -180;                
+
+                if (SwordRotation > -90)
                 {
                     SwordRotation += 1 * Slice_Speed * Slice_Friction;
                 }
@@ -116,17 +122,17 @@ public class DestroyBlocks : MonoBehaviour
 
             // Sword.transform.position = SwordPos;
 
-
+            Sword.transform.rotation = Quaternion.Euler(0, SwordRotationY, SwordRotation);
 
 
             //Sword.transform.rotation = Quaternion.Lerp(Quaternion_Rotate_From, Quaternion_Rotate_To, Time.deltaTime * Rotation_Smoothness);
-            Sword.transform.rotation = Quaternion.Euler(0, 0, SwordRotation);
+            //Sword.transform.rotation = Quaternion.Euler(0, 0, SwordRotation);
 
-            if(SwordRotation == 0 || SwordRotation == 180)
+            if (SwordRotation == 90)
             {
                 inisiateSlice = false;
                 swordAni = false;
-                SwordRotation = 90;
+                SwordRotation = 0;
             } 
 
             if (sliceEnergy)

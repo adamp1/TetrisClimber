@@ -6,6 +6,7 @@ public class TetrisBoomTest : MonoBehaviour
 {
     public float speed = 8;
     public float offset = 0.1f;
+    public GameObject effect;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,9 @@ public class TetrisBoomTest : MonoBehaviour
 
         yield return new WaitForSeconds(offset);
 
+        Instantiate(effect, transform.position, transform.rotation);
+
+        /*
         while (t <= 1)
         {
             material.SetFloat("_boom", Mathf.Lerp(0, 1, t));
@@ -31,6 +35,7 @@ public class TetrisBoomTest : MonoBehaviour
 
             t += Time.deltaTime * speed;
         }
+        */
 
         material.SetFloat("_boom", 0);
         GetComponent<MeshRenderer>().enabled = false;
@@ -43,6 +48,8 @@ public class TetrisBoomTest : MonoBehaviour
         {
             print("boom");
             StartCoroutine(boom());
+            GetComponent<MeshRenderer>().enabled = false;
+            //Instantiate(effect, transform.position, transform.rotation);
         }
 
         if (Input.GetKeyDown(KeyCode.LeftControl))
