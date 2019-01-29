@@ -21,6 +21,7 @@
 // CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 using UnityEngine;
+using System.Collections;
 
 namespace Kino
 {
@@ -34,7 +35,10 @@ namespace Kino
         [SerializeField, Range(0, 1)]
         float _intensity = 0;
 
-        public float intensity {
+        GameObject gameoverui, gameoverui2;
+
+        public float intensity
+        {
             get { return _intensity; }
             set { _intensity = value; }
         }
@@ -57,6 +61,14 @@ namespace Kino
         static Color RandomColor()
         {
             return new Color(Random.value, Random.value, Random.value, Random.value);
+        }
+
+        void Start()
+        {
+            Game g = GameObject.FindObjectOfType<Game>();
+            gameoverui = g.GameOverUI;
+            gameoverui2 = g.GameOver2UI;
+
         }
 
         void SetUpResources()
@@ -99,8 +111,31 @@ namespace Kino
 
         #region MonoBehaviour Functions
 
+        public float speed = 1;
+
+        IEnumerator activateEffect()
+        {
+            float t = 0;
+
+            while (t <= 1)
+            {
+                intensity = Mathf.Lerp(0, 1, t);
+                t += Time.deltaTime * speed;
+
+                yield return null;
+            }
+
+            intensity = 1;
+        }
+
         void Update()
         {
+            if (gameoverui.active || gameoverui2.active)
+            {
+                //intensity = 1;
+                StartCoroutine(activateEffect());
+            }
+
             if (Random.value > Mathf.Lerp(0.9f, 0.5f, _intensity))
             {
                 SetUpResources();
