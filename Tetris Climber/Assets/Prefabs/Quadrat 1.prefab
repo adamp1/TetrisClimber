@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 65679326164050240}
   - component: {fileID: 23576183040976236}
   - component: {fileID: 2570332121890320054}
-  - component: {fileID: 463939404596008942}
+  - component: {fileID: 824231400799975420}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Mino
@@ -112,7 +112,7 @@ MonoBehaviour:
   isFalling: 0
   sameParent: 0
   Grounded: 1
---- !u!120 &463939404596008942
+--- !u!120 &824231400799975420
 LineRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -282,7 +282,7 @@ GameObject:
   - component: {fileID: 65019068722231124}
   - component: {fileID: 23248318753474238}
   - component: {fileID: 326275054004058661}
-  - component: {fileID: 5595383915523409638}
+  - component: {fileID: 8806962990586252643}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Mino
@@ -381,7 +381,7 @@ MonoBehaviour:
   isFalling: 0
   sameParent: 0
   Grounded: 1
---- !u!120 &5595383915523409638
+--- !u!120 &8806962990586252643
 LineRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -489,7 +489,7 @@ GameObject:
   - component: {fileID: 65937327342925294}
   - component: {fileID: 23646336210060802}
   - component: {fileID: 3643748036706375046}
-  - component: {fileID: 986810106446087151}
+  - component: {fileID: 3642920557235329288}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Mino
@@ -588,7 +588,7 @@ MonoBehaviour:
   isFalling: 0
   sameParent: 0
   Grounded: 1
---- !u!120 &986810106446087151
+--- !u!120 &3642920557235329288
 LineRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -696,7 +696,7 @@ GameObject:
   - component: {fileID: 65436744944506668}
   - component: {fileID: 23880460497165080}
   - component: {fileID: 2584162792940102425}
-  - component: {fileID: 4082713611811299283}
+  - component: {fileID: 4020482954119088859}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Mino
@@ -711,7 +711,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1721223269135040}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -795,7 +795,7 @@ MonoBehaviour:
   isFalling: 0
   sameParent: 0
   Grounded: 1
---- !u!120 &4082713611811299283
+--- !u!120 &4020482954119088859
 LineRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

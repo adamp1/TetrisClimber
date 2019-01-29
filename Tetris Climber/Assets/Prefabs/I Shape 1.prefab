@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 65900728123564924}
   - component: {fileID: 23046156664180574}
   - component: {fileID: 8896852158089541094}
-  - component: {fileID: 4057524629192542269}
+  - component: {fileID: 3184019484796196849}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Mino
@@ -112,7 +112,7 @@ MonoBehaviour:
   isFalling: 0
   sameParent: 0
   Grounded: 1
---- !u!120 &4057524629192542269
+--- !u!120 &3184019484796196849
 LineRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -220,7 +220,7 @@ GameObject:
   - component: {fileID: 65031199498448034}
   - component: {fileID: 23717221958567646}
   - component: {fileID: 8069830834927596559}
-  - component: {fileID: 887104204016912591}
+  - component: {fileID: 1131807718557740935}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Mino
@@ -319,7 +319,7 @@ MonoBehaviour:
   isFalling: 0
   sameParent: 0
   Grounded: 1
---- !u!120 &887104204016912591
+--- !u!120 &1131807718557740935
 LineRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -427,7 +427,7 @@ GameObject:
   - component: {fileID: 65253306738238548}
   - component: {fileID: 23768139575936012}
   - component: {fileID: 99610053474556839}
-  - component: {fileID: 1048992710993428870}
+  - component: {fileID: 4126139243457066876}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Mino
@@ -526,7 +526,7 @@ MonoBehaviour:
   isFalling: 0
   sameParent: 0
   Grounded: 1
---- !u!120 &1048992710993428870
+--- !u!120 &4126139243457066876
 LineRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -634,7 +634,7 @@ GameObject:
   - component: {fileID: 65983049156066160}
   - component: {fileID: 23204330041603664}
   - component: {fileID: 1826355274499446537}
-  - component: {fileID: 4031830246003287990}
+  - component: {fileID: 3760388934953296254}
   m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Mino
@@ -733,7 +733,7 @@ MonoBehaviour:
   isFalling: 0
   sameParent: 0
   Grounded: 1
---- !u!120 &4031830246003287990
+--- !u!120 &3760388934953296254
 LineRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
