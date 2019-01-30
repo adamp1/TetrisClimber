@@ -51,8 +51,7 @@ Shader "Shader Forge/Dot Matrix Reklame" {
             }
             float4 frag(VertexOutput i) : COLOR {
                 float2 node_5104 = (abs(sin((i.uv0*_dotcount)))-(_dotsize/_dotcount)).rg;
-                float node_1513 = (node_5104.r*node_5104.g);
-                clip(node_1513 - 0.5);
+                clip((node_5104.r*node_5104.g) - 0.5);
 ////// Lighting:
 ////// Emissive:
                 float4 _tex_var = tex2D(_tex,TRANSFORM_TEX(i.uv0, _tex));
@@ -99,8 +98,7 @@ Shader "Shader Forge/Dot Matrix Reklame" {
             }
             float4 frag(VertexOutput i) : COLOR {
                 float2 node_5104 = (abs(sin((i.uv0*_dotcount)))-(_dotsize/_dotcount)).rg;
-                float node_1513 = (node_5104.r*node_5104.g);
-                clip(node_1513 - 0.5);
+                clip((node_5104.r*node_5104.g) - 0.5);
                 SHADOW_CASTER_FRAGMENT(i)
             }
             ENDCG
