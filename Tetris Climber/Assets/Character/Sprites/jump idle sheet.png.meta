@@ -1,12 +1,28 @@
 fileFormatVersion: 2
 guid: 5dadd3fdd2ba7cc4d9a83a7855603645
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: jump idle sheet_0
+    21300002: jump idle sheet_1
+    21300004: jump idle sheet_2
+    21300006: jump idle sheet_3
+    21300008: jump idle sheet_4
+    21300010: jump idle sheet_5
+    21300012: jump idle sheet_6
+    21300014: jump idle sheet_7
+    21300016: jump idle sheet_8
+    21300018: jump idle sheet_9
+    21300020: jump idle sheet_10
+    21300022: jump idle sheet_11
+    21300024: jump idle sheet_12
+    21300026: jump idle sheet_13
+    21300028: jump idle sheet_14
+    21300030: jump idle sheet_15
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -34,13 +50,13 @@ TextureImporter:
     filterMode: -1
     aniso: -1
     mipBias: -100
-    wrapU: -1
-    wrapV: -1
+    wrapU: 1
+    wrapV: 1
     wrapW: -1
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,9 +65,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   maxTextureSizeSet: 0
@@ -69,13 +85,344 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: jump idle sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1258.5
+        width: 512
+        height: 419.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bff8ee64a5d20874095d7ebd792d7446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump idle sheet_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1258.5
+        width: 512
+        height: 419.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5282807594fb6a4ba07a0ac7a10e17c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump idle sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1258.5
+        width: 512
+        height: 419.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a9fd3d3b66b7d14084d65783e5b6aab
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump idle sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1258.5
+        width: 512
+        height: 419.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 864bcefaad23406458f66bb4543cddbe
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump idle sheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 839.5
+        width: 512
+        height: 419.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bee3e0317da8b14593e83406eef6bd5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump idle sheet_5
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 839.5
+        width: 512
+        height: 419.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c2efb11f7b318c47a74ecaf930908b8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump idle sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 839.5
+        width: 512
+        height: 419.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a445adc12aa3d9a4098b86e3517e2e72
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump idle sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 839.5
+        width: 512
+        height: 419.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9999de992bf856a4485b3a2af6173529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump idle sheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 420.5
+        width: 512
+        height: 419.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5e8880595796db409a62d0947e43a12
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump idle sheet_9
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 420.5
+        width: 512
+        height: 419.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c459381be714a049bbcb1dbd0bb6bc8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump idle sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 420.5
+        width: 512
+        height: 419.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0386d7e651dae740a75a2a5abca51d6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump idle sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 420.5
+        width: 512
+        height: 419.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74c57e8823f770444a6058ad93a37e02
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump idle sheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1.5
+        width: 512
+        height: 419.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 636b12be88c875a4dbe5ada345cb3c8b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump idle sheet_13
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1.5
+        width: 512
+        height: 419.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93693cedddab4144e8a85ef0b0b6b847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump idle sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1.5
+        width: 512
+        height: 419.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a80b73144d08b004b9b296ff53d9476a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump idle sheet_15
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1.5
+        width: 512
+        height: 419.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6cad8fc4249e31459d2a410cfc11fb8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 36dbd08dbc7673c47a83b882dd009693
     vertices: []
     indices: 
     edges: []
