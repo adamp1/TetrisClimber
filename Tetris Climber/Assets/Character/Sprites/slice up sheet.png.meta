@@ -1,7 +1,23 @@
 fileFormatVersion: 2
 guid: 6afd9440ed626004e9a92a928bbbd612
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: slice up sheet_0
+    21300002: slice up sheet_1
+    21300004: slice up sheet_2
+    21300006: slice up sheet_3
+    21300008: slice up sheet_4
+    21300010: slice up sheet_5
+    21300012: slice up sheet_6
+    21300014: slice up sheet_7
+    21300016: slice up sheet_8
+    21300018: slice up sheet_9
+    21300020: slice up sheet_10
+    21300022: slice up sheet_11
+    21300024: slice up sheet_12
+    21300026: slice up sheet_13
+    21300028: slice up sheet_14
+    21300030: slice up sheet_15
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -63,7 +79,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -74,7 +90,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -82,11 +98,331 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: slice up sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1258.5
+        width: 512
+        height: 419.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9f76338f4689fa4096298dc7ca4cd57
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slice up sheet_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1258.5
+        width: 512
+        height: 419.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f822a911b490dd94481b397b097d1f17
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slice up sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1258.5
+        width: 512
+        height: 419.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 694fb06a4f0d3bb41a6a0395a211dc15
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slice up sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1258.5
+        width: 512
+        height: 419.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74d969bccfd6b0349b38c3930b10dd57
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slice up sheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 839.5
+        width: 512
+        height: 419.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0336494a63705c5459fc10cf74b52778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slice up sheet_5
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 839.5
+        width: 512
+        height: 419.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9af602680f0531948aad8c20bfa502ee
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slice up sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 839.5
+        width: 512
+        height: 419.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f42f202d6e97bff4baeff0c9fa9c7ab1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slice up sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 839.5
+        width: 512
+        height: 419.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 089b92ddbdfe8574c8adaba943c2f546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slice up sheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 420.5
+        width: 512
+        height: 419.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e59da7a4d0ebc543bda8567f8cf8c8d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slice up sheet_9
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 420.5
+        width: 512
+        height: 419.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 625c340b1649b0b4488c186d9e5c13ee
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slice up sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 420.5
+        width: 512
+        height: 419.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebe1f59b467fb824fb97b99ffede3c97
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slice up sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 420.5
+        width: 512
+        height: 419.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c73c612487904d429617ae1e4e160af
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slice up sheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1.5
+        width: 512
+        height: 419.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bdfe3c899d349447adaf5e10aa9d5ae
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slice up sheet_13
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1.5
+        width: 512
+        height: 419.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcac23ceb14d94c43a5af85afe34d49d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slice up sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1.5
+        width: 512
+        height: 419.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 414f97d20b8cdc54fb2492186d018863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slice up sheet_15
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1.5
+        width: 512
+        height: 419.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9442789a84a6644d8ec39d4eec60629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: aa5de607a0e11b541b4a12dd6ab8d5ed
     vertices: []
     indices: 
     edges: []
