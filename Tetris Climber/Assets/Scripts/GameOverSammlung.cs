@@ -12,6 +12,7 @@ public class GameOverSammlung : MonoBehaviour
         "Why did you do that?",
         "You died",
         "You are so dead.",
+        //DIE ERSTEN SECHS WERDEN IN REIHENFOLGE ABGESPIELT
         "You died",
         "You died. Again.",
         "You died",

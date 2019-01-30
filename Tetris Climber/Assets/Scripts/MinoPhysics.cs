@@ -177,13 +177,11 @@ public class MinoPhysics : MonoBehaviour
                 
                 lr.enabled = true;
 
-                if (Physics.Raycast(ShapePreview, out hit))
+                if (Physics.Raycast(ShapePreview, out hit, Mathf.Infinity))
                 {
-
                     lr.SetPosition(0, transform.position);
                     float hitpoint = hit.point.y - transform.position.y;
                     lr.SetPosition(1, hit.point);
-
                 }
                 
                 

@@ -76,6 +76,7 @@ public class Game : MonoBehaviour {
 
     int spawnBlocksLeftOrRight;
     bool DoItOnlyOnce;
+    static int counterGameOver;
 
     public GameObject GameOverUI;
     public GameObject GameOver2UI;
@@ -170,7 +171,7 @@ public class Game : MonoBehaviour {
             UpdateMinoPos();
         }
         else
-        {           
+        {
 
             if (!newHighscore)
             {
@@ -758,10 +759,20 @@ public class Game : MonoBehaviour {
         GameOverUI.SetActive(true);
         if(!DoItOnlyOnce)
         {
-            int randomGameOver = Random.Range(0, FindObjectOfType<GameOverSammlung>().GameOver.Length);
-            GameObject.Find("GameOverValue").GetComponent<Text>().text = FindObjectOfType<GameOverSammlung>().GameOver[randomGameOver];
+            if (counterGameOver > 5)
+            {
+                int randomGameOver = Random.Range(0, FindObjectOfType<GameOverSammlung>().GameOver.Length);
+                GameObject.Find("GameOverValue").GetComponent<Text>().text = FindObjectOfType<GameOverSammlung>().GameOver[randomGameOver];
+            }
+            else
+            {
+                GameObject.Find("GameOverValue").GetComponent<Text>().text = FindObjectOfType<GameOverSammlung>().GameOver[counterGameOver];
+            }
+
             GameObject.Find("scorevalue").GetComponent<Text>().text = maxplayerheight.ToString("F0") + " m";
             DoItOnlyOnce = true;
+
+            counterGameOver++;
         }
     }
 
@@ -770,10 +781,21 @@ public class Game : MonoBehaviour {
         GameOver2UI.SetActive(true);
         if (!DoItOnlyOnce)
         {
-            int randomGameOver = Random.Range(0, FindObjectOfType<GameOverSammlung>().GameOver.Length);
-            GameObject.Find("scorevalue").GetComponent<Text>().text = maxplayerheight.ToString("F0") + " m";
-            GameObject.Find("GameOverText").GetComponent<Text>().text = FindObjectOfType<GameOverSammlung>().GameOver[randomGameOver];
+
+            if (counterGameOver > 5)
+            {
+                int randomGameOver = Random.Range(0, FindObjectOfType<GameOverSammlung>().GameOver.Length);
+                GameObject.Find("GameOverText").GetComponent<Text>().text = FindObjectOfType<GameOverSammlung>().GameOver[randomGameOver];
+            }
+            else
+            {
+                GameObject.Find("GameOverText").GetComponent<Text>().text = FindObjectOfType<GameOverSammlung>().GameOver[counterGameOver];
+            }
+
+            GameObject.Find("scorevalue").GetComponent<Text>().text = maxplayerheight.ToString("F0") + " m";           
             DoItOnlyOnce = true;
+
+            counterGameOver++;
         }
         
 
@@ -794,7 +816,7 @@ public class Game : MonoBehaviour {
         t += 1 * Time.deltaTime;
         //Debug.Log(t);
 
-        /*
+       /* 
         //Set Startheight to Playerheigh
         if(!SaveStartHeight)
         {
@@ -811,13 +833,14 @@ public class Game : MonoBehaviour {
             //Climbed in Last 5 Seconds
             if(EndHeight > StartHeight)
             HeightDifference = EndHeight - StartHeight;
+            Debug.Log(HeightDifference);
 
             //Reset Everything
             SaveStartHeight = true;
             t = 0;
         }*/
 
-
+        /*
         if (t <= 5)
         {   
 
@@ -846,7 +869,7 @@ public class Game : MonoBehaviour {
             t = 0;
             scoreMittelwert = 0;
         }
-
+        */
 
 
     }
