@@ -42,6 +42,11 @@ public class PlayerAnimHelper2 : MonoBehaviour
         animator.Play("Idle");
     }
 
+    public void JumpIdle()
+    {
+        animator.Play("Jump Idle");
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -79,6 +84,11 @@ public class PlayerAnimHelper2 : MonoBehaviour
             {
                 Jump();
                
+            }
+
+            if (Input.GetKeyDown(KeyCode.O))
+            {
+                JumpIdle();
             }
         }
 
