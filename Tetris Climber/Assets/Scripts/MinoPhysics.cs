@@ -16,8 +16,8 @@ public class MinoPhysics : MonoBehaviour
     public bool LeftBlock;
 
     float goingdown;
-    float speed = 8;
-    float offset = 0f;
+    public float speed = 8;
+    public float offset = 0.1f;
 
     public bool isFalling;
     public bool sameParent;
@@ -29,6 +29,12 @@ public class MinoPhysics : MonoBehaviour
 
     float timer;
 
+    //Hier muss das Tetris Sparks Prefab rein
+    public GameObject effect;
+    GameObject ob;
+    ParticleSystem gameeffect;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,24 +42,23 @@ public class MinoPhysics : MonoBehaviour
         material = GetComponent<MeshRenderer>().material;
         lr = GetComponent<LineRenderer>();
 
-
-        //inactiveMat = Resources.Load("Models/Tetris Colors/Inactive Blocks.mat", typeof(Material)) as Material;
-
         //offset = transform.position.x * 0.1f;
-        //Grounded = true;
+
+
     }
 
     IEnumerator boom()
     {
         float t = 0;
 
-        yield return new WaitForSeconds(offset);
+        //yield return new WaitForSeconds(offset);
+
+        gameeffect.Play();
 
         while (t <= 1)
         {
             material.SetFloat("_boom", Mathf.Lerp(0, 1, t));
             yield return null;
-            //print(Time.time + " in boom");
 
             t += Time.deltaTime * speed;
         }
@@ -64,12 +69,15 @@ public class MinoPhysics : MonoBehaviour
         //FindObjectOfType<Game>().DeleteGrid();
 
         Destroy(gameObject);
+        
+        
         //material.SetFloat("_emintensity", 1000);
     }
 
     // Update is called once per frame
     void Update()
     {
+
         //DestroyBlock = GameObject.Find("Player")
 
         Vector3 pos = transform.position;
@@ -203,12 +211,21 @@ public class MinoPhysics : MonoBehaviour
 
         if (other.gameObject.tag == "Sword")
         {
+            SpawnParticle(); 
             StartCoroutine(boom());
+
+            
+            Destroy(ob, 1);
         }
 
-        if(other.gameObject.tag == "Blockage")
+        if(other.gameObject.tag == "Blockage") 
         {
+            SpawnParticle();
             StartCoroutine(boom());
+
+           
+                
+            Destroy(ob, 1);
         }
 
     }
@@ -223,4 +240,16 @@ public class MinoPhysics : MonoBehaviour
     {
         FindObjectOfType<Game>().UpdateMinoBudgetEdition(Mathf.RoundToInt(transform.position.x), Mathf.RoundToInt(transform.position.y + 1), transform);
     }
+
+    void SpawnParticle()
+    {
+
+        ob = Instantiate(effect, transform.position, transform.rotation) as GameObject;
+        gameeffect = ob.GetComponent<ParticleSystem>();
+
+        //Partikeleffekte müssen Farbe vom jeweiligen Block nehmen
+        var main = gameeffect.main;
+        main.startColor = material.GetColor("_GlowColor");
+    }
+
 }

@@ -112,6 +112,7 @@ MonoBehaviour:
   isFalling: 0
   sameParent: 0
   Grounded: 1
+  effect: {fileID: 2654335830876515354, guid: dadb4308c6142104382dc4149da89d07, type: 3}
 --- !u!120 &7390871994250775497
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -319,6 +320,7 @@ MonoBehaviour:
   isFalling: 0
   sameParent: 0
   Grounded: 1
+  effect: {fileID: 2654335830876515354, guid: dadb4308c6142104382dc4149da89d07, type: 3}
 --- !u!120 &4593980587078181046
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -526,6 +528,7 @@ MonoBehaviour:
   isFalling: 0
   sameParent: 0
   Grounded: 1
+  effect: {fileID: 2654335830876515354, guid: dadb4308c6142104382dc4149da89d07, type: 3}
 --- !u!120 &6313950910194788511
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -733,6 +736,7 @@ MonoBehaviour:
   isFalling: 0
   sameParent: 0
   Grounded: 1
+  effect: {fileID: 2654335830876515354, guid: dadb4308c6142104382dc4149da89d07, type: 3}
 --- !u!120 &7304017725512691904
 LineRenderer:
   m_ObjectHideFlags: 0
