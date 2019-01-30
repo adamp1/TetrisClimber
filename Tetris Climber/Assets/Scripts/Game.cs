@@ -64,6 +64,7 @@ public class Game : MonoBehaviour {
     bool rayInitializing;
 
     int spawnBlocksLeftOrRight;
+    bool DoItOnlyOnce;
 
     public GameObject GameOverUI;
     public GameObject GameOver2UI;
@@ -568,7 +569,7 @@ public class Game : MonoBehaviour {
             }
 
 
-          Instantiate(LaserPrefab, new Vector3(laserposx, blockageposY + blockageAbstand / 2, 0), new Quaternion(0, LaserRot, 0, 0)).name = "Laser "+i;
+                Instantiate(LaserPrefab, new Vector3(laserposx, blockageposY + blockageAbstand / 2, 0), new Quaternion(0, LaserRot, 0, 0)).name = "Laser "+i;
                 GameObject.Find("Lasermodel").name = "Lasermodel " + i;
                 GameObject.Find("Lasermodel " + i).transform.position = new Vector3(
                 laserposx,
@@ -646,14 +647,35 @@ public class Game : MonoBehaviour {
 
         if(OptionsMenuUI.activeInHierarchy && Input.GetKeyUp("escape"))
         {
-            shapePreviewOn = GameObject.Find("Shape Preview").GetComponent<Toggle>().isOn;;
+            shapePreviewOn = GameObject.Find("Shape Preview").GetComponent<Toggle>().isOn;
             PauseMenuUI.SetActive(false);
             OptionsMenuUI.SetActive(false);
             Time.timeScale = 1.0f;
             FindObjectOfType<BlockMovement>().enabled = true;
         }
 
+            
+        
+
     } 
+
+    void ShapePreview ()
+    {
+        if (OptionsMenuUI.activeInHierarchy)
+        {
+            shapePreviewOn = GameObject.Find("Shape Preview").GetComponent<Toggle>().isOn;
+
+            if (shapePreviewOn)
+            {
+                PlayerPrefs.SetInt("ShapePreview", 1);
+            }
+            else
+            {
+                PlayerPrefs.SetInt("ShapePreview", 0);
+            }
+        }
+    }
+
 
     //GUI
     void UpdateMenu()
@@ -723,7 +745,13 @@ public class Game : MonoBehaviour {
     public void GameOver()
     {
         GameOverUI.SetActive(true);
-        GameObject.Find("scorevalue").GetComponent<Text>().text = maxplayerheight.ToString("F0") + " m";
+        if(!DoItOnlyOnce)
+        {
+            int randomGameOver = Random.Range(0, FindObjectOfType<GameOverSammlung>().GameOver.Length);
+            GameObject.Find("GameOverValue").GetComponent<Text>().text = FindObjectOfType<GameOverSammlung>().GameOver[randomGameOver];
+            GameObject.Find("scorevalue").GetComponent<Text>().text = maxplayerheight.ToString("F0") + " m";
+            DoItOnlyOnce = true;
+        }
     }
 
     public void GameOver2()

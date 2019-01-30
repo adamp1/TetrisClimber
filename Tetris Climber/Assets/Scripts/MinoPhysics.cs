@@ -42,7 +42,7 @@ public class MinoPhysics : MonoBehaviour
         material = GetComponent<MeshRenderer>().material;
         lr = GetComponent<LineRenderer>();
 
-        //offset = transform.position.x * 0.1f;
+        
 
 
     }
@@ -51,6 +51,7 @@ public class MinoPhysics : MonoBehaviour
     {
         float t = 0;
 
+        //if (Player == null)
         //yield return new WaitForSeconds(offset);
 
         gameeffect.Play();
@@ -199,10 +200,14 @@ public class MinoPhysics : MonoBehaviour
         }
 
 
-        if (Player == null)
+     /*   if (Player == null)
         {
+            offset = transform.position.x * 0.1f;
+
+            SpawnParticle();
             StartCoroutine(boom());
-        }
+            //enabled = false;
+        }*/
 
     }
 
