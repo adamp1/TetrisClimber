@@ -8,6 +8,17 @@ public class Game : MonoBehaviour {
 
     //AudioSource Soundtrack;
 
+    //Variables
+    float EndHeight;
+    float StartHeight;
+    float HeightDifference;
+    float t;
+    bool SaveStartHeight = false;
+
+    float t2;
+    float score;
+    float scoreMittelwert;
+
     float playerheight;
     float maxplayerheight;
     float gametime;
@@ -141,7 +152,7 @@ public class Game : MonoBehaviour {
     {
 
         if (Player != null)
-        {
+        {            
             if (spawnPrefab)
             {
                 SpawnNextPrefab();
@@ -157,12 +168,11 @@ public class Game : MonoBehaviour {
             MoveSpawnerToPlayer();
             UpdateMenu();
             UpdateMinoPos();
-
-
         }
         else
-        {
-            if(!newHighscore)
+        {           
+
+            if (!newHighscore)
             {
                 GameOver();
             }
@@ -685,6 +695,7 @@ public class Game : MonoBehaviour {
         GameTime();
         PlayerHeight();
         DistanceToDanger();
+        DynamicScoreSystem();
 
         if(PlayerPrefs.GetFloat("Highscore5") < playerheight)
         {
@@ -757,17 +768,90 @@ public class Game : MonoBehaviour {
     public void GameOver2()
     {
         GameOver2UI.SetActive(true);
-        GameObject.Find("scorevalue").GetComponent<Text>().text = maxplayerheight.ToString("F0") + " m";
+        if (!DoItOnlyOnce)
+        {
+            int randomGameOver = Random.Range(0, FindObjectOfType<GameOverSammlung>().GameOver.Length);
+            GameObject.Find("scorevalue").GetComponent<Text>().text = maxplayerheight.ToString("F0") + " m";
+            GameObject.Find("GameOverText").GetComponent<Text>().text = FindObjectOfType<GameOverSammlung>().GameOver[randomGameOver];
+            DoItOnlyOnce = true;
+        }
         
+
         if(PlayerPrefs.GetFloat("Highscore1") < maxplayerheight)
         {
-            RectTransform rt = GameObject.Find("GameOverText").GetComponent<RectTransform>();
-            rt.sizeDelta = new Vector2(500, 81.2f);
+            //RectTransform rt = GameObject.Find("GameOverText").GetComponent<RectTransform>();
+            //rt.sizeDelta = new Vector2(500, 81.2f);
             GameObject.Find("GameOverText").GetComponent<Text>().text = "NEW HIGHSCORE";
             GameObject.Find("GameOverText").GetComponent<Text>().color = Color.green;
             //new Color32(254, 152, 203, 255); 
         } 
     }
+
+    void DynamicScoreSystem()
+    {
+
+        //Time
+        t += 1 * Time.deltaTime;
+        //Debug.Log(t);
+
+        /*
+        //Set Startheight to Playerheigh
+        if(!SaveStartHeight)
+        {
+            StartHeight = playerheight;
+            SaveStartHeight = true;
+        }
+
+        //After 5 seconds do something
+        if(t >= 5)
+        {
+            //Set Endheight to Playerheight
+            EndHeight = playerheight;
+
+            //Climbed in Last 5 Seconds
+            if(EndHeight > StartHeight)
+            HeightDifference = EndHeight - StartHeight;
+
+            //Reset Everything
+            SaveStartHeight = true;
+            t = 0;
+        }*/
+
+
+        if (t <= 5)
+        {   
+
+            t2 += 1 * Time.deltaTime;
+
+            if (t2 >= 1)
+            {
+                score = playerheight / gametime;
+
+                if(score < 0)
+                {
+                    score = 0;
+                }
+
+                scoreMittelwert = scoreMittelwert + score;
+
+
+                t2 = 0;
+            }
+
+        }
+        else
+        {
+            scoreMittelwert = scoreMittelwert / 5;
+            Debug.Log(scoreMittelwert);
+            t = 0;
+            scoreMittelwert = 0;
+        }
+
+
+
+    }
+
+
 
     void PlayerHeight()
     {
@@ -779,8 +863,8 @@ public class Game : MonoBehaviour {
 
     void GameTime() 
     {
-        gametime += 1 * Time.deltaTime;
-        GameObject.Find("timevalue").GetComponent<Text>().text = gametime.ToString("F0")+" s";
+        gametime += Time.deltaTime;
+        //GameObject.Find("timevalue").GetComponent<Text>().text = gametime.ToString("F0")+" s";
     }
 
     void DistanceToDanger()
