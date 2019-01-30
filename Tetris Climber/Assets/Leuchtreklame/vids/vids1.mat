@@ -77,8 +77,9 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     - _circles: 20
-    - _dotsize: 0.7
-    - _dotspace: 112.49
+    - _dotcount: 100
+    - _dotsize: -3.2
+    - _dotspace: 179.26
     - _emission: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
