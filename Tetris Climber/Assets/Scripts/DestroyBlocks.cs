@@ -18,6 +18,7 @@ public class DestroyBlocks : MonoBehaviour
     public bool inisiateSlice;
     bool sliceEnergy;
 
+    float t;
     public float Slice_Speed = 10;
     float Slice_Friction = 1;
 
@@ -28,12 +29,14 @@ public class DestroyBlocks : MonoBehaviour
 
     Vector3 SwordPos;
 
+
     // Start is called before the first frame update
     void Start()
     {
         Sword = GameObject.Find("Sword");
         Blade = GameObject.Find("Blade");
         SwordRotation = 0;
+        Sword.SetActive(false);
     }
 
     // Update is called once per frame
@@ -80,44 +83,36 @@ public class DestroyBlocks : MonoBehaviour
 
 
 
-
         if (inisiateSlice)
         {
+            t = t + 1 * Time.deltaTime;
             Sword.SetActive(true);
             swordAni = true;
-
-            //  SwordPos = Sword.transform.position;
-
 
             if (lookRight)
             {
                 SwordRotationY = 0;
-
-                if (SwordRotation < 90)
-                {
-                    SwordRotation += 1 * Slice_Speed * Slice_Friction;
-                }
             }
 
             if (lookLeft)
             {
                 SwordRotationY = -180;
-
-                if (SwordRotation > -90)
-                {
-                    SwordRotation += 1 * Slice_Speed * Slice_Friction;
-                }
             }
 
+            Sword.transform.rotation = Quaternion.Euler(0, SwordRotationY, 0);
 
-            Sword.transform.rotation = Quaternion.Euler(0, SwordRotationY, SwordRotation);
-
-
-            if (SwordRotation == 90)
+            if (t >= 0.1f)
             {
-                inisiateSlice = false;
+                Sword.SetActive(false);
+                //SwordRotation = 0;
+
+            }
+
+            if(t >= 0.45f)
+            {
                 swordAni = false;
-                SwordRotation = 0;
+                t = 0;
+                inisiateSlice = false;
             }
 
             if (sliceEnergy)
@@ -134,9 +129,8 @@ public class DestroyBlocks : MonoBehaviour
         }
         else
         {
-            Sword.SetActive(false);
+            
         }
-
 
 
 
