@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour {
     bool moving;
 
     bool jumping;
+    bool jumpingIdle;
 
     bool allowMoveRight = true;
     bool allowMoveLeft = true;
@@ -47,8 +48,9 @@ public class PlayerMovement : MonoBehaviour {
         Ray DeathFromAbove = new Ray(new Vector3(pos.x, pos.y, pos.z), Vector3.up);
         Debug.DrawRay(new Vector3(pos.x, pos.y, pos.z), Vector3.up);
 
+
         //IDLE ANIMATION
-        if (moving == false && jumping == false && FindObjectOfType<DestroyBlocks>().inisiateSlice == false )
+        if (moving == false && jumping == false && FindObjectOfType<DestroyBlocks>().inisiateSlice == false && jumpingIdle == false)
         {
 
             FindObjectOfType<PlayerAnimHelper2>().Idle();
@@ -156,19 +158,31 @@ public class PlayerMovement : MonoBehaviour {
 
         }
 
+        //Jump Animation
         if(jumping)
         {
             //JUMP Ani
             time = time + 1 * Time.deltaTime;
             //Debug.Log(time);
-            if (time > 0.48)
+            if (time > 0.21)
             {
                 time = 0;
                 jumping = false;
             }
+
         }
 
-        
+        //Jump Idle
+        if (!grounded && jumping == false)
+        {
+            jumpingIdle = true;
+            FindObjectOfType<PlayerAnimHelper2>().JumpIdle();
+        }
+        else
+        {
+            jumpingIdle = false;
+        }
+
 
         //CheckGround
         if (Physics.Raycast(GroundCheck1, out hit, 1.1f) || Physics.Raycast(GroundCheck2, out hit, 1.1f))

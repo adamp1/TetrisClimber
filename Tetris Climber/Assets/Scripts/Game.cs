@@ -116,11 +116,11 @@ public class Game : MonoBehaviour {
         //UPDATE SCOREBOARD
         if (PauseMenuUI.activeInHierarchy)
         {
-            GameObject.Find("Highscore 1").GetComponent<Text>().text = PlayerPrefs.GetFloat("Highscore1").ToString("F0") + " m";
-            GameObject.Find("Highscore 2").GetComponent<Text>().text = PlayerPrefs.GetFloat("Highscore2").ToString("F0") + " m";
-            GameObject.Find("Highscore 3").GetComponent<Text>().text = PlayerPrefs.GetFloat("Highscore3").ToString("F0") + " m";
-            GameObject.Find("Highscore 4").GetComponent<Text>().text = PlayerPrefs.GetFloat("Highscore4").ToString("F0") + " m";
-            GameObject.Find("Highscore 5").GetComponent<Text>().text = PlayerPrefs.GetFloat("Highscore5").ToString("F0") + " m";
+            GameObject.Find("Highscore 1").GetComponent<Text>().text = PlayerPrefs.GetFloat("Highscore1").ToString("F0");
+            GameObject.Find("Highscore 2").GetComponent<Text>().text = PlayerPrefs.GetFloat("Highscore2").ToString("F0");
+            GameObject.Find("Highscore 3").GetComponent<Text>().text = PlayerPrefs.GetFloat("Highscore3").ToString("F0");
+            GameObject.Find("Highscore 4").GetComponent<Text>().text = PlayerPrefs.GetFloat("Highscore4").ToString("F0");
+            GameObject.Find("Highscore 5").GetComponent<Text>().text = PlayerPrefs.GetFloat("Highscore5").ToString("F0");
 
             GameObject.Find("Name 1").GetComponent<Text>().text = PlayerPrefs.GetString("Name1");
             GameObject.Find("Name 2").GetComponent<Text>().text = PlayerPrefs.GetString("Name2");
@@ -137,7 +137,7 @@ public class Game : MonoBehaviour {
 
         SpawnNextPrefab();
 
-     /*    PlayerPrefs.SetFloat("Highscore5", 0);
+       /*  PlayerPrefs.SetFloat("Highscore5", 0);
           PlayerPrefs.SetFloat("Highscore4", 0);
           PlayerPrefs.SetFloat("Highscore3", 0);
           PlayerPrefs.SetFloat("Highscore2", 0);
@@ -883,15 +883,15 @@ public class Game : MonoBehaviour {
 
     public void SaveScore()
     {
-        if (PlayerPrefs.GetFloat("Highscore5") < maxplayerheight)
+        if (PlayerPrefs.GetFloat("Highscore5") < ScoreGesamt)
         {
-            if (PlayerPrefs.GetFloat("Highscore4") < maxplayerheight)
+            if (PlayerPrefs.GetFloat("Highscore4") < ScoreGesamt)
             {
-                if (PlayerPrefs.GetFloat("Highscore3") < maxplayerheight)
+                if (PlayerPrefs.GetFloat("Highscore3") < ScoreGesamt)
                 {
-                    if (PlayerPrefs.GetFloat("Highscore2") < maxplayerheight)
+                    if (PlayerPrefs.GetFloat("Highscore2") < ScoreGesamt)
                     {
-                        if (PlayerPrefs.GetFloat("Highscore1") < maxplayerheight)
+                        if (PlayerPrefs.GetFloat("Highscore1") < ScoreGesamt)
                         {
                             PlayerPrefs.SetFloat("Highscore5", PlayerPrefs.GetFloat("Highscore4"));
                             PlayerPrefs.SetString("Name5", PlayerPrefs.GetString("Name4"));
@@ -901,7 +901,7 @@ public class Game : MonoBehaviour {
                             PlayerPrefs.SetString("Name3", PlayerPrefs.GetString("Name2"));
                             PlayerPrefs.SetFloat("Highscore2", PlayerPrefs.GetFloat("Highscore1"));
                             PlayerPrefs.SetString("Name2", PlayerPrefs.GetString("Name1"));
-                            PlayerPrefs.SetFloat("Highscore1", maxplayerheight);
+                            PlayerPrefs.SetFloat("Highscore1", ScoreGesamt);
                             PlayerPrefs.SetString("Name1", GameObject.Find("Input Name").GetComponent<InputField>().text);
                         }
                         else
@@ -912,7 +912,7 @@ public class Game : MonoBehaviour {
                             PlayerPrefs.SetString("Name4", PlayerPrefs.GetString("Name3"));
                             PlayerPrefs.SetFloat("Highscore3", PlayerPrefs.GetFloat("Highscore2"));
                             PlayerPrefs.SetString("Name3", PlayerPrefs.GetString("Name2"));
-                            PlayerPrefs.SetFloat("Highscore2", maxplayerheight);
+                            PlayerPrefs.SetFloat("Highscore2", ScoreGesamt);
                             PlayerPrefs.SetString("Name2", GameObject.Find("Input Name").GetComponent<InputField>().text);
                         }
                     }
@@ -922,7 +922,7 @@ public class Game : MonoBehaviour {
                         PlayerPrefs.SetString("Name5", PlayerPrefs.GetString("Name4"));
                         PlayerPrefs.SetFloat("Highscore4", PlayerPrefs.GetFloat("Highscore3"));
                         PlayerPrefs.SetString("Name4", PlayerPrefs.GetString("Name3"));
-                        PlayerPrefs.SetFloat("Highscore3", maxplayerheight);
+                        PlayerPrefs.SetFloat("Highscore3", ScoreGesamt);
                         PlayerPrefs.SetString("Name3", GameObject.Find("Input Name").GetComponent<InputField>().text);
                     }
                 }
@@ -930,13 +930,13 @@ public class Game : MonoBehaviour {
                 {
                     PlayerPrefs.SetFloat("Highscore5", PlayerPrefs.GetFloat("Highscore4"));
                     PlayerPrefs.SetString("Name5", PlayerPrefs.GetString("Name4"));
-                    PlayerPrefs.SetFloat("Highscore4", maxplayerheight);
+                    PlayerPrefs.SetFloat("Highscore4", ScoreGesamt);
                     PlayerPrefs.SetString("Name4", GameObject.Find("Input Name").GetComponent<InputField>().text);
                 }
             }
             else
             {
-                PlayerPrefs.SetFloat("Highscore5", maxplayerheight);              
+                PlayerPrefs.SetFloat("Highscore5", ScoreGesamt);              
                 PlayerPrefs.SetString("Name5", GameObject.Find("Input Name").GetComponent<InputField>().text);
             }
         }
