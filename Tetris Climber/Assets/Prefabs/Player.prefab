@@ -4868,7 +4868,9 @@ MonoBehaviour:
   SlashCost: 99.9
   lookRight: 0
   lookLeft: 1
+  inisiateSlice: 0
   Slice_Speed: 20
+  swordAni: 0
 --- !u!136 &3473486972618215318
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5122,12 +5124,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!4 &6708453451886093946 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1450116850471805369, guid: 2e135ac9f6043eb4581bce2f2c4e9013,
-    type: 3}
-  m_PrefabInstance: {fileID: 5262156310178678723}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5262156310178678723
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5163,7 +5159,7 @@ PrefabInstance:
     - target: {fileID: 1450116850471805369, guid: 2e135ac9f6043eb4581bce2f2c4e9013,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.431
+      value: 1.004
       objectReference: {fileID: 0}
     - target: {fileID: 1450116850471805369, guid: 2e135ac9f6043eb4581bce2f2c4e9013,
         type: 3}
@@ -5173,17 +5169,17 @@ PrefabInstance:
     - target: {fileID: 1450116850471805369, guid: 2e135ac9f6043eb4581bce2f2c4e9013,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.82284737
+      value: 0.938046
       objectReference: {fileID: 0}
     - target: {fileID: 1450116850471805369, guid: 2e135ac9f6043eb4581bce2f2c4e9013,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.82284737
+      value: 0.938046
       objectReference: {fileID: 0}
     - target: {fileID: 1450116850471805369, guid: 2e135ac9f6043eb4581bce2f2c4e9013,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.82284737
+      value: 0.938046
       objectReference: {fileID: 0}
     - target: {fileID: 1450116850471805369, guid: 2e135ac9f6043eb4581bce2f2c4e9013,
         type: 3}
@@ -5192,3 +5188,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e135ac9f6043eb4581bce2f2c4e9013, type: 3}
+--- !u!4 &6708453451886093946 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1450116850471805369, guid: 2e135ac9f6043eb4581bce2f2c4e9013,
+    type: 3}
+  m_PrefabInstance: {fileID: 5262156310178678723}
+  m_PrefabAsset: {fileID: 0}
