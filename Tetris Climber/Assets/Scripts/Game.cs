@@ -296,6 +296,8 @@ public class Game : MonoBehaviour {
         //UPDATE MINO POS IN GRID
         //Minos = GameObject.FindGameObjectsWithTag("Mino") as GameObject[];
 
+
+
         DeleteGrid();
 
         GameObject[] Minos = new GameObject[GameObject.FindGameObjectsWithTag("Mino").Length];
@@ -329,6 +331,8 @@ public class Game : MonoBehaviour {
             
         }
     }
+
+ 
 
     //CLEARS MINO IN GRID
     public void DeleteMinoBudgetEdition(int x, int y)

@@ -62,10 +62,5 @@ public class DeathCollider : MonoBehaviour {
             GameOverUI.SetActive(true);
             GameObject.Find("Main Camera").GetComponent<CameraMovement>().enabled = false;
         }
-
-        if (other.gameObject.tag == "Mino")
-        {
-            //Destroy(other.gameObject);
-        }
     }
 }

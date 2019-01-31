@@ -33,7 +33,7 @@ public class MinoPhysics : MonoBehaviour
     public GameObject effect;
     GameObject ob;
     ParticleSystem gameeffect;
-
+    GameObject Deathcollider;
 
     // Start is called before the first frame update
     void Start()
@@ -41,8 +41,8 @@ public class MinoPhysics : MonoBehaviour
         Player = GameObject.Find("Player");
         material = GetComponent<MeshRenderer>().material;
         lr = GetComponent<LineRenderer>();
+        Deathcollider = GameObject.Find("Death Collider");
 
-        
 
 
     }
@@ -198,14 +198,28 @@ public class MinoPhysics : MonoBehaviour
         }
 
 
-     /*   if (Player == null)
-        {
-            offset = transform.position.x * 0.1f;
+        /*   if (Player == null)
+           {
+               offset = transform.position.x * 0.1f;
 
-            SpawnParticle();
-            StartCoroutine(boom());
-            //enabled = false;
-        }*/
+               SpawnParticle();
+               StartCoroutine(boom());
+               //enabled = false;
+           }*/
+
+
+        //Delete This 
+        if (transform.position.y < Deathcollider.transform.position.y + Deathcollider.transform.localScale.y / 2 - 2)
+        {
+            BlockUnderBlock = false;
+            isFalling = false;
+        }
+
+        if (transform.position.y < Deathcollider.transform.position.y + Deathcollider.transform.localScale.y / 2 - 4)
+        {
+            Destroy(gameObject);
+        }
+
 
     }
 
@@ -227,7 +241,6 @@ public class MinoPhysics : MonoBehaviour
             StartCoroutine(boom());
 
            
-                
             Destroy(ob, 1);
         }
 
