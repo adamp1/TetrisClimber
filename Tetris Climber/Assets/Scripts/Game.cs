@@ -16,8 +16,11 @@ public class Game : MonoBehaviour {
     bool SaveStartHeight = false;
 
     float t2;
-    float score;
+    float scoreMultiplikator;
     float scoreMittelwert;
+    float Score;
+    float ScoreGesamt;
+    float maxheightmulti;
 
     float playerheight;
     float maxplayerheight;
@@ -171,7 +174,7 @@ public class Game : MonoBehaviour {
             UpdateMinoPos();
         }
         else
-        {
+        {           
 
             if (!newHighscore)
             {
@@ -770,6 +773,7 @@ public class Game : MonoBehaviour {
             }
 
             GameObject.Find("scorevalue").GetComponent<Text>().text = maxplayerheight.ToString("F0") + " m";
+            GameObject.Find("realscorevalue").GetComponent<Text>().text = "SCORE: "+ ScoreGesamt.ToString("F0");
             DoItOnlyOnce = true;
 
             counterGameOver++;
@@ -792,7 +796,8 @@ public class Game : MonoBehaviour {
                 GameObject.Find("GameOverText").GetComponent<Text>().text = FindObjectOfType<GameOverSammlung>().GameOver[counterGameOver];
             }
 
-            GameObject.Find("scorevalue").GetComponent<Text>().text = maxplayerheight.ToString("F0") + " m";           
+            GameObject.Find("scorevalue").GetComponent<Text>().text = maxplayerheight.ToString("F0") + " m";
+            GameObject.Find("realscorevalue").GetComponent<Text>().text = "SCORE: " + ScoreGesamt.ToString("F0");
             DoItOnlyOnce = true;
 
             counterGameOver++;
@@ -809,71 +814,50 @@ public class Game : MonoBehaviour {
         } 
     }
 
+
     void DynamicScoreSystem()
     {
-
         //Time
         t += 1 * Time.deltaTime;
         //Debug.Log(t);
 
-       /* 
-        //Set Startheight to Playerheigh
-        if(!SaveStartHeight)
+        //Calculate Score Multiplikator
+        scoreMultiplikator = playerheight / gametime;
+        maxheightmulti = playerheight / 10;
+        scoreMultiplikator = scoreMultiplikator * maxheightmulti;
+        //Debug.Log(scoreMultiplikator);
+
+        //Set Startheight to Playerheight
+        if (!SaveStartHeight)
         {
             StartHeight = playerheight;
             SaveStartHeight = true;
         }
 
-        //After 5 seconds do something
-        if(t >= 5)
+        //After 5 seconds do something 
+        if (t >= 5)
         {
             //Set Endheight to Playerheight
             EndHeight = playerheight;
 
             //Climbed in Last 5 Seconds
-            if(EndHeight > StartHeight)
-            HeightDifference = EndHeight - StartHeight;
-            Debug.Log(HeightDifference);
+            if (EndHeight >= StartHeight)
+                HeightDifference = EndHeight - StartHeight;
+                //Debug.Log(HeightDifference);
+
+            //Calculate Score
+            Score = HeightDifference * scoreMultiplikator;
+            //Debug.Log("Score :   "+ Score);
+
+            //Calculate Gesamt Score
+            ScoreGesamt = ScoreGesamt + Score;
+            //Debug.Log("Scoregesamt : " +ScoreGesamt);
 
             //Reset Everything
-            SaveStartHeight = true;
+            SaveStartHeight = false;
             t = 0;
-        }*/
-
-        /*
-        if (t <= 5)
-        {   
-
-            t2 += 1 * Time.deltaTime;
-
-            if (t2 >= 1)
-            {
-                score = playerheight / gametime;
-
-                if(score < 0)
-                {
-                    score = 0;
-                }
-
-                scoreMittelwert = scoreMittelwert + score;
-
-
-                t2 = 0;
-            }
-
         }
-        else
-        {
-            scoreMittelwert = scoreMittelwert / 5;
-            Debug.Log(scoreMittelwert);
-            t = 0;
-            scoreMittelwert = 0;
-        }
-        */
-
-
     }
-
 
 
     void PlayerHeight()

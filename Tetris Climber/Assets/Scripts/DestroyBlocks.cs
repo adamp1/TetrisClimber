@@ -81,7 +81,7 @@ public class DestroyBlocks : MonoBehaviour
 
 
 
-        if(inisiateSlice)
+        if (inisiateSlice)
         {
             Sword.SetActive(true);
             swordAni = true;
@@ -90,7 +90,7 @@ public class DestroyBlocks : MonoBehaviour
 
 
             if (lookRight)
-            {               
+            {
                 SwordRotationY = 0;
 
                 if (SwordRotation < 90)
@@ -101,7 +101,7 @@ public class DestroyBlocks : MonoBehaviour
 
             if (lookLeft)
             {
-                SwordRotationY = -180;                
+                SwordRotationY = -180;
 
                 if (SwordRotation > -90)
                 {
@@ -110,39 +110,24 @@ public class DestroyBlocks : MonoBehaviour
             }
 
 
-            /*     if (SwordPos.y > pos.y-0.8f)
-                  {
-                      SwordPos.y -= SlashSpeed * Time.deltaTime;
-                  }
-                  else
-                  {
-                      SwordPos = new Vector3(SwordPos.x, pos.y + 1.5f, pos.z);
-                      inisiateSlice = false;               
-                  }*/
-
-            // Sword.transform.position = SwordPos;
-
             Sword.transform.rotation = Quaternion.Euler(0, SwordRotationY, SwordRotation);
 
-
-            //Sword.transform.rotation = Quaternion.Lerp(Quaternion_Rotate_From, Quaternion_Rotate_To, Time.deltaTime * Rotation_Smoothness);
-            //Sword.transform.rotation = Quaternion.Euler(0, 0, SwordRotation);
 
             if (SwordRotation == 90)
             {
                 inisiateSlice = false;
                 swordAni = false;
                 SwordRotation = 0;
-            } 
+            }
 
             if (sliceEnergy)
             {
                 //Energieverbrauch
-                if(energy > SlashCost)
+                if (energy > SlashCost)
                 {
                     energy -= SlashCost;
                 }
-                   
+
                 sliceEnergy = false;
             }
 
@@ -150,15 +135,17 @@ public class DestroyBlocks : MonoBehaviour
         else
         {
             Sword.SetActive(false);
-
-           // SwordPos = new Vector3(pos.x + 0.5f, pos.y + 1.5f, pos.z);
         }
+
+
+
 
         //Show Energy
         energy /= 100;
         Energy.fillAmount = energy;
-      
 
     }
+
+
 
 }
