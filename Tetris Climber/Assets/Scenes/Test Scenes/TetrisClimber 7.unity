@@ -544,6 +544,66 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8823170582764013469, guid: 2e2911b1546ab3943b78fccf1df25fe3,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8823170582616490599, guid: 2e2911b1546ab3943b78fccf1df25fe3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 38.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8823170581609422163, guid: 2e2911b1546ab3943b78fccf1df25fe3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 24.05457
+      objectReference: {fileID: 0}
+    - target: {fileID: 8823170581603404987, guid: 2e2911b1546ab3943b78fccf1df25fe3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 26.26669
+      objectReference: {fileID: 0}
+    - target: {fileID: 8823170582764013469, guid: 2e2911b1546ab3943b78fccf1df25fe3,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 376785678}
+    - target: {fileID: 8823170582764013469, guid: 2e2911b1546ab3943b78fccf1df25fe3,
+        type: 3}
+      propertyPath: m_PlaneDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2360050705159217055, guid: 2e2911b1546ab3943b78fccf1df25fe3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -90.350006
+      objectReference: {fileID: 0}
+    - target: {fileID: 6729350988599752631, guid: 2e2911b1546ab3943b78fccf1df25fe3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 106
+      objectReference: {fileID: 0}
+    - target: {fileID: 6729350988599752631, guid: 2e2911b1546ab3943b78fccf1df25fe3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -53
+      objectReference: {fileID: 0}
+    - target: {fileID: 8823170582616490599, guid: 2e2911b1546ab3943b78fccf1df25fe3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -64.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8823170581609422163, guid: 2e2911b1546ab3943b78fccf1df25fe3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -54.01429
+      objectReference: {fileID: 0}
+    - target: {fileID: 8823170581603404987, guid: 2e2911b1546ab3943b78fccf1df25fe3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -51.4453
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e2911b1546ab3943b78fccf1df25fe3, type: 3}
 --- !u!1 &100298025
@@ -1491,6 +1551,12 @@ MeshFilter:
 --- !u!1 &376785667 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6954327962032065425, guid: db1b7182508627a4ba105a7df40443f5,
+    type: 3}
+  m_PrefabInstance: {fileID: 6954327963050798923}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &376785678 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 6954327962032065430, guid: db1b7182508627a4ba105a7df40443f5,
     type: 3}
   m_PrefabInstance: {fileID: 6954327963050798923}
   m_PrefabAsset: {fileID: 0}
