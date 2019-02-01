@@ -562,7 +562,7 @@ PrefabInstance:
     - target: {fileID: 2360050705159217055, guid: 2e2911b1546ab3943b78fccf1df25fe3,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -90.349976
+      value: -90.34999
       objectReference: {fileID: 0}
     - target: {fileID: 6729350988599752631, guid: 2e2911b1546ab3943b78fccf1df25fe3,
         type: 3}
@@ -6959,11 +6959,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3473486972618215317, guid: de1ebf98e34bef045b552eefa69560ed,
-        type: 3}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
     - target: {fileID: 3473486972618215320, guid: de1ebf98e34bef045b552eefa69560ed,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7019,16 +7014,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3473486972618215317, guid: de1ebf98e34bef045b552eefa69560ed,
+        type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 3473486972618215322, guid: de1ebf98e34bef045b552eefa69560ed,
         type: 3}
       propertyPath: Energy
       value: 
       objectReference: {fileID: 2056746235}
-    - target: {fileID: 3473486972687339501, guid: de1ebf98e34bef045b552eefa69560ed,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.75
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de1ebf98e34bef045b552eefa69560ed, type: 3}
 --- !u!1 &3723038851834066423 stripped
