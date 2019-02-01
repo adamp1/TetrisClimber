@@ -177,11 +177,30 @@ public class MinoPhysics : MonoBehaviour
                 
                 lr.enabled = true;
 
-                if (Physics.Raycast(ShapePreview, out hit, Mathf.Infinity))
+                if (Physics.Raycast(ShapePreview, out hit, Mathf.Infinity)) 
                 {
+
                     lr.SetPosition(0, transform.position);
                     float hitpoint = hit.point.y - transform.position.y;
-                    lr.SetPosition(1, hit.point);
+
+                    if (hit.transform.tag == "Player")
+                    {
+                        if(FindObjectOfType<PlayerMovement>().grounded)
+                        {
+                            lr.SetPosition(1, new Vector3(hit.point.x, hit.point.y - hit.transform.localScale.y*2, hit.point.z));
+                        }
+
+
+
+
+                    }
+                    else
+                    {
+                        lr.SetPosition(1, hit.point);
+                    }
+
+                    
+
                 }
                 
                 

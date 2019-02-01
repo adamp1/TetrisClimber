@@ -68,7 +68,7 @@ public class Laser : MonoBehaviour
             else
             {
                     transform.GetChild(1).gameObject.SetActive(false);
-                
+                Destroy(gameObject);
             }
 
 
@@ -122,6 +122,7 @@ public class Laser : MonoBehaviour
             else
             {
                     transform.GetChild(1).gameObject.SetActive(false);
+                Destroy(gameObject);
             }
 
         }
