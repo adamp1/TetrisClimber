@@ -8,6 +8,7 @@ public class PlayerAnimHelper2 : MonoBehaviour
     public Animator animator;
     public string state;
     public bool debugmode;
+    public GameObject slice1, slice2;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,7 @@ public class PlayerAnimHelper2 : MonoBehaviour
     public void Jump()
     {
         animator.Play("Jump");
-        
+
     }
 
 
@@ -33,7 +34,28 @@ public class PlayerAnimHelper2 : MonoBehaviour
     public void Slice()
     {
         animator.Play("Slice");
+        if (slice1 && slice2)
+        {
+            StartCoroutine(SliceAnim(slice1));
+            StartCoroutine(SliceAnim(slice2));
+        }
 
+    }
+
+    public float slicespeed = 0.5f;
+
+    IEnumerator SliceAnim(GameObject g)
+    {
+        float t = 0;
+        Material m = g.GetComponent<MeshRenderer>().material;
+
+        while (t <= 1)
+        {
+            m.SetFloat("_alpha", Mathf.Lerp(-0.5f, 0.49f, t));
+            t += Time.deltaTime * slicespeed;
+
+            yield return null;
+        }
     }
 
     //Play Idle animation
@@ -50,11 +72,11 @@ public class PlayerAnimHelper2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-     
+
 
         if (Input.GetAxis("Horizontal") != 0)
         {
-           // print(Input.GetAxis("Horizontal"));
+            // print(Input.GetAxis("Horizontal"));
             bool mirror = Input.GetAxis("Horizontal") < 0;
             float mirrorfloat = mirror ? 1 : 0;
             mirrorfloat *= 180;
@@ -83,7 +105,7 @@ public class PlayerAnimHelper2 : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.J))
             {
                 Jump();
-               
+
             }
 
             if (Input.GetKeyDown(KeyCode.O))
@@ -92,7 +114,7 @@ public class PlayerAnimHelper2 : MonoBehaviour
             }
         }
 
-        
+
 
 
     }
