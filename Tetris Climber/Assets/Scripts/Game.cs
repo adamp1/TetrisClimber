@@ -137,7 +137,7 @@ public class Game : MonoBehaviour {
 
         SpawnNextPrefab();
 
-       /*  PlayerPrefs.SetFloat("Highscore5", 0);
+      /*   PlayerPrefs.SetFloat("Highscore5", 0);
           PlayerPrefs.SetFloat("Highscore4", 0);
           PlayerPrefs.SetFloat("Highscore3", 0);
           PlayerPrefs.SetFloat("Highscore2", 0);
