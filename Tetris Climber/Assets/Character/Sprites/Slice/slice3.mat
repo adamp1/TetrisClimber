@@ -97,7 +97,7 @@ Material:
     - _UVSec: 0
     - _ZWrite: 0
     - _alpha: 0.45
-    - _emissonintensity: 3
+    - _emissonintensity: 10
     - _node_359: 0
     - _node_652: -0.5
     - _speed: 15

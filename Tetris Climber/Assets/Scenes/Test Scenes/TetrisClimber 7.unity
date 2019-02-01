@@ -4938,7 +4938,7 @@ PrefabInstance:
     - target: {fileID: 2472139596172657150, guid: f0da06476e7c8244d8da50d68c5d755e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.66
+      value: 0.301
       objectReference: {fileID: 0}
     - target: {fileID: 2472139596172657150, guid: f0da06476e7c8244d8da50d68c5d755e,
         type: 3}
@@ -4984,6 +4984,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Slice Plane
+      objectReference: {fileID: 0}
+    - target: {fileID: 2472139596172657151, guid: f0da06476e7c8244d8da50d68c5d755e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0da06476e7c8244d8da50d68c5d755e, type: 3}
