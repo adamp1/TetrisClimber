@@ -1,53 +1,114 @@
-﻿Shader "Custom/slice2"
-{
-    Properties
-    {
-        _Color ("Color", Color) = (1,1,1,1)
-        _MainTex ("Albedo (RGB)", 2D) = "white" {}
-        _Glossiness ("Smoothness", Range(0,1)) = 0.5
-        _Metallic ("Metallic", Range(0,1)) = 0.0
+// Shader created with Shader Forge v1.38 
+// Shader Forge (c) Freya Holmer - http://www.acegikmo.com/shaderforge/
+// Note: Manually altering this data may prevent you from opening it in Shader Forge
+/*SF_DATA;ver:1.38;sub:START;pass:START;ps:flbk:,iptp:0,cusa:False,bamd:0,cgin:,lico:1,lgpr:1,limd:1,spmd:1,trmd:0,grmd:0,uamb:True,mssp:True,bkdf:False,hqlp:False,rprd:False,enco:False,rmgx:True,imps:True,rpth:0,vtps:0,hqsc:True,nrmq:1,nrsp:0,vomd:0,spxs:False,tesm:0,olmd:1,culm:0,bsrc:0,bdst:1,dpts:2,wrdp:True,dith:0,atcv:False,rfrpo:True,rfrpn:Refraction,coma:15,ufog:True,aust:True,igpj:False,qofs:0,qpre:2,rntp:3,fgom:False,fgoc:False,fgod:False,fgor:False,fgmd:0,fgcr:0.5,fgcg:0.5,fgcb:0.5,fgca:1,fgde:0.01,fgrn:0,fgrf:300,stcl:False,atwp:False,stva:128,stmr:255,stmw:255,stcp:6,stps:0,stfa:0,stfz:0,ofsf:0,ofsu:0,f2p0:False,fnsp:False,fnfb:False,fsmp:False;n:type:ShaderForge.SFN_Final,id:9254,x:32719,y:32712,varname:node_9254,prsc:2|emission-4723-RGB,clip-9390-OUT;n:type:ShaderForge.SFN_Tex2d,id:4723,x:32091,y:32646,ptovrint:False,ptlb:node_4723,ptin:_node_4723,varname:node_4723,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,tex:406abd4c855c4234381f2c49040108f8,ntxv:0,isnm:False;n:type:ShaderForge.SFN_Tex2d,id:6940,x:31919,y:32969,ptovrint:False,ptlb:node_6940,ptin:_node_6940,varname:node_6940,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,tex:23ff164ab04da3b4bab145b5ba95b631,ntxv:0,isnm:False;n:type:ShaderForge.SFN_Multiply,id:3684,x:32369,y:32903,varname:node_3684,prsc:2|A-5318-OUT,B-6940-A;n:type:ShaderForge.SFN_Slider,id:2063,x:31960,y:33232,ptovrint:False,ptlb:alpha,ptin:_alpha,varname:node_2063,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:-0.5,cur:0.3097377,max:0.49;n:type:ShaderForge.SFN_Add,id:9390,x:32452,y:33121,varname:node_9390,prsc:2|A-3684-OUT,B-2063-OUT;n:type:ShaderForge.SFN_OneMinus,id:5318,x:32140,y:32815,varname:node_5318,prsc:2|IN-6940-R;proporder:6940-4723-2063;pass:END;sub:END;*/
+
+Shader "Custom/slice2" {
+    Properties {
+        _node_6940 ("node_6940", 2D) = "white" {}
+        _node_4723 ("node_4723", 2D) = "white" {}
+        _alpha ("alpha", Range(-0.5, 0.49)) = 0.3097377
+        [HideInInspector]_Cutoff ("Alpha cutoff", Range(0,1)) = 0.5
     }
-    SubShader
-    {
-        Tags { "RenderType"="Opaque" }
-        LOD 200
-
-        CGPROGRAM
-        // Physically based Standard lighting model, and enable shadows on all light types
-        #pragma surface surf Standard fullforwardshadows
-
-        // Use shader model 3.0 target, to get nicer looking lighting
-        #pragma target 3.0
-
-        sampler2D _MainTex;
-
-        struct Input
-        {
-            float2 uv_MainTex;
-        };
-
-        half _Glossiness;
-        half _Metallic;
-        fixed4 _Color;
-
-        // Add instancing support for this shader. You need to check 'Enable Instancing' on materials that use the shader.
-        // See https://docs.unity3d.com/Manual/GPUInstancing.html for more information about instancing.
-        // #pragma instancing_options assumeuniformscaling
-        UNITY_INSTANCING_BUFFER_START(Props)
-            // put more per-instance properties here
-        UNITY_INSTANCING_BUFFER_END(Props)
-
-        void surf (Input IN, inout SurfaceOutputStandard o)
-        {
-            // Albedo comes from a texture tinted by color
-            fixed4 c = tex2D (_MainTex, IN.uv_MainTex) * _Color;
-            o.Albedo = c.rgb;
-            // Metallic and smoothness come from slider variables
-            o.Metallic = _Metallic;
-            o.Smoothness = _Glossiness;
-            o.Alpha = c.a;
+    SubShader {
+        Tags {
+            "Queue"="AlphaTest"
+            "RenderType"="TransparentCutout"
         }
-        ENDCG
+        LOD 200
+        Pass {
+            Name "FORWARD"
+            Tags {
+                "LightMode"="ForwardBase"
+            }
+            
+            
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            #define UNITY_PASS_FORWARDBASE
+            #include "UnityCG.cginc"
+            #pragma multi_compile_fwdbase_fullshadows
+            #pragma multi_compile_fog
+            #pragma only_renderers d3d9 d3d11 glcore gles 
+            #pragma target 3.0
+            uniform sampler2D _node_4723; uniform float4 _node_4723_ST;
+            uniform sampler2D _node_6940; uniform float4 _node_6940_ST;
+            uniform float _alpha;
+            struct VertexInput {
+                float4 vertex : POSITION;
+                float2 texcoord0 : TEXCOORD0;
+            };
+            struct VertexOutput {
+                float4 pos : SV_POSITION;
+                float2 uv0 : TEXCOORD0;
+                UNITY_FOG_COORDS(1)
+            };
+            VertexOutput vert (VertexInput v) {
+                VertexOutput o = (VertexOutput)0;
+                o.uv0 = v.texcoord0;
+                o.pos = UnityObjectToClipPos( v.vertex );
+                UNITY_TRANSFER_FOG(o,o.pos);
+                return o;
+            }
+            float4 frag(VertexOutput i) : COLOR {
+                float4 _node_6940_var = tex2D(_node_6940,TRANSFORM_TEX(i.uv0, _node_6940));
+                clip((((1.0 - _node_6940_var.r)*_node_6940_var.a)+_alpha) - 0.5);
+////// Lighting:
+////// Emissive:
+                float4 _node_4723_var = tex2D(_node_4723,TRANSFORM_TEX(i.uv0, _node_4723));
+                float3 emissive = _node_4723_var.rgb;
+                float3 finalColor = emissive;
+                fixed4 finalRGBA = fixed4(finalColor,1);
+                UNITY_APPLY_FOG(i.fogCoord, finalRGBA);
+                return finalRGBA;
+            }
+            ENDCG
+        }
+        Pass {
+            Name "ShadowCaster"
+            Tags {
+                "LightMode"="ShadowCaster"
+            }
+            Offset 1, 1
+            Cull Back
+            
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            #define UNITY_PASS_SHADOWCASTER
+            #include "UnityCG.cginc"
+            #include "Lighting.cginc"
+            #pragma fragmentoption ARB_precision_hint_fastest
+            #pragma multi_compile_shadowcaster
+            #pragma multi_compile_fog
+            #pragma only_renderers d3d9 d3d11 glcore gles 
+            #pragma target 3.0
+            uniform sampler2D _node_6940; uniform float4 _node_6940_ST;
+            uniform float _alpha;
+            struct VertexInput {
+                float4 vertex : POSITION;
+                float2 texcoord0 : TEXCOORD0;
+            };
+            struct VertexOutput {
+                V2F_SHADOW_CASTER;
+                float2 uv0 : TEXCOORD1;
+            };
+            VertexOutput vert (VertexInput v) {
+                VertexOutput o = (VertexOutput)0;
+                o.uv0 = v.texcoord0;
+                o.pos = UnityObjectToClipPos( v.vertex );
+                TRANSFER_SHADOW_CASTER(o)
+                return o;
+            }
+            float4 frag(VertexOutput i) : COLOR {
+                float4 _node_6940_var = tex2D(_node_6940,TRANSFORM_TEX(i.uv0, _node_6940));
+                clip((((1.0 - _node_6940_var.r)*_node_6940_var.a)+_alpha) - 0.5);
+                SHADOW_CASTER_FRAGMENT(i)
+            }
+            ENDCG
+        }
     }
     FallBack "Diffuse"
+    CustomEditor "ShaderForgeMaterialInspector"
 }
