@@ -947,7 +947,7 @@ public class Game : MonoBehaviour {
 
     }
 
-    public void MouseHover()
+    public void MouseHover() 
     {
         AkSoundEngine.PostEvent("ButtonClick", gameObject);
     }
