@@ -173,7 +173,7 @@ public class PlayerMovement : MonoBehaviour {
         }
 
         //Jump Idle
-        if (!grounded && jumping == false)
+        if (!grounded && jumping == false && FindObjectOfType<DestroyBlocks>().inisiateSlice == false)
         {
             jumpingIdle = true;
             FindObjectOfType<PlayerAnimHelper2>().JumpIdle();
