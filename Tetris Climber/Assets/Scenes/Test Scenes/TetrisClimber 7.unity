@@ -549,8 +549,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-=======
     - target: {fileID: 8823170582764013469, guid: 2e2911b1546ab3943b78fccf1df25fe3,
         type: 3}
       propertyPath: m_RenderMode
@@ -674,7 +672,6 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[0].eventID
       value: 9
       objectReference: {fileID: 0}
->>>>>>> 08f0787994d3d7933900ed7f2dd25d0dee1a096a
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e2911b1546ab3943b78fccf1df25fe3, type: 3}
 --- !u!1 &100298025
