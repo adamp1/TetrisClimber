@@ -827,22 +827,23 @@ public class Game : MonoBehaviour {
 
         //Calculate Score Multiplikator
         scoreMultiplikator = playerheight / gametime;
-        maxheightmulti = playerheight / 10;
-        scoreMultiplikator = scoreMultiplikator * maxheightmulti;
+        maxheightmulti = playerheight / 100;
+        maxheightmulti = maxheightmulti + 1; 
+        scoreMultiplikator = scoreMultiplikator + maxheightmulti;
         //Debug.Log(scoreMultiplikator);
 
         //Set Startheight to Playerheight
         if (!SaveStartHeight)
         {
-            StartHeight = playerheight;
+            StartHeight = maxplayerheight;
             SaveStartHeight = true;
         }
 
         //After 5 seconds do something 
-        if (t >= 5)
+        if (t >= 1)
         {
             //Set Endheight to Playerheight
-            EndHeight = playerheight;
+            EndHeight = maxplayerheight;
 
             //Climbed in Last 5 Seconds
             if (EndHeight >= StartHeight)
@@ -855,7 +856,7 @@ public class Game : MonoBehaviour {
 
             //Calculate Gesamt Score
             ScoreGesamt = ScoreGesamt + Score;
-            //Debug.Log("Scoregesamt : " +ScoreGesamt);
+            Debug.Log("Scoregesamt : " +ScoreGesamt);
 
             //Reset Everything
             SaveStartHeight = false;
@@ -868,8 +869,11 @@ public class Game : MonoBehaviour {
     {
         playerheight = Player.transform.position.y;
         if (playerheight < 0) playerheight = 0;
-        GameObject.Find("heightvalue").GetComponent<Text>().text = playerheight.ToString("F0");      
-        maxplayerheight = playerheight;
+        GameObject.Find("heightvalue").GetComponent<Text>().text = playerheight.ToString("F0");
+        if(playerheight > maxplayerheight)
+        {
+            maxplayerheight = playerheight;
+        }
     }
 
     void GameTime() 
