@@ -172,38 +172,15 @@ public class MinoPhysics : MonoBehaviour
 
             //SHAPE PREVIEW
             if (FindObjectOfType<Game>().shapePreviewOn)
-            {
-
-                
+            {               
                 lr.enabled = true;
 
                 if (Physics.Raycast(ShapePreview, out hit, Mathf.Infinity)) 
                 {
-
                     lr.SetPosition(0, transform.position);
-                    float hitpoint = hit.point.y - transform.position.y;
-
-                    if (hit.transform.tag == "Player")
-                    {
-                        if(FindObjectOfType<PlayerMovement>().grounded)
-                        {
-                            lr.SetPosition(1, new Vector3(hit.point.x, hit.point.y - hit.transform.localScale.y*2, hit.point.z));
-                        }
-
-
-
-
-                    }
-                    else
-                    {
-                        lr.SetPosition(1, hit.point);
-                    }
-
-                    
-
+                    lr.SetPosition(1, hit.point);
                 }
-                
-                
+                               
             }
             else
             {
@@ -226,6 +203,19 @@ public class MinoPhysics : MonoBehaviour
                //enabled = false;
            }*/
 
+
+        //Allow Movement
+        if (Physics.Raycast(CheckUnderBlock, out hit, 1.005f))
+        {
+            if(hit.transform.tag == "Mino")
+            {
+                if (hit.transform.parent != transform.parent)
+                {                    
+                    transform.parent.GetComponent<BlockMovement>().allowMovement = true;
+                }
+            }
+
+        }
 
         //Delete This 
         if (transform.position.y < Deathcollider.transform.position.y + Deathcollider.transform.localScale.y / 2 - 2)

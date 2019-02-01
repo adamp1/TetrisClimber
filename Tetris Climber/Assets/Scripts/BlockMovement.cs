@@ -22,6 +22,10 @@ public class BlockMovement : MonoBehaviour {
     float resetRight;
     float resetLeft;
 
+    public bool allowMovement;
+
+    bool fastDrop;
+
     Material inactiveMat;
 
     void Start()
@@ -44,23 +48,31 @@ public class BlockMovement : MonoBehaviour {
             Vector3 pos = transform.position;
 
 
+        if (!Input.GetButton("MoveTetrisDown"))
+        {
+            fastDrop = true;
+        }
 
         //Speed Up falling Object
-        if (Input.GetButton("MoveTetrisDown"))
+
+        if (fastDrop)
         {
-
-            //pos.y = pos.y - Input.GetAxis("MoveTetrisDown") * 50 * Time.deltaTime;
-            
-            
-            transform.position += new Vector3(0, -1, 0);
-
-            if (CheckIsValidPosition())
+            if (Input.GetButton("MoveTetrisDown"))
             {
-                FindObjectOfType<Game>().UpdateGrid(this);
-            }
-            else
-            {
-                transform.position += new Vector3(0, 1, 0);
+
+                //pos.y = pos.y - Input.GetAxis("MoveTetrisDown") * 50 * Time.deltaTime;
+
+
+                transform.position += new Vector3(0, -1, 0);
+
+                if (CheckIsValidPosition())
+                {
+                    FindObjectOfType<Game>().UpdateGrid(this);
+                }
+                else
+                {
+                    transform.position += new Vector3(0, 1, 0);
+                }
             }
         }
  
@@ -172,69 +184,72 @@ public class BlockMovement : MonoBehaviour {
         }
 
         //MOVE TETRISBLOCK LEFT AND RIGHT
-        if (Input.GetAxis("MoveTetrisSide") > 0 || Input.GetKeyDown("right"))
-        {
-            if (!moveRightAxis)
-            {
-                transform.position += new Vector3(1, 0, 0);
-
-                if (CheckIsValidPosition())
-                {
-                    FindObjectOfType<Game>().UpdateGrid(this);
-                }
-                else
-                {
-                    transform.position += new Vector3(-1, 0, 0);
-                }
-
-                moveRightAxis = true;
-            }
-        }
-
-        if (moveRightAxis)
-        {
-            resetRight += 1 * Time.deltaTime;
-
-            if (resetRight > 0.05)
-            {
-                moveRightAxis = false;
-                resetRight = 0;
-            }
-        }
-
-
-
-        if (Input.GetAxis("MoveTetrisSide") < 0 || Input.GetKeyDown("left"))
+        if (!allowMovement)
         {
 
-            if (!moveLeftAxis)
+            if (Input.GetAxis("MoveTetrisSide") > 0 || Input.GetKeyDown("right"))
             {
-                transform.position += new Vector3(-1, 0, 0);
-
-                if (CheckIsValidPosition())
-                {
-                    FindObjectOfType<Game>().UpdateGrid(this);
-                }
-                else
+                if (!moveRightAxis)
                 {
                     transform.position += new Vector3(1, 0, 0);
+
+                    if (CheckIsValidPosition())
+                    {
+                        FindObjectOfType<Game>().UpdateGrid(this);
+                    }
+                    else
+                    {
+                        transform.position += new Vector3(-1, 0, 0);
+                    }
+
+                    moveRightAxis = true;
                 }
             }
 
-            moveLeftAxis = true;
-        }
-
-        if (moveLeftAxis)
-        {
-            resetLeft += 1 * Time.deltaTime;
-
-            if (resetLeft > 0.05)
+            if (moveRightAxis)
             {
-                moveLeftAxis = false;
-                resetLeft = 0;
+                resetRight += 1 * Time.deltaTime;
+
+                if (resetRight > 0.05)
+                {
+                    moveRightAxis = false;
+                    resetRight = 0;
+                }
+            }
+
+
+
+            if (Input.GetAxis("MoveTetrisSide") < 0 || Input.GetKeyDown("left"))
+            {
+
+                if (!moveLeftAxis)
+                {
+                    transform.position += new Vector3(-1, 0, 0);
+
+                    if (CheckIsValidPosition())
+                    {
+                        FindObjectOfType<Game>().UpdateGrid(this);
+                    }
+                    else
+                    {
+                        transform.position += new Vector3(1, 0, 0);
+                    }
+                }
+
+                moveLeftAxis = true;
+            }
+
+            if (moveLeftAxis)
+            {
+                resetLeft += 1 * Time.deltaTime;
+
+                if (resetLeft > 0.05)
+                {
+                    moveLeftAxis = false;
+                    resetLeft = 0;
+                }
             }
         }
-        
 
         //Spawn New Prefab if out of Sight
         if (Player != null)

@@ -17,7 +17,7 @@ public class PlayerDeathTrigger : MonoBehaviour {
 
         if(other.gameObject.tag == "Ground")
         {
-            GameObject Player = GameObject.Find("Player");
+            GameObject Player = GameObject.Find("Player"); 
             Destroy(Player);
             //FindObjectOfType<Game>().SaveScore();
         }

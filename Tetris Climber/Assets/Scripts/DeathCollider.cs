@@ -9,7 +9,7 @@ public class DeathCollider : MonoBehaviour {
     public float increaseIntervall = 1;
     public float speedIncrease = 0.005f;
     float time;
-    float distancetodanger;
+    //float distancetodanger;
     float speedifoutofsight = 1;
 
 	// Update is called once per frame
@@ -23,14 +23,14 @@ public class DeathCollider : MonoBehaviour {
     void moveCollider ()
     {
         //Distance to Danger
-        distancetodanger = FindObjectOfType<Game>().distancetodanger;
+        //distancetodanger = FindObjectOfType<Game>().distancetodanger;
         
         //Time
         time += 1 * Time.deltaTime;
 
 
         
-        //
+        /*
         if(distancetodanger > 12)
         {
             speedifoutofsight = 3;
@@ -38,7 +38,7 @@ public class DeathCollider : MonoBehaviour {
         else
         {
             speedifoutofsight = 1;
-        }
+        }*/
 
 
 

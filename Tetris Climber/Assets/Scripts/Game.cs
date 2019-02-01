@@ -521,7 +521,7 @@ public class Game : MonoBehaviour {
     //Spawn Engpässe
     void SpawnBlockage()
     {
-        for (int i = 0; i < 30; i++)
+        for (int i = 0; i < 20; i++)
         {
             blockageAbstand = Random.Range(BlockageDistanceMin, BlockageDistanceMax);
 
@@ -551,6 +551,11 @@ public class Game : MonoBehaviour {
 
             BlockageObject[i] = GameObject.Find("Blockage " + i);
             BlockageObject[i].transform.localScale = new Vector3(blockageWidth, 2, 2.87f);
+
+            if(BlockageObject[i].transform.position.y > 311)
+            {
+                BlockageObject[i].transform.position = new Vector3(BlockageObject[i].transform.position.x, 311, BlockageObject[i].transform.position.z);
+            }
 
             //Spawn Laser
             laserrot = Random.Range(0, 2);
