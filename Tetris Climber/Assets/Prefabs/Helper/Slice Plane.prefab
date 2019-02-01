@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2472139596172656897}
   - component: {fileID: 2472139596172656896}
   - component: {fileID: 2472139596172657151}
+  - component: {fileID: 7839294543132100138}
   m_Layer: 0
   m_Name: Slice Plane
   m_TagString: Untagged
@@ -92,3 +93,15 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &7839294543132100138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2472139596172657149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4decae86008e06f489ed62207e02dce1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
