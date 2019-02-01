@@ -41,6 +41,7 @@ namespace Kino
             serializedObject.Update();
 
             EditorGUILayout.PropertyField(_intensity);
+            
 
             serializedObject.ApplyModifiedProperties();
         }

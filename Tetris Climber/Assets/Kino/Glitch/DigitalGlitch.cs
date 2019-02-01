@@ -35,6 +35,7 @@ namespace Kino
         [SerializeField, Range(0, 1)]
         float _intensity = 0;
 
+
         GameObject gameoverui, gameoverui2;
 
         public float intensity
