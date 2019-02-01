@@ -1151,7 +1151,7 @@ PrefabInstance:
         type: 3}
       propertyPath: slice2
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1514889341}
     - target: {fileID: 1450116850471805370, guid: 2e135ac9f6043eb4581bce2f2c4e9013,
         type: 3}
       propertyPath: slicespeed
