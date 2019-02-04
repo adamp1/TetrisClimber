@@ -430,6 +430,115 @@
 										</MusicTrackSequence>
 									</SequenceList>
 								</MusicTrack>
+								<MusicTrack Name="DangerLevel" ID="{4169E7DD-A231-475F-8121-0006740B0824}" ShortID="448452919">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16">
+											<RTPCList>
+												<RTPC Name="" ID="{8D33D7DD-6590-4A90-8D08-0800416FA985}" ShortID="281602995">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="Danger" ID="{4A44F32B-CB66-4696-B8B7-C5B140DEAD69}" WorkUnitID="{8A58A337-B2BC-404E-8CCC-ADA5157EF448}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{DF959671-3FB3-48BA-B3ED-99CA62DDAD57}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="65537"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>1</XPos>
+																<YPos>-100</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>2.9473</XPos>
+																<YPos>22</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>7</XPos>
+																<YPos>71</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<RTPCList>
+												<RTPC Name="" ID="{94335E7B-FF94-4E63-AD9E-22E9CBC64B12}" ShortID="772496969">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="Danger" ID="{4A44F32B-CB66-4696-B8B7-C5B140DEAD69}" WorkUnitID="{8A58A337-B2BC-404E-8CCC-ADA5157EF448}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{D38CD03C-9ED5-4446-8605-C746FA6803DD}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>1</XPos>
+																<YPos>2.5606</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>2.92019</XPos>
+																<YPos>-4.67043</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>7</XPos>
+																<YPos>-200</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B4640E2-A2A8-484D-BCCB-39D6CBB28FBD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{59D5B0C7-CBD5-4C44-AFDB-AC8E703BAC41}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DangerSound_v3" ID="{1429AA61-EF9F-4A59-B443-4E77874CEA6C}" ShortID="823164329">
+											<Language>SFX</Language>
+											<AudioFile>DangerSound_v3.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="638066440"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{E7234DD0-CCCB-42F6-8FBA-4A4F80B6162E}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{1AEAF051-774A-428A-B791-BFCB6A6A6401}">
+											<ClipList>
+												<MusicClip Name="DangerSound_v3" ID="{2953E924-8AB9-4F7C-A6F2-D667730CB428}">
+													<PropertyList>
+														<Property Name="EndTrimOffset" Type="Real64" Value="32000"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+													</PropertyList>
+													<AudioSourceRef Name="DangerSound_v3" ID="{1429AA61-EF9F-4A59-B443-4E77874CEA6C}"/>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
 							</ChildrenList>
 							<CueList>
 								<MusicCue Name="Entry Cue" ID="{B4094EDF-84AD-46C0-AEEA-DDE2908A727D}"/>
@@ -442,6 +551,27 @@
 							</CueList>
 						</MusicSegment>
 					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="PlayState" ID="{F13EBD3B-4AD2-4158-8790-0DE94F098D58}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Pausing" ID="{A192AA40-CB8C-4AD3-8619-4DB0EF48BF59}"/>
+								<State Name="" ID="{0B95B601-BB0D-4E01-9972-2F92ED5A00E3}" ShortID="640309116">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-12"/>
+									</PropertyList>
+								</State>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Playing" ID="{44C952A5-2020-4E18-B4AA-F733E595CB5D}"/>
+								<State Name="" ID="{1F6E9867-08A8-4408-B322-A5FFB7934298}" ShortID="825055938"/>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 					<TransitionList>
 						<MusicTransition Name="Root" ID="{BA243538-0261-485C-8430-33160230A8F4}">
 							<PropertyList>

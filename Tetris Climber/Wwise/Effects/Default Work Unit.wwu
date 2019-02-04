@@ -30,6 +30,34 @@
 						<Property Name="PreEQBand3Gain" Type="Real32" Value="4"/>
 					</PropertyList>
 				</Effect>
+				<Effect Name="LaserHarmonizer" ID="{2F46ED3A-1558-4B07-A6CD-91FFC3E11C8D}" PluginName="Wwise Harmonizer" CompanyID="0" PluginID="138" PluginType="3">
+					<PropertyList>
+						<Property Name="Voice1FilterFrequency" Type="Real32" Value="1502"/>
+						<Property Name="Voice1FilterGain" Type="Real32" Value="1"/>
+						<Property Name="Voice1FilterType" Type="int32" Value="3"/>
+						<Property Name="Voice1Gain" Type="Real32" Value="-5"/>
+						<Property Name="Voice1Pitch" Type="Real32" Value="900"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="LaserGain" ID="{969CC0BA-1398-466D-AF21-BA9A8CD8CCE4}" PluginName="Wwise Gain" CompanyID="0" PluginID="139" PluginType="3">
+					<PropertyList>
+						<Property Name="FullBandGain" Type="Real32" Value="4"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="LaserDistortion" ID="{D78F997C-33C3-418D-A52D-412C8639F9E0}" PluginName="Wwise Guitar Distortion" CompanyID="0" PluginID="126" PluginType="3">
+					<PropertyList>
+						<Property Name="DistortionDrive" Type="Real32" Value="38"/>
+						<Property Name="DistortionTone" Type="Real32" Value="10"/>
+						<Property Name="DistortionType" Type="int32" Value="3"/>
+						<Property Name="PostEQBand1Enable" Type="bool" Value="True"/>
+						<Property Name="PostEQBand1Gain" Type="Real32" Value="-4.5"/>
+						<Property Name="PostEQBand3Enable" Type="bool" Value="True"/>
+						<Property Name="PostEQBand3Gain" Type="Real32" Value="-1.5"/>
+						<Property Name="PreEQBand3Enable" Type="bool" Value="True"/>
+						<Property Name="PreEQBand3FilterType" Type="int32" Value="2"/>
+						<Property Name="PreEQBand3Gain" Type="Real32" Value="1.5"/>
+					</PropertyList>
+				</Effect>
 			</ChildrenList>
 		</WorkUnit>
 	</Effects>

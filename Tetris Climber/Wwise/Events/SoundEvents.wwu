@@ -11,7 +11,21 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Laser" ID="{9D8B5459-8F81-4346-962A-57F7B556597C}" WorkUnitID="{035B1F1F-FE5D-4F3D-B36C-34B1898CC711}"/>
+									<ObjectRef Name="Laser" ID="{9D8B5459-8F81-4346-962A-57F7B556597C}" WorkUnitID="{976382F9-AB48-47A9-97DC-11E081474677}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="DestroyBlock" ID="{EA795E57-F4A9-4387-A7F7-FE559E6932C6}">
+					<ChildrenList>
+						<Action Name="" ID="{3128F1C3-FD90-4247-80CA-FFDF61848915}" ShortID="168962599">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="DestroyBlock" ID="{EB06B2B7-0BF0-4C6A-B6B9-86188E6B938A}" WorkUnitID="{976382F9-AB48-47A9-97DC-11E081474677}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

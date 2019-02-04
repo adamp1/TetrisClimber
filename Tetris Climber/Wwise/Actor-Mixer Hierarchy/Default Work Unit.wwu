@@ -5,6 +5,7 @@
 			<ChildrenList>
 				<WorkUnit Name="GameSFX" ID="{035B1F1F-FE5D-4F3D-B36C-34B1898CC711}" PersistMode="Reference"/>
 				<WorkUnit Name="PlayerSFX" ID="{A3FB5ABD-58BE-4F99-A897-3BB3D9562A49}" PersistMode="Reference"/>
+				<WorkUnit Name="ObjectSFX" ID="{976382F9-AB48-47A9-97DC-11E081474677}" PersistMode="Reference"/>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
