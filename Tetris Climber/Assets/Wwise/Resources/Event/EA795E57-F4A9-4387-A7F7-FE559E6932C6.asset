@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a6402cce065264489f58c1e733ae195, type: 3}
-  m_Name: C4DFFDAA-337D-40C4-89B0-B598BAA987FA
+  m_Name: EA795E57-F4A9-4387-A7F7-FE559E6932C6
   m_EditorClassIdentifier: 
-  objectName: generalDeath
-  id: 463069199
-  guid: C4DFFDAA-337D-40C4-89B0-B598BAA987FA
+  objectName: DestroyBlock
+  id: 1112009440
+  guid: EA795E57-F4A9-4387-A7F7-FE559E6932C6

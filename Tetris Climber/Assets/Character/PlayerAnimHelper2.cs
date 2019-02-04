@@ -69,6 +69,11 @@ public class PlayerAnimHelper2 : MonoBehaviour
         animator.Play("Jump Idle");
     }
 
+    public void PlayFootStep()
+    {
+        AkSoundEngine.PostEvent("FootStep", gameObject);
+    }
+
     // Update is called once per frame
     void Update()
     {
