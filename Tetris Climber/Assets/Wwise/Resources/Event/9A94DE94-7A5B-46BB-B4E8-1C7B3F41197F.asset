@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a6402cce065264489f58c1e733ae195, type: 3}
-  m_Name: C4DFFDAA-337D-40C4-89B0-B598BAA987FA
+  m_Name: 9A94DE94-7A5B-46BB-B4E8-1C7B3F41197F
   m_EditorClassIdentifier: 
-  objectName: generalDeath
-  id: 463069199
-  guid: C4DFFDAA-337D-40C4-89B0-B598BAA987FA
+  objectName: Laser
+  id: 3982605422
+  guid: 9A94DE94-7A5B-46BB-B4E8-1C7B3F41197F

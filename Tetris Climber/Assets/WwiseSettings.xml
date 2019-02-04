@@ -9,5 +9,5 @@
   <SoundbankPath>../StreamingAssets/</SoundbankPath>
   <WwiseInstallationPathMac />
   <WwiseInstallationPathWindows />
-  <WwiseProjectPath>../Wwise/TetrisClimber.wproj</WwiseProjectPath>
+  <WwiseProjectPath>../../../wwiseIntegration/Wwise/TetrisClimber.wproj</WwiseProjectPath>
 </WwiseSettings>
