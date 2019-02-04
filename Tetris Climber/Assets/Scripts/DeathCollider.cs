@@ -41,12 +41,12 @@ public class DeathCollider : MonoBehaviour {
         }*/
 
 
-
         if (time > increaseIntervall)
         {
             speed += speedIncrease;
             time = 0;
         }
+
 
         Vector3 pos = transform.position;
         pos.y = pos.y + speedifoutofsight * speed * Time.deltaTime;

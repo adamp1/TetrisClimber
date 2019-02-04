@@ -9,6 +9,9 @@ public class Laser : MonoBehaviour
     public GameObject SparksEffect;
     GameObject Spark;
 
+    bool LaserCorrection;
+    bool laserKey;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,17 +34,27 @@ public class Laser : MonoBehaviour
             //lr.SetPosition(0, transform.position);
             if (Physics.Raycast(transform.position, transform.right * 30, out hit))
             {
-                
                 //Particle Effect
                 transform.GetChild(1).gameObject.SetActive(true);
                 transform.GetChild(1).transform.position = hit.point;
                 transform.GetChild(1).transform.rotation = Quaternion.Euler(0, 270, 0);
 
                 //Reposition Laser if not working
-                if (hit.collider.tag == "Wall" && hit.point.x < 7.5f)
+                if (hit.collider.tag == "Wall" && hit.point.x < 7.5f && !LaserCorrection)
                 {
                     transform.position = new Vector3(transform.position.x + 0.1f, transform.position.y, transform.position.z);
-                   // Debug.Log("Laser Correction: " + name);
+                    // Debug.Log("Laser Correction: " + name);
+
+                    if (laserKey)
+                    {
+                        LaserCorrection = true;
+                    }
+                    
+                }
+                else if(hit.point.x > 7.5f && !LaserCorrection)
+                {
+                    transform.position = new Vector3(transform.position.x - 0.05f, transform.position.y, transform.position.z);
+                    laserKey = true;                   
                 }
 
                 //Set laser Position
@@ -67,7 +80,7 @@ public class Laser : MonoBehaviour
             }
             else
             {
-                    transform.GetChild(1).gameObject.SetActive(false);
+                transform.GetChild(1).gameObject.SetActive(false);
                 Destroy(gameObject);
             }
 
@@ -92,6 +105,17 @@ public class Laser : MonoBehaviour
                 {
                     transform.position = new Vector3(transform.position.x - 0.1f, transform.position.y, transform.position.z);
                     //Debug.Log("Laser Correction: " + name);
+
+                    if (laserKey)
+                    {
+                        LaserCorrection = true;
+                    }
+                }
+                else if (hit.point.x < 7.5f && !LaserCorrection)
+                {
+                    transform.position = new Vector3(transform.position.x + 0.05f, transform.position.y, transform.position.z);
+                    laserKey = true;
+
                 }
 
                 //Set laser Position
@@ -108,6 +132,7 @@ public class Laser : MonoBehaviour
                     if (hit.collider.tag == "Player")
                     {
                         Destroy(hit.collider.gameObject);
+                        AkSoundEngine.PostEvent("KilledByBlock", gameObject);
                         //FindObjectOfType<Game>().SaveScore();
                     }
 
@@ -115,7 +140,7 @@ public class Laser : MonoBehaviour
                 else
                 {
                     //lr.SetPosition(1, new Vector3(20, 0, 0));
-                    lr.SetPosition(1, Vector3.left*50);
+                    lr.SetPosition(1, Vector3.left * 50);
                     //SparksEffect.SetActive(false);
                 }
             }

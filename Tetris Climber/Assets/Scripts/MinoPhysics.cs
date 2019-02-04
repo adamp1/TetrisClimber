@@ -7,7 +7,10 @@ public class MinoPhysics : MonoBehaviour
 {
     GameObject Player;
     Material material;
-    Material inactiveMat;
+
+   // public Material lrmaterial1;
+   // public Material lrmaterial2;
+
     LineRenderer lr;
 
     public bool moveMino;
@@ -29,6 +32,8 @@ public class MinoPhysics : MonoBehaviour
 
     float timer;
 
+    int layermask = 00000001;
+
     //Hier muss das Tetris Sparks Prefab rein
     public GameObject effect;
     GameObject ob;
@@ -42,9 +47,6 @@ public class MinoPhysics : MonoBehaviour
         material = GetComponent<MeshRenderer>().material;
         lr = GetComponent<LineRenderer>();
         Deathcollider = GameObject.Find("Death Collider");
-
-
-
     }
 
     IEnumerator boom()
@@ -105,7 +107,7 @@ public class MinoPhysics : MonoBehaviour
         {
 
             //UNDER BLOCK CHECK
-            if (Physics.Raycast(CheckUnderBlock, out hit, 1f))
+            if (Physics.Raycast(CheckUnderBlock, out hit, 1f, layermask))
             {
                 if (hit.transform.tag == "Ground") 
                 {
@@ -160,7 +162,7 @@ public class MinoPhysics : MonoBehaviour
 
 
             //BUGFIXES
-            if (!Physics.Raycast(CheckUnderBlock, out hit, 1) && !Physics.Raycast(CheckLeftBlock, out hit, 1) && !Physics.Raycast(CheckRightBlock, out hit, 1) && !Physics.Raycast(CheckOverBlock, out hit, 1) && gameObject.GetComponentInParent<BlockMovement>().enabled == false)
+            if (!Physics.Raycast(CheckUnderBlock, out hit, 1, layermask) && !Physics.Raycast(CheckLeftBlock, out hit, 1, layermask) && !Physics.Raycast(CheckRightBlock, out hit, 1, layermask) && !Physics.Raycast(CheckOverBlock, out hit, 1, layermask) && gameObject.GetComponentInParent<BlockMovement>().enabled == false)
             {
                 isFalling = true;
             }
@@ -173,14 +175,26 @@ public class MinoPhysics : MonoBehaviour
             //SHAPE PREVIEW
             if (FindObjectOfType<Game>().shapePreviewOn)
             {               
-                lr.enabled = true;
+                lr.enabled = true;               
 
-                if (Physics.Raycast(ShapePreview, out hit, Mathf.Infinity)) 
+                if (Physics.Raycast(ShapePreview, out hit, Mathf.Infinity, layermask))
                 {
                     lr.SetPosition(0, transform.position);
                     lr.SetPosition(1, hit.point);
                 }
-                               
+
+              /*  if (Physics.Raycast(ShapePreview, out hit, Mathf.Infinity))
+                {
+                    if(hit.transform.tag == "Player")
+                    {
+                        lr.material = lrmaterial2;
+                    }
+                    else
+                    {
+                        lr.material = lrmaterial1;
+                    }
+                }*/
+
             }
             else
             {
@@ -240,7 +254,7 @@ public class MinoPhysics : MonoBehaviour
             SpawnParticle(); 
             StartCoroutine(boom());
 
-            
+            AkSoundEngine.PostEvent("DestroyBlock", Player.gameObject);
             Destroy(ob, 1);
         }
 

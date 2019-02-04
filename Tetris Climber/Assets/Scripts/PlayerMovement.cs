@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
 
-    
-
     Vector3 MovePlayer;
     public Rigidbody rb;
     public float speed = 14;
     public float speedWhilejump = 10;
-    public float jumpPower = 40;
+    float jumpPower = 15;
     public float gravity = 80;
     float time;
     bool moving;
 
+    bool isJumping;
     bool jumping;
     bool jumpingIdle;
+    float jumpTimeCounter = 0.1f;
 
     bool allowMoveRight = true;
     bool allowMoveLeft = true;
@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour {
 
     private void Start()
     {
-        
+        Physics.gravity = new Vector3(0, -gravity, 0);
     }
 
     // Update is called once per frame
@@ -137,31 +137,31 @@ public class PlayerMovement : MonoBehaviour {
         }
 
         transform.position = pos;
-       
+
         //Jump
         if (Input.GetButtonDown("Jump") && grounded)
         {
-            //rb.AddForce(new Vector3(0, jumpPower, 0), ForceMode.VelocityChange);
-
-            rb.velocity = new Vector3(0, jumpPower, 0);
-
-            grounded = false;
-
-            jumping = true;
-
-            Physics.gravity = new Vector3(0, -gravity, 0);
-
-            FindObjectOfType<PlayerAnimHelper2>().Jump();
-
-            AkSoundEngine.PostEvent("Jump", gameObject);
-
-
+            JumpDown();
         }
 
+
+        if (Input.GetButton("Jump") && isJumping)
+        {
+            Jump();
+        }
+
+
+        if(Input.GetButtonUp("Jump"))
+        {
+            JumpUp();
+        }
+
+
         //Jump Animation
-        if(jumping)
+        if (jumping)
         {
             //JUMP Ani
+
             time = time + 1 * Time.deltaTime;
             //Debug.Log(time);
             if (time > 0.21)
@@ -187,7 +187,8 @@ public class PlayerMovement : MonoBehaviour {
         //CheckGround
         if (Physics.Raycast(GroundCheck1, out hit, 1.1f) || Physics.Raycast(GroundCheck2, out hit, 1.1f))
         {
-            grounded = true;           
+            grounded = true;
+            jumpTimeCounter = 0.1f;
         }
         else
         {
@@ -225,10 +226,9 @@ public class PlayerMovement : MonoBehaviour {
             allowMoveLeft = true;
 
         } 
-
-        
-
+      
     }
+  
 
     void OnCollisionEnter(Collision collision)
     {
@@ -238,6 +238,39 @@ public class PlayerMovement : MonoBehaviour {
         }
     }
 
+    void JumpDown()
+    {
+        //rb.AddForce(new Vector3(0, jumpPower, 0), ForceMode.VelocityChange);
 
+        rb.velocity = Vector3.up * jumpPower;
+
+        grounded = false;
+
+        jumping = true;
+        isJumping = true;
+
+
+        FindObjectOfType<PlayerAnimHelper2>().Jump();
+
+        AkSoundEngine.PostEvent("Jump", gameObject);
+    }
+
+    void Jump()
+    {
+        if (jumpTimeCounter > 0)
+        {
+            rb.velocity = Vector3.up * jumpPower;
+            jumpTimeCounter -= Time.deltaTime;
+        }
+        else
+        {
+            isJumping = false;
+        }
+    }
+    
+    void JumpUp()
+    {
+        isJumping = false;
+    }
 }
 

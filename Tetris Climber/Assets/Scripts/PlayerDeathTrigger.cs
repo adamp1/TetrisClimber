@@ -12,6 +12,7 @@ public class PlayerDeathTrigger : MonoBehaviour {
             GameObject Player = GameObject.Find("Player");
             Destroy(Player);
             GameObject.Find("Main Camera").GetComponent<CameraMovement>().enabled = false;
+            AkSoundEngine.PostEvent("KilledByBlock", other.gameObject);
             //FindObjectOfType<Game>().SaveScore();
         }
 
@@ -20,6 +21,7 @@ public class PlayerDeathTrigger : MonoBehaviour {
             GameObject Player = GameObject.Find("Player"); 
             Destroy(Player);
             //FindObjectOfType<Game>().SaveScore();
+            AkSoundEngine.PostEvent("KilledByBlock", other.gameObject);
         }
 
         if (other.gameObject.tag == "DeathCollider")
@@ -28,7 +30,7 @@ public class PlayerDeathTrigger : MonoBehaviour {
             Destroy(Player);
             FindObjectOfType<BlockMovement>().enabled = false;
             //FindObjectOfType<Game>().SaveScore();
-
+            AkSoundEngine.PostEvent("KilledByBlock", other.gameObject);
         }
 
     }

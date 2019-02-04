@@ -75,7 +75,8 @@ public class BlockMovement : MonoBehaviour {
                 }
             }
         }
- 
+
+
             //Falling Object
             transform.position += new Vector3(0, -fallingSpeed * Time.deltaTime, 0);
 

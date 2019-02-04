@@ -1,5 +1,11 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!4 &1254096791414828234 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 883cbd84e8aa7c143884d16e9de10265,
+    type: 3}
+  m_PrefabInstance: {fileID: 1254096791414699594}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1254096791075142074
 GameObject:
   m_ObjectHideFlags: 0
@@ -9,7 +15,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1254096791075142073}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Engpass
   m_TagString: Blockage
   m_Icon: {fileID: 0}
@@ -32,12 +38,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1254096791414828234 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: 883cbd84e8aa7c143884d16e9de10265,
-    type: 3}
-  m_PrefabInstance: {fileID: 1254096791414699594}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2286455988063902877 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 883cbd84e8aa7c143884d16e9de10265,
@@ -166,6 +166,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 883cbd84e8aa7c143884d16e9de10265, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 883cbd84e8aa7c143884d16e9de10265, type: 3}
 --- !u!1001 &2286455988063869501
@@ -243,6 +247,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1f0a394c725142247ab0cf22d15872f0, type: 2}
+    - target: {fileID: 100000, guid: 883cbd84e8aa7c143884d16e9de10265, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6400000, guid: 883cbd84e8aa7c143884d16e9de10265, type: 3}
     - {fileID: 9500000, guid: 883cbd84e8aa7c143884d16e9de10265, type: 3}

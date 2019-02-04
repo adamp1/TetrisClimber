@@ -112,7 +112,7 @@ namespace Kino
 
         #region MonoBehaviour Functions
 
-        public float speed = 1;
+        public float speed = 0.25f;
 
         IEnumerator activateEffect()
         {

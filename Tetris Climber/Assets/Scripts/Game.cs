@@ -103,6 +103,7 @@ public class Game : MonoBehaviour {
         PauseMenuUI = GameObject.Find("Pause");
         LaserSpawner = GameObject.Find("Laserspawner");
         shapePreviewOn = GameObject.Find("Shape Preview").GetComponent<Toggle>().isOn;
+        Player = GameObject.Find("Player");
 
         blockagePosX = Random.Range(0, 2);
         SpawnBlockage();
@@ -132,7 +133,6 @@ public class Game : MonoBehaviour {
         OptionsMenuUI.SetActive(false);
         PauseMenuUI.SetActive(false);
 
-        Player = GameObject.Find("Player");
         Deathcollider = GameObject.Find("Death Collider");
 
         SpawnNextPrefab();
@@ -164,7 +164,7 @@ public class Game : MonoBehaviour {
 
             CheckBlockagePosition();
 
-            if (Player.transform.position.y > BlockageObject[NrBlockages].transform.position.y+2)
+            if (transform.position.y > BlockageObject[NrBlockages].transform.position.y - 17)
             {
                 NrBlockages++;
             }
@@ -379,11 +379,15 @@ public class Game : MonoBehaviour {
 
         if (spawnBlocksLeftOrRight == 1)
         {
-            spawnPosX = 2;
+            spawnPosX = 4;
         }
         else if (spawnBlocksLeftOrRight == 0)
         {
-            spawnPosX = 11;
+            spawnPosX = 12;
+        }
+        else if(spawnBlocksLeftOrRight == 2)
+        {
+            spawnPosX = 8;
         }
 
         if (Physics.Raycast(CheckUnderSpawner, out hit, 2))
@@ -394,24 +398,24 @@ public class Game : MonoBehaviour {
                 {
                     if (offsetPos == 0)
                     {
-                        spawnPosX = 2;
+                        spawnPosX = 4;
                     }
                 }
                 else if (!Physics.Raycast(CheckUnderSpawnerRight, out hit, 2))
                 {
-                    spawnPosX = 11;
+                    spawnPosX = 12;
                 }
 
                 if (!Physics.Raycast(CheckUnderSpawnerRight, out hit, 2))
                 {
                     if (offsetPos == 1)
                     {
-                        spawnPosX = 11;
+                        spawnPosX = 12;
                     }
                 }
                 else if (!Physics.Raycast(CheckUnderSpawnerLeft, out hit, 2))
                 {
-                    spawnPosX = 2;
+                    spawnPosX = 4;
                 }
             }
         }
@@ -424,24 +428,24 @@ public class Game : MonoBehaviour {
                 {
                     if (offsetPos == 0)
                     {
-                        spawnPosX = 2;
+                        spawnPosX = 4;
                     }
                 }
                 else if (!Physics.Raycast(CheckUnderSpawner, out hit, 2))
                 {
-                    spawnPosX = 6.5f;
+                    spawnPosX = 8;
                 }
 
                 if (!Physics.Raycast(CheckUnderSpawner, out hit, 2))
                 {
                     if (offsetPos == 1)
                     {
-                        spawnPosX = 6.5f;
+                        spawnPosX = 8;
                     }
                 }
                 else if (!Physics.Raycast(CheckUnderSpawnerLeft, out hit, 2))
                 {
-                    spawnPosX = 2;
+                    spawnPosX = 4;
                 }
             }
         }
@@ -454,24 +458,24 @@ public class Game : MonoBehaviour {
                 {
                     if (offsetPos == 0)
                     {
-                        spawnPosX = 6.5f;
+                        spawnPosX = 8;
                     }
                 }
                 else if (!Physics.Raycast(CheckUnderSpawnerRight, out hit, 2))
                 {
-                    spawnPosX = 11;
+                    spawnPosX = 12;
                 }
 
                 if (!Physics.Raycast(CheckUnderSpawnerRight, out hit, 2))
                 {
                     if (offsetPos == 1)
                     {
-                        spawnPosX = 11;
+                        spawnPosX = 12;
                     }
                 }
                 else if (!Physics.Raycast(CheckUnderSpawner, out hit, 2))
                 {
-                    spawnPosX = 6.5f;
+                    spawnPosX = 8;
                 }
             }
         }
@@ -554,7 +558,8 @@ public class Game : MonoBehaviour {
 
             if(BlockageObject[i].transform.position.y > 311)
             {
-                BlockageObject[i].transform.position = new Vector3(BlockageObject[i].transform.position.x, 311, BlockageObject[i].transform.position.z);
+                Destroy(BlockageObject[i]);
+                //BlockageObject[i].transform.position = new Vector3(BlockageObject[i].transform.position.x, 311, BlockageObject[i].transform.position.z);
             }
 
             //Spawn Laser
@@ -617,12 +622,29 @@ public class Game : MonoBehaviour {
     {
         if (BlockageObject[NrBlockages].transform.position.x < -9)
         {
-            spawnBlocksLeftOrRight = 0;
+            if(Player.transform.position.x > 5.5f)
+            {
+                spawnBlocksLeftOrRight = 0;
+            }
+            else if(Player.transform.position.x < 5.5f)
+            {
+                spawnBlocksLeftOrRight = 2;
+            }
+
+           
+
         }
 
         else if (BlockageObject[NrBlockages].transform.position.x > 24)
         {
-            spawnBlocksLeftOrRight = 1;
+            if (Player.transform.position.x < 9.5f)
+            {
+                spawnBlocksLeftOrRight = 1;                
+            }
+            else if(Player.transform.position.x > 9.5f)
+            {
+                spawnBlocksLeftOrRight = 2;
+            }
         }
     }
 
@@ -631,7 +653,7 @@ public class Game : MonoBehaviour {
     {
         Vector3 PlayerPos = Player.transform.position;
 
-        PlayerPos.y += 20;
+        PlayerPos.y += 15;
 
         if(PlayerPos.y > transform.position.y)
         {
@@ -660,12 +682,14 @@ public class Game : MonoBehaviour {
             Time.timeScale = 0;
             //AudioListener.volume = 0.5f;
             FindObjectOfType<BlockMovement>().enabled = false;
+            FindObjectOfType<PlayerMovement>().enabled = false;
         }
         else if (Input.GetKeyUp("escape") && Time.timeScale == 0 && !OptionsMenuUI.activeInHierarchy || Input.GetKeyUp(KeyCode.Joystick1Button9) && Time.timeScale == 0 && !OptionsMenuUI.activeInHierarchy)
         {
             PauseMenuUI.SetActive(false);
             Time.timeScale = 1.0f;
             FindObjectOfType<BlockMovement>().enabled = true;
+            FindObjectOfType<PlayerMovement>().enabled = true;
         }
 
         if(OptionsMenuUI.activeInHierarchy && Input.GetKeyUp("escape"))
@@ -675,6 +699,7 @@ public class Game : MonoBehaviour {
             OptionsMenuUI.SetActive(false);
             Time.timeScale = 1.0f;
             FindObjectOfType<BlockMovement>().enabled = true;
+            FindObjectOfType<PlayerMovement>().enabled = true;
         }
 
             
@@ -837,6 +862,7 @@ public class Game : MonoBehaviour {
         scoreMultiplikator = scoreMultiplikator + maxheightmulti;
         //Debug.Log(scoreMultiplikator);
 
+
         //Set Startheight to Playerheight
         if (!SaveStartHeight)
         {
@@ -861,7 +887,7 @@ public class Game : MonoBehaviour {
 
             //Calculate Gesamt Score
             ScoreGesamt = ScoreGesamt + Score;
-            Debug.Log("Scoregesamt : " +ScoreGesamt);
+            //Debug.Log("Scoregesamt : " +ScoreGesamt);
 
             //Reset Everything
             SaveStartHeight = false;
