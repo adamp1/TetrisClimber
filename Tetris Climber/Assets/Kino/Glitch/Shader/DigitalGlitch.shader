@@ -56,6 +56,7 @@ Shader "Hidden/Kino/Glitch/Digital"
 
         // Shuffle color components.
         float3 neg = saturate(color.grb + (1 - dot(color, 1)) * 0.5);
+        neg = color.rgb;
         color = lerp(color, neg, w_c);
 
         return float4(color, source.a);
