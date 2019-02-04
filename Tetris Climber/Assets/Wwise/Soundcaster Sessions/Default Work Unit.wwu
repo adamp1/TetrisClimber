@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{18621CD4-5341-43B9-BD3E-42429B574FAC}" SchemaVersion="89">
+	<SoundcasterSessions>
+		<WorkUnit Name="Default Work Unit" ID="{18621CD4-5341-43B9-BD3E-42429B574FAC}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="Background Test" ID="{ADAC99F4-C2BB-4DEE-9F5B-7545EDB83383}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="BackgroundMusic" ID="{8FDE9198-9AF4-4F51-A088-77920913127C}" WorkUnitID="{14690D2B-5BA9-469C-B9A6-B38D4259CA25}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="SFX_Menu_SelectOption_001" ID="{50DC4D5D-EED4-46DE-9B99-5955D8AD3176}" WorkUnitID="{035B1F1F-FE5D-4F3D-B36C-34B1898CC711}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="DestroyBlock" ID="{EB06B2B7-0BF0-4C6A-B6B9-86188E6B938A}" WorkUnitID="{976382F9-AB48-47A9-97DC-11E081474677}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="FootSteps" ID="{7619B503-BBB9-4372-A24F-EFF631BB1758}" WorkUnitID="{A3FB5ABD-58BE-4F99-A897-3BB3D9562A49}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Laser" ID="{9D8B5459-8F81-4346-962A-57F7B556597C}" WorkUnitID="{976382F9-AB48-47A9-97DC-11E081474677}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Jump" ID="{1869BF3C-9B5E-4C17-BA5F-A0A05E6FAF65}" WorkUnitID="{D54FDC3E-CCB3-4783-8F33-141F6589D675}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Sword_Swing" ID="{6C9BC006-7C10-4F10-8555-D14F09AE650F}" WorkUnitID="{A3FB5ABD-58BE-4F99-A897-3BB3D9562A49}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="Danger" ID="{4A44F32B-CB66-4696-B8B7-C5B140DEAD69}"/>
+							<Value>7</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="BGM_PlaybackSpeed" ID="{89A1775D-F62E-4A49-BA56-DC79790B9D21}"/>
+							<Value>1</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="Playing" ID="{44C952A5-2020-4E18-B4AA-F733E595CB5D}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundcasterSessions>
+</WwiseDocument>

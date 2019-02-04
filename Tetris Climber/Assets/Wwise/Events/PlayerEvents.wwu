@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{D54FDC3E-CCB3-4783-8F33-141F6589D675}" SchemaVersion="89" RootDocumentID="{D27BA803-18E8-4470-B561-D12F974B5065}">
+	<Events>
+		<WorkUnit Name="PlayerEvents" ID="{D54FDC3E-CCB3-4783-8F33-141F6589D675}" OwnerID="{D27BA803-18E8-4470-B561-D12F974B5065}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="Jump" ID="{1869BF3C-9B5E-4C17-BA5F-A0A05E6FAF65}">
+					<ChildrenList>
+						<Action Name="" ID="{AD65E363-D529-4646-88EE-A090D9C75A04}" ShortID="763457492">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Jump" ID="{9DD60F7A-A9B6-49E3-AF7A-21E3DD18E2D0}" WorkUnitID="{A3FB5ABD-58BE-4F99-A897-3BB3D9562A49}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Swing_Sword" ID="{6CA6D478-23AA-4142-AD1F-ADDEF9EF6594}">
+					<ChildrenList>
+						<Action Name="" ID="{7EF8E3F1-D731-4995-95F8-3F07A1F07F3A}" ShortID="815439434">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Sword_Swing" ID="{6C9BC006-7C10-4F10-8555-D14F09AE650F}" WorkUnitID="{A3FB5ABD-58BE-4F99-A897-3BB3D9562A49}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<WorkUnit Name="Deaths" ID="{035F0BCF-5BD9-46BD-B9D1-381957CA9F71}" PersistMode="Reference"/>
+				<Event Name="FootStep" ID="{7D34A652-6116-43B2-876D-C9513D52CC46}">
+					<ChildrenList>
+						<Action Name="" ID="{01C123D2-3787-4EA6-897A-9306A1DFA05F}" ShortID="473092469">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FootSteps" ID="{7619B503-BBB9-4372-A24F-EFF631BB1758}" WorkUnitID="{A3FB5ABD-58BE-4F99-A897-3BB3D9562A49}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
