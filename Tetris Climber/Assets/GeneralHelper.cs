@@ -20,6 +20,22 @@ public class GeneralHelper : MonoBehaviour
     public LineRenderer[] lrs;
     public float previewEmissionPower = 2;
 
+    void BlockLights()
+    {
+        //get only additional blocks?
+        MinoPhysics[] minos = GameObject.FindObjectsOfType<MinoPhysics>();
+
+        foreach (MinoPhysics m in minos)
+        {
+            //put light into block, but also check if light already exists
+
+            //light color = block glow color
+            //if close enough to player enable lights
+        }
+
+
+    }
+
     void ChangePreviewColors()
     {
         //get all line renderer
