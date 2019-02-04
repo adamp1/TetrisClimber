@@ -7312,6 +7312,9 @@ MonoBehaviour:
   previewmatref: {fileID: 2100000, guid: 0166bf69287915440b37f778bfa3db23, type: 2}
   lrs: []
   previewEmissionPower: 3
+  spieler: {fileID: 0}
+  lightDistance: 20
+  lightPower: 2
 --- !u!1 &1841820486
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,17 +8,21 @@ public class GeneralHelper : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        spieler = GameObject.FindObjectOfType<PlayerMovement>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        ChangePreviewColors(); //doesnt work and kills performance
+        ChangePreviewColors(); 
+        BlockLights();
     }
 
     public LineRenderer[] lrs;
     public float previewEmissionPower = 2;
+    public PlayerMovement spieler;
+    public float lightDistance = 20;
+    public float lightPower = 5;
 
     void BlockLights()
     {
@@ -27,10 +31,24 @@ public class GeneralHelper : MonoBehaviour
 
         foreach (MinoPhysics m in minos)
         {
-            //put light into block, but also check if light already exists
+            //get light
+            Light l = m.transform.Find("Point Light").GetComponent<Light>();
 
             //light color = block glow color
+            Color c = m.GetComponent<MeshRenderer>().material.GetColor("_GlowColor");
+            l.color = c;
+            l.intensity = lightPower;
+
             //if close enough to player enable lights
+            if (Vector3.Distance(m.transform.position, spieler.transform.position) <= lightDistance)
+            {
+                l.enabled = true;
+            }
+            else
+            {
+                l.enabled = false;
+            }
+
         }
 
 
