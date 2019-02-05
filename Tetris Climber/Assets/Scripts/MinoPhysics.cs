@@ -169,7 +169,7 @@ public class MinoPhysics : MonoBehaviour
 
         }
 
-        if (gameObject.GetComponentInParent<BlockMovement>().enabled)
+        if (gameObject.GetComponentInParent<BlockMovement>().allowMovement == false)
         {
 
             //SHAPE PREVIEW
@@ -256,7 +256,6 @@ public class MinoPhysics : MonoBehaviour
 
             AkSoundEngine.PostEvent("DestroyBlock", Player.gameObject);
             Destroy(ob, 1);
-            AkSoundEngine.PostEvent("DestroyBlock", Player.gameObject);
         }
 
         if(other.gameObject.tag == "Blockage") 
@@ -273,7 +272,7 @@ public class MinoPhysics : MonoBehaviour
     void MoveMinoDown ()
     {
         transform.position += new Vector3(0, -1f, 0);
-        moveMino = true;
+        moveMino = true;        
     }
 
     void UpdateMino()

@@ -30,7 +30,7 @@ public class PlayerDeathTrigger : MonoBehaviour {
             Destroy(Player);
             FindObjectOfType<BlockMovement>().enabled = false;
             //FindObjectOfType<Game>().SaveScore();
-            AkSoundEngine.PostEvent("KilledByBlock", other.gameObject);
+            AkSoundEngine.PostEvent("KilledByNano", other.gameObject);
         }
 
     }
