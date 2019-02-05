@@ -39,6 +39,7 @@ public class FallingObjects : MonoBehaviour
             if (Vector3.Distance(a.transform.position, spieler.transform.position) >= deathdistance){
                 Destroy(a);
                 a = null;
+                t = Random.Range(min, max);
             }
         }
     }
