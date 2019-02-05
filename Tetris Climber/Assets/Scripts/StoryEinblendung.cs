@@ -26,21 +26,27 @@ public class StoryEinblendung : MonoBehaviour
     IEnumerator StoryProgress()
     {
         int length = 0;
-        currenttxt = "PRESS ANY BUTTON TO SKIP\n\n\n";
+        currenttxt = "PRESS ANY BUTTON TO CONTINUE\n\n\n";
         length += currenttxt.Length;
         int i = 0;
-        
 
-        while (currenttxt.Length - length != textstory.Length)
+        //skippable = true;
+
+
+        while (currenttxt.Length - length != textstory.Length || Input.anyKeyDown)
         {
             currenttxt += textstory[i];
             i++;
             uistory.text = currenttxt;
             yield return new WaitForSeconds(chartime);
+            skippable = true;
         }
         print("AAAAAAAAAAAAA");
-        game.Restart();
+
+        //game.Restart();
     }
+
+    bool skippable;
 
     public void StoryStart()
     {
@@ -65,11 +71,19 @@ public class StoryEinblendung : MonoBehaviour
         //starte Game.Restart()
         //GameObject.FindObjectOfType<Game>().Restart();
         //game.Restart();
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (skippable)
+        {
+            if (Input.anyKeyDown)
+            {
+                game.Restart();
+            }
+        }
     }
 }
