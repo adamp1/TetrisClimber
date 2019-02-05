@@ -201,7 +201,7 @@ public class PlayerMovement : MonoBehaviour {
         }
 
 
-        /*    //Kill Player
+        /*    //Kill Player 
             if(Physics.Raycast(DeathFromAbove, out hit, 0.6f))
             {
                 if(hit.collider.tag == "Mino")
@@ -283,7 +283,6 @@ public class PlayerMovement : MonoBehaviour {
         if (transform.position.y < playerPosY + 1.8f)
         {
              rb.velocity = Vector3.up * jumpPower;
-            Debug.Log(Vector3.up * jumpPower);
         }
         else
         {

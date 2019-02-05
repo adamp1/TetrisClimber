@@ -7,7 +7,7 @@ public class PlayerDeathTrigger : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Mino" && FindObjectOfType<PlayerMovement>().grounded)
+        if(other.gameObject.tag == "Mino")
         {
             GameObject Player = GameObject.Find("Player");
             Destroy(Player);
@@ -16,7 +16,7 @@ public class PlayerDeathTrigger : MonoBehaviour {
             //FindObjectOfType<Game>().SaveScore();
         }
 
-        if(other.gameObject.tag == "Ground" && FindObjectOfType<PlayerMovement>().grounded)
+        if(other.gameObject.tag == "Ground")
         {
             GameObject Player = GameObject.Find("Player"); 
             Destroy(Player);

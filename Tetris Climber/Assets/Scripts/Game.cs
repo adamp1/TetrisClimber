@@ -62,7 +62,6 @@ public class Game : MonoBehaviour {
     public GameObject[] TetrisPrefab = new GameObject[6];
     public GameObject BlockagePrefab;
 
-    
     public GameObject LaserPrefab;
     GameObject[] BlockageObject = new GameObject[30];
     GameObject LaserSpawner;
@@ -83,7 +82,9 @@ public class Game : MonoBehaviour {
 
     public GameObject GameOverUI;
     public GameObject GameOver2UI;
-
+    public GameObject PlayAgain2;
+    public GameObject SubmitButton;
+    public GameObject InputField;
 
     GameObject Player;
     GameObject Deathcollider;
@@ -137,7 +138,7 @@ public class Game : MonoBehaviour {
 
         SpawnNextPrefab();
 
-      /*   PlayerPrefs.SetFloat("Highscore5", 0);
+     /*  PlayerPrefs.SetFloat("Highscore5", 0);
           PlayerPrefs.SetFloat("Highscore4", 0);
           PlayerPrefs.SetFloat("Highscore3", 0);
           PlayerPrefs.SetFloat("Highscore2", 0);
@@ -735,7 +736,7 @@ public class Game : MonoBehaviour {
         DistanceToDanger();
         DynamicScoreSystem();
 
-        if(PlayerPrefs.GetFloat("Highscore5") < playerheight)
+        if(PlayerPrefs.GetFloat("Highscore5") < ScoreGesamt)
         {
             newHighscore = true;
         }
@@ -752,16 +753,23 @@ public class Game : MonoBehaviour {
     {
         //GameObject.Find("Input Name").GetComponent<InputField>().text;
 
-
-
-
-
         SaveScore();
 
-
         Debug.Log(GameObject.Find("Input Name").GetComponent<InputField>().text);
+    }
 
-
+    public void SubmitNameShortcut()
+    {
+        Debug.Log("WORKS");
+        if(Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown("joystick button 9"))
+        {
+            Debug.Log("hey");
+            SubmitName();
+            SubmitButton.SetActive(false);
+            InputField.SetActive(false);
+            PlayAgain2.SetActive(true);
+           
+        }
     }
 
     public void Continue()
