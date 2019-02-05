@@ -20,11 +20,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Test Scenes/Title Screen 0.unity
     guid: 75a7f61c5a7c62e45932b724f308bc1c
+  - enabled: 1
+    path: Assets/Scenes/Test Scenes/TetrisClimber 7.unity
+    guid: e3cf3ebca1eb7e144bb0f6c85c814641
   - enabled: 0
     path: Assets/Scenes/Test Scenes/Old/Title Screen 1.unity
     guid: 6cd0d2c8eddf8224e9beb56794b9fc76
-  - enabled: 1
-    path: Assets/Scenes/Test Scenes/TetrisClimber 7.unity
+  - enabled: 0
+    path: Assets/__DELETED_GUID_Trash/80391bcd0acdcee47b3c6c0fb47c86ce
     guid: 80391bcd0acdcee47b3c6c0fb47c86ce
   - enabled: 0
     path: Assets/Scenes/Test Scenes/TetrisClimber no.unity
