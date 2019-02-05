@@ -11,7 +11,8 @@ public class StoryEinblendung : MonoBehaviour
     public string textstory;
     public string currenttxt;
     public float chartime = 0.1f;
-    public GameObject menu;
+    public GameObject[] menu;
+    public Image darkstory;
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +41,11 @@ public class StoryEinblendung : MonoBehaviour
         uistory.gameObject.SetActive(true);
         textstory = uistory.text;
         uistory.text = "";
+
+        foreach (GameObject g in menu)
+        {
+            g.SetActive(false);
+        }
 
         StartCoroutine(StoryProgress());
 
