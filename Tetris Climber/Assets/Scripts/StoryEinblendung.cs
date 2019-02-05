@@ -26,7 +26,7 @@ public class StoryEinblendung : MonoBehaviour
     IEnumerator StoryProgress()
     {
         int length = 0;
-        currenttxt = "PRESS ANY BUTTON TO CONTINUE\n\n\n";
+        currenttxt = "";
         length += currenttxt.Length;
         int i = 0;
 
