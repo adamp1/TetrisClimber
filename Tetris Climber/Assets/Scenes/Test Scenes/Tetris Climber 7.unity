@@ -8759,7 +8759,7 @@ MonoBehaviour:
   objects:
   - {fileID: 1770183625655937055, guid: 516c85499ed475a4e952e44f7fed5a12, type: 3}
   min: 3
-  max: 8
+  max: 20
   t: 0
   spawndistance: {x: 20, y: 20}
   speed: 20
