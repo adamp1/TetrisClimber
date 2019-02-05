@@ -30,11 +30,11 @@ public class FallingObjects : MonoBehaviour
             a = Instantiate(objects[i],spieler.transform.position + new Vector3(0, spawndistance.x, spawndistance.y), 
             objects[i].transform.rotation, transform) as GameObject;
 
-            //t = Random.Range(min, max);
+            t = Random.Range(min, max);
         }
 
         if (a){
-            
+
         }
     }
 }
