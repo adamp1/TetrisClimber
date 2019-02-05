@@ -16,7 +16,9 @@ public class PlayerMovement : MonoBehaviour {
     bool isJumping;
     bool jumping;
     bool jumpingIdle;
-    float jumpTimeCounter = 0.1f;
+    float jumpTimeCounter = 0;
+
+    bool jumpINPUT = true;
 
     bool allowMoveRight = true;
     bool allowMoveLeft = true;
@@ -147,7 +149,11 @@ public class PlayerMovement : MonoBehaviour {
 
         if (Input.GetButton("Jump") && isJumping)
         {
-            Jump();
+            jumpINPUT = true;
+        }
+        else
+        {
+            jumpINPUT = false;
         }
 
 
@@ -185,28 +191,33 @@ public class PlayerMovement : MonoBehaviour {
 
 
         //CheckGround
-        if (Physics.Raycast(GroundCheck1, out hit, 1.1f) || Physics.Raycast(GroundCheck2, out hit, 1.1f))
+        if (Physics.Raycast(GroundCheck1, out hit, 1f) || Physics.Raycast(GroundCheck2, out hit, 1f))
         {
-            grounded = true;
-            jumpTimeCounter = 0.1f;
+            if(hit.transform.tag == "Mino" || hit.transform.tag == "Ground")
+            {
+                grounded = true;
+                jumpTimeCounter = 0;
+            }
+           
         }
         else
         {
             grounded = false;
         }
 
-    /*    //Kill Player
-        if(Physics.Raycast(DeathFromAbove, out hit, 0.6f))
-        {
-            if(hit.collider.tag == "Mino")
+
+        /*    //Kill Player
+            if(Physics.Raycast(DeathFromAbove, out hit, 0.6f))
             {
-                Destroy(gameObject);
-            }
-            //GameObject.Find("Main Camera").GetComponent<CameraMovement>().enabled = false;
-        }*/
+                if(hit.collider.tag == "Mino")
+                {
+                    Destroy(gameObject);
+                }
+                //GameObject.Find("Main Camera").GetComponent<CameraMovement>().enabled = false;
+            }*/
 
         //CheckWall
-        if(Physics.Raycast(WallCheckRight1, out hit, 0.6f) || Physics.Raycast(WallCheckRight2, out hit, 0.5f) || Physics.Raycast(WallCheckRight3, out hit, 0.5f))
+        if (Physics.Raycast(WallCheckRight1, out hit, 0.6f) || Physics.Raycast(WallCheckRight2, out hit, 0.5f) || Physics.Raycast(WallCheckRight3, out hit, 0.5f))
         {
             allowMoveRight = false;
             //FindObjectOfType<PlayerAnimHelper2>().animator.SetBool("run", false);
@@ -241,7 +252,14 @@ public class PlayerMovement : MonoBehaviour {
         } 
       
     }
-  
+
+    private void FixedUpdate()
+    {
+        if(jumpINPUT)
+        {
+            Jump();
+        }
+    }
 
     void OnCollisionEnter(Collision collision)
     {
@@ -270,10 +288,12 @@ public class PlayerMovement : MonoBehaviour {
 
     void Jump()
     {
-        if (jumpTimeCounter > 0)
+        jumpTimeCounter += Time.deltaTime;
+        Debug.Log(jumpTimeCounter);
+
+        if (jumpTimeCounter < 0.15f)
         {
             rb.velocity = Vector3.up * jumpPower;
-            jumpTimeCounter -= Time.deltaTime;
         }
         else
         {

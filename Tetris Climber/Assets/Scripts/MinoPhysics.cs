@@ -164,7 +164,7 @@ public class MinoPhysics : MonoBehaviour
 
         }
 
-        if (gameObject.GetComponentInParent<BlockMovement>().allowMovement == false)
+        if (gameObject.GetComponentInParent<BlockMovement>().enabled)
         {
 
             //SHAPE PREVIEW
