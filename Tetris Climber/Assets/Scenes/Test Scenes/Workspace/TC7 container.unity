@@ -7206,6 +7206,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8499534c8ef7fc74d8cd47d75f97e24b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objects: []
+  min: 3
+  max: 10
+  spawndistance: 50
+  speed: 5
+  deathdistance: 100
 --- !u!1 &1727814461
 GameObject:
   m_ObjectHideFlags: 0
@@ -8553,6 +8559,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: b2bb50a4ab08f4f3c9b3f08f8c3c0a72,
         type: 2}
+    - target: {fileID: 1814444821, guid: de1ebf98e34bef045b552eefa69560ed, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1418163841632783944, guid: de1ebf98e34bef045b552eefa69560ed,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767583505568352824, guid: de1ebf98e34bef045b552eefa69560ed,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1331517527634141428, guid: de1ebf98e34bef045b552eefa69560ed,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de1ebf98e34bef045b552eefa69560ed, type: 3}
 --- !u!1 &3723038851834066423 stripped
