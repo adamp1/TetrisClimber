@@ -191,11 +191,9 @@ public class PlayerMovement : MonoBehaviour {
         //CheckGround
         if (Physics.Raycast(GroundCheck1, out hit, 1.1f) || Physics.Raycast(GroundCheck2, out hit, 1.1f))
         {
-            if(hit.transform.tag == "Mino" || hit.transform.tag == "Ground")
-            {
-                grounded = true;
-                jumpTimeCounter = 0;
-            }           
+               grounded = true;
+               jumpTimeCounter = 0;
+                   
         }
         else
         {
