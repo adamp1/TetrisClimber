@@ -8762,8 +8762,9 @@ MonoBehaviour:
   max: 8
   t: 0
   spawndistance: {x: 20, y: 20}
-  speed: 5
+  speed: 20
   deathdistance: 100
+  a: {fileID: 0}
 --- !u!1001 &5696030681462519161
 PrefabInstance:
   m_ObjectHideFlags: 0
