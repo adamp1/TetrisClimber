@@ -25,16 +25,21 @@ public class StoryEinblendung : MonoBehaviour
 
     IEnumerator StoryProgress()
     {
-        currenttxt = "";
+        int length = 0;
+        currenttxt = "PRESS ANY BUTTON TO SKIP\n\n\n";
+        length += currenttxt.Length;
         int i = 0;
+        
 
-        while (currenttxt != textstory)
+        while (currenttxt.Length - length != textstory.Length)
         {
             currenttxt += textstory[i];
             i++;
             uistory.text = currenttxt;
             yield return new WaitForSeconds(chartime);
         }
+        print("AAAAAAAAAAAAA");
+        game.Restart();
     }
 
     public void StoryStart()
@@ -50,7 +55,7 @@ public class StoryEinblendung : MonoBehaviour
             g.SetActive(false);
         }
 
-        
+
         darkstory.color = olddark;
 
         StartCoroutine(StoryProgress());
