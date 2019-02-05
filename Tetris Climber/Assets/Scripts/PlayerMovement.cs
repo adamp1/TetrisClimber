@@ -210,6 +210,13 @@ public class PlayerMovement : MonoBehaviour {
         {
             allowMoveRight = false;
             //FindObjectOfType<PlayerAnimHelper2>().animator.SetBool("run", false);
+
+            //Start Idle Animation if running next to wall
+            if(Input.GetAxis("Horizontal") > 0 && jumping == false && jumpingIdle == false && FindObjectOfType<DestroyBlocks>().inisiateSlice == false)
+            {
+                FindObjectOfType<PlayerAnimHelper2>().Idle();
+            }
+
         }
         else
         {
@@ -220,6 +227,12 @@ public class PlayerMovement : MonoBehaviour {
         {
             allowMoveLeft = false;
             //FindObjectOfType<PlayerAnimHelper2>().animator.SetBool("run", false);
+
+            //Start Idle Animation if running next to wall
+            if (Input.GetAxis("Horizontal") < 0 && jumping == false && jumpingIdle == false && FindObjectOfType<DestroyBlocks>().inisiateSlice == false)
+            {
+                FindObjectOfType<PlayerAnimHelper2>().Idle();
+            }
         }
         else
         {

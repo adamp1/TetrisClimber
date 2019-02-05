@@ -109,11 +109,6 @@ public class MinoPhysics : MonoBehaviour
             //UNDER BLOCK CHECK
             if (Physics.Raycast(CheckUnderBlock, out hit, 1f, layermask))
             {
-                if (hit.transform.tag == "Ground") 
-                {
-
-                }
-
                 if (hit.transform.tag == "Mino")
                 {
                     if (hit.transform.parent.GetComponent<BlockMovement>().enabled == false && gameObject.GetComponentInParent<BlockMovement>().enabled == false)
