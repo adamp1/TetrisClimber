@@ -169,8 +169,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b58afc2ac7e4dd46b65f115a642ef46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lrmaterial1: {fileID: 2100000, guid: 0166bf69287915440b37f778bfa3db23, type: 2}
-  lrmaterial2: {fileID: 2100000, guid: 23c9e032f05b01647ab8631571da9cd8, type: 2}
   moveMino: 0
   BlockUnderBlock: 0
   RightBlock: 0
@@ -219,8 +217,8 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  - {x: -20, y: -20, z: 0}
+  - {x: -20, y: -20, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -382,8 +380,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b58afc2ac7e4dd46b65f115a642ef46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lrmaterial1: {fileID: 2100000, guid: 0166bf69287915440b37f778bfa3db23, type: 2}
-  lrmaterial2: {fileID: 2100000, guid: 23c9e032f05b01647ab8631571da9cd8, type: 2}
   moveMino: 0
   BlockUnderBlock: 0
   RightBlock: 0
@@ -432,8 +428,8 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  - {x: -20, y: -20, z: 0}
+  - {x: -20, y: -20, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -595,8 +591,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b58afc2ac7e4dd46b65f115a642ef46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lrmaterial1: {fileID: 2100000, guid: 0166bf69287915440b37f778bfa3db23, type: 2}
-  lrmaterial2: {fileID: 2100000, guid: 23c9e032f05b01647ab8631571da9cd8, type: 2}
   moveMino: 0
   BlockUnderBlock: 0
   RightBlock: 0
@@ -645,8 +639,8 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  - {x: -20, y: -20, z: 0}
+  - {x: -20, y: -20, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -808,8 +802,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b58afc2ac7e4dd46b65f115a642ef46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lrmaterial1: {fileID: 2100000, guid: 0166bf69287915440b37f778bfa3db23, type: 2}
-  lrmaterial2: {fileID: 2100000, guid: 23c9e032f05b01647ab8631571da9cd8, type: 2}
   moveMino: 0
   BlockUnderBlock: 0
   RightBlock: 0
@@ -858,8 +850,8 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  - {x: -20, y: -20, z: 0}
+  - {x: -20, y: -20, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
