@@ -13,6 +13,11 @@ public class ScriptWithNoName : MonoBehaviour
         
     }
 
+    private void OnDestroy()
+    {
+        AkSoundEngine.PostEvent("DestroyBlock", null);
+    }
+
     // Update is called once per frame
     void Update()
     {

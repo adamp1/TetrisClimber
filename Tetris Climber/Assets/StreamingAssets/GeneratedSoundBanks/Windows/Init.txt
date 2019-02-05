@@ -1,3 +1,11 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	2372318522	PlayState			\Default Work Unit\PlayState	
+
+State	ID	Name	State Group			Notes
+	0	None	PlayState			
+	1852808225	Playing	PlayState			
+	3856304344	Pausing	PlayState			
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 

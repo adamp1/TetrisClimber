@@ -465,3 +465,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allowRotation: 1
   limitRotation: 1
+  allowMovement: 0

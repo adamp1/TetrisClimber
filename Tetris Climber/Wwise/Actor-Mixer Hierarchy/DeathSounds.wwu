@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{522FC939-1E83-4EC3-9DC4-0522F5A0B6BA}" SchemaVersion="89" RootDocumentID="{82BA0831-8B77-46B5-BBB4-A968759254E5}">
+	<AudioObjects>
+		<WorkUnit Name="DeathSounds" ID="{522FC939-1E83-4EC3-9DC4-0522F5A0B6BA}" OwnerID="{A3FB5ABD-58BE-4F99-A897-3BB3D9562A49}" PersistMode="Nested">
+			<ChildrenList>
+				<Sound Name="DieByNano" ID="{D49C7595-7010-4178-B6A2-B22B07862F6A}" ShortID="742917916">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-4</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B4640E2-A2A8-484D-BCCB-39D6CBB28FBD}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{59D5B0C7-CBD5-4C44-AFDB-AC8E703BAC41}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Die" ID="{26DF65F6-FBD4-4693-9338-5233D85EC2C7}" ShortID="638468395">
+							<PropertyList>
+								<Property Name="TrimBegin" Type="Real64" Value="0.65378337020649"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>Die.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Die" ID="{26DF65F6-FBD4-4693-9338-5233D85EC2C7}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="SFX_Squished_001" ID="{87FD09C6-D11C-417C-A65F-51F00D255B28}" ShortID="249649412">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B4640E2-A2A8-484D-BCCB-39D6CBB28FBD}"/>
+						</Reference>
+						<Reference Name="Effect0" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+							<ObjectRef Name="Squish" ID="{3D55BA85-1F0F-4455-846A-F028D2BD3C4A}" WorkUnitID="{4B9D26AE-138A-48A5-B0D7-BF194754E732}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{59D5B0C7-CBD5-4C44-AFDB-AC8E703BAC41}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="SFX_Squished_001" ID="{206CF323-5361-47EA-9C49-D1778C26F0C0}" ShortID="80948791">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="0.0769911504424779"/>
+								<Property Name="TrimBegin" Type="Real64" Value="0.354159292035399"/>
+								<Property Name="TrimEnd" Type="Real64" Value="1.26778761061947"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>SFX_Squished_001.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="SFX_Squished_001" ID="{206CF323-5361-47EA-9C49-D1778C26F0C0}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="DieByLaser" ID="{171F471E-2158-4C33-BA28-B2E1779C62B8}" ShortID="220323493">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B4640E2-A2A8-484D-BCCB-39D6CBB28FBD}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{59D5B0C7-CBD5-4C44-AFDB-AC8E703BAC41}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="DieByLaser" ID="{DFB04045-BEE1-495C-B958-D24916CC0292}" ShortID="508723006">
+							<Language>SFX</Language>
+							<AudioFile>DieByLaser.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="DieByLaser" ID="{DFB04045-BEE1-495C-B958-D24916CC0292}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

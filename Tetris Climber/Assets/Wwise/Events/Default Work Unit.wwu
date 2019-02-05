@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{D27BA803-18E8-4470-B561-D12F974B5065}" SchemaVersion="89">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{D27BA803-18E8-4470-B561-D12F974B5065}" PersistMode="Standalone">
+			<ChildrenList>
+				<WorkUnit Name="PlayerEvents" ID="{D54FDC3E-CCB3-4783-8F33-141F6589D675}" PersistMode="Reference"/>
+				<WorkUnit Name="SoundEvents" ID="{05644F9E-C62A-44B0-B7FC-6978647153A1}" PersistMode="Reference"/>
+				<WorkUnit Name="GameEvents" ID="{0863560F-D445-4BBB-946E-636A1F8B4C40}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
