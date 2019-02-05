@@ -79,7 +79,7 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _Variant: 1
+    - _Variant: 0
     - _ZWrite: 1
     - _circles: 20
     - _dotcount: 40

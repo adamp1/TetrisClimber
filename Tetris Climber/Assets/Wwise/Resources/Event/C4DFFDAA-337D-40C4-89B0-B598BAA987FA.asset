@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a6402cce065264489f58c1e733ae195, type: 3}
   m_Name: C4DFFDAA-337D-40C4-89B0-B598BAA987FA
   m_EditorClassIdentifier: 
-  objectName: Die
-  id: 445985469
+  objectName: generalDeath
+  id: 463069199
   guid: C4DFFDAA-337D-40C4-89B0-B598BAA987FA
