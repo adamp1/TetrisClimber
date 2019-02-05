@@ -25,7 +25,7 @@ PlayerSettings:
   m_SplashScreenDrawMode: 1
   m_SplashScreenBackgroundAnimationZoom: 1
   m_SplashScreenLogoAnimationZoom: 1
-  m_SplashScreenBackgroundLandscapeAspect: 1.7653563
+  m_SplashScreenBackgroundLandscapeAspect: 1.7641277
   m_SplashScreenBackgroundPortraitAspect: 1
   m_SplashScreenBackgroundLandscapeUvs:
     serializedVersion: 2
@@ -40,12 +40,14 @@ PlayerSettings:
     width: 1
     height: 1
   m_SplashScreenLogos:
+  - logo: {fileID: 21300000, guid: e07aa952045eee142ab8158ba0b6ef01, type: 3}
+    duration: 2
   - logo: {fileID: 21300000, guid: 3660710decff07e4797ccb42319492c6, type: 3}
     duration: 2
   - logo: {fileID: 10404, guid: 0000000000000000e000000000000000, type: 0}
     duration: 2
   - logo: {fileID: 21300000, guid: dc10c30f66307ae418e72e21f83c04c9, type: 3}
-    duration: 5
+    duration: 3
   m_VirtualRealitySplashScreen: {fileID: 0}
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1024
@@ -518,7 +520,7 @@ PlayerSettings:
   ps4attribEyeToEyeDistanceSettingVR: 0
   ps4IncludedModules: []
   monoEnv: 
-  splashScreenBackgroundSourceLandscape: {fileID: 21300000, guid: ad48a4a1b114e1a4985e70e172730ee4,
+  splashScreenBackgroundSourceLandscape: {fileID: 21300000, guid: 1fd72310a101e1245960a642b7969ced,
     type: 3}
   splashScreenBackgroundSourcePortrait: {fileID: 0}
   spritePackerPolicy: 
