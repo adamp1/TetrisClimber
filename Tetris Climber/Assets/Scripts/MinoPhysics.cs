@@ -256,7 +256,6 @@ public class MinoPhysics : MonoBehaviour
 
             AkSoundEngine.PostEvent("DestroyBlock", Player.gameObject);
             Destroy(ob, 1);
-            AkSoundEngine.PostEvent("DestroyBlock", Player.gameObject);
         }
 
         if(other.gameObject.tag == "Blockage") 
