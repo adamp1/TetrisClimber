@@ -17,11 +17,17 @@ public class SlicePlaneHelper : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (spieler.inisiateSlice){
-            renderer.enabled = true;
+        if (spieler && renderer)
+        {
+            if (spieler.inisiateSlice)
+            {
+                renderer.enabled = true;
+            }
+            else
+            {
+                renderer.enabled = false;
+            }
         }
-        else{
-            renderer.enabled = false;
-        }
+
     }
 }
