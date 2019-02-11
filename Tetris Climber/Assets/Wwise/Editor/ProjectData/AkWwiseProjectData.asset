@@ -28,17 +28,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 6e0b53c5edb45d409049cd6f25ff12ce
-    m_lastTime: -8586517266199975808
+    m_lastTime: -8586517142174175808
     List:
-    - name: MenuSoundBank
-      guid: e9f2a016ea1f5b4aadde1b8254dae3b7
-      id: 2316487327
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: MenuSoundBank
-        ObjectType: 7
-      Path: Default Work Unit\MenuSoundBank
     - name: SoundBank
       guid: 4b8e74b6ce355646950207c03462dd54
       id: 1661994096
@@ -52,7 +43,7 @@ MonoBehaviour:
   - PhysicalPath: Events\Deaths.wwu
     ParentPhysicalPath: Events\PlayerEvents.wwu
     guid: cf0b5f03d95bbd46b9d1381957ca9f71
-    m_lastTime: -8586517694697675808
+    m_lastTime: -8586517160296275808
     List:
     - name: generalDeath
       guid: aafddfc47d33c44089b0b598baa987fa
@@ -126,7 +117,7 @@ MonoBehaviour:
   - PhysicalPath: Events\GameEvents.wwu
     ParentPhysicalPath: Events\Default Work Unit.wwu
     guid: 0f56630845d4bb4b946e636a1f8b4c40
-    m_lastTime: -8586517228195275808
+    m_lastTime: -8586517141326775808
     List:
     - name: ButtonClick
       guid: 29445634aa766245961ae635260d44ea
@@ -320,7 +311,7 @@ MonoBehaviour:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 9c8d81d77d8e184eb562c23135cdef4f
-    m_lastTime: -8586517630846975808
+    m_lastTime: -8586517143463175808
     List:
     - name: MenuState
       guid: 9a34d39defecb6448f084a50af423811
@@ -401,12 +392,5 @@ MonoBehaviour:
       Path: Default Work Unit\EndLoop
   ExpandedItems:
   - /TetrisClimber
-  - /TetrisClimber/Events
-  - /TetrisClimber/Events/Default Work Unit
-  - /TetrisClimber/Events/Default Work Unit/GameEvents
-  - /TetrisClimber/Events/Default Work Unit/PlayerEvents
-  - /TetrisClimber/Events/Default Work Unit/SoundEvents
-  - /TetrisClimber/SoundBanks
-  - /TetrisClimber/SoundBanks/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
