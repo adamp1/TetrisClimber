@@ -122,7 +122,17 @@ PlayerSettings:
     16:9: 1
     Others: 1
   bundleVersion: Pre-Goldmaster
-  preloadedAssets: []
+  preloadedAssets:
+  - {fileID: 2800000, guid: 4f63c3b20bc54e84eb2c0dadaf53c672, type: 3}
+  - {fileID: 2800000, guid: 5c61a359fdf774e4e973718c2d128752, type: 3}
+  - {fileID: 2800000, guid: 5dadd3fdd2ba7cc4d9a83a7855603645, type: 3}
+  - {fileID: 2800000, guid: 54e994075f2881e44b824ec473c10c79, type: 3}
+  - {fileID: 2800000, guid: 6afd9440ed626004e9a92a928bbbd612, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1

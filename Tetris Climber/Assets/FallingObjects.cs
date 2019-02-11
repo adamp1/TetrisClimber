@@ -12,6 +12,8 @@ public class FallingObjects : MonoBehaviour
     public float deathdistance = 100;
     public GameObject a;
     PlayerMovement spieler;
+    public float scale = 0.75f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,17 +28,21 @@ public class FallingObjects : MonoBehaviour
 
         if (t <= 0 && !a)
         {
-            int i = Random.Range(0, objects.Length-1);
-            a = Instantiate(objects[i],spieler.transform.position + new Vector3(0, spawndistance.x, spawndistance.y), 
+            int i = Random.Range(0, objects.Length - 1);
+            a = Instantiate(objects[i], spieler.transform.position + new Vector3(0, spawndistance.x, spawndistance.y),
             objects[i].transform.rotation, transform) as GameObject;
 
             t = Random.Range(min, max);
         }
 
-        if (a){
+        if (a)
+        {
             a.transform.position += Vector3.down * speed * Time.deltaTime;
 
-            if (Vector3.Distance(a.transform.position, spieler.transform.position) >= deathdistance){
+            a.transform.localScale = Vector3.one * scale;
+
+            if (Vector3.Distance(a.transform.position, spieler.transform.position) >= deathdistance)
+            {
                 Destroy(a);
                 a = null;
                 t = Random.Range(min, max);
