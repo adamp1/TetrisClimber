@@ -56,7 +56,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _emissivemask:
-        m_Texture: {fileID: 2800000, guid: a9e3828283aea8144965f45fadae2f32, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1af15518c1c841e448461b10b9676cc3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -76,7 +76,7 @@ Material:
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
-    - _emintensity: 2
+    - _emintensity: 4
     - _gloss: 0.5811554
     - _metallic: 1
     - _scale: 0.1
@@ -85,3 +85,4 @@ Material:
     - _EmissionColor: {r: 0, g: 0.0019533234, b: 0.039215688, a: 1}
     - _color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _emcolor: {r: 0, g: 0.93359566, b: 1, a: 1}
+    - _scale: {r: 0.04, g: 0.1, b: 0, a: 0}
