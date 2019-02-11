@@ -17645,6 +17645,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6434282302539720790, guid: 5b463e87c5a93ec4eac93835974f863c,
+        type: 3}
+      propertyPath: m_Name
+      value: Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6434282302539720790, guid: 5b463e87c5a93ec4eac93835974f863c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6434282302539720793, guid: 5b463e87c5a93ec4eac93835974f863c,
         type: 3}
       propertyPath: GameOverUI
@@ -17751,16 +17761,6 @@ PrefabInstance:
       propertyPath: InputField
       value: 
       objectReference: {fileID: 2007025434}
-    - target: {fileID: 6434282302539720790, guid: 5b463e87c5a93ec4eac93835974f863c,
-        type: 3}
-      propertyPath: m_Name
-      value: Manager
-      objectReference: {fileID: 0}
-    - target: {fileID: 6434282302539720790, guid: 5b463e87c5a93ec4eac93835974f863c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6434282302539720792, guid: 5b463e87c5a93ec4eac93835974f863c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17982,7 +17982,7 @@ PrefabInstance:
     - target: {fileID: 6954327962032065429, guid: db1b7182508627a4ba105a7df40443f5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 477.57
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 6954327962032065429, guid: db1b7182508627a4ba105a7df40443f5,
         type: 3}
