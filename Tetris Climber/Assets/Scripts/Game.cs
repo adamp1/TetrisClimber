@@ -16,7 +16,8 @@ public class Game : MonoBehaviour {
     bool SaveStartHeight = false;
 
     float t2;
-    float scoreMultiplikator;
+
+    public float scoreMultiplikator;
     float scoreMittelwert;
     float Score;
     float ScoreGesamt;
@@ -63,7 +64,7 @@ public class Game : MonoBehaviour {
     public GameObject BlockagePrefab;
 
     public GameObject LaserPrefab;
-    GameObject[] BlockageObject = new GameObject[30];
+    GameObject[] BlockageObject = new GameObject[40];
     GameObject LaserSpawner;
 
     int prefabRepeat = 9;
@@ -165,7 +166,7 @@ public class Game : MonoBehaviour {
 
             CheckBlockagePosition();
 
-            if (transform.position.y > BlockageObject[NrBlockages].transform.position.y - 17)
+            if (Player.transform.position.y > BlockageObject[NrBlockages].transform.position.y - 1)
             {
                 NrBlockages++;
             }
@@ -481,13 +482,16 @@ public class Game : MonoBehaviour {
             }
         }
 
+        //Schiebt Spawner nach Oben Falls alles voll ist
         if (Physics.Raycast(CheckUnderSpawner, out hit, 2) && Physics.Raycast(CheckUnderSpawnerLeft, out hit, 2) && Physics.Raycast(CheckUnderSpawnerRight, out hit, 2))
         {
-
-            transform.position = new Vector3(transform.position.x, transform.position.y + 10, transform.position.z);
-            CheckUnderSpawner = new Ray(transform.position, Vector3.down);
-            CheckUnderSpawnerLeft = new Ray(new Vector3(transform.position.x - 4, transform.position.y, transform.position.z), Vector3.down);
-            CheckUnderSpawnerRight = new Ray(new Vector3(transform.position.x + 5, transform.position.y, transform.position.z), Vector3.down);
+            if(hit.transform.tag == "Mino")
+            {
+                transform.position = new Vector3(transform.position.x, transform.position.y + 10, transform.position.z);
+                CheckUnderSpawner = new Ray(transform.position, Vector3.down);
+                CheckUnderSpawnerLeft = new Ray(new Vector3(transform.position.x - 4, transform.position.y, transform.position.z), Vector3.down);
+                CheckUnderSpawnerRight = new Ray(new Vector3(transform.position.x + 5, transform.position.y, transform.position.z), Vector3.down);
+            }
         }
 
         if (randomPrefab == prefabRepeat)
@@ -519,14 +523,13 @@ public class Game : MonoBehaviour {
         spawnPrefab = false;
 
         BlockFallingSpeed();
-        //DeleteGrid();
     }
 
 
     //Spawn Engpässe
     void SpawnBlockage()
     {
-        for (int i = 0; i < 30; i++)
+        for (int i = 0; i < 40; i++)
         {
             blockageAbstand = Random.Range(BlockageDistanceMin, BlockageDistanceMax);
 
@@ -557,10 +560,9 @@ public class Game : MonoBehaviour {
             BlockageObject[i] = GameObject.Find("Blockage " + i);
             BlockageObject[i].transform.localScale = new Vector3(blockageWidth, 2, 2.87f);
 
-            if(BlockageObject[i].transform.position.y > 311)
+            if(BlockageObject[i].transform.position.y > 519)
             {
                 Destroy(BlockageObject[i]);
-                //BlockageObject[i].transform.position = new Vector3(BlockageObject[i].transform.position.x, 311, BlockageObject[i].transform.position.z);
             }
 
             //Spawn Laser
@@ -869,11 +871,13 @@ public class Game : MonoBehaviour {
 
         //Calculate Score Multiplikator
         scoreMultiplikator = playerheight / gametime;
+        FindObjectOfType<DeathCollider>().SpeedMultiplikator = scoreMultiplikator;
+
+        //Debug.Log(scoreMultiplikator);
         maxheightmulti = playerheight / 100;
         maxheightmulti = maxheightmulti + 1; 
         scoreMultiplikator = scoreMultiplikator + maxheightmulti;
-        //Debug.Log(scoreMultiplikator);
-
+        
 
         //Set Startheight to Playerheight
         if (!SaveStartHeight)

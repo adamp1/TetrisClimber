@@ -8,7 +8,8 @@ public class PlayerMovement : MonoBehaviour {
     public Rigidbody rb;
     public float speed = 14;
     public float speedWhilejump = 10;
-    float jumpPower = 15;
+    public float jumpPower = 15;
+    public float MaxJumpDistance = 1.8f;
     public float gravity = 80;
     float time;
     bool moving;
@@ -280,7 +281,7 @@ public class PlayerMovement : MonoBehaviour {
         
         //jumpTimeCounter += Time.deltaTime;
 
-        if (transform.position.y < playerPosY + 1.8f)
+        if (transform.position.y < playerPosY + MaxJumpDistance)
         {
              rb.velocity = Vector3.up * jumpPower;
         }
