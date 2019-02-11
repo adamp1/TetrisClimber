@@ -4,28 +4,28 @@
 		<Banks>
 			<Language ID="393239870">
 				<File Name="BackgroundMusic" Hash="2184461989" Timestamp="1546451845"/>
-				<File Name="Init" Hash="4105074289" Timestamp="1549879563"/>
-				<File Name="MenuSoundBank" Hash="402581799" Timestamp="1549880193"/>
-				<File Name="SoundBank" Hash="1147448589" Timestamp="1549884070"/>
+				<File Name="Init" Hash="4105074289" Timestamp="1549892657"/>
+				<File Name="MenuSoundBank" Hash="402581799" Timestamp="1549892657"/>
+				<File Name="SoundBank" Hash="40292972" Timestamp="1549892849"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="3673877838" Timestamp="1549884070"/>
+				<File Name="" Hash="879565835" Timestamp="1549892849"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
 	<Platform GUID="{510BBF72-630F-47FE-8B99-B1A675EDE65A}">
 		<Banks>
 			<Language ID="393239870">
-				<File Name="Init" Hash="2828579127" Timestamp="1549879558"/>
-				<File Name="MenuSoundBank" Hash="402581799" Timestamp="1549880193"/>
-				<File Name="SoundBank" Hash="1147448589" Timestamp="1549884070"/>
+				<File Name="Init" Hash="2828579127" Timestamp="1549892656"/>
+				<File Name="MenuSoundBank" Hash="402581799" Timestamp="1549892656"/>
+				<File Name="SoundBank" Hash="40292972" Timestamp="1549892848"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="2768899884" Timestamp="1549884070"/>
+				<File Name="" Hash="2024477449" Timestamp="1549892848"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
