@@ -12,12 +12,14 @@ public class CameraMovement : MonoBehaviour {
     public float CameraX = 7.5f;
 
     public float CameraSpeed = 4;
+    public float StartPosCameraY = 40;
+    
     
 
     // Use this for initialization
     void Start () {
         Player = GameObject.Find("Player");
-        transform.position = new Vector3(CameraX , Player.transform.position.y + CameraY + 25, CameraY);
+        transform.position = new Vector3(CameraX , Player.transform.position.y + CameraY + StartPosCameraY, CameraY);
     }
 	
 	// Update is called once per frame
@@ -38,10 +40,24 @@ public class CameraMovement : MonoBehaviour {
 
             if (setCameraToPlayer)
             {
-
-                CameraPos.y = Mathf.Lerp(transform.position.y, Player.transform.position.y + CameraY, interpolation);
-                CameraPos.x = CameraX;
+                //KAMERA Y
+                CameraPos.y = Mathf.Lerp(transform.position.y, Player.transform.position.y + CameraY, interpolation);               
                 CameraPos.z = CameraZ;
+
+
+                //KAMERA X
+                if (Player.transform.position.x < 10.5f && Player.transform.position.x > 4.5f)
+                {
+                    CameraPos.x = Mathf.Lerp(transform.position.x, 7.5f, interpolation);
+                }
+                else if (Player.transform.position.x > 10.5f)
+                {
+                    CameraPos.x = Mathf.Lerp(transform.position.x, Player.transform.position.x - 3f, interpolation);
+                }
+                else if (Player.transform.position.x < 4.5f)
+                {
+                    CameraPos.x = Mathf.Lerp(transform.position.x, Player.transform.position.x + 3f, interpolation);
+                }                
 
                 //CameraPos = new Vector3(CameraX, PlayerPos.y + CameraY, CameraZ);
                 transform.position = CameraPos;

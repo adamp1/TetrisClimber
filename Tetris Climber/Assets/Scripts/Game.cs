@@ -699,6 +699,7 @@ public class Game : MonoBehaviour {
             Time.timeScale = 1.0f;
         }
 
+
         if(OptionsMenuUI.activeInHierarchy || PauseMenuUI.activeInHierarchy)
         {
             FindObjectOfType<BlockMovement>().enabled = false;
@@ -872,11 +873,11 @@ public class Game : MonoBehaviour {
         //Debug.Log(t);
 
         //Calculate Score Multiplikator
-        scoreMultiplikator = playerheight / gametime;
+        scoreMultiplikator = maxplayerheight / gametime;
         FindObjectOfType<DeathCollider>().SpeedMultiplikator = scoreMultiplikator;
 
         //Debug.Log(scoreMultiplikator);
-        maxheightmulti = playerheight / 100;
+        maxheightmulti = maxplayerheight / 100;
         maxheightmulti = maxheightmulti + 1; 
         scoreMultiplikator = scoreMultiplikator + maxheightmulti;
         
@@ -919,7 +920,7 @@ public class Game : MonoBehaviour {
         playerheight = Player.transform.position.y;
         if (playerheight < 0) playerheight = 0;
         GameObject.Find("heightvalue").GetComponent<Text>().text = playerheight.ToString("F0");
-        if(playerheight > maxplayerheight)
+        if(playerheight > maxplayerheight && FindObjectOfType<PlayerMovement>().grounded)
         {
             maxplayerheight = playerheight;
         }
