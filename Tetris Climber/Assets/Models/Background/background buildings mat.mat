@@ -76,13 +76,13 @@ Material:
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
-    - _emintensity: 1.54
-    - _gloss: 0.383
-    - _metallic: 1
+    - _emintensity: 0
+    - _gloss: 0
+    - _metallic: 0
     - _scale: 0.1
     m_Colors:
     - _Color: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0.0019533234, b: 0.039215688, a: 1}
-    - _color: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 1}
+    - _color: {r: 0, g: 0, b: 0, a: 1}
     - _emcolor: {r: 0, g: 0.93359566, b: 1, a: 1}
     - _scale: {r: 0.11, g: 0.2, b: 0, a: 0}
