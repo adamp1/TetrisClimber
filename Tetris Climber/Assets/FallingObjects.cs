@@ -22,6 +22,8 @@ public class FallingObjects : MonoBehaviour
     }
 
     // Update is called once per frame
+
+    public int anzahl = 5;
     void Update()
     {
         t -= Time.deltaTime;
