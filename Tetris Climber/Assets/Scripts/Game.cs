@@ -526,7 +526,7 @@ public class Game : MonoBehaviour {
     //Spawn Engpässe
     void SpawnBlockage()
     {
-        for (int i = 0; i < 20; i++)
+        for (int i = 0; i < 30; i++)
         {
             blockageAbstand = Random.Range(BlockageDistanceMin, BlockageDistanceMax);
 
@@ -682,15 +682,11 @@ public class Game : MonoBehaviour {
             PauseMenuUI.SetActive(true);
             Time.timeScale = 0;
             //AudioListener.volume = 0.5f;
-            FindObjectOfType<BlockMovement>().enabled = false;
-            FindObjectOfType<PlayerMovement>().enabled = false;
         }
         else if (Input.GetKeyUp("escape") && Time.timeScale == 0 && !OptionsMenuUI.activeInHierarchy || Input.GetKeyUp(KeyCode.Joystick1Button9) && Time.timeScale == 0 && !OptionsMenuUI.activeInHierarchy)
         {
             PauseMenuUI.SetActive(false);
             Time.timeScale = 1.0f;
-            FindObjectOfType<BlockMovement>().enabled = true;
-            FindObjectOfType<PlayerMovement>().enabled = true;
         }
 
         if(OptionsMenuUI.activeInHierarchy && Input.GetKeyUp("escape"))
@@ -699,10 +695,18 @@ public class Game : MonoBehaviour {
             PauseMenuUI.SetActive(false);
             OptionsMenuUI.SetActive(false);
             Time.timeScale = 1.0f;
+        }
+
+        if(OptionsMenuUI.activeInHierarchy || PauseMenuUI.activeInHierarchy)
+        {
+            FindObjectOfType<BlockMovement>().enabled = false;
+            FindObjectOfType<PlayerMovement>().enabled = false;
+        }
+        else
+        {
             FindObjectOfType<BlockMovement>().enabled = true;
             FindObjectOfType<PlayerMovement>().enabled = true;
         }
-
             
         
 
