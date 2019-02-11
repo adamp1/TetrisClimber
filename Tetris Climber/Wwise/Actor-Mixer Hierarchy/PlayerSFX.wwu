@@ -457,6 +457,113 @@
 						</Sound>
 					</ChildrenList>
 				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="Scuff" ID="{D6227C58-A73D-43DA-8AD4-A86BF6FB2D00}" ShortID="350509963">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B4640E2-A2A8-484D-BCCB-39D6CBB28FBD}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{59D5B0C7-CBD5-4C44-AFDB-AC8E703BAC41}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Scuff_01" ID="{2584239E-8281-4438-8AFC-91F3ED00ABC5}" ShortID="228482048">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B4640E2-A2A8-484D-BCCB-39D6CBB28FBD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{59D5B0C7-CBD5-4C44-AFDB-AC8E703BAC41}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Scuff_01" ID="{79E0AA0E-EA88-4336-983D-C17BA0B91DEF}" ShortID="547703658">
+									<Language>SFX</Language>
+									<AudioFile>Scuff_01.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Scuff_01" ID="{79E0AA0E-EA88-4336-983D-C17BA0B91DEF}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Scuff_02" ID="{0BF05DDE-A334-4859-94AE-99C96FB2F1F1}" ShortID="1056568006">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B4640E2-A2A8-484D-BCCB-39D6CBB28FBD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{59D5B0C7-CBD5-4C44-AFDB-AC8E703BAC41}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Scuff_02" ID="{96CDB5EC-CED6-435B-91C0-A353FDC3DB73}" ShortID="900299826">
+									<Language>SFX</Language>
+									<AudioFile>Scuff_02.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Scuff_02" ID="{96CDB5EC-CED6-435B-91C0-A353FDC3DB73}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Scuff_03" ID="{34B0B225-93B7-47B8-A560-FA9849B26D44}" ShortID="831275667">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B4640E2-A2A8-484D-BCCB-39D6CBB28FBD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{59D5B0C7-CBD5-4C44-AFDB-AC8E703BAC41}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Scuff_03" ID="{B9FFA6C5-F519-4D0A-8E46-502CB0D6ECDA}" ShortID="1052188596">
+									<Language>SFX</Language>
+									<AudioFile>Scuff_03.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Scuff_03" ID="{B9FFA6C5-F519-4D0A-8E46-502CB0D6ECDA}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Scuff_04" ID="{41CA1022-4F4E-4890-BCDE-97DB4EFD8312}" ShortID="830273302">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B4640E2-A2A8-484D-BCCB-39D6CBB28FBD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{59D5B0C7-CBD5-4C44-AFDB-AC8E703BAC41}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Scuff_04" ID="{7380B150-3B2A-408A-8C25-5B842DA9C4BE}" ShortID="631715993">
+									<Language>SFX</Language>
+									<AudioFile>Scuff_04.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Scuff_04" ID="{7380B150-3B2A-408A-8C25-5B842DA9C4BE}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Scuff_05" ID="{6C1BB1CD-4447-4CCA-886B-3E22C0F2E869}" ShortID="133560598">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B4640E2-A2A8-484D-BCCB-39D6CBB28FBD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{59D5B0C7-CBD5-4C44-AFDB-AC8E703BAC41}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Scuff_05" ID="{AB29B0B3-BF9F-415B-B20E-1904480B9265}" ShortID="397942640">
+									<Language>SFX</Language>
+									<AudioFile>Scuff_05.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Scuff_05" ID="{AB29B0B3-BF9F-415B-B20E-1904480B9265}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

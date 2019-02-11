@@ -74,6 +74,10 @@ public class PlayerAnimHelper2 : MonoBehaviour
         AkSoundEngine.PostEvent("FootStep", gameObject);
     }
 
+    public void PostLandingSound(){
+        AkSoundEngine.PostEvent("Land", gameObject);
+    }
+
     // Update is called once per frame
     void Update()
     {

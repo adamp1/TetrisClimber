@@ -1,0 +1,21 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1973898857	StopMenuMusic			\Default Work Unit\GameEvents\StopMenuMusic	
+	2440264179	StartMenuMusic			\Default Work Unit\GameEvents\StartMenuMusic	
+	4051332235	ButtonClick			\Default Work Unit\GameEvents\ButtonClick	
+
+Effect plug-ins	ID	Name	Type				Notes
+	1584507803	Click	Wwise Guitar Distortion			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	67631447	Glitch01_v1_01	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Windows\SFX\Glitch02_v1_01_CB1F3167.wem		\Interactive Music Hierarchy\BackgroundMusic\MenuMusic\Start\Loop\Glitch01_v1_01		82106
+	98158388	Glitch01_v1_01	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Windows\SFX\Glitch01_v1_01_CB1F3167.wem		\Interactive Music Hierarchy\BackgroundMusic\MenuMusic\Start\Loop\Glitch01_v1_01		56615
+	226584871	Glitch01_v1_01	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Windows\SFX\Glitch03_v1_01_CB1F3167.wem		\Interactive Music Hierarchy\BackgroundMusic\MenuMusic\Start\Loop\Glitch01_v1_01		73170
+	255426623	Outro_01_wav_01	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Windows\SFX\Outro_01.wav_01_CB1F3167.wem		\Interactive Music Hierarchy\BackgroundMusic\MenuMusic\Outro\Outro_01_wav_01		38063
+	360456243	BG-Noise_v1_01	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Windows\SFX\BG-Noise_v1_01_CB1F3167.wem		\Interactive Music Hierarchy\BackgroundMusic\MenuMusic\Start\Loop\BG-Noise_v1_01		56674
+	430546196	Drums01_v1_01	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Windows\SFX\Drums02_v1_01_CB1F3167.wem		\Interactive Music Hierarchy\BackgroundMusic\MenuMusic\Start\Loop\Drums01_v1_01		84558
+	521772524	PercussiveCloud_v1_01	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Windows\SFX\PercussiveCloud_v1_01_CB1F3167.wem		\Interactive Music Hierarchy\BackgroundMusic\MenuMusic\Start\Loop\PercussiveCloud_v1_01		79378
+	872705618	SFX_Menu_SelectOption_001	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Windows\SFX\SFX_Menu_SelectOption_001_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\GameSFX\SFX_Menu_SelectOption_001		8573
+	919284918	Drums01_v1_01	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Windows\SFX\Drums01_v1_01_CB1F3167.wem		\Interactive Music Hierarchy\BackgroundMusic\MenuMusic\Start\Loop\Drums01_v1_01		83069
+	931732886	Drums01_v1_01	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Windows\SFX\Drums03_v1_01_CB1F3167.wem		\Interactive Music Hierarchy\BackgroundMusic\MenuMusic\Start\Loop\Drums01_v1_01		86093
+	1030191636	Intro_01_wav_01	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Windows\SFX\Intro_01.wav_01_CB1F3167.wem		\Interactive Music Hierarchy\BackgroundMusic\MenuMusic\Start\Intro\Intro_01_wav_01		84542
+

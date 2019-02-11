@@ -10,6 +10,13 @@
 						<State Name="Pausing" ID="{A192AA40-CB8C-4AD3-8619-4DB0EF48BF59}"/>
 					</ChildrenList>
 				</StateGroup>
+				<StateGroup Name="MenuState" ID="{9DD3349A-ECEF-44B6-8F08-4A50AF423811}">
+					<ChildrenList>
+						<State Name="None" ID="{A1CAED51-DE11-44C6-A9A3-F78514427CC9}"/>
+						<State Name="leaving" ID="{2E8C1FEA-6882-4492-BD3A-A5F51F4518E2}"/>
+						<State Name="playing" ID="{FFFD7453-2DA1-4F7B-807A-B5683A362748}"/>
+					</ChildrenList>
+				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>

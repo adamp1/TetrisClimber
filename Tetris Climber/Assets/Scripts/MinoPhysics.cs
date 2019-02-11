@@ -121,6 +121,7 @@ public class MinoPhysics : MonoBehaviour
                 if (hit.transform.tag == "Player" && isFalling)
                 {
                     Destroy(hit.collider.gameObject);
+                    AkSoundEngine.PostEvent("KilledByBlock", gameObject);
                 }
 
                 moveMino = false;
