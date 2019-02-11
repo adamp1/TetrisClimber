@@ -10803,7 +10803,7 @@ Transform:
   m_GameObject: {fileID: 1036877403}
   m_LocalRotation: {x: -0.70710576, y: -0, z: -0, w: 0.7071079}
   m_LocalPosition: {x: 7.8, y: 523.1, z: 35.2}
-  m_LocalScale: {x: 67.883896, y: 67.883896, z: 67.883896}
+  m_LocalScale: {x: 64.4897, y: 64.4897, z: 64.4897}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 17
@@ -16421,6 +16421,7 @@ MonoBehaviour:
   CameraZ: -20
   CameraX: 7.5
   CameraSpeed: 2
+  StartPosCameraY: 40
 --- !u!124 &1065323740949870090
 Behaviour:
   m_ObjectHideFlags: 0
@@ -16823,6 +16824,7 @@ MonoBehaviour:
   CameraZ: -20
   CameraX: 7.5
   CameraSpeed: 2
+  StartPosCameraY: 40
 --- !u!124 &1065323741081844831
 Behaviour:
   m_ObjectHideFlags: 0
@@ -17091,6 +17093,7 @@ MonoBehaviour:
   deathdistance: 100
   a: {fileID: 0}
   scale: 0.75
+  anzahl: 5
 --- !u!1001 &5696030681462519161
 PrefabInstance:
   m_ObjectHideFlags: 0
