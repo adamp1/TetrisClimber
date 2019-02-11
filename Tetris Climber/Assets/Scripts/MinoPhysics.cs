@@ -102,13 +102,6 @@ public class MinoPhysics : MonoBehaviour
 
         Debug.DrawRay(new Vector3(pos.x, pos.y, pos.z), Vector3.down * Mathf.Infinity );
 
-        if(gameObject.GetComponentInParent<BlockMovement>().enabled)
-        {
-            if(Input.GetKeyDown(KeyCode.K))
-            {
-                Destroy(gameObject);
-            }
-        }
 
         //GROUND TREE
         if (gameObject.GetComponentInParent<BlockMovement>().enabled == false && Time.timeScale != 0)

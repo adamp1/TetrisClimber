@@ -16371,6 +16371,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CameraY: 6
   CameraZ: -20
+  CameraX: 7.5
+  CameraSpeed: 2
 --- !u!124 &1065323740949870090
 Behaviour:
   m_ObjectHideFlags: 0
@@ -16771,6 +16773,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CameraY: 6
   CameraZ: -20
+  CameraX: 7.5
+  CameraSpeed: 2
 --- !u!124 &1065323741081844831
 Behaviour:
   m_ObjectHideFlags: 0
@@ -18123,6 +18127,11 @@ PrefabInstance:
         type: 3}
       propertyPath: bloomBlurIterations
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6954327962032065428, guid: db1b7182508627a4ba105a7df40443f5,
+        type: 3}
+      propertyPath: CameraSpeed
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db1b7182508627a4ba105a7df40443f5, type: 3}

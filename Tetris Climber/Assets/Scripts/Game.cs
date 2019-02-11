@@ -703,11 +703,13 @@ public class Game : MonoBehaviour {
         {
             FindObjectOfType<BlockMovement>().enabled = false;
             FindObjectOfType<PlayerMovement>().enabled = false;
+            AkSoundEngine.SetState("PlayState", "Pausing");
         }
         else
         {
             FindObjectOfType<BlockMovement>().enabled = true;
             FindObjectOfType<PlayerMovement>().enabled = true;
+            AkSoundEngine.SetState("PlayState", "Playing");
         }
             
         
