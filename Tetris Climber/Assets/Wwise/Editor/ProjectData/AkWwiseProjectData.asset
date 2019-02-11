@@ -28,7 +28,7 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 6e0b53c5edb45d409049cd6f25ff12ce
-    m_lastTime: -8586517142174175808
+    m_lastTime: -8586517081235566964
     List:
     - name: SoundBank
       guid: 4b8e74b6ce355646950207c03462dd54
@@ -43,7 +43,7 @@ MonoBehaviour:
   - PhysicalPath: Events\Deaths.wwu
     ParentPhysicalPath: Events\PlayerEvents.wwu
     guid: cf0b5f03d95bbd46b9d1381957ca9f71
-    m_lastTime: -8586517160296275808
+    m_lastTime: -8586517694697675808
     List:
     - name: generalDeath
       guid: aafddfc47d33c44089b0b598baa987fa
@@ -117,7 +117,7 @@ MonoBehaviour:
   - PhysicalPath: Events\GameEvents.wwu
     ParentPhysicalPath: Events\Default Work Unit.wwu
     guid: 0f56630845d4bb4b946e636a1f8b4c40
-    m_lastTime: -8586517141326775808
+    m_lastTime: -8586517081236936448
     List:
     - name: ButtonClick
       guid: 29445634aa766245961ae635260d44ea
@@ -192,7 +192,7 @@ MonoBehaviour:
   - PhysicalPath: Events\PlayerEvents.wwu
     ParentPhysicalPath: Events\Default Work Unit.wwu
     guid: 3edc4fd5b3cc83478f33141f6589d675
-    m_lastTime: -8586517238319575808
+    m_lastTime: -8586517167763830022
     List:
     - name: FootStep
       guid: 52a6347d1661b243876dc9513d52cc46
@@ -253,7 +253,7 @@ MonoBehaviour:
   - PhysicalPath: Events\SoundEvents.wwu
     ParentPhysicalPath: Events\Default Work Unit.wwu
     guid: 9e4f64052ac6b044b7fc6978647153a1
-    m_lastTime: -8586522440466706815
+    m_lastTime: -8586522423764585233
     List:
     - name: DestroyBlock
       guid: 575e79eaa9f48743a7f7fe559e6932c6
@@ -311,7 +311,7 @@ MonoBehaviour:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 9c8d81d77d8e184eb562c23135cdef4f
-    m_lastTime: -8586517143463175808
+    m_lastTime: -8586517167758193287
     List:
     - name: MenuState
       guid: 9a34d39defecb6448f084a50af423811
@@ -379,7 +379,7 @@ MonoBehaviour:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: d91cd1cdc73be344bb10dc0ce6082420
-    m_lastTime: -8586517694696775808
+    m_lastTime: -8586517167758113334
     List:
     - name: EndLoop
       guid: cfba70e43b949c4aa93dbaeea35c18ef
@@ -392,5 +392,10 @@ MonoBehaviour:
       Path: Default Work Unit\EndLoop
   ExpandedItems:
   - /TetrisClimber
+  - /TetrisClimber/SoundBanks
+  - /TetrisClimber/SoundBanks/Default Work Unit
+  - /TetrisClimber/States
+  - /TetrisClimber/States/Default Work Unit
+  - /TetrisClimber/States/Default Work Unit/PlayState
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

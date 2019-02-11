@@ -166,7 +166,7 @@ public class Game : MonoBehaviour {
 
             CheckBlockagePosition();
 
-            if (Player.transform.position.y > BlockageObject[NrBlockages].transform.position.y - 1)
+            if (Player.transform.position.y > BlockageObject[NrBlockages].transform.position.y)
             {
                 NrBlockages++;
             }
@@ -178,11 +178,11 @@ public class Game : MonoBehaviour {
         else
         {           
 
-            if (!newHighscore)
+            if (!newHighscore && !GameOverUI.activeInHierarchy && !GameOver2UI.activeInHierarchy)
             {
                 GameOver();
             }
-            else
+            else if(!GameOverUI.activeInHierarchy && !GameOver2UI.activeInHierarchy)
             {
                 GameOver2();
             }
@@ -699,6 +699,7 @@ public class Game : MonoBehaviour {
             Time.timeScale = 1.0f;
         }
 
+
         if(OptionsMenuUI.activeInHierarchy || PauseMenuUI.activeInHierarchy)
         {
             FindObjectOfType<BlockMovement>().enabled = false;
@@ -872,11 +873,11 @@ public class Game : MonoBehaviour {
         //Debug.Log(t);
 
         //Calculate Score Multiplikator
-        scoreMultiplikator = playerheight / gametime;
+        scoreMultiplikator = maxplayerheight / gametime;
         FindObjectOfType<DeathCollider>().SpeedMultiplikator = scoreMultiplikator;
 
         //Debug.Log(scoreMultiplikator);
-        maxheightmulti = playerheight / 100;
+        maxheightmulti = maxplayerheight / 100;
         maxheightmulti = maxheightmulti + 1; 
         scoreMultiplikator = scoreMultiplikator + maxheightmulti;
         
@@ -919,7 +920,7 @@ public class Game : MonoBehaviour {
         playerheight = Player.transform.position.y;
         if (playerheight < 0) playerheight = 0;
         GameObject.Find("heightvalue").GetComponent<Text>().text = playerheight.ToString("F0");
-        if(playerheight > maxplayerheight)
+        if(playerheight > maxplayerheight && FindObjectOfType<PlayerMovement>().grounded)
         {
             maxplayerheight = playerheight;
         }

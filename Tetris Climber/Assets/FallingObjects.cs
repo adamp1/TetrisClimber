@@ -22,6 +22,8 @@ public class FallingObjects : MonoBehaviour
     }
 
     // Update is called once per frame
+
+    public int anzahl = 5;
     void Update()
     {
         t -= Time.deltaTime;
@@ -39,7 +41,7 @@ public class FallingObjects : MonoBehaviour
         {
             a.transform.position += Vector3.down * speed * Time.deltaTime;
 
-            a.transform.localScale = Vector3.one * scale;
+            //a.transform.localScale = Vector3.one * scale;
 
             if (Vector3.Distance(a.transform.position, spieler.transform.position) >= deathdistance)
             {
