@@ -46,6 +46,7 @@
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="Playing" ID="{44C952A5-2020-4E18-B4AA-F733E595CB5D}"/>
+						<CurrentStateRef Name="leaving" ID="{2E8C1FEA-6882-4492-BD3A-A5F51F4518E2}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>

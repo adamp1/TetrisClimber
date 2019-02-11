@@ -58,6 +58,7 @@ public class DeathCollider : MonoBehaviour {
         if (other.gameObject.tag == "DeathTrigger")
         {
             GameObject Player = GameObject.Find("Player");
+            AkSoundEngine.PostEvent("KilledByNano", gameObject);
             Destroy(Player);
             GameOverUI.SetActive(true);
             GameObject.Find("Main Camera").GetComponent<CameraMovement>().enabled = false;

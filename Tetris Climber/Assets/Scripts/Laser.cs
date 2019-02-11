@@ -132,7 +132,7 @@ public class Laser : MonoBehaviour
                     if (hit.collider.tag == "Player")
                     {
                         Destroy(hit.collider.gameObject);
-                        AkSoundEngine.PostEvent("KilledByBlock", gameObject);
+                        AkSoundEngine.PostEvent("KilledByLaser", gameObject);
                         //FindObjectOfType<Game>().SaveScore();
                     }
 
