@@ -12,6 +12,8 @@ public class FallingObjects : MonoBehaviour
     public float deathdistance = 100;
     public GameObject a;
     PlayerMovement spieler;
+    public float scale = 0.75f;
+    
     // Start is called before the first frame update
     void Start()
     {
