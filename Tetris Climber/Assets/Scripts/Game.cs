@@ -178,11 +178,11 @@ public class Game : MonoBehaviour {
         else
         {           
 
-            if (!newHighscore)
+            if (!newHighscore && !GameOverUI.activeInHierarchy && !GameOver2UI.activeInHierarchy)
             {
                 GameOver();
             }
-            else
+            else if(!GameOverUI.activeInHierarchy && !GameOver2UI.activeInHierarchy)
             {
                 GameOver2();
             }
