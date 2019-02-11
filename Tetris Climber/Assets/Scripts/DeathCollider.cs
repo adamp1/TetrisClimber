@@ -65,7 +65,7 @@ public class DeathCollider : MonoBehaviour {
 
         speedProduct = speed * SpeedMultiplikator;
 
-        Debug.Log(speedProduct); 
+        //Debug.Log(speedProduct); 
 
         Vector3 pos = transform.position;
         pos.y = pos.y + speedifoutofsight * speedProduct  * Time.deltaTime;

@@ -166,7 +166,7 @@ public class Game : MonoBehaviour {
 
             CheckBlockagePosition();
 
-            if (Player.transform.position.y > BlockageObject[NrBlockages].transform.position.y - 1)
+            if (Player.transform.position.y > BlockageObject[NrBlockages].transform.position.y)
             {
                 NrBlockages++;
             }

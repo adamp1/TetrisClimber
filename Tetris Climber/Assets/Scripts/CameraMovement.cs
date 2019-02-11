@@ -28,15 +28,9 @@ public class CameraMovement : MonoBehaviour {
         {
             float interpolation = CameraSpeed * Time.deltaTime;
 
-
             Vector3 PlayerPos = Player.transform.position;
 
             Vector3 CameraPos = transform.position;
-
-            /*  if(PlayerPos.y >= CameraPos.y)
-              {
-                  setCameraToPlayer = true;
-              }  */
 
             if (setCameraToPlayer)
             {
