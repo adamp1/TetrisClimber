@@ -56,12 +56,12 @@ public class DestroyBlocks : MonoBehaviour
         //Slice
         Vector3 pos = transform.position;
 
-        if (Input.GetAxisRaw("Horizontal") > 0 && !swordAni)
+        if (Input.GetAxisRaw("Horizontal") > 0)
         {
             lookRight = true;
             lookLeft = false;
         }
-        else if(Input.GetAxisRaw("Horizontal") < 0 && !swordAni)
+        else if(Input.GetAxisRaw("Horizontal") < 0)
         {
             lookLeft = true;
             lookRight = false;
@@ -137,6 +137,9 @@ public class DestroyBlocks : MonoBehaviour
         //Show Energy
         energy /= 100;
         Energy.fillAmount = energy;
+
+
+
 
     }
 

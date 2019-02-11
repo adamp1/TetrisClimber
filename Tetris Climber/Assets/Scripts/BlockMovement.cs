@@ -256,7 +256,7 @@ public class BlockMovement : MonoBehaviour {
         if (Player != null)
         {
             //Spawn New Prefab if out of sight
-            if (transform.position.y < Player.transform.position.y - 10)
+            if (transform.position.y < Player.transform.position.y - 10 && transform.GetChild(0))
             {
                 enabled = false;
                 FindObjectOfType<Game>().SpawnNextPrefab();
