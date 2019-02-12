@@ -418,11 +418,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: T Shape 2
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8524112210316322324, guid: 3648b0cc652e7aa459f2b3e832380cd5, type: 3}
-    - {fileID: 3231251960660997730, guid: 3648b0cc652e7aa459f2b3e832380cd5, type: 3}
-    - {fileID: 8468747946687274269, guid: 3648b0cc652e7aa459f2b3e832380cd5, type: 3}
-    - {fileID: 4938486638105099851, guid: 3648b0cc652e7aa459f2b3e832380cd5, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3648b0cc652e7aa459f2b3e832380cd5, type: 3}
 --- !u!1001 &2265043431383451207
 PrefabInstance:
@@ -491,11 +487,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: S Shape 2
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5083755980007818814, guid: 5aeb77ca9534c7e49905d4b6d07fc4b7, type: 3}
-    - {fileID: 2833708257556323237, guid: 5aeb77ca9534c7e49905d4b6d07fc4b7, type: 3}
-    - {fileID: 2616250189455436493, guid: 5aeb77ca9534c7e49905d4b6d07fc4b7, type: 3}
-    - {fileID: 2735636499222084333, guid: 5aeb77ca9534c7e49905d4b6d07fc4b7, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5aeb77ca9534c7e49905d4b6d07fc4b7, type: 3}
 --- !u!1001 &2358224910407045172
 PrefabInstance:
@@ -633,11 +625,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: L Shape 2
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 212510936793294872, guid: 9c6b3f8e0fd449943b6a78633b7ab8df, type: 3}
-    - {fileID: 6638164720031457718, guid: 9c6b3f8e0fd449943b6a78633b7ab8df, type: 3}
-    - {fileID: 5312827589641637388, guid: 9c6b3f8e0fd449943b6a78633b7ab8df, type: 3}
-    - {fileID: 5471264864890881441, guid: 9c6b3f8e0fd449943b6a78633b7ab8df, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c6b3f8e0fd449943b6a78633b7ab8df, type: 3}
 --- !u!1001 &3606245351426753685
 PrefabInstance:
@@ -706,11 +694,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Quadrat 2
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5202619813173583971, guid: b0493f9622e9694499c1755edc217ab0, type: 3}
-    - {fileID: 4142105621289671420, guid: b0493f9622e9694499c1755edc217ab0, type: 3}
-    - {fileID: 414448781043509211, guid: b0493f9622e9694499c1755edc217ab0, type: 3}
-    - {fileID: 37636250479621128, guid: b0493f9622e9694499c1755edc217ab0, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0493f9622e9694499c1755edc217ab0, type: 3}
 --- !u!1001 &6226250738093789779
 PrefabInstance:
@@ -779,9 +763,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: I Shape 2
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8811291385431174535, guid: b3534d6b64ef3a34cad14c730ab2605a, type: 3}
-    - {fileID: 7081773931271936776, guid: b3534d6b64ef3a34cad14c730ab2605a, type: 3}
-    - {fileID: 8010474137366039818, guid: b3534d6b64ef3a34cad14c730ab2605a, type: 3}
-    - {fileID: 6475308823145567729, guid: b3534d6b64ef3a34cad14c730ab2605a, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3534d6b64ef3a34cad14c730ab2605a, type: 3}
