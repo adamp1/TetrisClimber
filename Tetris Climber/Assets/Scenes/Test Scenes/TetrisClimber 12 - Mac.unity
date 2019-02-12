@@ -994,6 +994,21 @@ PrefabInstance:
       propertyPath: m_FontData.m_MaxSize
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 8823170581655473616, guid: 2e2911b1546ab3943b78fccf1df25fe3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 5836358597819273093, guid: 2e2911b1546ab3943b78fccf1df25fe3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 8823170582397687325, guid: 2e2911b1546ab3943b78fccf1df25fe3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e2911b1546ab3943b78fccf1df25fe3, type: 3}
 --- !u!1 &100298025
@@ -4687,139 +4702,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6434282301940172368}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &693354571
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 693354570}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab5807524a3ef2e4b88d66cf3cfcaacd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GameOver:
-  - Game Over
-  - You died
-  - You died
-  - Why did you do that?
-  - You died
-  - You are so dead.
-  - You died
-  - You died. Again
-  - You died. Again.
-  - You died
-  - You died
-  - Wow.
-  - Really? Again?
-  - Can it get any deader?
-  - "Nice, now you\u2018re dead."
-  - There you go again.
-  - Well done. Not.
-  - You are honestly really dead.
-  - Nice, now you're dead.
-  - There you go again.
-  - Well done. Not.
-  - You are really dead.
-  - Dead.
-  - O_O
-  - <3
-  - You left this place.
-  - You passed away.
-  - There is no more You.
-  - You is no more.
-  - You is belong to Death
-  - So much die.
-  - Dat die.
-  - Oh, you died again!
-  - There you go again.
-  - "Okay, honestly. What\u2018s wrong?"
-  - ^^
-  - That was funny :D
-  - Oh, you died again!
-  - There you go again.
-  - Okay, honestly. What's wrong?
-  - AFK?
-  - Well done ^^
-  - Pff, wow.
-  - Damn.
-  - Meh.
-  - Try Again.
-  - You Lose.
-  - Your Life is over.
-  - You will be remembered.
-  - Gone to soon.
-  - We will remember You.
-  - "No one\u2018s gonna remember You."
-  - Get well soon :)
-  - Tzzz.
-  - That was sad.
-  - "That\u2018s so sad."
-  - "Dad i\u2018m sad."
-  - Ouchie!
-  - Did it hurt?
-  - Stand Up!
-  - Don't quit now.
-  - Meet your Maker
-  - You met your Maker.
-  - Uuuuh, did it hurt?
-  - Stand Up!
-  - Don't quit now.
-  - Meet your Maker
-  - Greet the Reaper!
-  - People die when they get killed...
-  - R.I.P.
-  - Your constant dying amuses me.
-  - Shit, I didn't bring the popcorn.
-  - Shit, i forgot the Popcorn.
-  - Laaame!
-  - WASTED!, ;D
-  - Dude, really?
-  - Well...
-  - At least you tried.
-  - Hasta la vista Baby!
-  - Owned.
-  - Well, what can i say?
-  - Better luck next time!
-  - The cake is a lie.
-  - Press F to pay respects.
-  - rekt.
-  - git gud.
-  - You were winning, until you lost
-  - Oopsie Woopsie
-  - Ok, this was epic.
-  - Your transformed into Lasagna.
-  - Ragequit?
-  - There is no Cow Level.
-  - I II II IL
-  - Yikes.
-  - You are in a better place now.
-  - "afsdflkja\xF6#*!"
-  - That was super effective!
-  - Keep trying!
-  - Such dead. Much gone. Wow.
-  - There is no spoon.
-  - rekt.
-  - git gud.
-  - You were winning, until you lost.
-  - Oopsie Woopsie!
-  - Ok, this was epic.
-  - You transformed into Lasagna.
-  - Ragequit?
-  - There is no Cow Level
-  - I II II IL
-  - Yikes.
-  - '#deep'
-  - You are in a better place now.
-  - "afsdflkja\xF6#*!!"
-  - That was super effective!
-  - Keep trying!
-  - Such dead.
-  - So much gone.
-  - Game over.
-  - I guess you won't be missed, huh?
-  - Awesome!
 --- !u!114 &693354572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17982,7 +17864,8 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1421546932051648281, guid: 5b463e87c5a93ec4eac93835974f863c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5b463e87c5a93ec4eac93835974f863c, type: 3}
 --- !u!1001 &6841671132713074010
 PrefabInstance:

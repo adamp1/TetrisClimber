@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class GameOverSammlung : MonoBehaviour
 {
+   
+    [System.NonSerialized]
     public string[] GameOver = new string[]
     {
-        "Game Over",
+        "GameOver",
         "You died.",
         "You died.",
         "Why did you do that?",
