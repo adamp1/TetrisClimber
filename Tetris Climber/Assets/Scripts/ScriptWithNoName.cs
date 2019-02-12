@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class ScriptWithNoName : MonoBehaviour
 {
-    bool BlockUnderBlock;
-    bool PlaceBlock;
+    bool key1;
+    bool key2;
+    bool key3;
+    bool key4;
+    bool key5;
+    bool key6;
+    bool key7;
+    bool key8;
 
     // Start is called before the first frame update
     void Start()
@@ -13,81 +19,108 @@ public class ScriptWithNoName : MonoBehaviour
         
     }
 
-    private void OnDestroy()
-    {
-        AkSoundEngine.PostEvent("DestroyBlock", null);
-    }
-
     // Update is called once per frame
     void Update()
     {
-        Vector3 pos = transform.position;
-        float fallingSpeed = 5;
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            key1 = true;
+            key2 = false;
+            key3 = false;
+            key4 = false;
+            key5 = false;
+            key6 = false;
+            key7 = false;
+            key8 = false;
+        }
 
-        //Ray
-        RaycastHit hit;
-        Ray CheckUnderBlock = new Ray(new Vector3(pos.x, pos.y, pos.z), Vector3.down);
-        Debug.DrawRay(new Vector3(pos.x, pos.y, pos.z), Vector3.down);
+        if (Input.GetKeyDown(KeyCode.UpArrow) && key1)
+        {
+            key1 = false;
+            key2 = true;
+            key3 = false;
+            key4 = false;
+            key5 = false;
+            key6 = false;
+            key7 = false;
+            key8 = false;
+        }
 
-        Ray CheckLeftBlock = new Ray(new Vector3(pos.x, pos.y, pos.z), Vector3.left);
-        Debug.DrawRay(new Vector3(pos.x, pos.y, pos.z), Vector3.left);
+        if (Input.GetKeyDown(KeyCode.DownArrow) && key2)
+        {
+            key1 = false;
+            key2 = false;
+            key3 = true;            
+            key4 = false;
+            key5 = false;
+            key6 = false;
+            key7 = false;
+            key8 = false;
+        }
 
-        Ray CheckRightBlock = new Ray(new Vector3(pos.x, pos.y, pos.z), Vector3.left);
-        Debug.DrawRay(new Vector3(pos.x, pos.y, pos.z), Vector3.right);
+        if (Input.GetKeyDown(KeyCode.DownArrow) && key3)
+        {
+            key1 = false;
+            key2 = false;
+            key3 = false;
+            key4 = true;
+            key5 = false;
+            key6 = false;
+            key7 = false;
+            key8 = false;
+        }
 
-        if (Physics.Raycast(CheckUnderBlock, out hit, 0.9f))
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && key4)
+        {
+            key1 = false;
+            key2 = false;
+            key3 = false;
+            key4 = false;
+            key5 = true;
+            key6 = false;
+            key7 = false;
+            key8 = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.RightArrow) && key5)
+        {
+            key1 = false;
+            key2 = false;
+            key3 = false;
+            key4 = false;
+            key5 = false;
+            key6 = true;
+            key7 = false;
+            key8 = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && key6)
+        {
+            key1 = false;
+            key2 = false;
+            key3 = false;
+            key4 = false;
+            key5 = false;
+            key6 = false;
+            key7 = true;
+            key8 = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.RightArrow) && key7)
+        {
+            key1 = false;
+            key2 = false;
+            key3 = false;
+            key4 = false;
+            key5 = false;
+            key6 = false;
+            key7 = false;
+            key8 = true;
+        }
+
+        if(key8)
         {
             
-            if (hit.transform.name != this.name && hit.transform.tag != "Player")
-            {
-                BlockUnderBlock = true;     
-            }
-
-            if (hit.transform.name == this.name && gameObject.GetComponentInParent<BlockMovement>().enabled == false)
-            {
-                BlockUnderBlock = true;
-            }
-
         }
-
-        if(BlockUnderBlock)
-        {
-            if(!Physics.Raycast(CheckUnderBlock, out hit, 0.9f))
-            {
-                transform.position += new Vector3(0, -fallingSpeed * Time.deltaTime, 0);
-                PlaceBlock = true;
-            }
-
-          /*  if(!Physics.Raycast(CheckLeftBlock, out hit, 0.9f) && !Physics.Raycast(CheckRightBlock, out hit, 0.9f))
-            {
-                transform.position += new Vector3(0, -fallingSpeed * Time.deltaTime, 0);
-                PlaceBlock = true;
-            } */
-
-        }
-
-        if(PlaceBlock)
-        {
-            if (Physics.Raycast(CheckUnderBlock, out hit, 0.9f))
-            {
-                if (hit.transform.tag == "Mino")
-                {
-                    pos = new Vector3(pos.x, hit.transform.position.y + 1, pos.z);
-                    transform.position = pos;
-                    BlockUnderBlock = false;
-                    PlaceBlock = false;
-                }
-
-                if (hit.transform.tag == "Ground")
-                {
-                    pos = new Vector3(pos.x, hit.transform.position.y + 10.5f, pos.z);
-                    transform.position = pos;
-                    BlockUnderBlock = false;
-                    PlaceBlock = false;
-                }
-
-            }
-        } 
-
     }
 }
