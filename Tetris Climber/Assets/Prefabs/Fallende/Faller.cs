@@ -13,7 +13,7 @@ public class Faller : MonoBehaviour
     {
         transform.position += new Vector3(rand(), rand(), rand());
         speed = Random.Range(speed, speed * 2);
-        print(speed);
+        //print(speed);
         startpos = transform.position;
     }
 
