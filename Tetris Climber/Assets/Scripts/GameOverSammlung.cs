@@ -8,17 +8,14 @@ public class GameOverSammlung : MonoBehaviour
     [System.NonSerialized]
     public string[] GameOver = new string[]
     {
-        "GameOver",
+        "Game Over",
         "You died.",
         "You died.",
         "Why did you do that?",
         "You died",
         "You are so dead.",
         //DIE ERSTEN SECHS WERDEN IN REIHENFOLGE ABGESPIELT
-        "You died.",
         "You died. Again.",
-        "You died.",
-        "You died.",
         "Wow.",
         "Really? Again?",
         "Nice, now you're dead.",
@@ -53,7 +50,7 @@ public class GameOverSammlung : MonoBehaviour
         "Tzzz.",
         "That was sad.",
         "That‘s so sad.",
-        "Dad i‘m sad.",
+        "Dad, I‘m sad.",
         "Ouchie!",
         "Uuuuh, did it hurt?",
         "Stand Up!",
@@ -63,7 +60,7 @@ public class GameOverSammlung : MonoBehaviour
         "People die when they are killed...",
         "R.I.P.",
         "Your constant dying amuses me.",
-        "Shit, i forgot the Popcorn.",
+        "Shit, I forgot the Popcorn.",
         "Laaame!",
         "WASTED!, " +
         ";D",
@@ -72,7 +69,7 @@ public class GameOverSammlung : MonoBehaviour
         "At least you tried.",
         "Hasta la vista Baby!",
         "Owned.",
-        "Well, what can i say?",
+        "Well, what can I say?",
         "Better luck next time!",
         "The cake is a lie.",
         "Press F to pay respects.",
