@@ -17850,7 +17850,7 @@ PrefabInstance:
     - target: {fileID: 6434282302539720793, guid: 5b463e87c5a93ec4eac93835974f863c,
         type: 3}
       propertyPath: godmode
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1421546932051648281, guid: 5b463e87c5a93ec4eac93835974f863c, type: 3}

@@ -11,7 +11,7 @@ public class CameraMovement : MonoBehaviour {
     public float CameraZ = -15;
     public float CameraX = 7.5f;
 
-    public float CameraSpeedY = 4;
+    public float CameraSpeedY = 3.5f;
     public float CameraSpeedX = 4;
     public float StartPosCameraY = 40;
     
@@ -20,7 +20,7 @@ public class CameraMovement : MonoBehaviour {
     // Use this for initialization
     void Start () {
         Player = GameObject.Find("Player");
-        transform.position = new Vector3(CameraX , Player.transform.position.y + CameraY + StartPosCameraY, CameraY);
+        transform.position = new Vector3(CameraX , Player.transform.position.y + CameraY + StartPosCameraY, CameraY);        
     }
 	
 	// Update is called once per frame
@@ -55,7 +55,7 @@ public class CameraMovement : MonoBehaviour {
                     CameraPos.x = Mathf.Lerp(transform.position.x, Player.transform.position.x + 3f, InterpolationX);
                 }                
 
-                //CameraPos = new Vector3(CameraX, PlayerPos.y + CameraY, CameraZ);
+                //CameraPos = new Vector3(CameraX, PlayerPos.y + CameraY, CameraZ); 
                 transform.position = CameraPos;
             }
         }
