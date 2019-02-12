@@ -16408,7 +16408,8 @@ MonoBehaviour:
   CameraY: 6
   CameraZ: -20
   CameraX: 7.5
-  CameraSpeed: 2
+  CameraSpeedY: 4
+  CameraSpeedX: 4
   StartPosCameraY: 40
 --- !u!124 &1065323740949870090
 Behaviour:
@@ -16811,7 +16812,8 @@ MonoBehaviour:
   CameraY: 6
   CameraZ: -20
   CameraX: 7.5
-  CameraSpeed: 2
+  CameraSpeedY: 4
+  CameraSpeedX: 4
   StartPosCameraY: 40
 --- !u!124 &1065323741081844831
 Behaviour:
@@ -16960,6 +16962,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Radius
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6708453451886093945, guid: de1ebf98e34bef045b552eefa69560ed,
+        type: 3}
+      propertyPath: debugmode
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 360972199, guid: de1ebf98e34bef045b552eefa69560ed, type: 3}
@@ -17839,6 +17846,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6434282302539720793, guid: 5b463e87c5a93ec4eac93835974f863c,
+        type: 3}
+      propertyPath: godmode
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1421546932051648281, guid: 5b463e87c5a93ec4eac93835974f863c, type: 3}

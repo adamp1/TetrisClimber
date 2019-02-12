@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour {
     public float gravity = 80;
     float time;
     bool moving;
+    bool allowFlying;
 
     float playerPosY;
 
@@ -29,7 +30,7 @@ public class PlayerMovement : MonoBehaviour {
 
     private void Start()
     {
-        Physics.gravity = new Vector3(0, -gravity, 0);
+        Physics.gravity = new Vector3(0, -gravity, 0);   
     }
 
     // Update is called once per frame
@@ -247,16 +248,25 @@ public class PlayerMovement : MonoBehaviour {
             allowMoveLeft = true;
 
         }
-        
+
+        //Flying
+        if(FindObjectOfType<Game>().godmode)
+        {
+            Flying();
+        }
+
     }
 
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Blockage")
+        if(FindObjectOfType<Game>().godmode == false)
         {
-            Destroy(gameObject);           
-        }
+            if (collision.gameObject.tag == "Blockage")
+            {
+                Destroy(gameObject);
+            }
+        }      
     }
 
     void JumpDown()
@@ -295,6 +305,39 @@ public class PlayerMovement : MonoBehaviour {
     void JumpUp()
     {
         isJumping = false;
+    }
+
+    void Flying()
+    {
+        if (!allowFlying)
+        {
+            if(Input.GetKeyDown(KeyCode.F))
+            {
+                Debug.Log("Fly Mode: On");
+                allowFlying = true;
+                Physics.gravity = new Vector3(0, 0, 0);
+            }
+        }
+        else if(allowFlying)
+        {
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                allowFlying = false;
+                Physics.gravity = new Vector3(0, -gravity, 0);
+                Debug.Log("Fly Mode: Off");
+            }                
+        }
+
+        if(allowFlying)
+        {
+            float moveHori;
+            float moveVerti;
+
+            moveHori = transform.position.x + Input.GetAxisRaw("Horizontal") * speed * Time.deltaTime;
+            moveVerti = transform.position.y + Input.GetAxisRaw("Vertical") * speed * Time.deltaTime;
+
+            transform.position = new Vector3(moveHori, moveVerti, transform.position.z); 
+        }
     }
 }
 
