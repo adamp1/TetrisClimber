@@ -43,7 +43,7 @@ MonoBehaviour:
   - PhysicalPath: Events\Deaths.wwu
     ParentPhysicalPath: Events\PlayerEvents.wwu
     guid: cf0b5f03d95bbd46b9d1381957ca9f71
-    m_lastTime: -8586517694697675808
+    m_lastTime: -8586517160296275808
     List:
     - name: generalDeath
       guid: aafddfc47d33c44089b0b598baa987fa
@@ -311,7 +311,7 @@ MonoBehaviour:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 9c8d81d77d8e184eb562c23135cdef4f
-    m_lastTime: -8586517167758193287
+    m_lastTime: -8586517143463175808
     List:
     - name: MenuState
       guid: 9a34d39defecb6448f084a50af423811
@@ -392,10 +392,16 @@ MonoBehaviour:
       Path: Default Work Unit\EndLoop
   ExpandedItems:
   - /TetrisClimber
+  - /TetrisClimber/Events
+  - /TetrisClimber/Events/Default Work Unit
+  - /TetrisClimber/Events/Default Work Unit/GameEvents
+  - /TetrisClimber/Events/Default Work Unit/PlayerEvents
+  - /TetrisClimber/Events/Default Work Unit/PlayerEvents/Deaths
   - /TetrisClimber/SoundBanks
   - /TetrisClimber/SoundBanks/Default Work Unit
   - /TetrisClimber/States
   - /TetrisClimber/States/Default Work Unit
+  - /TetrisClimber/States/Default Work Unit/MenuState
   - /TetrisClimber/States/Default Work Unit/PlayState
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
