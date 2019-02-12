@@ -139,7 +139,7 @@ public class Game : MonoBehaviour {
 
         SpawnNextPrefab();
 
-     /*  PlayerPrefs.SetFloat("Highscore5", 0);
+/*       PlayerPrefs.SetFloat("Highscore5", 0);
           PlayerPrefs.SetFloat("Highscore4", 0);
           PlayerPrefs.SetFloat("Highscore3", 0);
           PlayerPrefs.SetFloat("Highscore2", 0);
@@ -178,18 +178,18 @@ public class Game : MonoBehaviour {
         else
         {           
 
-            if (!newHighscore && !GameOverUI.activeInHierarchy && !GameOver2UI.activeInHierarchy)
+            if (!newHighscore)
             {
                 GameOver();
+                Debug.Log("Game Over");
+                Debug.Log(ScoreGesamt);
             }
-            else if(!GameOverUI.activeInHierarchy && !GameOver2UI.activeInHierarchy)
+            else
             {
                 GameOver2();
+                Debug.Log("Game Over2");
             }
-
         }
-
-        
     }
 
     

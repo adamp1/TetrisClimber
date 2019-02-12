@@ -37,30 +37,31 @@ public class PlayerMovement : MonoBehaviour {
 
 
 
-        //Player Position und Spawn Position
-        Vector3 pos = transform.position;
 
-        //Ray
-        RaycastHit hit;
-        Ray GroundCheck1 = new Ray(new Vector3(pos.x - 0.4f, pos.y, pos.z), Vector3.down);
-        Ray GroundCheck2 = new Ray(new Vector3(pos.x + 0.4f, pos.y, pos.z), Vector3.down);
-        Ray WallCheckRight1 = new Ray(new Vector3(pos.x, pos.y-0.9f,pos.z), Vector3.right);
-        Ray WallCheckRight2 = new Ray(new Vector3(pos.x, pos.y+0.9f, pos.z), Vector3.right);
-        Ray WallCheckRight3 = new Ray(new Vector3(pos.x, pos.y, pos.z), Vector3.right);
-        Ray WallCheckLeft1 = new Ray(new Vector3(pos.x, pos.y - 0.9f, pos.z), Vector3.left);
-        Ray WallCheckLeft2 = new Ray(new Vector3(pos.x, pos.y + 0.9f, pos.z), Vector3.left);
-        Ray WallCheckLeft3 = new Ray(new Vector3(pos.x, pos.y, pos.z), Vector3.left); 
-        Ray DeathFromAbove = new Ray(new Vector3(pos.x, pos.y, pos.z), Vector3.up);
-        Debug.DrawRay(new Vector3(pos.x, pos.y, pos.z), Vector3.up);
+            //Player Position und Spawn Position
+            Vector3 pos = transform.position;
+
+            //Ray
+            RaycastHit hit;
+            Ray GroundCheck1 = new Ray(new Vector3(pos.x - 0.4f, pos.y, pos.z), Vector3.down);
+            Ray GroundCheck2 = new Ray(new Vector3(pos.x + 0.4f, pos.y, pos.z), Vector3.down);
+            Ray WallCheckRight1 = new Ray(new Vector3(pos.x, pos.y - 0.9f, pos.z), Vector3.right);
+            Ray WallCheckRight2 = new Ray(new Vector3(pos.x, pos.y + 0.9f, pos.z), Vector3.right);
+            Ray WallCheckRight3 = new Ray(new Vector3(pos.x, pos.y, pos.z), Vector3.right);
+            Ray WallCheckLeft1 = new Ray(new Vector3(pos.x, pos.y - 0.9f, pos.z), Vector3.left);
+            Ray WallCheckLeft2 = new Ray(new Vector3(pos.x, pos.y + 0.9f, pos.z), Vector3.left);
+            Ray WallCheckLeft3 = new Ray(new Vector3(pos.x, pos.y, pos.z), Vector3.left);
+            Ray DeathFromAbove = new Ray(new Vector3(pos.x, pos.y, pos.z), Vector3.up);
+            Debug.DrawRay(new Vector3(pos.x, pos.y, pos.z), Vector3.up);
 
 
-        //IDLE ANIMATION
-        if (moving == false && jumping == false && FindObjectOfType<DestroyBlocks>().inisiateSlice == false && jumpingIdle == false)
-        {
+            //IDLE ANIMATION
+            if (moving == false && jumping == false && FindObjectOfType<DestroyBlocks>().inisiateSlice == false && jumpingIdle == false)
+            {
 
-            FindObjectOfType<PlayerAnimHelper2>().Idle();
-            //Debug.Log("START IDLE");
-        }
+                FindObjectOfType<PlayerAnimHelper2>().Idle();
+                //Debug.Log("START IDLE");
+            }
 
 
         //MOVE PLAYER HORIZONTAL
@@ -96,7 +97,7 @@ public class PlayerMovement : MonoBehaviour {
                 }
                 else
                 {
-                    
+
                 }
 
             }
@@ -131,7 +132,7 @@ public class PlayerMovement : MonoBehaviour {
                 }
                 else
                 {
-                    
+
                 }
             }
 
@@ -141,7 +142,7 @@ public class PlayerMovement : MonoBehaviour {
             moving = false;
         }
 
-        transform.position = pos;
+            transform.position = pos;
 
         //Jump
         if (Input.GetButtonDown("Jump") && grounded)
@@ -156,7 +157,7 @@ public class PlayerMovement : MonoBehaviour {
         }
 
 
-        if(Input.GetButtonUp("Jump"))
+        if (Input.GetButtonUp("Jump"))
         {
             JumpUp();
         }
@@ -192,9 +193,9 @@ public class PlayerMovement : MonoBehaviour {
         //CheckGround
         if (Physics.Raycast(GroundCheck1, out hit, 1.1f) || Physics.Raycast(GroundCheck2, out hit, 1.1f))
         {
-               grounded = true;
-               jumpTimeCounter = 0;
-                   
+            grounded = true;
+            jumpTimeCounter = 0;
+
         }
         else
         {
@@ -219,7 +220,7 @@ public class PlayerMovement : MonoBehaviour {
             //FindObjectOfType<PlayerAnimHelper2>().animator.SetBool("run", false);
 
             //Start Idle Animation if running next to wall
-            if(Input.GetAxis("Horizontal") > 0 && jumping == false && jumpingIdle == false && FindObjectOfType<DestroyBlocks>().inisiateSlice == false)
+            if (Input.GetAxis("Horizontal") > 0 && jumping == false && jumpingIdle == false && FindObjectOfType<DestroyBlocks>().inisiateSlice == false)
             {
                 FindObjectOfType<PlayerAnimHelper2>().Idle();
             }
@@ -245,8 +246,8 @@ public class PlayerMovement : MonoBehaviour {
         {
             allowMoveLeft = true;
 
-        } 
-      
+        }
+        
     }
 
 
