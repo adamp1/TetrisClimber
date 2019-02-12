@@ -438,7 +438,7 @@ Light:
   m_Type: 2
   m_Color: {r: 0, g: 0.3529412, b: 1, a: 1}
   m_Intensity: 23
-  m_Range: 31
+  m_Range: 32
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -2699,7 +2699,7 @@ Light:
   m_Type: 2
   m_Color: {r: 0.1462264, g: 0.49573547, b: 1, a: 1}
   m_Intensity: 24
-  m_Range: 39
+  m_Range: 45
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -3969,7 +3969,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 573414076}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.6999998, y: 110.3, z: 18.1}
+  m_LocalPosition: {x: 0.6999998, y: 134, z: 18.1}
   m_LocalScale: {x: 1.0576, y: 1.0576, z: 1.0576}
   m_Children: []
   m_Father: {fileID: 376785679}
@@ -3987,7 +3987,7 @@ Light:
   m_Type: 2
   m_Color: {r: 0.1462264, g: 0.49573547, b: 1, a: 1}
   m_Intensity: 10
-  m_Range: 100
+  m_Range: 135
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -10803,7 +10803,7 @@ Transform:
   m_GameObject: {fileID: 1036877403}
   m_LocalRotation: {x: -0.70710576, y: -0, z: -0, w: 0.7071079}
   m_LocalPosition: {x: 7.8, y: 523.1, z: 35.2}
-  m_LocalScale: {x: 67.883896, y: 67.883896, z: 67.883896}
+  m_LocalScale: {x: 64.4897, y: 64.4897, z: 64.4897}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 17
@@ -16421,6 +16421,7 @@ MonoBehaviour:
   CameraZ: -20
   CameraX: 7.5
   CameraSpeed: 2
+  StartPosCameraY: 40
 --- !u!124 &1065323740949870090
 Behaviour:
   m_ObjectHideFlags: 0
@@ -16823,6 +16824,7 @@ MonoBehaviour:
   CameraZ: -20
   CameraX: 7.5
   CameraSpeed: 2
+  StartPosCameraY: 40
 --- !u!124 &1065323741081844831
 Behaviour:
   m_ObjectHideFlags: 0
@@ -17091,6 +17093,7 @@ MonoBehaviour:
   deathdistance: 100
   a: {fileID: 0}
   scale: 0.75
+  anzahl: 5
 --- !u!1001 &5696030681462519161
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17731,17 +17734,17 @@ PrefabInstance:
     - target: {fileID: 6434282302539720793, guid: 5b463e87c5a93ec4eac93835974f863c,
         type: 3}
       propertyPath: FirstBlockage
-      value: -3
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 6434282302539720793, guid: 5b463e87c5a93ec4eac93835974f863c,
         type: 3}
       propertyPath: BlockageDistanceMin
-      value: 10
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 6434282302539720793, guid: 5b463e87c5a93ec4eac93835974f863c,
         type: 3}
       propertyPath: BlockageDistanceMax
-      value: 18
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 6434282302539720793, guid: 5b463e87c5a93ec4eac93835974f863c,
         type: 3}
@@ -17950,7 +17953,7 @@ PrefabInstance:
     - target: {fileID: 6841671131779761950, guid: f1d261530576741458d658dcef8c37c9,
         type: 3}
       propertyPath: speed
-      value: 1
+      value: 1.075
       objectReference: {fileID: 0}
     - target: {fileID: 6841671131779761950, guid: f1d261530576741458d658dcef8c37c9,
         type: 3}
@@ -17960,7 +17963,7 @@ PrefabInstance:
     - target: {fileID: 6841671131779761950, guid: f1d261530576741458d658dcef8c37c9,
         type: 3}
       propertyPath: increaseIntervall
-      value: 1
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 6841671131779761949, guid: f1d261530576741458d658dcef8c37c9,
         type: 3}
@@ -18084,7 +18087,7 @@ PrefabInstance:
     - target: {fileID: 6954327962032065429, guid: db1b7182508627a4ba105a7df40443f5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 232
+      value: 1.9
       objectReference: {fileID: 0}
     - target: {fileID: 6954327962032065429, guid: db1b7182508627a4ba105a7df40443f5,
         type: 3}
