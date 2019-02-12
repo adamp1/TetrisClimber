@@ -1006,5 +1006,9 @@ public class Game : MonoBehaviour {
         AkSoundEngine.PostEvent("ButtonClick", gameObject);
     }
 
+    void GodMode()
+    {
+
+    }
 }
 

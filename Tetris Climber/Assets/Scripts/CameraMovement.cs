@@ -11,7 +11,8 @@ public class CameraMovement : MonoBehaviour {
     public float CameraZ = -15;
     public float CameraX = 7.5f;
 
-    public float CameraSpeed = 4;
+    public float CameraSpeedY = 4;
+    public float CameraSpeedX = 4;
     public float StartPosCameraY = 40;
     
     
@@ -26,7 +27,8 @@ public class CameraMovement : MonoBehaviour {
 	void Update () {
         if (Player != null)
         {
-            float interpolation = CameraSpeed * Time.deltaTime;
+            float InterpolationY = CameraSpeedY * Time.deltaTime;
+            float InterpolationX = CameraSpeedX * Time.deltaTime;
 
             Vector3 PlayerPos = Player.transform.position;
 
@@ -35,22 +37,22 @@ public class CameraMovement : MonoBehaviour {
             if (setCameraToPlayer)
             {
                 //KAMERA Y
-                CameraPos.y = Mathf.Lerp(transform.position.y, Player.transform.position.y + CameraY, interpolation);               
+                CameraPos.y = Mathf.Lerp(transform.position.y, Player.transform.position.y + CameraY, InterpolationY);               
                 CameraPos.z = CameraZ;
 
 
                 //KAMERA X
                 if (Player.transform.position.x < 10.5f && Player.transform.position.x > 4.5f)
                 {
-                    CameraPos.x = Mathf.Lerp(transform.position.x, 7.5f, interpolation);
+                    CameraPos.x = Mathf.Lerp(transform.position.x, 7.5f, InterpolationX);
                 }
                 else if (Player.transform.position.x > 10.5f)
                 {
-                    CameraPos.x = Mathf.Lerp(transform.position.x, Player.transform.position.x - 3f, interpolation);
+                    CameraPos.x = Mathf.Lerp(transform.position.x, Player.transform.position.x - 3f, InterpolationX);
                 }
                 else if (Player.transform.position.x < 4.5f)
                 {
-                    CameraPos.x = Mathf.Lerp(transform.position.x, Player.transform.position.x + 3f, interpolation);
+                    CameraPos.x = Mathf.Lerp(transform.position.x, Player.transform.position.x + 3f, InterpolationX);
                 }                
 
                 //CameraPos = new Vector3(CameraX, PlayerPos.y + CameraY, CameraZ);
