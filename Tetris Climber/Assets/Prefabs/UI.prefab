@@ -7037,7 +7037,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6434282302539720793, guid: 5b463e87c5a93ec4eac93835974f863c,
           type: 3}
-        m_MethodName: Quit
+        m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
