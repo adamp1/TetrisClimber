@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FallingObjects : MonoBehaviour
 {
-    public Vector3 distances = new Vector3(0, 20, 50);
+    public Vector3 distances = new Vector3(0, 20, 25);
     public GameObject[] objects;
     public float waittime = 2;
     PlayerMovement spieler;
