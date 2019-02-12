@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8499534c8ef7fc74d8cd47d75f97e24b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distances: {x: 0, y: 20, z: 50}
+  distances: {x: 0, y: 20, z: 25}
   objects:
   - {fileID: 6227908693130476444, guid: b3534d6b64ef3a34cad14c730ab2605a, type: 3}
   - {fileID: 6077196847993433412, guid: e4e361a46e04df64197f670f8f641c59, type: 3}
@@ -51,4 +51,4 @@ MonoBehaviour:
   - {fileID: 3607147365623230648, guid: b0493f9622e9694499c1755edc217ab0, type: 3}
   - {fileID: 2264373176304218094, guid: 5aeb77ca9534c7e49905d4b6d07fc4b7, type: 3}
   - {fileID: 1373834298948077454, guid: 3648b0cc652e7aa459f2b3e832380cd5, type: 3}
-  waittime: 2
+  waittime: 1
