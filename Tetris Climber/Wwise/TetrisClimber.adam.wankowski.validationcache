@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationCache Version="1" SchemaVersion="89">
+	<ValidationCacheItem File="C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\Actor-Mixer Hierarchy\DeathSounds.wwu" DateLow="1549284340" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1549275057" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\Actor-Mixer Hierarchy\GameSFX.wwu" DateLow="1549275057" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\Actor-Mixer Hierarchy\ObjectSFX.wwu" DateLow="1549277637" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\Actor-Mixer Hierarchy\PlayerSFX.wwu" DateLow="1549883053" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\Attenuations\Default Work Unit.wwu" DateLow="1547687952" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\Audio Devices\Default Work Unit.wwu" DateLow="1547303978" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\Control Surface Sessions\Default Work Unit.wwu" DateLow="1547303978" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\Conversion Settings\Default Work Unit.wwu" DateLow="1549880265" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\Conversion Settings\Factory Conversion Settings.wwu" DateLow="1547687952" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1547303978" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\Effects\Default Work Unit.wwu" DateLow="1547731889" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\Effects\Factory Effects.wwu" DateLow="1549287856" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\Events\Deaths.wwu" DateLow="1549890855" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\Events\Default Work Unit.wwu" DateLow="1547687952" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\Events\GameEvents.wwu" DateLow="1549892752" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\Events\PlayerEvents.wwu" DateLow="1549883053" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\Events\SoundEvents.wwu" DateLow="1549276653" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\Game Parameters\Default Work Unit.wwu" DateLow="1547687952" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\Interactive Music Hierarchy\BackgroundMusic.wwu" DateLow="1549892539" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1549837415" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1547303979" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\Mixing Sessions\Default Work Unit.wwu" DateLow="1549890855" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\Modulators\Default Work Unit.wwu" DateLow="1547303979" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\Presets\Default Work Unit.wwu" DateLow="1547303980" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\Queries\Default Work Unit.wwu" DateLow="1547303980" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\Queries\Factory Queries.wwu" DateLow="1547303980" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\SoundBanks\Default Work Unit.wwu" DateLow="1549892668" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1549892539" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\States\Default Work Unit.wwu" DateLow="1549892539" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\Switches\Default Work Unit.wwu" DateLow="1547303980" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\TetrisClimber.wproj" DateLow="1547687954" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\Triggers\Default Work Unit.wwu" DateLow="1549837415" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\Virtual Acoustics\Default Work Unit.wwu" DateLow="1547303980" DateHigh="0"/>
+</ValidationCache>
