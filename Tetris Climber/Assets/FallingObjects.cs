@@ -21,7 +21,7 @@ public class FallingObjects : MonoBehaviour
         {
             yield return new WaitForSeconds(waittime);
             Instantiate(objects[Random.Range(0, objects.Length - 1)],
-            spieler.transform.position + distances, transform.rotation);
+            spieler.transform.position + distances, transform.rotation, transform);
         }
     }
 }
