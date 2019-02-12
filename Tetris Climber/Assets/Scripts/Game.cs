@@ -15,6 +15,8 @@ public class Game : MonoBehaviour {
     float t;
     bool SaveStartHeight = false;
 
+    public bool godmode = false;
+
     float t2;
 
     public float scoreMultiplikator;
@@ -137,6 +139,8 @@ public class Game : MonoBehaviour {
 
         Deathcollider = GameObject.Find("Death Collider");
 
+        GodMode();
+
         SpawnNextPrefab();
 
 /*       PlayerPrefs.SetFloat("Highscore5", 0);
@@ -173,7 +177,7 @@ public class Game : MonoBehaviour {
 
             MoveSpawnerToPlayer();
             UpdateMenu();
-            UpdateMinoPos();
+            UpdateMinoPos();            
         }
         else
         {           
@@ -181,13 +185,13 @@ public class Game : MonoBehaviour {
             if (!newHighscore)
             {
                 GameOver();
-                Debug.Log("Game Over");
-                Debug.Log(ScoreGesamt);
+                //Debug.Log("Game Over");
+                //Debug.Log(ScoreGesamt);
             }
             else
             {
                 GameOver2();
-                Debug.Log("Game Over2");
+                //Debug.Log("Game Over2");
             }
         }
     }
@@ -1008,7 +1012,12 @@ public class Game : MonoBehaviour {
 
     void GodMode()
     {
-
+        if (godmode)
+        {            
+                GameObject.Find("Death Trigger").SetActive(false);
+                GameObject.Find("Death Trigger (1)").SetActive(false);
+            
+        }
     }
 }
 
