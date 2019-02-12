@@ -232,10 +232,12 @@ public class MinoPhysics : MonoBehaviour
         if (transform.position.y < Deathcollider.transform.position.y + Deathcollider.transform.localScale.y / 2 - 2)
         {
             BlockUnderBlock = false;
+            LeftBlock = false;
+            RightBlock = false;
             isFalling = false;
         }
 
-        if (transform.position.y < Deathcollider.transform.position.y + Deathcollider.transform.localScale.y / 2 - 4)
+        if (transform.position.y < Deathcollider.transform.position.y + Deathcollider.transform.localScale.y / 2 - 5)
         {
             Destroy(gameObject);
         }
