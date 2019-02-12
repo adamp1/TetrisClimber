@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <WwiseSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <CopySoundBanksAsPreBuildStep>true</CopySoundBanksAsPreBuildStep>
+  <CopySoundBanksAsPreBuildStep>false</CopySoundBanksAsPreBuildStep>
   <CreatedPicker>true</CreatedPicker>
   <CreateWwiseGlobal>true</CreateWwiseGlobal>
   <CreateWwiseListener>true</CreateWwiseListener>
@@ -8,6 +8,6 @@
   <ShowMissingRigidBodyWarning>true</ShowMissingRigidBodyWarning>
   <SoundbankPath>GeneratedSoundBanks/</SoundbankPath>
   <WwiseInstallationPathMac />
-  <WwiseInstallationPathWindows />
+  <WwiseInstallationPathWindows>C:\Program Files (x86)\Audiokinetic\Wwise 2018.1.5.6835\Authoring\x64\Release\bin</WwiseInstallationPathWindows>
   <WwiseProjectPath>../Wwise/TetrisClimber.wproj</WwiseProjectPath>
 </WwiseSettings>
