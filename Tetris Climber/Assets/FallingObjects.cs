@@ -4,51 +4,24 @@ using UnityEngine;
 
 public class FallingObjects : MonoBehaviour
 {
+    public Vector3 distances = new Vector3(0, 20, 50);
     public GameObject[] objects;
-    public float min, max;
-    public float t;
-    public Vector2 spawndistance;
-    public float speed = 5;
-    public float deathdistance = 100;
-    public GameObject a;
+    public float waittime = 2;
     PlayerMovement spieler;
-    public float scale = 0.75f;
 
-    // Start is called before the first frame update
     void Start()
     {
-        t = Random.Range(min, max);
         spieler = GameObject.FindObjectOfType<PlayerMovement>();
+        StartCoroutine(Spawnobjs());
     }
 
-    // Update is called once per frame
-
-    public int anzahl = 5;
-    void Update()
+    IEnumerator Spawnobjs()
     {
-        t -= Time.deltaTime;
-
-        if (t <= 0 && !a)
+        while (true)
         {
-            int i = Random.Range(0, objects.Length - 1);
-            a = Instantiate(objects[i], spieler.transform.position + new Vector3(0, spawndistance.x, spawndistance.y),
-            objects[i].transform.rotation, transform) as GameObject;
-
-            t = Random.Range(min, max);
-        }
-
-        if (a)
-        {
-            a.transform.position += Vector3.down * speed * Time.deltaTime;
-
-            //a.transform.localScale = Vector3.one * scale;
-
-            if (Vector3.Distance(a.transform.position, spieler.transform.position) >= deathdistance)
-            {
-                Destroy(a);
-                a = null;
-                t = Random.Range(min, max);
-            }
+            yield return new WaitForSeconds(waittime);
+            Instantiate(objects[Random.Range(0, objects.Length - 1)],
+            spieler.transform.position + distances, transform.rotation, transform);
         }
     }
 }
