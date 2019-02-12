@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 6721984747080376007}
   - component: {fileID: 693354572}
   - component: {fileID: 693354573}
+  - component: {fileID: 1354562484607454597}
+  - component: {fileID: 4462201816876673549}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -47,6 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6719ef1ff993e7340b94a7c159b0545f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  godmode: 0
   scoreMultiplikator: 0
   FirstBlockage: -6
   BlockageDistanceMin: 14
@@ -87,94 +90,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab5807524a3ef2e4b88d66cf3cfcaacd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameOver:
-  - GameOver
-  - You died.
-  - You died.
-  - Why did you do that?
-  - You died
-  - You are so dead.
-  - You died.
-  - You died. Again.
-  - You died.
-  - You died.
-  - Wow.
-  - Really? Again?
-  - Nice, now you're dead.
-  - There you go again.
-  - Well done. Not.
-  - You are really dead.
-  - Dead.
-  - O_O
-  - <3
-  - You left this place.
-  - You passed away.
-  - You is no more.
-  - You is belong to Death
-  - So much die.
-  - Dat die.
-  - :/
-  - That was funny :D
-  - Oh, you died again!
-  - There you go again.
-  - Okay, honestly. What's wrong?
-  - AFK?
-  - Well done.
-  - Pff, wow.
-  - Damn.
-  - Meh.
-  - Try Again.
-  - You Lose.
-  - Your Life is over.
-  - You will be remembered.
-  - Gone to soon.
-  - Get well soon :)
-  - Tzzz.
-  - That was sad.
-  - "That\u2018s so sad."
-  - "Dad i\u2018m sad."
-  - Ouchie!
-  - Uuuuh, did it hurt?
-  - Stand Up!
-  - Don't quit now.
-  - Meet your Maker
-  - Greet the Reaper!
-  - People die when they are killed...
-  - R.I.P.
-  - Your constant dying amuses me.
-  - Shit, i forgot the Popcorn.
-  - Laaame!
-  - WASTED!, ;D
-  - Dude, really?
-  - Well...
-  - At least you tried.
-  - Hasta la vista Baby!
-  - Owned.
-  - Well, what can i say?
-  - Better luck next time!
-  - The cake is a lie.
-  - Press F to pay respects.
-  - There is no spoon.
-  - rekt.
-  - git gud.
-  - You were winning, until you lost.
-  - Oopsie Woopsie!
-  - Ok, this was epic.
-  - You transformed into Lasagna.
-  - Ragequit?
-  - There is no Cow Level.
-  - I II II IL
-  - Yikes.
-  - '#deep'
-  - You are in a better place now.
-  - afsdflkja#*!!
-  - That was super effective!
-  - Keep trying!
-  - Such dead.
-  - So much gone.
-  - Game over.
-  - I guess you won't be missed, huh?
-  - Awesome!
 --- !u!114 &6721984747080376007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,6 +140,54 @@ MonoBehaviour:
   transitionDuration: 0
   valueGuid: 
 --- !u!114 &693354573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6434282302539720790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea09102d321ac9340af220b7a44586ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 0
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
+--- !u!114 &1354562484607454597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6434282302539720790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9219feb7e2f2b0842b992d74308e3b70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    valueGuid: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6252ff93007f72646a8e5b270e50e8b2,
+      type: 2}
+  m_callbackData: {fileID: 0}
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  valueGuid: 
+--- !u!114 &4462201816876673549
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
