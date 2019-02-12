@@ -85,9 +85,10 @@ public class Game : MonoBehaviour {
 
     public GameObject GameOverUI;
     public GameObject GameOver2UI;
-    public GameObject PlayAgain2;
+    public GameObject Panel2;
     public GameObject SubmitButton;
     public GameObject InputField;
+    public GameObject VolumeSlider;
 
     GameObject Player;
     GameObject Deathcollider;
@@ -143,18 +144,17 @@ public class Game : MonoBehaviour {
 
         SpawnNextPrefab();
 
-/*       PlayerPrefs.SetFloat("Highscore5", 0);
-          PlayerPrefs.SetFloat("Highscore4", 0);
-          PlayerPrefs.SetFloat("Highscore3", 0);
-          PlayerPrefs.SetFloat("Highscore2", 0);
-          PlayerPrefs.SetFloat("Highscore1", 0);
+        /*       PlayerPrefs.SetFloat("Highscore5", 0);
+                  PlayerPrefs.SetFloat("Highscore4", 0);
+                  PlayerPrefs.SetFloat("Highscore3", 0);
+                  PlayerPrefs.SetFloat("Highscore2", 0);
+                  PlayerPrefs.SetFloat("Highscore1", 0);
 
-        PlayerPrefs.SetString("Name5", "Name 5");
-        PlayerPrefs.SetString("Name4", "Name 4");
-        PlayerPrefs.SetString("Name3", "Name 3");
-        PlayerPrefs.SetString("Name2", "Name 2");
-        PlayerPrefs.SetString("Name1", "Name 1"); */
-
+                PlayerPrefs.SetString("Name5", "Name 5");
+                PlayerPrefs.SetString("Name4", "Name 4");
+                PlayerPrefs.SetString("Name3", "Name 3");
+                PlayerPrefs.SetString("Name2", "Name 2");
+                PlayerPrefs.SetString("Name1", "Name 1"); */       
     }
 
     //Update
@@ -748,6 +748,7 @@ public class Game : MonoBehaviour {
         PlayerHeight();
         DistanceToDanger();
         DynamicScoreSystem();
+        MusicVolume();
 
         if(PlayerPrefs.GetFloat("Highscore5") < ScoreGesamt)
         {
@@ -780,8 +781,7 @@ public class Game : MonoBehaviour {
             SubmitName();
             SubmitButton.SetActive(false);
             InputField.SetActive(false);
-            PlayAgain2.SetActive(true);
-           
+            Panel2.SetActive(true);
         }
     }
 
@@ -1008,6 +1008,13 @@ public class Game : MonoBehaviour {
     public void MouseHover() 
     {
         AkSoundEngine.PostEvent("ButtonClick", gameObject);
+    }
+
+    void MusicVolume()
+    {
+        float musicVolume = VolumeSlider.GetComponent<Slider>().value;
+        AkSoundEngine.SetRTPCValue("MusicVolume", musicVolume);
+       
     }
 
     void GodMode()
