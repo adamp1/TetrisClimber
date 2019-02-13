@@ -89,7 +89,6 @@ public class Game : MonoBehaviour {
     public GameObject GameOverUI;
     public GameObject GameOver2UI;
     public GameObject Panel2;
-    public GameObject SubmitButton;
     public GameObject InputField;
     public GameObject Contrast;
     public GameObject Bloom;
@@ -140,7 +139,7 @@ public class Game : MonoBehaviour {
             GameObject.Find("Name 1").GetComponent<Text>().text = PlayerPrefs.GetString("Name1");
             GameObject.Find("Name 2").GetComponent<Text>().text = PlayerPrefs.GetString("Name2");
             GameObject.Find("Name 3").GetComponent<Text>().text = PlayerPrefs.GetString("Name3");
-             GameObject.Find("Name 4").GetComponent<Text>().text = PlayerPrefs.GetString("Name4");
+            GameObject.Find("Name 4").GetComponent<Text>().text = PlayerPrefs.GetString("Name4");
             GameObject.Find("Name 5").GetComponent<Text>().text = PlayerPrefs.GetString("Name5"); 
         }
         
@@ -165,7 +164,7 @@ public class Game : MonoBehaviour {
                 PlayerPrefs.SetString("Name4", "Name 4");
                 PlayerPrefs.SetString("Name3", "Name 3");
                 PlayerPrefs.SetString("Name2", "Name 2");
-                PlayerPrefs.SetString("Name1", "Name 1");      */
+                PlayerPrefs.SetString("Name1", "Name 1"); */     
     }
 
     //Update
@@ -806,7 +805,7 @@ public class Game : MonoBehaviour {
         if(Input.GetKeyUp(KeyCode.Return) || Input.GetKeyUp("joystick button 9"))
         {
             SubmitName();
-            SubmitButton.SetActive(false);
+            //SubmitButton.SetActive(false);
             InputField.SetActive(false);
             Panel2.SetActive(true);
             Eventsystem.GetComponent<UnityEngine.EventSystems.EventSystem>().SetSelectedGameObject(PlayAgain);
