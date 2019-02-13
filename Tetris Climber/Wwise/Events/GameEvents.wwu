@@ -69,23 +69,13 @@
 				</Event>
 				<Event Name="StartMenuMusic" ID="{2A2DD958-29AE-424F-BBF1-6386B5161B66}">
 					<ChildrenList>
-						<Action Name="" ID="{DA2B6A4F-4DED-4F7E-821C-C67F41FCD7DE}" ShortID="1037151515">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="22"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="playing" ID="{FFFD7453-2DA1-4F7B-807A-B5683A362748}" WorkUnitID="{D7818D9C-8E7D-4E18-B562-C23135CDEF4F}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
 						<Action Name="" ID="{D49C627F-9A0A-4AB4-9FBC-28946B540EE4}" ShortID="423142973">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="MenuMusic" ID="{C7FA7F8C-12EB-43DE-A2A8-2D876F105801}" WorkUnitID="{14690D2B-5BA9-469C-B9A6-B38D4259CA25}"/>
+									<ObjectRef Name="MenuMusic" ID="{2919CFD2-8DAD-43D0-8292-4DAD5DAAEE9A}" WorkUnitID="{14690D2B-5BA9-469C-B9A6-B38D4259CA25}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -93,24 +83,13 @@
 				</Event>
 				<Event Name="StopMenuMusic" ID="{576E5781-00B1-4E7C-8D6E-2AAF8AE0A9C9}">
 					<ChildrenList>
-						<Action Name="" ID="{23F4615F-9E50-4223-85A4-891E2456B5FE}" ShortID="714306701">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="22"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="leaving" ID="{2E8C1FEA-6882-4492-BD3A-A5F51F4518E2}" WorkUnitID="{D7818D9C-8E7D-4E18-B562-C23135CDEF4F}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
 						<Action Name="" ID="{B6F781F4-5A5C-43FD-80DF-9CA02AD34A8C}" ShortID="404734422">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
-								<Property Name="Delay" Type="Real64" Value="5"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="MenuMusic" ID="{C7FA7F8C-12EB-43DE-A2A8-2D876F105801}" WorkUnitID="{14690D2B-5BA9-469C-B9A6-B38D4259CA25}"/>
+									<ObjectRef Name="MenuMusic" ID="{2919CFD2-8DAD-43D0-8292-4DAD5DAAEE9A}" WorkUnitID="{14690D2B-5BA9-469C-B9A6-B38D4259CA25}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

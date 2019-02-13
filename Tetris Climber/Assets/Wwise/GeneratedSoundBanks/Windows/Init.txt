@@ -4,7 +4,6 @@ State Group	ID	Name			Wwise Object Path	Notes
 State	ID	Name	State Group			Notes
 	0	None	PlayState			
 	1852808225	Playing	PlayState			
-	2607556080	Menu	PlayState			
 	3856304344	Pausing	PlayState			
 
 Audio Bus	ID	Name			Wwise Object Path	Notes

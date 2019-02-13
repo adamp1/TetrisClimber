@@ -36,6 +36,10 @@
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
+							<GameParameterRef Name="MusicVolume" ID="{0DB77A4E-5F6C-4509-9C6E-22D8A993A05B}"/>
+							<Value>0.766442953020134</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="Danger" ID="{4A44F32B-CB66-4696-B8B7-C5B140DEAD69}"/>
 							<Value>7</Value>
 						</RTPCValue>

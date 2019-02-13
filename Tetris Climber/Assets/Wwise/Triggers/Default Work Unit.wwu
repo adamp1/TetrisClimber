@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{CDD11CD9-3BC7-44E3-BB10-DC0CE6082420}" SchemaVersion="89">
 	<Triggers>
-		<WorkUnit Name="Default Work Unit" ID="{CDD11CD9-3BC7-44E3-BB10-DC0CE6082420}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{CDD11CD9-3BC7-44E3-BB10-DC0CE6082420}" PersistMode="Standalone">
+			<ChildrenList>
+				<Trigger Name="EndLoop" ID="{E470BACF-943B-4A9C-A93D-BAEEA35C18EF}"/>
+			</ChildrenList>
+		</WorkUnit>
 	</Triggers>
 </WwiseDocument>

@@ -66,9 +66,9 @@
 					<ShortName>Glitch03_v1_01.wav</ShortName>
 					<Path>SFX\Glitch03_v1_01_CB1F3167.wem</Path>
 				</File>
-				<File Id="255426623" Language="SFX">
-					<ShortName>Outro_01.wav_01.wav</ShortName>
-					<Path>SFX\Outro_01.wav_01_CB1F3167.wem</Path>
+				<File Id="273782971" Language="SFX">
+					<ShortName>Laser_v2.wav</ShortName>
+					<Path>SFX\Laser_v2_CB1F3167.wem</Path>
 				</File>
 				<File Id="274342202" Language="SFX">
 					<ShortName>FootStep_07.wav</ShortName>
@@ -205,10 +205,6 @@
 				<File Id="931732886" Language="SFX">
 					<ShortName>Drums03_v1_01.wav</ShortName>
 					<Path>SFX\Drums03_v1_01_CB1F3167.wem</Path>
-				</File>
-				<File Id="935250761" Language="SFX">
-					<ShortName>Laser.wav</ShortName>
-					<Path>SFX\Laser_E5554007.wem</Path>
 				</File>
 				<File Id="1012470945" Language="SFX">
 					<ShortName>sfx_destroyBlock_06.wav</ShortName>
