@@ -16258,6 +16258,22 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5886738394551263880, guid: a17fa451c9aaa8a429d70df6bfb16221,
+        type: 3}
+      propertyPath: m_VideoClip
+      value: 
+      objectReference: {fileID: 32900000, guid: 45f17f81fe8323c44a9f9019f00707fc,
+        type: 3}
+    - target: {fileID: 5886738394551263881, guid: a17fa451c9aaa8a429d70df6bfb16221,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.9271011
+      objectReference: {fileID: 0}
+    - target: {fileID: 5886738394551263882, guid: a17fa451c9aaa8a429d70df6bfb16221,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 811f061754aee754180e237b8e260bba, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a17fa451c9aaa8a429d70df6bfb16221, type: 3}
 --- !u!1001 &5696030681462519161
