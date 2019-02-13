@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Game : MonoBehaviour {
 
+
     //AudioSource Soundtrack;
 
     //Variables
@@ -89,6 +90,8 @@ public class Game : MonoBehaviour {
     public GameObject SubmitButton;
     public GameObject InputField;
     public GameObject VolumeSlider;
+    public GameObject Eventsystem;
+    public GameObject PlayAgain;
 
     GameObject Player;
     GameObject Deathcollider;
@@ -144,17 +147,17 @@ public class Game : MonoBehaviour {
 
         SpawnNextPrefab();
 
-        /*       PlayerPrefs.SetFloat("Highscore5", 0);
-                  PlayerPrefs.SetFloat("Highscore4", 0);
-                  PlayerPrefs.SetFloat("Highscore3", 0);
-                  PlayerPrefs.SetFloat("Highscore2", 0);
-                  PlayerPrefs.SetFloat("Highscore1", 0);
+           /*  PlayerPrefs.SetFloat("Highscore5", 0);
+               PlayerPrefs.SetFloat("Highscore4", 0);
+               PlayerPrefs.SetFloat("Highscore3", 0);
+               PlayerPrefs.SetFloat("Highscore2", 0);
+               PlayerPrefs.SetFloat("Highscore1", 0);
 
                 PlayerPrefs.SetString("Name5", "Name 5");
                 PlayerPrefs.SetString("Name4", "Name 4");
                 PlayerPrefs.SetString("Name3", "Name 3");
                 PlayerPrefs.SetString("Name2", "Name 2");
-                PlayerPrefs.SetString("Name1", "Name 1"); */       
+                PlayerPrefs.SetString("Name1", "Name 1");      */
     }
 
     //Update
@@ -178,7 +181,8 @@ public class Game : MonoBehaviour {
             MoveSpawnerToPlayer();
             UpdateMenu();
             UpdateMinoPos();
-            
+            //Stupid           
+
         }
         else
         {           
@@ -192,8 +196,10 @@ public class Game : MonoBehaviour {
             else
             {
                 GameOver2();
-                //Debug.Log("Game Over2");
+                //Debug.Log("Game Over2");               
             }
+
+            SubmitThisShit();
         }
     }
 
@@ -776,16 +782,46 @@ public class Game : MonoBehaviour {
 
     public void SubmitNameShortcut()
     {
-        Debug.Log("WORKS");
-        if(Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown("joystick button 9"))
+        if(Input.GetKeyUp(KeyCode.Return) || Input.GetKeyUp("joystick button 9"))
         {
-            Debug.Log("hey");
             SubmitName();
             SubmitButton.SetActive(false);
             InputField.SetActive(false);
             Panel2.SetActive(true);
+            Eventsystem.GetComponent<UnityEngine.EventSystems.EventSystem>().SetSelectedGameObject(PlayAgain);
+            
         }
+
     }
+
+    public void SubmitThisShit()
+    {
+        if(PlayAgain.activeInHierarchy)
+        {
+            if (Input.GetKeyDown(KeyCode.Return) && Eventsystem.GetComponent<UnityEngine.EventSystems.EventSystem>().currentSelectedGameObject == PlayAgain || Input.GetKeyDown("joystick button 9") && Eventsystem.GetComponent<UnityEngine.EventSystems.EventSystem>().currentSelectedGameObject == PlayAgain)
+            {
+                Restart();                
+            }
+
+            if (Input.GetKeyDown(KeyCode.Return) && Eventsystem.GetComponent<UnityEngine.EventSystems.EventSystem>().currentSelectedGameObject == GameObject.Find("Quit") || Input.GetKeyDown("joystick button 9") && Eventsystem.GetComponent<UnityEngine.EventSystems.EventSystem>().currentSelectedGameObject == GameObject.Find("Quit"))
+            {
+                MainMenu();
+            }
+
+            if (Input.GetAxis("Vertical") < 0)
+            {
+                Eventsystem.GetComponent<UnityEngine.EventSystems.EventSystem>().SetSelectedGameObject(GameObject.Find("Quit"));
+            }
+
+            if (Input.GetAxis("Vertical") > 0)
+            {
+                Eventsystem.GetComponent<UnityEngine.EventSystems.EventSystem>().SetSelectedGameObject(PlayAgain );
+            }
+
+        }
+       
+    }
+
 
     public void Continue()
     {
