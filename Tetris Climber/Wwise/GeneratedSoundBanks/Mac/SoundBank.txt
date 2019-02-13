@@ -28,6 +28,7 @@ Custom State	ID	Name	State Group	Owner		Notes
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	1090009724	BGM_PlaybackSpeed			\Default Work Unit\BGM_PlaybackSpeed	
+	2346531308	MusicVolume			\Default Work Unit\MusicVolume	
 	4174463524	Danger			\Default Work Unit\Danger	
 
 Effect plug-ins	ID	Name	Type				Notes
@@ -39,53 +40,43 @@ Effect plug-ins	ID	Name	Type				Notes
 	1889231423	LaserGain	Wwise Gain			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	3263297	Jump_01	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\Jump_01_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\Jump\Jump_01		2576
-	25369643	Jump_03	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\Jump_03_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\Jump\Jump_03		2560
-	67631447	Glitch01_v1_01	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\Glitch02_v1_01_CB1F3167.wem		\Interactive Music Hierarchy\BackgroundMusic\MenuMusic\Start\Loop\Glitch01_v1_01		82106
-	80948791	SFX_Squished_001	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\SFX_Squished_001_BA26AE0B.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\DeathSounds\SFX_Squished_001		13016
-	98158388	Glitch01_v1_01	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\Glitch01_v1_01_CB1F3167.wem		\Interactive Music Hierarchy\BackgroundMusic\MenuMusic\Start\Loop\Glitch01_v1_01		56615
-	149838036	sfx_destroyBlock_07	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\sfx_destroyBlock_07_D7B82BD1.wem		\Actor-Mixer Hierarchy\Default Work Unit\ObjectSFX\DestroyBlock\sfx_destroyBlock_07		15842
-	226584871	Glitch01_v1_01	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\Glitch03_v1_01_CB1F3167.wem		\Interactive Music Hierarchy\BackgroundMusic\MenuMusic\Start\Loop\Glitch01_v1_01		73170
-	255426623	Outro_01_wav_01	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\Outro_01.wav_01_CB1F3167.wem		\Interactive Music Hierarchy\BackgroundMusic\MenuMusic\Outro\Outro_01_wav_01		38063
-	274342202	FootStep_07	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\FootStep_07_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\FootSteps\FootStep_07		5057
-	344996841	Inserts_1	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\Inserts_2.mp3_CB1F3167.wem		\Interactive Music Hierarchy\BackgroundMusic\BackgroundMusic\Loop\Inserts_1		44813
-	360434965	sfx_destroyBlock_09	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\sfx_destroyBlock_09_B82ED906.wem		\Actor-Mixer Hierarchy\Default Work Unit\ObjectSFX\DestroyBlock\sfx_destroyBlock_09		15558
-	360456243	BG-Noise_v1_01	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\BG-Noise_v1_01_CB1F3167.wem		\Interactive Music Hierarchy\BackgroundMusic\MenuMusic\Start\Loop\BG-Noise_v1_01		56674
-	397942640	Scuff_05	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\Scuff_05_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\Scuff\Scuff_05		3595
-	399191169	Game_v2_7	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\Game_v2.7_CB1F3167.wem		\Interactive Music Hierarchy\BackgroundMusic\BackgroundMusic\Intro\Game_v2_7		443830
-	414834681	sfx_destroyBlock_02	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\sfx_destroyBlock_02_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\ObjectSFX\DestroyBlock\sfx_destroyBlock_02		19440
-	430546196	Drums01_v1_01	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\Drums02_v1_01_CB1F3167.wem		\Interactive Music Hierarchy\BackgroundMusic\MenuMusic\Start\Loop\Drums01_v1_01		84558
-	433066933	sfx_destroyBlock_01	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\sfx_destroyBlock_01_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\ObjectSFX\DestroyBlock\sfx_destroyBlock_01		16047
-	453819133	Jump_02	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\Jump_02_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\Jump\Jump_02		2923
-	480420654	FootStep_03	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\FootStep_03_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\FootSteps\FootStep_03		4823
-	496301193	FootStep_01	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\FootStep_01_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\FootSteps\FootStep_01		4065
-	508723006	DieByLaser	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\DieByLaser_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\DeathSounds\DieByLaser		37339
-	521772524	PercussiveCloud_v1_01	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\PercussiveCloud_v1_01_CB1F3167.wem		\Interactive Music Hierarchy\BackgroundMusic\MenuMusic\Start\Loop\PercussiveCloud_v1_01		79378
-	547703658	Scuff_01	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\Scuff_01_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\Scuff\Scuff_01		5045
-	552534133	sfx_destroyBlock_08	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\sfx_destroyBlock_08_E4274FC2.wem		\Actor-Mixer Hierarchy\Default Work Unit\ObjectSFX\DestroyBlock\sfx_destroyBlock_08		18416
-	585752603	sword_1	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\sword_1_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\Sword_Swing\sword_1		4431
-	631715993	Scuff_04	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\Scuff_04_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\Scuff\Scuff_04		5295
-	635072450	sword_2	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\sword_2_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\Sword_Swing\sword_2		3131
-	638066440	DangerLevel	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\DangerSound_v3_CB1F3167.wem		\Interactive Music Hierarchy\BackgroundMusic\BackgroundMusic\Loop\DangerLevel		676895
-	638468395	DieByNano	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\Die_08DA7031.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\DeathSounds\DieByNano		38945
-	642461171	FootStep_06	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\FootStep_06_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\FootSteps\FootStep_06		4711
-	706580612	SFX_Menu_ButtonSwitching_001	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\SFX_Menu_ButtonSwitching_001_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\GameSFX\SFX_Menu_ButtonSwitching_001		2384
-	737510309	sfx_destroyBlock_04	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\sfx_destroyBlock_04_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\ObjectSFX\DestroyBlock\sfx_destroyBlock_04		22634
-	769991994	Inserts_1	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\Inserts_3.mp3_CB1F3167.wem		\Interactive Music Hierarchy\BackgroundMusic\BackgroundMusic\Loop\Inserts_1		112192
-	774133020	sfx_destroyBlock_03	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\sfx_destroyBlock_03_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\ObjectSFX\DestroyBlock\sfx_destroyBlock_03		14660
-	796183027	SFX_Jump_001	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\SFX_Jump_001_C1752865.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\SFX_Jump_001		5802
-	818350625	FootStep_02	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\FootStep_02_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\FootSteps\FootStep_02		4416
-	837590637	Inserts_1	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\Inserts_1.mp3_CB1F3167.wem		\Interactive Music Hierarchy\BackgroundMusic\BackgroundMusic\Loop\Inserts_1		105646
-	872705618	SFX_Menu_SelectOption_001	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\SFX_Menu_SelectOption_001_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\GameSFX\SFX_Menu_SelectOption_001		8573
-	900299826	Scuff_02	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\Scuff_02_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\Scuff\Scuff_02		5149
-	919284918	Drums01_v1_01	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\Drums01_v1_01_CB1F3167.wem		\Interactive Music Hierarchy\BackgroundMusic\MenuMusic\Start\Loop\Drums01_v1_01		83069
-	920971337	FootStep_04	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\FootStep_04_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\FootSteps\FootStep_04		3725
-	931732886	Drums01_v1_01	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\Drums03_v1_01_CB1F3167.wem		\Interactive Music Hierarchy\BackgroundMusic\MenuMusic\Start\Loop\Drums01_v1_01		86093
-	935250761	Laser	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\Laser_E5554007.wem		\Actor-Mixer Hierarchy\Default Work Unit\ObjectSFX\Laser		23861
-	1012470945	sfx_destroyBlock_06	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\sfx_destroyBlock_06_E1A4546A.wem		\Actor-Mixer Hierarchy\Default Work Unit\ObjectSFX\DestroyBlock\sfx_destroyBlock_06		12959
-	1015403401	FootStep_05	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\FootStep_05_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\FootSteps\FootStep_05		4688
-	1030191636	Intro_01_wav_01	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\Intro_01.wav_01_CB1F3167.wem		\Interactive Music Hierarchy\BackgroundMusic\MenuMusic\Start\Intro\Intro_01_wav_01		84542
-	1041379320	Game_v2_8	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\Game_v2.8_CB1F3167.wem		\Interactive Music Hierarchy\BackgroundMusic\BackgroundMusic\Loop\Game_v2_8		897035
-	1052188596	Scuff_03	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\Scuff_03_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\Scuff\Scuff_03		5305
-	1057746592	sfx_destroyBlock_05	C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\SFX\sfx_destroyBlock_05_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\ObjectSFX\DestroyBlock\sfx_destroyBlock_05		16735
+	3263297	Jump_01	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Mac\SFX\Jump_01_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\Jump\Jump_01		2576
+	25369643	Jump_03	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Mac\SFX\Jump_03_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\Jump\Jump_03		2560
+	80948791	SFX_Squished_001	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Mac\SFX\SFX_Squished_001_BA26AE0B.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\DeathSounds\SFX_Squished_001		13016
+	149838036	sfx_destroyBlock_07	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Mac\SFX\sfx_destroyBlock_07_6FA03250.wem		\Actor-Mixer Hierarchy\Default Work Unit\ObjectSFX\DestroyBlock\sfx_destroyBlock_07		15842
+	274342202	FootStep_07	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Mac\SFX\FootStep_07_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\FootSteps\FootStep_07		5057
+	344996841	Inserts_1	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Mac\SFX\Inserts_2.mp3_CB1F3167.wem		\Interactive Music Hierarchy\BackgroundMusic\BackgroundMusic\Loop\Inserts_1		44813
+	360434965	sfx_destroyBlock_09	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Mac\SFX\sfx_destroyBlock_09_8394B6B1.wem		\Actor-Mixer Hierarchy\Default Work Unit\ObjectSFX\DestroyBlock\sfx_destroyBlock_09		15558
+	397942640	Scuff_05	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Mac\SFX\Scuff_05_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\Scuff\Scuff_05		3595
+	399191169	Game_v2_7	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Mac\SFX\Game_v2.7_CB1F3167.wem		\Interactive Music Hierarchy\BackgroundMusic\BackgroundMusic\Intro\Game_v2_7		443830
+	414834681	sfx_destroyBlock_02	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Mac\SFX\sfx_destroyBlock_02_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\ObjectSFX\DestroyBlock\sfx_destroyBlock_02		19440
+	433066933	sfx_destroyBlock_01	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Mac\SFX\sfx_destroyBlock_01_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\ObjectSFX\DestroyBlock\sfx_destroyBlock_01		16047
+	453819133	Jump_02	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Mac\SFX\Jump_02_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\Jump\Jump_02		2923
+	480420654	FootStep_03	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Mac\SFX\FootStep_03_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\FootSteps\FootStep_03		4823
+	496301193	FootStep_01	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Mac\SFX\FootStep_01_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\FootSteps\FootStep_01		4065
+	508723006	DieByLaser	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Mac\SFX\DieByLaser_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\DeathSounds\DieByLaser		37339
+	547703658	Scuff_01	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Mac\SFX\Scuff_01_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\Scuff\Scuff_01		5045
+	552534133	sfx_destroyBlock_08	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Mac\SFX\sfx_destroyBlock_08_E4274FC2.wem		\Actor-Mixer Hierarchy\Default Work Unit\ObjectSFX\DestroyBlock\sfx_destroyBlock_08		18416
+	585752603	sword_1	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Mac\SFX\sword_1_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\Sword_Swing\sword_1		4431
+	631715993	Scuff_04	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Mac\SFX\Scuff_04_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\Scuff\Scuff_04		5295
+	635072450	sword_2	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Mac\SFX\sword_2_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\Sword_Swing\sword_2		3131
+	638066440	DangerLevel	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Mac\SFX\DangerSound_v3_CB1F3167.wem		\Interactive Music Hierarchy\BackgroundMusic\BackgroundMusic\Loop\DangerLevel		676895
+	638468395	DieByNano	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Mac\SFX\Die_133746D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\DeathSounds\DieByNano		38945
+	642461171	FootStep_06	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Mac\SFX\FootStep_06_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\FootSteps\FootStep_06		4711
+	706580612	SFX_Menu_ButtonSwitching_001	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Mac\SFX\SFX_Menu_ButtonSwitching_001_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\GameSFX\SFX_Menu_ButtonSwitching_001		2384
+	737510309	sfx_destroyBlock_04	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Mac\SFX\sfx_destroyBlock_04_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\ObjectSFX\DestroyBlock\sfx_destroyBlock_04		22634
+	769991994	Inserts_1	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Mac\SFX\Inserts_3.mp3_CB1F3167.wem		\Interactive Music Hierarchy\BackgroundMusic\BackgroundMusic\Loop\Inserts_1		112192
+	774133020	sfx_destroyBlock_03	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Mac\SFX\sfx_destroyBlock_03_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\ObjectSFX\DestroyBlock\sfx_destroyBlock_03		14660
+	796183027	SFX_Jump_001	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Mac\SFX\SFX_Jump_001_9A81F93A.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\SFX_Jump_001		5802
+	818350625	FootStep_02	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Mac\SFX\FootStep_02_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\FootSteps\FootStep_02		4416
+	837590637	Inserts_1	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Mac\SFX\Inserts_1.mp3_CB1F3167.wem		\Interactive Music Hierarchy\BackgroundMusic\BackgroundMusic\Loop\Inserts_1		105646
+	872705618	SFX_Menu_SelectOption_001	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Mac\SFX\SFX_Menu_SelectOption_001_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\GameSFX\SFX_Menu_SelectOption_001		8573
+	900299826	Scuff_02	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Mac\SFX\Scuff_02_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\Scuff\Scuff_02		5149
+	920971337	FootStep_04	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Mac\SFX\FootStep_04_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\FootSteps\FootStep_04		3725
+	935250761	Laser	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Mac\SFX\Laser_E5554007.wem		\Actor-Mixer Hierarchy\Default Work Unit\ObjectSFX\Laser		23861
+	1012470945	sfx_destroyBlock_06	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Mac\SFX\sfx_destroyBlock_06_E1A4546A.wem		\Actor-Mixer Hierarchy\Default Work Unit\ObjectSFX\DestroyBlock\sfx_destroyBlock_06		12959
+	1015403401	FootStep_05	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Mac\SFX\FootStep_05_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\FootSteps\FootStep_05		4688
+	1041379320	Game_v2_8	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Mac\SFX\Game_v2.8_CB1F3167.wem		\Interactive Music Hierarchy\BackgroundMusic\BackgroundMusic\Loop\Game_v2_8		897035
+	1052188596	Scuff_03	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Mac\SFX\Scuff_03_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerSFX\Scuff\Scuff_03		5305
+	1057746592	sfx_destroyBlock_05	Y:\Documents\Projekte\TetrisClimber\wwiseIntegration\Wwise\.cache\Mac\SFX\sfx_destroyBlock_05_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\ObjectSFX\DestroyBlock\sfx_destroyBlock_05		16735
 

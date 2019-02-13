@@ -46,6 +46,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Land" ID="{3C2C5BE4-178F-4993-A3B0-E79925AB665F}">
+					<ChildrenList>
+						<Action Name="" ID="{899E81FD-AEA9-41D3-93C8-2F503A9F3A2D}" ShortID="879247815">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Scuff" ID="{D6227C58-A73D-43DA-8AD4-A86BF6FB2D00}" WorkUnitID="{A3FB5ABD-58BE-4F99-A897-3BB3D9562A49}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

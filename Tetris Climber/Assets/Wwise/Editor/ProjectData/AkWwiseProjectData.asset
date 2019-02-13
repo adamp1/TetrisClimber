@@ -16,13 +16,13 @@ MonoBehaviour:
   - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 78bb5febc9cc7d43988f0ae121a93d32
-    m_lastTime: -8586523181274775808
+    m_lastTime: -8586517082764775808
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: c7b0d559d5cb444cafdbac8e703bac41
-    m_lastTime: -8586523181274775808
+    m_lastTime: -8586517082764775808
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
@@ -43,7 +43,7 @@ MonoBehaviour:
   - PhysicalPath: Events\Deaths.wwu
     ParentPhysicalPath: Events\PlayerEvents.wwu
     guid: cf0b5f03d95bbd46b9d1381957ca9f71
-    m_lastTime: -8586517160296275808
+    m_lastTime: -8586517082764775808
     List:
     - name: generalDeath
       guid: aafddfc47d33c44089b0b598baa987fa
@@ -112,7 +112,7 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 03a87bd2e8187044b561d12f974b5065
-    m_lastTime: -8586523181274775808
+    m_lastTime: -8586517082764775808
     List: []
   - PhysicalPath: Events\GameEvents.wwu
     ParentPhysicalPath: Events\Default Work Unit.wwu
@@ -192,7 +192,7 @@ MonoBehaviour:
   - PhysicalPath: Events\PlayerEvents.wwu
     ParentPhysicalPath: Events\Default Work Unit.wwu
     guid: 3edc4fd5b3cc83478f33141f6589d675
-    m_lastTime: -8586517167763830022
+    m_lastTime: -8586517082764775808
     List:
     - name: FootStep
       guid: 52a6347d1661b243876dc9513d52cc46
@@ -253,7 +253,7 @@ MonoBehaviour:
   - PhysicalPath: Events\SoundEvents.wwu
     ParentPhysicalPath: Events\Default Work Unit.wwu
     guid: 9e4f64052ac6b044b7fc6978647153a1
-    m_lastTime: -8586522423764585233
+    m_lastTime: -8586517082764775808
     List:
     - name: DestroyBlock
       guid: 575e79eaa9f48743a7f7fe559e6932c6
@@ -287,7 +287,7 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 37a3588abcb24e408cccada5157ef448
-    m_lastTime: -8586523181274775808
+    m_lastTime: -8586517082764775808
     List:
     - name: BGM_PlaybackSpeed
       guid: 5d77a1892ef6494aba56dc79790b9d21
@@ -307,40 +307,21 @@ MonoBehaviour:
       - ElementName: Danger
         ObjectType: 13
       Path: Default Work Unit\Danger
+    - name: MusicVolume
+      guid: 4e7ab70d6c5f09459c6e22d8a993a05b
+      id: 2346531308
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MusicVolume
+        ObjectType: 13
+      Path: Default Work Unit\MusicVolume
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 9c8d81d77d8e184eb562c23135cdef4f
-    m_lastTime: -8586517143463175808
+    m_lastTime: -8586517082764775808
     List:
-    - name: MenuState
-      guid: 9a34d39defecb6448f084a50af423811
-      id: 1548586727
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: MenuState
-        ObjectType: 9
-      Path: Default Work Unit\MenuState
-      values:
-      - name: leaving
-        guid: ea1f8c2e82689244bd3aa5f51f4518e2
-        id: 3551938303
-        PathAndIcons:
-        - ElementName: leaving
-          ObjectType: 8
-      - name: None
-        guid: 51edcaa111dec644a9a3f78514427cc9
-        id: 748895195
-        PathAndIcons:
-        - ElementName: None
-          ObjectType: 8
-      - name: playing
-        guid: 5374fdffa12d7b4f807ab5683a362748
-        id: 1852808225
-        PathAndIcons:
-        - ElementName: playing
-          ObjectType: 8
     - name: PlayState
       guid: 3bbd3ef1d24a584187900de94f098d58
       id: 2372318522
@@ -373,13 +354,13 @@ MonoBehaviour:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: cc578b8dea049e42928a5021bda7241e
-    m_lastTime: -8586523181274775808
+    m_lastTime: -8586517082764775808
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: d91cd1cdc73be344bb10dc0ce6082420
-    m_lastTime: -8586517167758113334
+    m_lastTime: -8586517082764775808
     List:
     - name: EndLoop
       guid: cfba70e43b949c4aa93dbaeea35c18ef
