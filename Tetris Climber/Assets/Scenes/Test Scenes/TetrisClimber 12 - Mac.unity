@@ -306,7 +306,7 @@ ParticleSystem:
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
-  useRigidbodyForVelocity: 1
+  useRigidbodyForVelocity: 0
   startDelay:
     serializedVersion: 2
     minMaxState: 0
@@ -4079,7 +4079,7 @@ ParticleSystem:
     maxLights: 20
   TrailModule:
     enabled: 1
-    mode: 0
+    mode: 1
     ratio: 1
     lifetime:
       serializedVersion: 2
@@ -4136,7 +4136,7 @@ ParticleSystem:
         m_RotationOrder: 4
     minVertexDistance: 0.2
     textureMode: 0
-    ribbonCount: 1
+    ribbonCount: 10
     shadowBias: 0.5
     worldSpace: 0
     dieWithParticles: 1
@@ -4145,7 +4145,7 @@ ParticleSystem:
     inheritParticleColor: 1
     generateLightingData: 0
     splitSubEmitterRibbons: 0
-    attachRibbonsToTransform: 1
+    attachRibbonsToTransform: 0
     colorOverLifetime:
       serializedVersion: 2
       minMaxState: 0
@@ -20767,7 +20767,7 @@ PrefabInstance:
     - target: {fileID: 6547185944731269635, guid: de1ebf98e34bef045b552eefa69560ed,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.95
+      value: -0.44
       objectReference: {fileID: 0}
     - target: {fileID: 5727591035873480764, guid: de1ebf98e34bef045b552eefa69560ed,
         type: 3}
