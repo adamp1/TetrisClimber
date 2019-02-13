@@ -59,7 +59,7 @@ public class Game : MonoBehaviour {
     public float FallingSpeedMultiplikator = 1;
    
     public static int gridWidth = 16;
-    public static int gridHeight = 500;
+    public static int gridHeight = 1000;
 
     public static Transform[,] grid = new Transform[gridWidth, gridHeight];
     [Space]
