@@ -16419,6 +16419,11 @@ PrefabInstance:
       propertyPath: EnergyRecovery
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 2353856795300000781, guid: de1ebf98e34bef045b552eefa69560ed,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 360972199, guid: de1ebf98e34bef045b552eefa69560ed, type: 3}
     - {fileID: 1884626484070803310, guid: de1ebf98e34bef045b552eefa69560ed, type: 3}
