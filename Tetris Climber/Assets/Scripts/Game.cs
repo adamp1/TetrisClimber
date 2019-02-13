@@ -69,7 +69,7 @@ public class Game : MonoBehaviour {
     public GameObject LaserPrefab;
     GameObject[] BlockageObject = new GameObject[40];
     GameObject LaserSpawner;
-
+    
     int prefabRepeat = 9;
     bool spawnPrefab;
     bool startGame;
@@ -173,7 +173,7 @@ public class Game : MonoBehaviour {
 
             CheckBlockagePosition();
 
-            if (Player.transform.position.y > BlockageObject[NrBlockages].transform.position.y)
+            if (Player.transform.position.y > BlockageObject[NrBlockages].transform.position.y && BlockageObject[NrBlockages+1] != null)
             {
                 NrBlockages++;
             }
@@ -659,6 +659,11 @@ public class Game : MonoBehaviour {
             {
                 spawnBlocksLeftOrRight = 2;
             }
+        }
+
+        if(BlockageObject[NrBlockages + 1] == null)
+        {
+            spawnBlocksLeftOrRight = 2;
         }
     }
 
