@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="11" SoundbankVersion="132">
 	<RootPaths>
-		<ProjectRoot>C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>/Users/benjaminfeder/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Documents/Projekte/TetrisClimber/wwiseIntegration/Wwise/</ProjectRoot>
+		<SourceFilesRoot>/Users/benjaminfeder/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Documents/Projekte/TetrisClimber/wwiseIntegration/Wwise/.cache/Mac/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/benjaminfeder/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Documents/Projekte/TetrisClimber/wwiseIntegration/Wwise/GeneratedSoundBanks/Mac/</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\Adam.Wankowski\Desktop\TetrisClimber - Kopie\Tetris Climber\Wwise\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>/Users/benjaminfeder/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Documents/Projekte/TetrisClimber/wwiseIntegration/Wwise/GeneratedSoundBanks/Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -40,199 +40,159 @@
 			<IncludedMemoryFiles>
 				<File Id="3263297" Language="SFX">
 					<ShortName>Jump_01.wav</ShortName>
-					<Path>SFX\Jump_01_A1793BE9.wem</Path>
+					<Path>SFX/Jump_01_A1793BE9.wem</Path>
 				</File>
 				<File Id="25369643" Language="SFX">
 					<ShortName>Jump_03.wav</ShortName>
-					<Path>SFX\Jump_03_A1793BE9.wem</Path>
-				</File>
-				<File Id="67631447" Language="SFX">
-					<ShortName>Glitch02_v1_01.wav</ShortName>
-					<Path>SFX\Glitch02_v1_01_CB1F3167.wem</Path>
+					<Path>SFX/Jump_03_A1793BE9.wem</Path>
 				</File>
 				<File Id="80948791" Language="SFX">
 					<ShortName>SFX_Squished_001.wav</ShortName>
-					<Path>SFX\SFX_Squished_001_BA26AE0B.wem</Path>
-				</File>
-				<File Id="98158388" Language="SFX">
-					<ShortName>Glitch01_v1_01.wav</ShortName>
-					<Path>SFX\Glitch01_v1_01_CB1F3167.wem</Path>
+					<Path>SFX/SFX_Squished_001_BA26AE0B.wem</Path>
 				</File>
 				<File Id="149838036" Language="SFX">
 					<ShortName>sfx_destroyBlock_07.wav</ShortName>
-					<Path>SFX\sfx_destroyBlock_07_D7B82BD1.wem</Path>
-				</File>
-				<File Id="226584871" Language="SFX">
-					<ShortName>Glitch03_v1_01.wav</ShortName>
-					<Path>SFX\Glitch03_v1_01_CB1F3167.wem</Path>
-				</File>
-				<File Id="255426623" Language="SFX">
-					<ShortName>Outro_01.wav_01.wav</ShortName>
-					<Path>SFX\Outro_01.wav_01_CB1F3167.wem</Path>
+					<Path>SFX/sfx_destroyBlock_07_6FA03250.wem</Path>
 				</File>
 				<File Id="274342202" Language="SFX">
 					<ShortName>FootStep_07.wav</ShortName>
-					<Path>SFX\FootStep_07_A1793BE9.wem</Path>
+					<Path>SFX/FootStep_07_A1793BE9.wem</Path>
 				</File>
 				<File Id="344996841" Language="SFX">
 					<ShortName>Inserts_2.mp3.wav</ShortName>
-					<Path>SFX\Inserts_2.mp3_CB1F3167.wem</Path>
+					<Path>SFX/Inserts_2.mp3_CB1F3167.wem</Path>
 				</File>
 				<File Id="360434965" Language="SFX">
 					<ShortName>sfx_destroyBlock_09.wav</ShortName>
-					<Path>SFX\sfx_destroyBlock_09_B82ED906.wem</Path>
-				</File>
-				<File Id="360456243" Language="SFX">
-					<ShortName>BG-Noise_v1_01.wav</ShortName>
-					<Path>SFX\BG-Noise_v1_01_CB1F3167.wem</Path>
+					<Path>SFX/sfx_destroyBlock_09_8394B6B1.wem</Path>
 				</File>
 				<File Id="397942640" Language="SFX">
 					<ShortName>Scuff_05.wav</ShortName>
-					<Path>SFX\Scuff_05_A1793BE9.wem</Path>
+					<Path>SFX/Scuff_05_A1793BE9.wem</Path>
 				</File>
 				<File Id="399191169" Language="SFX">
 					<ShortName>Game_v2.7.wav</ShortName>
-					<Path>SFX\Game_v2.7_CB1F3167.wem</Path>
+					<Path>SFX/Game_v2.7_CB1F3167.wem</Path>
 				</File>
 				<File Id="414834681" Language="SFX">
 					<ShortName>sfx_destroyBlock_02.wav</ShortName>
-					<Path>SFX\sfx_destroyBlock_02_A1793BE9.wem</Path>
-				</File>
-				<File Id="430546196" Language="SFX">
-					<ShortName>Drums02_v1_01.wav</ShortName>
-					<Path>SFX\Drums02_v1_01_CB1F3167.wem</Path>
+					<Path>SFX/sfx_destroyBlock_02_A1793BE9.wem</Path>
 				</File>
 				<File Id="433066933" Language="SFX">
 					<ShortName>sfx_destroyBlock_01.wav</ShortName>
-					<Path>SFX\sfx_destroyBlock_01_A1793BE9.wem</Path>
+					<Path>SFX/sfx_destroyBlock_01_A1793BE9.wem</Path>
 				</File>
 				<File Id="453819133" Language="SFX">
 					<ShortName>Jump_02.wav</ShortName>
-					<Path>SFX\Jump_02_A1793BE9.wem</Path>
+					<Path>SFX/Jump_02_A1793BE9.wem</Path>
 				</File>
 				<File Id="480420654" Language="SFX">
 					<ShortName>FootStep_03.wav</ShortName>
-					<Path>SFX\FootStep_03_A1793BE9.wem</Path>
+					<Path>SFX/FootStep_03_A1793BE9.wem</Path>
 				</File>
 				<File Id="496301193" Language="SFX">
 					<ShortName>FootStep_01.wav</ShortName>
-					<Path>SFX\FootStep_01_A1793BE9.wem</Path>
+					<Path>SFX/FootStep_01_A1793BE9.wem</Path>
 				</File>
 				<File Id="508723006" Language="SFX">
 					<ShortName>DieByLaser.wav</ShortName>
-					<Path>SFX\DieByLaser_A1793BE9.wem</Path>
-				</File>
-				<File Id="521772524" Language="SFX">
-					<ShortName>PercussiveCloud_v1_01.wav</ShortName>
-					<Path>SFX\PercussiveCloud_v1_01_CB1F3167.wem</Path>
+					<Path>SFX/DieByLaser_A1793BE9.wem</Path>
 				</File>
 				<File Id="547703658" Language="SFX">
 					<ShortName>Scuff_01.wav</ShortName>
-					<Path>SFX\Scuff_01_A1793BE9.wem</Path>
+					<Path>SFX/Scuff_01_A1793BE9.wem</Path>
 				</File>
 				<File Id="552534133" Language="SFX">
 					<ShortName>sfx_destroyBlock_08.wav</ShortName>
-					<Path>SFX\sfx_destroyBlock_08_E4274FC2.wem</Path>
+					<Path>SFX/sfx_destroyBlock_08_E4274FC2.wem</Path>
 				</File>
 				<File Id="585752603" Language="SFX">
 					<ShortName>sword_1.wav</ShortName>
-					<Path>SFX\sword_1_A1793BE9.wem</Path>
+					<Path>SFX/sword_1_A1793BE9.wem</Path>
 				</File>
 				<File Id="631715993" Language="SFX">
 					<ShortName>Scuff_04.wav</ShortName>
-					<Path>SFX\Scuff_04_A1793BE9.wem</Path>
+					<Path>SFX/Scuff_04_A1793BE9.wem</Path>
 				</File>
 				<File Id="635072450" Language="SFX">
 					<ShortName>sword_2.wav</ShortName>
-					<Path>SFX\sword_2_A1793BE9.wem</Path>
+					<Path>SFX/sword_2_A1793BE9.wem</Path>
 				</File>
 				<File Id="638066440" Language="SFX">
 					<ShortName>DangerSound_v3.wav</ShortName>
-					<Path>SFX\DangerSound_v3_CB1F3167.wem</Path>
+					<Path>SFX/DangerSound_v3_CB1F3167.wem</Path>
 				</File>
 				<File Id="638468395" Language="SFX">
 					<ShortName>Die.wav</ShortName>
-					<Path>SFX\Die_08DA7031.wem</Path>
+					<Path>SFX/Die_133746D2.wem</Path>
 				</File>
 				<File Id="642461171" Language="SFX">
 					<ShortName>FootStep_06.wav</ShortName>
-					<Path>SFX\FootStep_06_A1793BE9.wem</Path>
+					<Path>SFX/FootStep_06_A1793BE9.wem</Path>
 				</File>
 				<File Id="706580612" Language="SFX">
 					<ShortName>SFX_Menu_ButtonSwitching_001.wav</ShortName>
-					<Path>SFX\SFX_Menu_ButtonSwitching_001_A1793BE9.wem</Path>
+					<Path>SFX/SFX_Menu_ButtonSwitching_001_A1793BE9.wem</Path>
 				</File>
 				<File Id="737510309" Language="SFX">
 					<ShortName>sfx_destroyBlock_04.wav</ShortName>
-					<Path>SFX\sfx_destroyBlock_04_A1793BE9.wem</Path>
+					<Path>SFX/sfx_destroyBlock_04_A1793BE9.wem</Path>
 				</File>
 				<File Id="769991994" Language="SFX">
 					<ShortName>Inserts_3.mp3.wav</ShortName>
-					<Path>SFX\Inserts_3.mp3_CB1F3167.wem</Path>
+					<Path>SFX/Inserts_3.mp3_CB1F3167.wem</Path>
 				</File>
 				<File Id="774133020" Language="SFX">
 					<ShortName>sfx_destroyBlock_03.wav</ShortName>
-					<Path>SFX\sfx_destroyBlock_03_A1793BE9.wem</Path>
+					<Path>SFX/sfx_destroyBlock_03_A1793BE9.wem</Path>
 				</File>
 				<File Id="796183027" Language="SFX">
 					<ShortName>SFX_Jump_001.wav</ShortName>
-					<Path>SFX\SFX_Jump_001_C1752865.wem</Path>
+					<Path>SFX/SFX_Jump_001_9A81F93A.wem</Path>
 				</File>
 				<File Id="818350625" Language="SFX">
 					<ShortName>FootStep_02.wav</ShortName>
-					<Path>SFX\FootStep_02_A1793BE9.wem</Path>
+					<Path>SFX/FootStep_02_A1793BE9.wem</Path>
 				</File>
 				<File Id="837590637" Language="SFX">
 					<ShortName>Inserts_1.mp3.wav</ShortName>
-					<Path>SFX\Inserts_1.mp3_CB1F3167.wem</Path>
+					<Path>SFX/Inserts_1.mp3_CB1F3167.wem</Path>
 				</File>
 				<File Id="872705618" Language="SFX">
 					<ShortName>SFX_Menu_SelectOption_001.wav</ShortName>
-					<Path>SFX\SFX_Menu_SelectOption_001_A1793BE9.wem</Path>
+					<Path>SFX/SFX_Menu_SelectOption_001_A1793BE9.wem</Path>
 				</File>
 				<File Id="900299826" Language="SFX">
 					<ShortName>Scuff_02.wav</ShortName>
-					<Path>SFX\Scuff_02_A1793BE9.wem</Path>
-				</File>
-				<File Id="919284918" Language="SFX">
-					<ShortName>Drums01_v1_01.wav</ShortName>
-					<Path>SFX\Drums01_v1_01_CB1F3167.wem</Path>
+					<Path>SFX/Scuff_02_A1793BE9.wem</Path>
 				</File>
 				<File Id="920971337" Language="SFX">
 					<ShortName>FootStep_04.wav</ShortName>
-					<Path>SFX\FootStep_04_A1793BE9.wem</Path>
-				</File>
-				<File Id="931732886" Language="SFX">
-					<ShortName>Drums03_v1_01.wav</ShortName>
-					<Path>SFX\Drums03_v1_01_CB1F3167.wem</Path>
+					<Path>SFX/FootStep_04_A1793BE9.wem</Path>
 				</File>
 				<File Id="935250761" Language="SFX">
 					<ShortName>Laser.wav</ShortName>
-					<Path>SFX\Laser_E5554007.wem</Path>
+					<Path>SFX/Laser_E5554007.wem</Path>
 				</File>
 				<File Id="1012470945" Language="SFX">
 					<ShortName>sfx_destroyBlock_06.wav</ShortName>
-					<Path>SFX\sfx_destroyBlock_06_E1A4546A.wem</Path>
+					<Path>SFX/sfx_destroyBlock_06_E1A4546A.wem</Path>
 				</File>
 				<File Id="1015403401" Language="SFX">
 					<ShortName>FootStep_05.wav</ShortName>
-					<Path>SFX\FootStep_05_A1793BE9.wem</Path>
-				</File>
-				<File Id="1030191636" Language="SFX">
-					<ShortName>Intro_01.wav_01.wav</ShortName>
-					<Path>SFX\Intro_01.wav_01_CB1F3167.wem</Path>
+					<Path>SFX/FootStep_05_A1793BE9.wem</Path>
 				</File>
 				<File Id="1041379320" Language="SFX">
 					<ShortName>Game_v2.8.wav</ShortName>
-					<Path>SFX\Game_v2.8_CB1F3167.wem</Path>
+					<Path>SFX/Game_v2.8_CB1F3167.wem</Path>
 				</File>
 				<File Id="1052188596" Language="SFX">
 					<ShortName>Scuff_03.wav</ShortName>
-					<Path>SFX\Scuff_03_A1793BE9.wem</Path>
+					<Path>SFX/Scuff_03_A1793BE9.wem</Path>
 				</File>
 				<File Id="1057746592" Language="SFX">
 					<ShortName>sfx_destroyBlock_05.wav</ShortName>
-					<Path>SFX\sfx_destroyBlock_05_A1793BE9.wem</Path>
+					<Path>SFX/sfx_destroyBlock_05_A1793BE9.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
