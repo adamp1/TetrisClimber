@@ -9632,20 +9632,20 @@ TrailRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1
-        value: 0.7586212
-        inSlope: 0
-        outSlope: 0
+        time: 0.98535156
+        value: 0
+        inSlope: 0.08115203
+        outSlope: 0.08115203
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0
+        inWeight: 0.21561621
         outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.2028302, g: 1, b: 0.60973173, a: 0.5176471}
+      key0: {r: 0.2028302, g: 1, b: 0.60973173, a: 0.75686276}
       key1: {r: 0.2028302, g: 1, b: 0.60973173, a: 0}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
