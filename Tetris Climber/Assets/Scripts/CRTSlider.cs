@@ -37,6 +37,7 @@ public class CRTSlider : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        PlayerPrefs.SetFloat("Settings3", slider.value);
         //effect.bloomIntensity = Mathf.Lerp(bloommin, bloommax, slider.value);
 
         float helper = Helper();

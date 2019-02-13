@@ -940,6 +940,24 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 97313832}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &97313834 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2475377290574901588, guid: 2e2911b1546ab3943b78fccf1df25fe3,
+    type: 3}
+  m_PrefabInstance: {fileID: 97313832}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &97313835 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1289904551, guid: 2e2911b1546ab3943b78fccf1df25fe3,
+    type: 3}
+  m_PrefabInstance: {fileID: 97313832}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &97313836 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8823170583154395917, guid: 2e2911b1546ab3943b78fccf1df25fe3,
+    type: 3}
+  m_PrefabInstance: {fileID: 97313832}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &100298025
 GameObject:
   m_ObjectHideFlags: 0
@@ -2955,12 +2973,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 379951825}
   m_CullTransparentMesh: 0
---- !u!1 &381989428 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6487997364416763545, guid: 2e2911b1546ab3943b78fccf1df25fe3,
-    type: 3}
-  m_PrefabInstance: {fileID: 97313832}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &402273302 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8823170581641447921, guid: 2e2911b1546ab3943b78fccf1df25fe3,
@@ -17394,7 +17406,7 @@ PrefabInstance:
         type: 3}
       propertyPath: SubmitButton
       value: 
-      objectReference: {fileID: 381989428}
+      objectReference: {fileID: 0}
     - target: {fileID: 6434282302539720793, guid: 5b463e87c5a93ec4eac93835974f863c,
         type: 3}
       propertyPath: InputField
@@ -17445,6 +17457,26 @@ PrefabInstance:
       propertyPath: PlayAgain
       value: 
       objectReference: {fileID: 2184725916168650503}
+    - target: {fileID: 6434282302539720793, guid: 5b463e87c5a93ec4eac93835974f863c,
+        type: 3}
+      propertyPath: ContrastSlider
+      value: 
+      objectReference: {fileID: 97313836}
+    - target: {fileID: 6434282302539720793, guid: 5b463e87c5a93ec4eac93835974f863c,
+        type: 3}
+      propertyPath: BloomSlider
+      value: 
+      objectReference: {fileID: 97313835}
+    - target: {fileID: 6434282302539720793, guid: 5b463e87c5a93ec4eac93835974f863c,
+        type: 3}
+      propertyPath: RTCSlider
+      value: 
+      objectReference: {fileID: 97313834}
+    - target: {fileID: 6434282302539720793, guid: 5b463e87c5a93ec4eac93835974f863c,
+        type: 3}
+      propertyPath: CRTSlider
+      value: 
+      objectReference: {fileID: 97313834}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b463e87c5a93ec4eac93835974f863c, type: 3}
 --- !u!1001 &6841671132713074010

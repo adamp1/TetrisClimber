@@ -83,12 +83,15 @@ public class Game : MonoBehaviour {
     int spawnBlocksLeftOrRight;
     bool DoItOnlyOnce;
     static int counterGameOver;
+    bool loadSettings;
 
     public GameObject GameOverUI;
     public GameObject GameOver2UI;
     public GameObject Panel2;
-    public GameObject SubmitButton;
     public GameObject InputField;
+    public GameObject ContrastSlider;
+    public GameObject BloomSlider;
+    public GameObject CRTSlider;
     public GameObject VolumeSlider;
     public GameObject Eventsystem;
     public GameObject PlayAgain;
@@ -116,6 +119,7 @@ public class Game : MonoBehaviour {
         blockagePosX = Random.Range(0, 2);
         SpawnBlockage();
         CheckBlockagePosition();
+        LoadSettings();
     }
 
     //Start
@@ -138,7 +142,7 @@ public class Game : MonoBehaviour {
             GameObject.Find("Name 5").GetComponent<Text>().text = PlayerPrefs.GetString("Name5"); 
         }
 
-        OptionsMenuUI.SetActive(false);
+        
         PauseMenuUI.SetActive(false);
 
         Deathcollider = GameObject.Find("Death Collider");
@@ -163,6 +167,11 @@ public class Game : MonoBehaviour {
     //Update
     private void Update() 
     {
+        if(!loadSettings)
+        {
+            OptionsMenuUI.SetActive(false);
+            loadSettings = true;
+        }
 
         if (Player != null)
         {            
@@ -790,7 +799,6 @@ public class Game : MonoBehaviour {
         if(Input.GetKeyUp(KeyCode.Return) || Input.GetKeyUp("joystick button 9"))
         {
             SubmitName();
-            SubmitButton.SetActive(false);
             InputField.SetActive(false);
             Panel2.SetActive(true);
             Eventsystem.GetComponent<UnityEngine.EventSystems.EventSystem>().SetSelectedGameObject(PlayAgain);
@@ -1047,6 +1055,20 @@ public class Game : MonoBehaviour {
             }
         }
 
+    }
+
+    public void SaveSettings()
+    {
+        //PlayerPrefs.SetFloat("Settings1", );
+    }
+
+    
+
+    public void LoadSettings()
+    {
+        ContrastSlider.GetComponent<Slider>().value = PlayerPrefs.GetFloat("Settings1");
+        BloomSlider.GetComponent<Slider>().value = PlayerPrefs.GetFloat("Settings2");
+        CRTSlider.GetComponent<Slider>().value = PlayerPrefs.GetFloat("Settings3");
     }
 
     public void MouseHover() 

@@ -24,6 +24,7 @@ public class BloomSlider : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        PlayerPrefs.SetFloat("Settings2", slider.value);
         effect.bloomIntensity = Mathf.Lerp(bloommin, bloommax, slider.value);
     }
 }
