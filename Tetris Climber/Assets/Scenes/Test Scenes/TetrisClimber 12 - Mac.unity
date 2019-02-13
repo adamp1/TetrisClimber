@@ -892,6 +892,46 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.1265
       objectReference: {fileID: 0}
+    - target: {fileID: 8823170582616490598, guid: 2e2911b1546ab3943b78fccf1df25fe3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8823170581609422163, guid: 2e2911b1546ab3943b78fccf1df25fe3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -80
+      objectReference: {fileID: 0}
+    - target: {fileID: 8823170581609422163, guid: 2e2911b1546ab3943b78fccf1df25fe3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8823170581603404987, guid: 2e2911b1546ab3943b78fccf1df25fe3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 8823170581603404987, guid: 2e2911b1546ab3943b78fccf1df25fe3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -53.64529
+      objectReference: {fileID: 0}
+    - target: {fileID: 6729350988599752631, guid: 2e2911b1546ab3943b78fccf1df25fe3,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6729350988599752631, guid: 2e2911b1546ab3943b78fccf1df25fe3,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9030243434908106863, guid: 2e2911b1546ab3943b78fccf1df25fe3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -103
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e2911b1546ab3943b78fccf1df25fe3, type: 3}
 --- !u!1 &97313833 stripped
@@ -16382,7 +16422,7 @@ PrefabInstance:
     - target: {fileID: 3473486972618215322, guid: de1ebf98e34bef045b552eefa69560ed,
         type: 3}
       propertyPath: SlashCost
-      value: 35
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3473486972618215323, guid: de1ebf98e34bef045b552eefa69560ed,
         type: 3}
@@ -17378,7 +17418,7 @@ PrefabInstance:
     - target: {fileID: 6434282302539720793, guid: 5b463e87c5a93ec4eac93835974f863c,
         type: 3}
       propertyPath: godmode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6434282302539720793, guid: 5b463e87c5a93ec4eac93835974f863c,
         type: 3}
