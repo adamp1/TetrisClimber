@@ -20,6 +20,7 @@ public class ContrastSlider : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        effect.intensity = slider.value;
+        PlayerPrefs.SetFloat("Setting1", slider.value); 
+        effect.intensity = slider.value; 
     }
 }

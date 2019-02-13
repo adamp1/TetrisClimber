@@ -18,12 +18,12 @@ public class BloomSlider : MonoBehaviour
 
         slider = GetComponent<Slider>();
         effect = GameObject.FindObjectOfType<Bloom>();
-        
     }
 
     // Update is called once per frame
     void Update()
     {
+        PlayerPrefs.SetFloat("Setting2", slider.value);
         effect.bloomIntensity = Mathf.Lerp(bloommin, bloommax, slider.value);
     }
 }
