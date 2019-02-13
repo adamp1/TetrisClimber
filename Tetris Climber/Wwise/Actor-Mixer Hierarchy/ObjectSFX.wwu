@@ -48,9 +48,13 @@
 							<Language>SFX</Language>
 							<AudioFile>Laser.wav</AudioFile>
 						</AudioFileSource>
+						<AudioFileSource Name="Laser_v2" ID="{66713E8E-3E39-42BF-82C7-37D09A204BC2}" ShortID="273782971">
+							<Language>SFX</Language>
+							<AudioFile>Laser_v2.wav</AudioFile>
+						</AudioFileSource>
 					</ChildrenList>
 					<ActiveSourceList>
-						<ActiveSource Name="Laser" ID="{0D1E8781-EE40-4BEE-8343-85CB1BF604E8}" Platform="Linked"/>
+						<ActiveSource Name="Laser_v2" ID="{66713E8E-3E39-42BF-82C7-37D09A204BC2}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 				<RandomSequenceContainer Name="DestroyBlock" ID="{EB06B2B7-0BF0-4C6A-B6B9-86188E6B938A}" ShortID="1029790230">
