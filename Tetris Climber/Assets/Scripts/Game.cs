@@ -80,6 +80,8 @@ public class Game : MonoBehaviour {
     public bool shapePreviewOn;
     bool rayInitializing;
 
+    bool loadsettings;
+
     int spawnBlocksLeftOrRight;
     bool DoItOnlyOnce;
     static int counterGameOver;
@@ -87,8 +89,10 @@ public class Game : MonoBehaviour {
     public GameObject GameOverUI;
     public GameObject GameOver2UI;
     public GameObject Panel2;
-    public GameObject SubmitButton;
     public GameObject InputField;
+    public GameObject Contrast;
+    public GameObject Bloom;
+    public GameObject CRTSlider;
     public GameObject VolumeSlider;
     public GameObject Eventsystem;
     public GameObject PlayAgain;
@@ -116,6 +120,7 @@ public class Game : MonoBehaviour {
         blockagePosX = Random.Range(0, 2);
         SpawnBlockage();
         CheckBlockagePosition();
+        LoadSettings();
     }
 
     //Start
@@ -137,15 +142,17 @@ public class Game : MonoBehaviour {
             GameObject.Find("Name 4").GetComponent<Text>().text = PlayerPrefs.GetString("Name4");
             GameObject.Find("Name 5").GetComponent<Text>().text = PlayerPrefs.GetString("Name5"); 
         }
+        
 
-        OptionsMenuUI.SetActive(false);
         PauseMenuUI.SetActive(false);
-
+         
         Deathcollider = GameObject.Find("Death Collider");
 
         GodMode();
 
         SpawnNextPrefab();
+
+        
 
            /*  PlayerPrefs.SetFloat("Highscore5", 0);
                PlayerPrefs.SetFloat("Highscore4", 0);
@@ -157,12 +164,17 @@ public class Game : MonoBehaviour {
                 PlayerPrefs.SetString("Name4", "Name 4");
                 PlayerPrefs.SetString("Name3", "Name 3");
                 PlayerPrefs.SetString("Name2", "Name 2");
-                PlayerPrefs.SetString("Name1", "Name 1");      */
+                PlayerPrefs.SetString("Name1", "Name 1"); */     
     }
 
     //Update
     private void Update() 
     {
+        if(!loadsettings)
+        {
+            OptionsMenuUI.SetActive(false);
+            loadsettings = true;
+        }        
 
         if (Player != null)
         {            
@@ -201,6 +213,8 @@ public class Game : MonoBehaviour {
 
             SubmitThisShit();
         }
+
+   
     }
 
     
@@ -644,8 +658,8 @@ public class Game : MonoBehaviour {
             {
                 spawnBlocksLeftOrRight = 2;
             }
+         
 
-           
 
         }
 
@@ -708,11 +722,11 @@ public class Game : MonoBehaviour {
         }
 
         if(OptionsMenuUI.activeInHierarchy && Input.GetKeyUp("escape"))
-        {
+        { 
             shapePreviewOn = GameObject.Find("Shape Preview").GetComponent<Toggle>().isOn;
             PauseMenuUI.SetActive(false);
             OptionsMenuUI.SetActive(false);
-            Time.timeScale = 1.0f;
+            Time.timeScale = 1.0f;            
         }
 
 
@@ -724,6 +738,7 @@ public class Game : MonoBehaviour {
         }
         else
         {
+            //SaveSettings();
             FindObjectOfType<BlockMovement>().enabled = true;
             FindObjectOfType<PlayerMovement>().enabled = true;
             AkSoundEngine.SetState("PlayState", "Playing");
@@ -790,7 +805,7 @@ public class Game : MonoBehaviour {
         if(Input.GetKeyUp(KeyCode.Return) || Input.GetKeyUp("joystick button 9"))
         {
             SubmitName();
-            SubmitButton.SetActive(false);
+            //SubmitButton.SetActive(false);
             InputField.SetActive(false);
             Panel2.SetActive(true);
             Eventsystem.GetComponent<UnityEngine.EventSystems.EventSystem>().SetSelectedGameObject(PlayAgain);
@@ -1053,6 +1068,22 @@ public class Game : MonoBehaviour {
     {
         AkSoundEngine.PostEvent("ButtonClick", gameObject);
     }
+
+    public void SaveSettings()
+    {
+        PlayerPrefs.SetFloat("Setting1", Contrast.GetComponent<Slider>().value);
+        PlayerPrefs.SetFloat("Setting2", Bloom.GetComponent<Slider>().value);
+        PlayerPrefs.SetFloat("Setting3", CRTSlider.GetComponent<Slider>().value);
+        PlayerPrefs.SetFloat("Setting4", VolumeSlider.GetComponent<Slider>().value);
+    }
+
+    public void LoadSettings()
+    {
+        Contrast.GetComponent<Slider>().value = PlayerPrefs.GetFloat("Setting1");
+        Bloom.GetComponent<Slider>().value = PlayerPrefs.GetFloat("Setting2");
+        CRTSlider.GetComponent<Slider>().value = PlayerPrefs.GetFloat("Setting3");
+        VolumeSlider.GetComponent<Slider>().value = PlayerPrefs.GetFloat("Setting4"); 
+    } 
 
     void MusicVolume()
     {
