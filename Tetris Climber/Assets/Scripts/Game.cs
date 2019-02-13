@@ -177,7 +177,8 @@ public class Game : MonoBehaviour {
 
             MoveSpawnerToPlayer();
             UpdateMenu();
-            UpdateMinoPos();            
+            UpdateMinoPos();
+            
         }
         else
         {           
@@ -715,6 +716,7 @@ public class Game : MonoBehaviour {
             FindObjectOfType<BlockMovement>().enabled = true;
             FindObjectOfType<PlayerMovement>().enabled = true;
             AkSoundEngine.SetState("PlayState", "Playing");
+            MusicVolume();
         }
             
         
@@ -748,7 +750,7 @@ public class Game : MonoBehaviour {
         PlayerHeight();
         DistanceToDanger();
         DynamicScoreSystem();
-        MusicVolume();
+        
 
         if(PlayerPrefs.GetFloat("Highscore5") < ScoreGesamt)
         {
@@ -793,7 +795,7 @@ public class Game : MonoBehaviour {
     }
 
     public void Quit()
-    {
+    {       
         Application.Quit();   
     }
 
@@ -808,6 +810,7 @@ public class Game : MonoBehaviour {
 
     public void MainMenu()
     {
+        Time.timeScale = 1;
         AkSoundEngine.StopAll();
         SceneManager.LoadScene(0);
     }
