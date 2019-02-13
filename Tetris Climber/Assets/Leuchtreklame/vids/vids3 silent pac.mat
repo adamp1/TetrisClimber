@@ -79,15 +79,15 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _Variant: 0
+    - _Variant: 0.372
     - _ZWrite: 1
     - _circles: 20
-    - _dotcount: 65.69
+    - _dotcount: 100.3
     - _dotsize: 0
     - _dotspace: 179.26
     - _emission: 3
-    - _masksize: 0.1
+    - _masksize: 0.287
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _tintcolor: {r: 1, g: 0.6231968, b: 0, a: 1}
+    - _tintcolor: {r: 0, g: 0.29707307, b: 0.406, a: 1}
