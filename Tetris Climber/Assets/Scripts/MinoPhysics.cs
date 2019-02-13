@@ -170,15 +170,14 @@ public class MinoPhysics : MonoBehaviour
         {
 
             //SHAPE PREVIEW
-            if (FindObjectOfType<Game>().shapePreviewOn)
-            {               
-                lr.enabled = true;               
+                         
+                lr.enabled = true;
 
-                if (Physics.Raycast(ShapePreview, out hit, Mathf.Infinity, layermask))
-                {
-                    lr.SetPosition(0, transform.position);
-                    lr.SetPosition(1, hit.point);
-                }
+            if (Physics.Raycast(ShapePreview, out hit, Mathf.Infinity, layermask))
+            {
+                lr.SetPosition(0, transform.position);
+                lr.SetPosition(1, hit.point);
+            }
 
               /*  if (Physics.Raycast(ShapePreview, out hit, Mathf.Infinity))
                 {
@@ -191,12 +190,7 @@ public class MinoPhysics : MonoBehaviour
                         lr.material = lrmaterial1;
                     }
                 }*/
-
-            }
-            else
-            {
-                lr.enabled = false;
-            }
+ 
 
         }
         else

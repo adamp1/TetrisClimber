@@ -113,7 +113,6 @@ public class Game : MonoBehaviour {
         OptionsMenuUI = GameObject.Find("OptionsMenu");
         PauseMenuUI = GameObject.Find("Pause");
         LaserSpawner = GameObject.Find("Laserspawner");
-        shapePreviewOn = GameObject.Find("Shape Preview").GetComponent<Toggle>().isOn;
         Player = GameObject.Find("Player");
 
         blockagePosX = Random.Range(0, 2);
@@ -639,6 +638,7 @@ public class Game : MonoBehaviour {
             }
         }
     }
+
 
 
     void CheckBlockagePosition()
