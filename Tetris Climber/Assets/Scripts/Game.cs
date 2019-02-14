@@ -664,7 +664,8 @@ public class Game : MonoBehaviour {
             {
                 spawnBlocksLeftOrRight = 1;                
             }
-            else if(Player.transform.position.x > 9.5f)
+         
+   else if(Player.transform.position.x > 9.5f)
             {
                 spawnBlocksLeftOrRight = 2;
             }
@@ -714,11 +715,10 @@ public class Game : MonoBehaviour {
         {
             PauseMenuUI.SetActive(false);
             Time.timeScale = 1.0f;
-        }
+        }    
 
         if(OptionsMenuUI.activeInHierarchy && Input.GetKeyUp("escape"))
-        {
-            shapePreviewOn = GameObject.Find("Shape Preview").GetComponent<Toggle>().isOn;
+        {           
             PauseMenuUI.SetActive(false);
             OptionsMenuUI.SetActive(false);
             Time.timeScale = 1.0f;
@@ -729,7 +729,7 @@ public class Game : MonoBehaviour {
         {
             FindObjectOfType<BlockMovement>().enabled = false;
             FindObjectOfType<PlayerMovement>().enabled = false;
-            AkSoundEngine.SetState("PlayState", "Pausing");
+            AkSoundEngine.SetState("PlayState", "Pausing");            
         }
         else
         {
@@ -1069,6 +1069,7 @@ public class Game : MonoBehaviour {
         ContrastSlider.GetComponent<Slider>().value = PlayerPrefs.GetFloat("Settings1");
         BloomSlider.GetComponent<Slider>().value = PlayerPrefs.GetFloat("Settings2");
         CRTSlider.GetComponent<Slider>().value = PlayerPrefs.GetFloat("Settings3");
+        VolumeSlider.GetComponent<Slider>().value = PlayerPrefs.GetFloat("Settings4");
     }
 
     public void MouseHover() 
@@ -1079,8 +1080,8 @@ public class Game : MonoBehaviour {
     void MusicVolume()
     {
         float musicVolume = VolumeSlider.GetComponent<Slider>().value;
-        AkSoundEngine.SetRTPCValue("MusicVolume", musicVolume);
-       
+        PlayerPrefs.SetFloat("Settings4", musicVolume);
+        AkSoundEngine.SetRTPCValue("MusicVolume", PlayerPrefs.GetFloat("Settings4"));      
     }
 
     void GodMode()
