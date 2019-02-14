@@ -850,18 +850,18 @@ public class Game : MonoBehaviour {
     }
 
     public void MainMenu()
-    {
+    { 
         Time.timeScale = 1;
         godmode = false;
 
-        FindObjectOfType<ScriptWithNoName>().key1 = false;
+      /*  FindObjectOfType<ScriptWithNoName>().key1 = false;
         FindObjectOfType<ScriptWithNoName>().key2 = false;
         FindObjectOfType<ScriptWithNoName>().key3 = false;
         FindObjectOfType<ScriptWithNoName>().key4 = false;
         FindObjectOfType<ScriptWithNoName>().key5 = false;
         FindObjectOfType<ScriptWithNoName>().key6 = false;
         FindObjectOfType<ScriptWithNoName>().key7 = false;
-        FindObjectOfType<ScriptWithNoName>().key8 = false;
+        FindObjectOfType<ScriptWithNoName>().key8 = false;*/
         FindObjectOfType<ScriptWithNoName>().godmode = false;
         AkSoundEngine.StopAll();
         SceneManager.LoadScene(0);

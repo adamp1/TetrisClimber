@@ -9,14 +9,14 @@ public class ScriptWithNoName : MonoBehaviour
     public GameObject text1;
     public GameObject text2;
     public GameObject text3;
-    public bool key1;
-    public bool key2;
-    public bool key3;
-    public bool key4;
-    public bool key5;
-    public bool key6;
-    public bool key7;
-    public bool key8;
+    //public bool key1;
+    //public bool key2;
+    //public bool key3;
+    //public bool key4;
+    //public bool key5;
+    //public bool key6;
+    //public bool key7;
+    //public bool key8;
     public bool godmode; 
 
     // Start is called before the first frame update
@@ -30,7 +30,7 @@ public class ScriptWithNoName : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "Title Screen 0")
         {
-            if (Input.GetKeyDown(KeyCode.UpArrow))
+           /* if (Input.GetKeyDown(KeyCode.UpArrow))
             {
                 key1 = true;
                 key2 = false;
@@ -124,9 +124,9 @@ public class ScriptWithNoName : MonoBehaviour
                 key6 = false;
                 key7 = false;
                 key8 = true;
-            }
+            }*/
 
-            if (key8)
+            if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.C))
             {
                 godmode = true;
                 text1.GetComponent<Text>().text = "YOU";
