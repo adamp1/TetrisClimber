@@ -65,7 +65,7 @@ public class Laser : MonoBehaviour
                     lr.SetPosition(1, new Vector3(hitpoint / 2, 0, 0));
 
 
-                    if (hit.collider.tag == "Player" && FindObjectOfType<Game>().godmode == false)
+                    if (hit.collider.tag == "Player" && FindObjectOfType<ScriptWithNoName>().godmode == false)
                     {
                         Destroy(hit.collider.gameObject);
                         AkSoundEngine.PostEvent("KilledByLaser", gameObject);
@@ -130,7 +130,7 @@ public class Laser : MonoBehaviour
 
                     //Debug.Log("Laserhit");
 
-                    if (hit.collider.tag == "Player" && FindObjectOfType<Game>().godmode == false)
+                    if (hit.collider.tag == "Player" && FindObjectOfType<ScriptWithNoName>().godmode == false)
                     {
                         Destroy(hit.collider.gameObject);
                         AkSoundEngine.PostEvent("KilledByLaser", gameObject);

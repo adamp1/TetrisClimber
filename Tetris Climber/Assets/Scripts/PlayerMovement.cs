@@ -250,8 +250,8 @@ public class PlayerMovement : MonoBehaviour {
         }
 
         //Flying
-        if(FindObjectOfType<Game>().godmode)
-        {
+        if(FindObjectOfType<ScriptWithNoName>().godmode)
+        { 
             Flying();
         }
 
@@ -260,7 +260,7 @@ public class PlayerMovement : MonoBehaviour {
 
     void OnCollisionEnter(Collision collision)
     {
-        if(FindObjectOfType<Game>().godmode == false)
+        if(FindObjectOfType<ScriptWithNoName>().godmode == false)
         {
             if (collision.gameObject.tag == "Blockage")
             {
