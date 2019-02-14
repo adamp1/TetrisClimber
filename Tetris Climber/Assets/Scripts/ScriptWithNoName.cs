@@ -9,14 +9,14 @@ public class ScriptWithNoName : MonoBehaviour
     public GameObject text1;
     public GameObject text2;
     public GameObject text3;
-    bool key1;
-    bool key2;
-    bool key3;
-    bool key4;
-    bool key5;
-    bool key6;
-    bool key7;
-    bool key8;
+    public bool key1;
+    public bool key2;
+    public bool key3;
+    public bool key4;
+    public bool key5;
+    public bool key6;
+    public bool key7;
+    public bool key8;
     public bool godmode; 
 
     // Start is called before the first frame update
