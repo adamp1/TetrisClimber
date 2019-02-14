@@ -1069,7 +1069,16 @@ public class Game : MonoBehaviour {
         ContrastSlider.GetComponent<Slider>().value = PlayerPrefs.GetFloat("Settings1");
         BloomSlider.GetComponent<Slider>().value = PlayerPrefs.GetFloat("Settings2");
         CRTSlider.GetComponent<Slider>().value = PlayerPrefs.GetFloat("Settings3");
-        VolumeSlider.GetComponent<Slider>().value = PlayerPrefs.GetFloat("Settings4");
+
+        if (!PlayerPrefs.HasKey("Settings4"))
+        {
+            VolumeSlider.GetComponent<Slider>().value = 0.5f;
+        }
+        else
+        {
+            VolumeSlider.GetComponent<Slider>().value = PlayerPrefs.GetFloat("Settings4");
+        }
+
     }
 
     public void MouseHover() 

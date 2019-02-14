@@ -12,6 +12,7 @@ public class ScriptWithNoName : MonoBehaviour
     bool key6;
     bool key7;
     bool key8;
+    public float godmode; 
 
     // Start is called before the first frame update
     void Start()
