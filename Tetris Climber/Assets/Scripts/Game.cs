@@ -16,7 +16,7 @@ public class Game : MonoBehaviour {
     float t;
     bool SaveStartHeight = false;
 
-    public bool godmode = false;
+    bool godmode;
 
     float t2;
 
@@ -77,7 +77,6 @@ public class Game : MonoBehaviour {
     bool options;
     bool dead;
     bool newHighscore;
-    public bool shapePreviewOn;
     bool rayInitializing;
 
     int spawnBlocksLeftOrRight;
@@ -139,6 +138,8 @@ public class Game : MonoBehaviour {
             GameObject.Find("Name 3").GetComponent<Text>().text = PlayerPrefs.GetString("Name3");
             GameObject.Find("Name 4").GetComponent<Text>().text = PlayerPrefs.GetString("Name4");
             GameObject.Find("Name 5").GetComponent<Text>().text = PlayerPrefs.GetString("Name5"); 
+
+
         }
 
         
@@ -149,6 +150,14 @@ public class Game : MonoBehaviour {
         GodMode();
 
         SpawnNextPrefab();
+
+        godmode = FindObjectOfType<ScriptWithNoName>().godmode;
+
+        if(godmode)
+        {
+            GameObject.Find("Death Trigger").SetActive(false);
+            GameObject.Find("Death Trigger (1)").SetActive(false);
+        }
 
            /*  PlayerPrefs.SetFloat("Highscore5", 0);
                PlayerPrefs.SetFloat("Highscore4", 0);
@@ -743,23 +752,6 @@ public class Game : MonoBehaviour {
 
     } 
 
-    void ShapePreview ()
-    {
-        if (OptionsMenuUI.activeInHierarchy)
-        {
-            shapePreviewOn = GameObject.Find("Shape Preview").GetComponent<Toggle>().isOn;
-
-            if (shapePreviewOn)
-            {
-                PlayerPrefs.SetInt("ShapePreview", 1);
-            }
-            else
-            {
-                PlayerPrefs.SetInt("ShapePreview", 0);
-            }
-        }
-    }
-
 
     //GUI
     void UpdateMenu()
@@ -860,6 +852,17 @@ public class Game : MonoBehaviour {
     public void MainMenu()
     {
         Time.timeScale = 1;
+        godmode = false;
+
+        FindObjectOfType<ScriptWithNoName>().key1 = false;
+        FindObjectOfType<ScriptWithNoName>().key2 = false;
+        FindObjectOfType<ScriptWithNoName>().key3 = false;
+        FindObjectOfType<ScriptWithNoName>().key4 = false;
+        FindObjectOfType<ScriptWithNoName>().key5 = false;
+        FindObjectOfType<ScriptWithNoName>().key6 = false;
+        FindObjectOfType<ScriptWithNoName>().key7 = false;
+        FindObjectOfType<ScriptWithNoName>().key8 = false;
+        FindObjectOfType<ScriptWithNoName>().godmode = false;
         AkSoundEngine.StopAll();
         SceneManager.LoadScene(0);
     }

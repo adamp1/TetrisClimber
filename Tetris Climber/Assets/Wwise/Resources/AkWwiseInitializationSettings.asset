@@ -16,7 +16,7 @@ MonoBehaviour:
   - Mac
   - Windows
   PlatformSettingsList:
-  - {fileID: 11400000, guid: fb844b7ddc2e64940a98dbd3a9f5bf64, type: 2}
+  - {fileID: 11400000, guid: 52b2cf758368843cb85aa881d70da4f3, type: 2}
   - {fileID: 11400000, guid: 2d61297e66400664e949e05e23028148, type: 2}
   InvalidReferencePlatforms: []
   UserSettings:
